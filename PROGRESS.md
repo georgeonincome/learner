@@ -8,30 +8,26 @@ Tailwind CSS v4, Radix UI primitives, Firebase Auth + Firestore, Turso/libSQL,
 Cloudinary, Nodemailer + React Email, Stripe test mode.
 
 ## Evidence (Phase 0) — verified
-- `_reference/` exists at `web/clone/savvypro/_reference/` and is now read-only (chmod a-w).
-- `site/`: 301 files (58M) — 193 captured HTML pages, 92 real JS chunks, 5 CSS files, images + fonts.
-- `sitemap.xml`: 181 URLs.
-- `SPECIFICATION.md`, `ASSETS.md`, `CAPTURE-NOTES.md`, `homepage_copy.txt`: present.
-- `capture\` directory: MISSING from reference.
-- `pages\*.md`: MISSING from reference (SPECIFICATION references ~50 captured markdown pages; HTML equivalents exist in `site/`).
-- Re-download of savvypro.org: NOT feasible — WAF (Cloudflare/OpenResty) blocks subsequent requests; backend is hosted EzyCourse SaaS, not capturable.
+- `_reference/` exists at `web/clone/savvypro/_reference/` and is read-only (chmod a-w).
+- `site/`: 301 files (58M) — 193 HTML, 92 JS, 5 CSS, 11 images/fonts.
+- `sitemap.xml`: 181 URLs. SPECIFICATION.md, ASSETS.md, CAPTURE-NOTES.md, homepage_copy.txt present.
+- Missing: `capture\` dir, `pages\*.md` (HTML equivalents used). Re-download not feasible (WAF); backend not capturable (EzyCourse SaaS).
 
 ## Milestone status
-- [x] M0 Setup & evidence — Phase 0 complete: _reference verified (read-only), lena/ initialized, git repo created, PROGRESS.md + GAPS.md written, file counts/sizes reported.
-- [ ] M1 Foundation (Tailwind theme from TOKENS.md, component library, layout shell, SEO helpers, ESLint @mui/@emotion rule)
-- [ ] M2 Auth (Firebase Auth, httpOnly session cookies, email verification, password reset, middleware protection, roles, account settings)
-- [ ] M3 Data (Turso migrations, Firestore rules + emulator tests, seed from content)
-- [ ] M4 Public pages (home, path landings, catalog, course detail, mini-courses/programs, books, blog, legal, about, contact, testimonials; generateStaticParams for all 181 URLs)
-- [ ] M5 Commerce (Stripe test mode adapter, webhook signature verification, idempotency, order states, receipts, enrollment after confirmed payment, memberships + gating)
-- [ ] M6 Learning (dashboard, lesson player, per-lesson progress, resume, completion, certificates)
-- [ ] M7 Engagement (community, coaching/appointments + webinars, lead magnets/forms, AI assistant mock provider + streaming + limits)
-- [ ] M8 Admin (courses, lessons, posts, books, users, orders, memberships, settings)
-- [ ] M9 Hardening (rate limiting, auth guard on every API route, CSP/security headers, validation everywhere, .env.example)
-- [ ] Phase 4 Verification (tsc/lint/build, tests, Playwright journeys, sitemap crawler, layout comparison, Axe/Lighthouse, brand grep)
-- [ ] Phase 5 Deliver (feature table, README, production checklist)
+- [x] M0 Setup & evidence — Phase 0 complete
+- [x] Phase 1 analysis docs — COVERAGE.md (all 181 URLs mapped), FEATURES.md, API-CONTRACT.md, DATA-MODEL.md, UI-SPEC/TOKENS.md + 17 template specs, GAPS.md — committed
+- [x] Phase 2 Plan — PLAN.md (stack, DATA-ARCHITECTURE.md, milestone order, folder structure) — WAITING for go-ahead before any app code
+- [ ] M1 Foundation
+- [ ] M2 Auth
+- [ ] M3 Data
+- [ ] M4 Public pages
+- [ ] M5 Commerce
+- [ ] M6 Learning
+- [ ] M7 Engagement
+- [ ] M8 Admin
+- [ ] M9 Hardening
+- [ ] Phase 4 Verification
+- [ ] Phase 5 Deliver
 
 ## Current step
-Phase 1 analysis documents: COVERAGE.md, FEATURES.md, API-CONTRACT.md, DATA-MODEL.md, UI-SPEC/TOKENS.md + per-template specs, GAPS.md.
-
-## Next action
-Draft COVERAGE.md mapping all 181 sitemap URLs to template + content entry + auth requirement.
+Phase 2 Plan complete (PLAN.md + DATA-ARCHITECTURE.md). WAITING for your go-ahead before building M1 Foundation.
