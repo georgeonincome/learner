@@ -24,6 +24,7 @@ Cloudinary, Nodemailer + React Email, Stripe test mode.
 - [ ] M4 Public pages — home, path landings, catalog, course detail, programs, books, blog, legal, about, contact, testimonials; generateStaticParams for all 181 URLs
 - [x] M4 Public pages — path landings (6), all-products catalog, blog (list/post/category with generateStaticParams), legal pages (contact, about, testimonials, ccs-testimonials, terms, privacy, refund, appointment), blog.json content — build passes
 - [ ] M5 Commerce — Stripe test-mode adapter, webhook signature + idempotency, order states, receipts, enrollment after confirmed payment, memberships + gating
+- [x] M5 Commerce — Stripe test-mode checkout, webhook signature + idempotency, order states, enrollment after confirmed payment, memberships + gating — build passes
 - [ ] M6 Learning — dashboard, lesson player, per-lesson progress, resume, completion, certificates
 - [ ] M7 Engagement — community, coaching/appointments + webinars, lead magnets/forms, AI assistant (mock provider, streaming, limits)
 - [ ] M8 Admin — manage courses, lessons, posts, books, users, orders, memberships, settings
