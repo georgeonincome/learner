@@ -1,8 +1,9 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import { clsx } from 'clsx'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/Button'
 
 const navItems = [
@@ -18,6 +19,30 @@ const navItems = [
 
 export function Header() {
   const pathname = usePathname()
+  const router = useRouter()
+  const [session, setSession] = useState<{ email?: string; role?: string } | null>(null)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const loadSession = async () => {
+      try {
+        const res = await fetch('/api/auth/me', { cache: 'no-store' })
+        if (res.ok) setSession(await res.json())
+      } catch {
+        // no session
+      } finally {
+        setLoading(false)
+      }
+    }
+    loadSession()
+  }, [router])
+
+  async function handleSignOut() {
+    await fetch('/api/auth/logout', { method: 'POST' })
+    setSession(null)
+    router.push('/')
+    router.refresh()
+  }
 
   return (
     <header
@@ -29,7 +54,7 @@ export function Header() {
     >
       <div className="mx-auto px-2.5 sm:px-5 flex items-center justify-between gap-1.5 w-full" style={{ height: '75px' }}>
         <Link href="/" className="flex h-full max-w-24 sm:max-w-40 items-center justify-center flex-col min-[440px]:max-w-32 no-underline">
-          <img src="/logo.png" alt="Logo" className="img-fluid" style={{ width: 'auto', height: '100%', objectFit: 'contain' }} />
+          <span className="font-heading font-bold text-xl tracking-wide text-primary">SavvyPro</span>
         </Link>
 
         <nav className="flex-1 flex justify-center">
@@ -56,12 +81,25 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Link href="/signup" className="no-underline">
-            <Button variant="secondary" size="md">Sign up</Button>
-          </Link>
-          <Link href="/login" className="no-underline">
-            <Button variant="outline" size="md">Login</Button>
-          </Link>
+          {loading ? (
+            <span className="w-8 h-8 rounded-full border-2 border-primary border-b-transparent animate-spin" />
+          ) : session ? (
+            <div className="flex items-center gap-2">
+              <span className="hidden sm:block text-sm text-text-secondary">{session.email}</span>
+              <Button variant="ghost" size="sm" onClick={handleSignOut}>
+                Sign out
+              </Button>
+            </div>
+          ) : (
+            <>
+              <Link href="/signup" className="no-underline">
+                <Button variant="secondary" size="md">Sign up</Button>
+              </Link>
+              <Link href="/login" className="no-underline">
+                <Button variant="outline" size="md">Login</Button>
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </header>

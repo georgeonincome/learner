@@ -1,13 +1,16 @@
 'use client'
 
 import { clsx, type ClassValue } from 'clsx'
-import { forwardRef, type HTMLAttributes } from 'react'
+import {
+  forwardRef,
+  type ComponentPropsWithoutRef,
+} from 'react'
 
 export function cn(...inputs: ClassValue[]) {
   return clsx(inputs)
 }
 
-export interface InputProps extends HTMLAttributes<HTMLInputElement> {
+export interface InputProps extends ComponentPropsWithoutRef<'input'> {
   label?: string
   error?: string
   helper?: string

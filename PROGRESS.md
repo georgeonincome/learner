@@ -16,18 +16,18 @@ Cloudinary, Nodemailer + React Email, Stripe test mode.
 ## Milestone status
 - [x] M0 Setup & evidence — Phase 0 complete
 - [x] Phase 1 analysis docs — COVERAGE.md (all 181 URLs mapped), FEATURES.md, API-CONTRACT.md, DATA-MODEL.md, UI-SPEC/TOKENS.md + 17 template specs, GAPS.md — committed
-- [x] Phase 2 Plan — PLAN.md (stack, DATA-ARCHITECTURE.md, milestone order, folder structure) — WAITING for go-ahead before any app code
-- [ ] M1 Foundation
-- [ ] M2 Auth
-- [ ] M3 Data
-- [ ] M4 Public pages
-- [ ] M5 Commerce
-- [ ] M6 Learning
-- [ ] M7 Engagement
-- [ ] M8 Admin
-- [ ] M9 Hardening
-- [ ] Phase 4 Verification
-- [ ] Phase 5 Deliver
+- [x] Phase 2 Plan — PLAN.md (stack, DATA-ARCHITECTURE.md, milestone order, folder structure) — go-ahead given
+- [x] M1 Foundation — Tailwind v4 theme from TOKENS.md, component library (Button/Input/Card/Badge/Alert/Modal/Tabs/Accordion/Carousel/Toast) with cva+clsx, layout shell, SEO metadata, ESLint @mui/@emotion ban rule — build passes
+- [ ] M2 Auth — Firebase Auth, httpOnly session cookies, email verification, password reset, middleware protection, roles, account settings
+- [ ] M3 Data — Turso migrations, Firestore rules (emulator-tested), seed from content
+- [ ] M4 Public pages — home, path landings, catalog, course detail, programs, books, blog, legal, about, contact, testimonials; generateStaticParams for all 181 URLs
+- [ ] M5 Commerce — Stripe test-mode adapter, webhook signature + idempotency, order states, receipts, enrollment after confirmed payment, memberships + gating
+- [ ] M6 Learning — dashboard, lesson player, per-lesson progress, resume, completion, certificates
+- [ ] M7 Engagement — community, coaching/appointments + webinars, lead magnets/forms, AI assistant (mock provider, streaming, limits)
+- [ ] M8 Admin — manage courses, lessons, posts, books, users, orders, memberships, settings
+- [ ] M9 Hardening — rate limiting, auth guard on every API route, CSP/security headers, validation everywhere, .env.example
+- [ ] Phase 4 Verification — tsc/lint/build, tests, Playwright journeys, sitemap crawler, layout comparison, Axe/Lighthouse, brand grep
+- [ ] Phase 5 Deliver — feature table, README, production checklist
 
 ## Current step
-Phase 2 Plan complete (PLAN.md + DATA-ARCHITECTURE.md). WAITING for your go-ahead before building M1 Foundation.
+M2 Auth: Firebase Auth client + admin SDK, server-verified httpOnly session cookie routes, email verification, password reset, middleware route protection, roles, account settings pages.
