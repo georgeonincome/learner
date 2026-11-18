@@ -1,8 +1,6 @@
-import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
-import { Alert } from '@/components/ui/Alert'
 import { LessonProgress } from '@/components/learning/LessonProgress'
 
 export const dynamic = 'force-dynamic'
