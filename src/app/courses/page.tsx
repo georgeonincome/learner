@@ -1,4 +1,3 @@
-import { createClient } from '@libsql/client'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 
@@ -14,17 +13,6 @@ const REF = {
   magenta: '#df1488',
   border: '#d9d9d9',
   borderCard: '#64748b',
-}
-
-interface Course {
-  id: number
-  slug: string
-  title: string
-  category: string
-  description: string
-  price: number
-  currency: string
-  is_free: boolean
 }
 
 export const dynamic = 'force-dynamic'

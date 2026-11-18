@@ -2,10 +2,8 @@
 
 import { clsx, type ClassValue } from 'clsx'
 import {
-  useCallback,
   useEffect,
   useRef,
-  useState,
   type ReactNode,
 } from 'react'
 

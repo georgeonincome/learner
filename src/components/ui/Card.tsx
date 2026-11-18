@@ -3,7 +3,10 @@
 import { clsx } from 'clsx'
 import { type HTMLAttributes, forwardRef } from 'react'
 
-export interface CardProps extends HTMLAttributes<HTMLDivElement> {}
+export interface CardProps extends HTMLAttributes<HTMLDivElement> {
+  /** additional props */
+  [key: string]: unknown
+}
 
 export const Card = forwardRef<HTMLDivElement, CardProps>(({ className, ...props }, ref) => {
   return (

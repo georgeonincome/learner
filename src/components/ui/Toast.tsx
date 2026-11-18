@@ -7,7 +7,6 @@ import {
   useContext,
   useEffect,
   useMemo,
-  useRef,
   useState,
   type ReactNode,
 } from 'react'
@@ -49,9 +48,10 @@ export function ToastProvider({
         const timer = setTimeout(() => {
           setToasts((prev) => prev.filter((t) => t.id !== id))
         }, props.duration ?? 5000)
-        ;(window as any).__toastTimers =
-          (window as any).__toastTimers || {}
-        ;(window as any).__toastTimers[id] = timer
+        const timers = (window as Record<string, unknown>).__toastTimers ||
+          {}
+        timers[id] = timer
+        ;(window as Record<string, unknown>).__toastTimers = timers
       }
     },
     [],
@@ -63,7 +63,7 @@ export function ToastProvider({
 
   useEffect(() => {
     return () => {
-      const timers = (window as any).__toastTimers || {}
+      const timers = (window as Record<string, unknown>).__toastTimers || {}
       Object.keys(timers).forEach((key) => {
         const t = timers[key] as number | undefined
         if (t !== undefined) clearTimeout(t)

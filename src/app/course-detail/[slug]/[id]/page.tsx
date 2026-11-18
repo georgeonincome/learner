@@ -1,4 +1,3 @@
-import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
 
@@ -12,14 +11,6 @@ const REF = {
   textSecondary: '#f7f3f3',
   textMuted: '#5b6475',
   borderCard: '#64748b',
-}
-
-interface Lesson {
-  id: number
-  chapter: number
-  title: string
-  is_free: boolean
-  duration_minutes: number
 }
 
 const course = {
@@ -80,7 +71,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string; id: string }> }) {
-  const { slug, id } = await params
+  await params
   return {
     title: course.title,
     description: course.description,
@@ -90,7 +81,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 export default async function CourseDetailPage({ params }: { params: Promise<{ slug: string; id: string }> }) {
-  const { slug, id } = await params
+  await params
   return (
     <div className="py-10 md:py-16 px-2.5 sm:px-5">
       <div className="mx-auto max-w-[1200px]">
