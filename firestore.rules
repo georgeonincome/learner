@@ -1,0 +1,62 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isSignedIn() { return request.auth != null; }
+    function isOwner(uid) { return isSignedIn() && request.auth.uid == uid; }
+    function isTeacherOrAdmin() {
+      return isSignedIn() &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role in ['teacher','admin'];
+    }
+    function published() { return resource.data.isPublished == true; }
+
+    // Content — public read when published; write by teacher/admin
+    match /courses/{courseId} {
+      allow read: if published();
+      allow write: if isTeacherOrAdmin();
+      match /lessons/{lessonId} {
+        allow read: if published();
+        allow write: if isTeacherOrAdmin();
+      }
+    }
+    match /books/{bookId} { allow read: if published(); allow write: if isTeacherOrAdmin(); }
+    match /products/{productId} { allow read: if published(); allow write: if isTeacherOrAdmin(); }
+    match /blogPosts/{postId} { allow read: if published(); allow write: if isTeacherOrAdmin(); }
+    match /blogCategories/{catId=**} { allow read; allow write: if isTeacherOrAdmin(); }
+    match /libraryItems/{itemId} { allow read: if published(); allow write: if isTeacherOrAdmin(); }
+    match /settings/{siteId} { allow read; allow write: if isTeacherOrAdmin(); }
+
+    // Users — owner + admins
+    match /users/{uid} {
+      allow read: if isOwner(uid) || isTeacherOrAdmin();
+      allow write: if isOwner(uid) || isTeacherOrAdmin();
+    }
+
+    // Community — public read; authenticated write (own content)
+    match /communityGroups/{groupId} {
+      allow read;
+      allow write: if isTeacherOrAdmin();
+      match /posts/{postId} {
+        allow read;
+        allow create: if isSignedIn();
+        allow update, delete: if isSignedIn() && resource.data.authorId == request.auth.uid || isTeacherOrAdmin();
+        match /comments/{commentId} {
+          allow read;
+          allow create: if isSignedIn();
+          allow update, delete: if isSignedIn() && resource.data.authorId == request.auth.uid || isTeacherOrAdmin();
+          match /likes/{userId} {
+            allow read;
+            allow create, delete: if isSignedIn() && userId == request.auth.uid;
+          }
+        }
+      }
+    }
+
+    // Certificates — owner + admins
+    match /certificates/{certId} {
+      allow read: if isOwner(resource.data.auth_user_id) || isTeacherOrAdmin();
+      allow write: if isTeacherOrAdmin();
+    }
+
+    match /{document=**} { allow read, write: if false; }
+  }
+}
