@@ -1,4 +1,4 @@
-import booksData from '@/content/books'
+import booksData from '@/content/books.json'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 

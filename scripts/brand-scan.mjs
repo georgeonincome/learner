@@ -1,0 +1,194 @@
+// Brand / copy provenance scan.
+//
+// Verifies that shipped source and content do not reuse the reference site's
+// domain names, tracking IDs, bundled brand assets, or verbatim marketing copy
+// (8-word runs). Route slugs and product/article titles are treated as
+// identifiers and reported separately, because the clone intentionally keeps
+// the same URL structure.
+//
+// Run: node scripts/brand-scan.mjs
+import fs from 'node:fs'
+import path from 'node:path'
+
+const REFERENCE = '_reference'
+const CONTENT = 'src/content'
+const SOURCE = 'src'
+const SHINGLE = 8
+
+const FORBIDDEN = [
+  { label: 'reference domain', pattern: /ezycourse\.net|b-cdn\.net|savvypro\.org|savvyproconsulting\.com/i },
+  { label: 'reference tracking ID', pattern: /GTM-PH89WSX4|hjid\s*[:=]\s*645767|645767/i },
+]
+
+function normalize(text) {
+  return text
+    .toLowerCase()
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&[a-z]+;/g, ' ')
+    .replace(/[^a-z0-9+$ ]+/g, ' ')
+    .split(/\s+/)
+    .filter(Boolean)
+}
+
+function buildCorpus() {
+  const words = []
+  const add = (file) => {
+    try {
+      words.push(...normalize(fs.readFileSync(file, 'utf8')))
+    } catch {
+      /* unreadable */
+    }
+  }
+  add(path.join(REFERENCE, 'homepage_copy.txt'))
+  const walk = (dir) => {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, entry.name)
+      if (entry.isDirectory()) walk(full)
+      else if (/\.(html|txt)$/i.test(entry.name)) add(full)
+    }
+  }
+  if (fs.existsSync(path.join(REFERENCE, 'site'))) walk(path.join(REFERENCE, 'site'))
+
+  const shingles = new Set()
+  for (let i = 0; i + SHINGLE <= words.length; i++) {
+    shingles.add(words.slice(i, i + SHINGLE).join(' '))
+  }
+  return shingles
+}
+
+const shingles = buildCorpus()
+
+function matchingShingle(value) {
+  const words = normalize(value)
+  if (words.length < SHINGLE) return null
+  for (let i = 0; i + SHINGLE <= words.length; i++) {
+    const candidate = words.slice(i, i + SHINGLE).join(' ')
+    if (shingles.has(candidate)) return candidate
+  }
+  return null
+}
+
+const IDENTIFIER_KEY = /(^|\.)(slug|href|url|id|thumbnail|cover_image|logo|image)$/
+
+function scanContent() {
+  const prose = []
+  const identifiers = []
+
+  const walk = (value, file, keyPath) => {
+    if (typeof value === 'string') {
+      const match = matchingShingle(value)
+      if (!match) return
+      const record = { file, key: keyPath, text: value.slice(0, 120), shingle: match }
+      const looksLikeSlug = /^[a-z0-9]+(?:-[a-z0-9]+)+$/.test(value)
+      if (IDENTIFIER_KEY.test(keyPath) || looksLikeSlug || /(^|\.)(title|excerpt)$/.test(keyPath)) identifiers.push(record)
+      else prose.push(record)
+      return
+    }
+    if (Array.isArray(value)) {
+      value.forEach((item, index) => walk(item, file, `${keyPath}[${index}]`))
+      return
+    }
+    if (value && typeof value === 'object') {
+      for (const key of Object.keys(value)) walk(value[key], file, `${keyPath}.${key}`)
+    }
+  }
+
+  for (const file of fs.readdirSync(CONTENT)) {
+    if (!file.endsWith('.json') || file === 'sitemap-urls.json') continue
+    const full = path.join(CONTENT, file)
+    try {
+      walk(JSON.parse(fs.readFileSync(full, 'utf8')), full, '$')
+    } catch (err) {
+      console.error(`could not parse ${full}:`, err.message)
+    }
+  }
+  return { prose, identifiers }
+}
+
+function sourceFiles(dir) {
+  const out = []
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, entry.name)
+    if (entry.isDirectory()) {
+      if (entry.name === 'node_modules' || entry.name === '.next') continue
+      out.push(...sourceFiles(full))
+    } else if (/\.(ts|tsx)$/.test(entry.name) && !/\.test\./.test(entry.name)) {
+      out.push(full)
+    }
+  }
+  return out
+}
+
+function scanSource() {
+  const matches = []
+  const forbidden = []
+
+  for (const file of sourceFiles(SOURCE)) {
+    const raw = fs.readFileSync(file, 'utf8')
+
+    for (const rule of FORBIDDEN) {
+      const hit = raw.match(rule.pattern)
+      if (hit) forbidden.push({ file, label: rule.label, match: hit[0] })
+    }
+
+    // String literals (single, double, backtick) and JSX text nodes.
+    const candidates = []
+    const literalRe = /(['"`])((?:\\.|(?!\1)[\s\S])*?)\1/g
+    let match
+    while ((match = literalRe.exec(raw))) candidates.push(match[2])
+    const jsxTextRe = />([^<>{}]{40,})</g
+    while ((match = jsxTextRe.exec(raw))) candidates.push(match[1])
+
+    for (const candidate of candidates) {
+      // SQL statements and generated markup are not marketing copy.
+      if (/\b(INSERT|SELECT|UPDATE|DELETE|CREATE)\b/.test(candidate)) continue
+      const shingle = matchingShingle(candidate)
+      if (shingle) matches.push({ file, text: candidate.trim().slice(0, 120), shingle })
+    }
+  }
+
+  return { matches, forbidden, assets: findBinaryAssets('public') }
+}
+
+function findBinaryAssets(dir) {
+  const out = []
+  if (!fs.existsSync(dir)) return out
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, entry.name)
+    if (entry.isDirectory()) out.push(...findBinaryAssets(full))
+    else if (/\.(png|jpe?g|svg|webp|gif|ico|woff2?|ttf|otf)$/i.test(entry.name)) out.push(full)
+  }
+  return out
+}
+
+const content = scanContent()
+const source = scanSource()
+
+console.log('BRAND / COPY PROVENANCE SCAN')
+console.log(`corpus: ${shingles.size} distinct ${SHINGLE}-word shingles from ${REFERENCE}`)
+console.log('')
+
+console.log(`Reference domains / contact details in src: ${source.forbidden.length}`)
+for (const hit of source.forbidden) console.log(`  ✗ ${hit.file}: ${hit.label} "${hit.match}"`)
+
+console.log(`Reference image binaries bundled in src: ${source.assets.length}`)
+for (const file of source.assets) console.log(`  ✗ ${file}`)
+
+console.log('')
+console.log(`Verbatim prose in src/content: ${content.prose.length}`)
+for (const hit of content.prose) console.log(`  ✗ ${hit.file} ${hit.key}\n    "${hit.text}"\n    shared: "${hit.shingle}"`)
+
+console.log(`Verbatim prose in source files: ${source.matches.length}`)
+for (const hit of source.matches) console.log(`  ✗ ${hit.file}\n    "${hit.text}"\n    shared: "${hit.shingle}"`)
+
+console.log('')
+console.log(`Identifiers matching reference titles/slugs (expected for URL parity): ${content.identifiers.length}`)
+for (const hit of content.identifiers.slice(0, 10)) console.log(`  · ${hit.file} ${hit.key}`)
+if (content.identifiers.length > 10) console.log(`  · …and ${content.identifiers.length - 10} more`)
+
+const failures = source.forbidden.length + source.assets.length + content.prose.length + source.matches.length
+console.log('')
+console.log(failures === 0 ? 'PASS — no copied prose, brand assets, tracking IDs or reference domains' : `FAIL — ${failures} provenance issue(s)`)
+process.exitCode = failures === 0 ? 0 : 1

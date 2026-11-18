@@ -13,6 +13,31 @@ Source files live in `_reference/`:
 
 ---
 
+## Build Status (Tailwind CSS v4 Migration)
+
+| Template | Status | Evidence |
+|---|---|---|
+| Layout shell (Header + Footer) | working | `src/components/layout/Header.tsx`, `src/components/layout/Footer.tsx` |
+| Home page | working | `src/app/page.tsx`, `src/components/home/index.tsx` |
+| Course catalog | working | `src/app/courses/page.tsx` |
+| Course detail | working | `src/app/course-detail/[slug]/[id]/page.tsx` |
+| Books catalog | working | `src/app/books/page.tsx` |
+| Book detail | working | `src/app/book/[slug]/page.tsx` |
+| Path landings | inferred | `src/components/templates/index.tsx` (PathLanding, PathPicker) |
+| Blog index/post/category | inferred | not yet rebuilt |
+| Auth pages | inferred | not yet rebuilt |
+| Checkout | inferred | not yet rebuilt |
+| Dashboard | inferred | not yet rebuilt |
+| Lesson player | inferred | not yet rebuilt |
+| Community | inferred | not yet rebuilt |
+| Appointment | inferred | not yet rebuilt |
+| Admin | inferred | not yet rebuilt |
+
+Design system: `src/app/globals.css` (Tailwind base + design tokens).
+Component library: `src/components/ui/Button.tsx`, `src/components/ui/Card.tsx` (more components to be added).
+
+---
+
 ## 1. Homepage / landing
 
 | Feature | Description | Routes | Source | Auth |

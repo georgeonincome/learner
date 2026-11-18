@@ -1,6 +1,4 @@
 import { notFound } from 'next/navigation'
-import { Button } from '@/components/ui/Button'
-import Link from 'next/link'
 
 const REF = {
   bgHero: '#090e21',

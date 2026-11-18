@@ -5,6 +5,28 @@ Everything below cannot be verified from the reference evidence. Each item is ma
 (no evidence at all). Conservative implementation: build the smallest thing that
 satisfies the observable behavior; do not add features the reference does not show.
 
+## Implementation status
+
+Completed (Tailwind CSS v4 rebuild):
+- Layout shell: Header (sticky, 75px, backdrop-blur, nav, auth buttons) + Footer
+- Home page: Hero, Path picker, Social proof/testimonials, Service pillars
+- Course catalog: `/courses/` with search, filters, pagination
+- Course detail: `/course-detail/<slug>/<id>/` with curriculum, pricing, enrollment CTA
+- Books catalog: `/books/` with preview/purchase gating
+- Book detail: `/book/<slug>/` with chapter list and preview gating
+
+Not yet built:
+- Auth pages: login, signup, forgot-password, reset-password, verify-email
+- Checkout page and success page
+- Dashboard and student area
+- Lesson player
+- Community pages
+- Appointment booking
+- Admin panel
+- Blog index/post/category
+- Mini-courses/programs
+- Legal/static pages
+
 ## Reference capture gaps
 - `capture\` directory — MISSING from `_reference/`. [unknown] No capture metadata available.
 - `pages\*.md` — MISSING from `_reference/` (SPECIFICATION.md §2.2 references ~50 captured markdown pages). HTML equivalents exist in `site/www.savvypro.org/*.html`. [inferred] Treat captured HTML pages as the source of truth for those routes.
