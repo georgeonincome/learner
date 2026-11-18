@@ -7,6 +7,7 @@ import {
   useContext,
   useEffect,
   useMemo,
+  useRef,
   useState,
   type ReactNode,
 } from 'react'
@@ -39,6 +40,7 @@ export function ToastProvider({
   children: ReactNode
 }) {
   const [toasts, setToasts] = useState<Toast[]>([])
+  const timersRef = useRef<Record<string, ReturnType<typeof setTimeout>>>({})
 
   const toast = useCallback(
     (props: Omit<Toast, 'id'>) => {
@@ -47,27 +49,25 @@ export function ToastProvider({
       if (props.duration !== 0) {
         const timer = setTimeout(() => {
           setToasts((prev) => prev.filter((t) => t.id !== id))
+          delete timersRef.current[id]
         }, props.duration ?? 5000)
-        const timers = (window as Record<string, unknown>).__toastTimers ||
-          {}
-        timers[id] = timer
-        ;(window as Record<string, unknown>).__toastTimers = timers
+        timersRef.current[id] = timer
       }
     },
     [],
   )
 
   const dismiss = useCallback((id: string) => {
+    const t = timersRef.current[id]
+    if (t !== undefined) clearTimeout(t)
+    delete timersRef.current[id]
     setToasts((prev) => prev.filter((t) => t.id !== id))
   }, [])
 
   useEffect(() => {
     return () => {
-      const timers = (window as Record<string, unknown>).__toastTimers || {}
-      Object.keys(timers).forEach((key) => {
-        const t = timers[key] as number | undefined
-        if (t !== undefined) clearTimeout(t)
-      })
+      Object.values(timersRef.current).forEach((t) => clearTimeout(t))
+      timersRef.current = {}
     }
   }, [])
 
