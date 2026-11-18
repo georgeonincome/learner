@@ -29,8 +29,17 @@ Cloudinary, Nodemailer + React Email, Stripe test mode.
 - [x] Phase 4 Verification — tsc, ESLint, 11 Vitest tests, production build, brand scan PASS, route coverage 181/181 — all green
 - [x] Phase 5 Deliver — README with feature table, PRODUCTION-CHECKLIST.md, BRAND-AUDIT.md, GAPS.md, SECURITY.md
 
-## Current step
-All milestones and phases complete. Push the final commits to `origin main`.
-Note: Playwright journeys, Axe/Lighthouse and pixel-level layout comparison
-were not run (no browser/lighthouse setup in this environment) — recorded in
-GAPS.md as [unknown].
+## Verification-gap closure (user request, 2026-11-19)
+
+### Step 1 — Browser tooling — DONE
+- `npx playwright install --with-deps chromium` FAILED: `sudo: A terminal is
+  required to authenticate` (running as uid 1000 without passwordless sudo).
+- `npx playwright install chromium` SUCCEEDED (exit 0); browsers present in
+  `~/.cache/ms-playwright/chromium-1255` and `chromium_headless_shell-1255`.
+- Smoke test: `chromium.launch({headless:true})` + `page.setContent('<h1>hello</h1>')`
+  returned `LAUNCH OK: hello`. Browser is usable; no extra system deps needed.
+- On a machine where `--with-deps` is required, run it from an interactive
+  terminal with sudo access.
+
+Remaining steps: layout comparison, sitemap crawl, E2E/integration tests +
+axe/Lighthouse, GAPS.md completion, final report.
