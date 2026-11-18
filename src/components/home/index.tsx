@@ -248,3 +248,49 @@ export function ServicePillars() {
     </div>
   )
 }
+
+export function PathLanding({ path }: { path: (typeof homeContent.paths)[number] }) {
+  return (
+    <div className="py-10 md:py-16 px-2.5 sm:px-5">
+      <div className="mx-auto max-w-[1200px]">
+        <div className="text-center mb-[48px]">
+          <h1 className="font-heading font-bold text-center text-3xl md:text-4xl" style={{
+            lineHeight: '1.2',
+            marginBottom: '16px',
+            color: REF.textPrimary,
+          }}>
+            {path.title}
+          </h1>
+          <p className="mx-auto max-w-[720px] text-text-secondary text-sm md:text-base" style={{
+            lineHeight: '1.6',
+            marginBottom: '8px',
+          }}>
+            {path.sub}
+          </p>
+        </div>
+
+        <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          {[
+            { title: 'Explore courses', sub: 'Browse courses and programs to build your skills.', href: '/courses', label: 'Browse courses' },
+            { title: 'Related books', sub: 'Read ebooks and guides on digital business.', href: '/books', label: 'Browse books' },
+            { title: 'Get coaching', sub: 'Work with an expert 1-on-1.', href: '/appointment', label: 'Book a session' },
+          ].map((c) => (
+            <div key={c.title} className="border border-card rounded-xl bg-surface-elevated p-5 flex flex-col h-full">
+              <h3 className="font-heading font-bold text-text-primary mb-2" style={{ fontSize: '18px' }}>{c.title}</h3>
+              <p className="flex-1 text-text-muted text-sm" style={{ lineHeight: '1.6', marginBottom: '16px' }}>{c.sub}</p>
+              <Link href={c.href} className="no-underline inline-block">
+                <Button variant="primary" size="sm">{c.label}</Button>
+              </Link>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <Link href="/" className="no-underline text-primary hover:text-primary-hover font-medium">
+            ← Back to home
+          </Link>
+        </div>
+      </div>
+    </div>
+  )
+}
