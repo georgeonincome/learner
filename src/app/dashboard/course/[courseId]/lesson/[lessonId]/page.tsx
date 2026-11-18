@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { Alert } from '@/components/ui/Alert'
+import { LessonProgress } from '@/components/learning/LessonProgress'
 
 export const dynamic = 'force-dynamic'
 
@@ -90,11 +91,7 @@ export default async function LessonPlayerPage({ params }: { params: Promise<{ c
                   </div>
                 </div>
               </div>
-              <div className="mt-4">
-                <Button variant="primary" size="sm" className="w-full" disabled>
-                  Mark complete
-                </Button>
-              </div>
+              <LessonProgress lessonId={lessonId} />
             </Card>
 
             <Card className="p-4 bg-surface-elevated">
@@ -104,9 +101,14 @@ export default async function LessonPlayerPage({ params }: { params: Promise<{ c
               <p className="text-text-muted text-sm mb-3">
                 Complete all lessons to earn your certificate for this course.
               </p>
-              <Button variant="outline" size="sm" className="w-full" disabled>
-                Download certificate
-              </Button>
+              <Link
+                href="/dashboard/certificates"
+                className="no-underline block"
+              >
+                <Button variant="outline" size="sm" className="w-full">
+                  View certificates
+                </Button>
+              </Link>
             </Card>
           </div>
         </div>

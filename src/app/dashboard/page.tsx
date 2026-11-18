@@ -18,7 +18,9 @@ export default function DashboardPage() {
           }}>
             My Dashboard
           </h1>
-          <p className="text-text-secondary text-sm">Your courses and learning progress.</p>
+          <Link href="/dashboard/certificates" className="no-underline text-sm text-primary hover:text-primary-hover font-medium">
+            My Certificates →
+          </Link>
         </div>
 
         <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

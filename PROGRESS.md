@@ -19,13 +19,10 @@ Cloudinary, Nodemailer + React Email, Stripe test mode.
 - [x] Phase 2 Plan — PLAN.md (stack, DATA-ARCHITECTURE.md, milestone order, folder structure) — go-ahead given
 - [x] M1 Foundation — Tailwind v4 theme from TOKENS.md, component library (Button/Input/Card/Badge/Alert/Modal/Tabs/Accordion/Carousel/Toast) with cva+clsx, layout shell, SEO metadata, ESLint @mui/@emotion ban rule — build passes
 - [x] M2 Auth — Firebase Auth, httpOnly session cookies, email verification, password reset, middleware protection, roles, account settings — build passes
-- [ ] M3 Data — Turso migrations, Firestore rules (emulator-tested), seed from content
-- [ ] M3 Data — Turso migrations, Firestore rules (emulator-tested), seed from content
-- [ ] M4 Public pages — home, path landings, catalog, course detail, programs, books, blog, legal, about, contact, testimonials; generateStaticParams for all 181 URLs
+- [x] M3 Data — Turso schema.sql, @libsql/client wrapper, Firestore rules, Firestore server lib, seed script — build passes
 - [x] M4 Public pages — path landings (6), all-products catalog, blog (list/post/category with generateStaticParams), legal pages (contact, about, testimonials, ccs-testimonials, terms, privacy, refund, appointment), blog.json content — build passes
-- [ ] M5 Commerce — Stripe test-mode adapter, webhook signature + idempotency, order states, receipts, enrollment after confirmed payment, memberships + gating
 - [x] M5 Commerce — Stripe test-mode checkout, webhook signature + idempotency, order states, enrollment after confirmed payment, memberships + gating — build passes
-- [ ] M6 Learning — dashboard, lesson player, per-lesson progress, resume, completion, certificates
+- [x] M6 Learning — dashboard, course page, lesson player, per-lesson progress API (upsert), client "Mark complete", certificates page + SVG download endpoint — build passes
 - [ ] M7 Engagement — community, coaching/appointments + webinars, lead magnets/forms, AI assistant (mock provider, streaming, limits)
 - [ ] M8 Admin — manage courses, lessons, posts, books, users, orders, memberships, settings
 - [ ] M9 Hardening — rate limiting, auth guard on every API route, CSP/security headers, validation everywhere, .env.example
@@ -33,4 +30,6 @@ Cloudinary, Nodemailer + React Email, Stripe test mode.
 - [ ] Phase 5 Deliver — feature table, README, production checklist
 
 ## Current step
-M2 Auth: Firebase Auth client + admin SDK, server-verified httpOnly session cookie routes, email verification, password reset, middleware route protection, roles, account settings pages.
+M7 Engagement: community (groups/posts/comments/likes), coaching/appointments +
+webinars, lead magnets/forms, AI assistant (mock provider, streaming, limits).
+Build after the phase; commit; then proceed to M8 Admin and M9 Hardening.
