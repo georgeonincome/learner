@@ -9,8 +9,8 @@ export default async function LessonPlayerPage({ params }: { params: Promise<{ c
   const { courseId, lessonId } = await params
 
   return (
-    <div className="py-10 md:py-16 px-2.5 sm:px-5">
-      <div className="mx-auto max-w-[1200px]">
+    <div className="py-10 md:py-16 px-2 sm:px-2">
+      <div className="mx-auto max-w-[1264px]">
         <div className="flex items-center gap-2 mb-6">
           <Link href={`/dashboard/course/${courseId}`} className="no-underline text-sm text-text-secondary hover:text-primary">
             ← Back to course

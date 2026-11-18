@@ -10,8 +10,8 @@ export const metadata = {
 
 export default function CommunityDetailPage() {
   return (
-    <div className="py-10 md:py-14 px-2.5 sm:px-5">
-      <div className="mx-auto max-w-[1200px]">
+    <div className="py-10 md:py-14 px-2 sm:px-2">
+      <div className="mx-auto max-w-[1264px]">
         <h1 className="font-heading font-bold text-2xl md:text-4xl text-text-primary mb-2">
           Community detail
         </h1>

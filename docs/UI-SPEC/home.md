@@ -90,3 +90,9 @@ computed measurements were not possible (no Playwright). See TOKENS.md.
 
 ## Gaps
 - Exact computed spacing/gap/width per breakpoint — [inferred]; to be validated in Phase 4 layout comparison within ±4px.
+
+## Measured 2026-11-19
+
+Measured h1: 28px/34 at 375px, 50px/60 at 1280px; hero padding 60px/100px; content width 1264px; 8 sections in order: hero, stats, paths, stories heading, stories grid, pillars, CTA, footer.
+
+See `COMPARISON.md` for pass/fail per template and breakpoint and `layout-results.json` for raw measurements.

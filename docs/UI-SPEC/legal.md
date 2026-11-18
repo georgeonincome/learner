@@ -42,3 +42,9 @@ Source: `_reference/SPECIFICATION.md` §2; captured legal HTML. All measurements
 
 ## Gaps
 - Policy copy, appointment availability logic, .ics generation — [inferred].
+
+## Measured 2026-11-19
+
+Measured h1 (contact): 19px/23 at both breakpoints.
+
+See `COMPARISON.md` for pass/fail per template and breakpoint and `layout-results.json` for raw measurements.

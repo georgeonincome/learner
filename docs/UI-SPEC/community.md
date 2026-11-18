@@ -42,3 +42,9 @@ Source: `_reference/SPECIFICATION.md` §2; captured `/groups.html`, `/community/
 
 ## Gaps
 - Post/comment/like data, moderation, realtime — [inferred] minimal.
+
+## Measured 2026-11-19
+
+Reference group pages have no h1; ours has one (intentional for accessibility).
+
+See `COMPARISON.md` for pass/fail per template and breakpoint and `layout-results.json` for raw measurements.

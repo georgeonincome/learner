@@ -29,3 +29,9 @@ Source: `_reference/SPECIFICATION.md` §2.3, §3 (path picker); captured HTML fo
 
 ## Gaps
 - Exact copy per path beyond SPECIFICATION §3 themes — [inferred]; measured spacing/gaps not live-verified.
+
+## Measured 2026-11-19
+
+Measured h1: 30px/36 at both breakpoints.
+
+See `COMPARISON.md` for pass/fail per template and breakpoint and `layout-results.json` for raw measurements.

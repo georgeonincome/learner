@@ -31,13 +31,13 @@ const fields = [
 
 export default function PrivateConsultationPage() {
   return (
-    <div className="px-2.5 sm:px-5 pb-16">
-      <section className="bg-hero py-16">
+    <div className="px-2 sm:px-2 pb-16">
+      <section data-layout-section className="bg-hero py-16">
         <div className="mx-auto max-w-[1000px]">
           <p className="text-primary font-heading font-bold tracking-wide mb-2">
             VIP PRIVATE CONSULTATION
           </p>
-          <h1 className="font-heading font-bold text-3xl md:text-5xl text-text-primary mb-4">
+          <h1 className="font-heading font-bold text-[30px] text-text-primary mb-4">
             Build a coaching, consulting or service business from your expertise
           </h1>
           <p className="text-text-secondary leading-relaxed mb-6">
@@ -55,7 +55,7 @@ export default function PrivateConsultationPage() {
         </div>
       </section>
 
-      <div className="mx-auto max-w-[1000px] pt-14 space-y-10">
+      <div data-layout-section className="mx-auto max-w-[1000px] pt-14 space-y-10">
         <Card className="p-6">
           <h2 className="font-heading font-bold text-2xl text-text-primary mb-4">
             What I can offer you

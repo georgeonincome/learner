@@ -26,12 +26,11 @@ const REF = {
 export function HeroSection() {
   const hero = homeContent.hero
   return (
-    <section className="py-10 md:py-16" style={{ backgroundColor: REF.bgHero, color: REF.textPrimary }}>
-      <div className="mx-auto max-w-[1200px] px-2.5 sm:px-5">
+    <>
+    <section data-layout-section className="py-[60px] md:py-[100px]" style={{ backgroundColor: REF.bgHero, color: REF.textPrimary }}>
+      <div className="mx-auto max-w-[1264px] px-2 sm:px-2">
         <div className="text-center mb-[64px]">
-          <h1 className="font-heading font-bold text-center" style={{
-            fontSize: '36px',
-            lineHeight: '1.2',
+          <h1 className="font-heading font-bold text-center mx-auto max-w-[776px] text-[28px] md:text-[50px] leading-[1.2] font-normal md:font-medium" style={{
             marginBottom: '24px',
           }}>
             <span style={{ color: REF.textPrimary }}>Build the Skills and </span>
@@ -49,22 +48,6 @@ export function HeroSection() {
           </p>
         </div>
 
-        <div className="flex gap-3 flex-wrap justify-center mb-[64px]">
-          {hero.stats.map((s) => (
-            <div key={s.value} className="text-center">
-              <span className="font-heading font-bold block" style={{
-                fontSize: '24px',
-                color: REF.textPrimary,
-              }}>
-                {s.value}
-              </span>
-              <span className="block text-text-muted" style={{ fontSize: '14px' }}>
-                {s.label}
-              </span>
-            </div>
-          ))}
-        </div>
-
         <div className="flex gap-3 flex-wrap justify-center">
           {hero.ctas.map((c, i) => (
             <Link key={i} href={c.href} className="no-underline">
@@ -76,13 +59,32 @@ export function HeroSection() {
         </div>
       </div>
     </section>
+
+    <div data-layout-section className="bg-surface py-0">
+      <div className="mx-auto max-w-[1264px] px-2 flex gap-3 flex-wrap justify-center py-5">
+        {hero.stats.map((s) => (
+          <div key={s.value} className="text-center">
+            <span className="font-heading font-bold block" style={{
+              fontSize: '24px',
+              color: REF.textPrimary,
+            }}>
+              {s.value}
+            </span>
+            <span className="block text-text-muted" style={{ fontSize: '14px' }}>
+              {s.label}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+    </>
   )
 }
 
 export function PathPicker() {
   return (
-    <div className="py-10 md:py-16 px-2.5 sm:px-5">
-      <div className="mx-auto max-w-[1200px]">
+    <div data-layout-section className="py-10 md:py-16 px-2 sm:px-2">
+      <div className="mx-auto max-w-[1264px]">
         <h1 className="font-heading font-bold text-center" style={{
           fontSize: '24px',
           marginBottom: '8px',
@@ -121,9 +123,10 @@ export function PathPicker() {
 
 export function SocialProof() {
   return (
-    <div className="py-10 md:py-16 px-2.5 sm:px-5">
-      <div className="mx-auto max-w-[1200px]">
-        <div className="text-center mb-[48px]">
+    <>
+    <div data-layout-section className="py-5 px-2 sm:px-2">
+      <div className="mx-auto max-w-[1264px]">
+        <div className="text-center">
           <h1 className="font-heading font-bold uppercase tracking-wide" style={{
             color: REF.goldLight,
             fontSize: '20px',
@@ -149,10 +152,12 @@ export function SocialProof() {
             Read stories from learners at every stage of their journey.
           </p>
         </div>
+      </div>
+    </div>
 
-        <div className="grid gap-3" style={{
-          gridTemplateColumns: 'repeat(1, 1fr)',
-        }}>
+    <div data-layout-section className="py-5 px-2 sm:px-2">
+      <div className="mx-auto max-w-[1264px]">
+        <div className="grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {homeContent.testimonials.map((t) => (
             <div key={t.name} className="flex flex-col h-full p-3 border border-border-card rounded-xl bg-surface-elevated" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
               <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', height: '100%' }}>
@@ -194,13 +199,14 @@ export function SocialProof() {
         </div>
       </div>
     </div>
+    </>
   )
 }
 
 export function ServicePillars() {
   return (
-    <div className="py-10 md:py-16 px-2.5 sm:px-5">
-      <div className="mx-auto max-w-[1200px]">
+    <div data-layout-section className="py-10 md:py-16 px-2 sm:px-2">
+      <div className="mx-auto max-w-[1264px]">
         <div className="text-center mb-[48px]">
           <h1 className="font-heading font-bold uppercase tracking-wide" style={{
             color: REF.goldLight,
@@ -251,8 +257,8 @@ export function ServicePillars() {
 
 export function PathLanding({ path }: { path: (typeof homeContent.paths)[number] }) {
   return (
-    <div className="py-10 md:py-16 px-2.5 sm:px-5">
-      <div className="mx-auto max-w-[1200px]">
+    <div data-layout-section className="py-10 md:py-16 px-2 sm:px-2">
+      <div className="mx-auto max-w-[1264px]">
         <div className="text-center mb-[48px]">
           <h1 className="font-heading font-bold text-center text-3xl md:text-4xl" style={{
             lineHeight: '1.2',

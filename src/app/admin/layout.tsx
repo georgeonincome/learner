@@ -43,7 +43,7 @@ export default async function AdminLayout({
   return (
     <div className="min-h-screen">
       <div className="bg-hero border-b border-border-card">
-        <div className="mx-auto max-w-[1200px] px-2.5 sm:px-5 py-4 flex items-center justify-between">
+        <div className="mx-auto max-w-[1264px] px-2 sm:px-2 py-4 flex items-center justify-between">
           <div>
             <h1 className="font-heading font-bold text-xl text-text-primary">
               SavvyPro Admin
@@ -59,7 +59,7 @@ export default async function AdminLayout({
         </div>
       </div>
 
-      <div className="mx-auto max-w-[1200px] px-2.5 sm:px-5 py-8 grid gap-8 lg:grid-cols-12">
+      <div className="mx-auto max-w-[1264px] px-2 sm:px-2 py-8 grid gap-8 lg:grid-cols-12">
         <aside className="lg:col-span-3">
           <nav className="flex flex-wrap lg:flex-col gap-1">
             {navItems.map((item) => (

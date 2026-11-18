@@ -28,8 +28,8 @@ export default async function BlogCategoryPage({ params }: { params: Promise<{ c
   const posts = blogData.posts.filter((p) => p.category === category.name)
 
   return (
-    <div className="py-10 md:py-16 px-2.5 sm:px-5">
-      <div className="mx-auto max-w-[1200px]">
+    <div data-layout-section className="py-10 md:py-16 px-2 sm:px-2">
+      <div className="mx-auto max-w-[1264px]">
         <h1 className="font-heading font-bold mb-2" style={{
           fontSize: '24px',
           color: 'var(--color-text-primary)',

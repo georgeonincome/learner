@@ -37,3 +37,9 @@ Source: `_reference/SPECIFICATION.md` §2; captured course-detail HTML (content-
 
 ## Gaps
 - Lesson count, curriculum structure, pricing display — [inferred]; not observable per course.
+
+## Measured 2026-11-19
+
+Measured h1: 25px/30 at 375px, 36px/43 at 1280px (Figtree), max-width ~776px.
+
+See `COMPARISON.md` for pass/fail per template and breakpoint and `layout-results.json` for raw measurements.

@@ -34,3 +34,9 @@ Source: `_reference/SPECIFICATION.md` §2; captured book HTML. All measurements 
 
 ## Gaps
 - Book catalog contents and pricing — [inferred].
+
+## Measured 2026-11-19
+
+Measured h1: 37px/47 at both breakpoints.
+
+See `COMPARISON.md` for pass/fail per template and breakpoint and `layout-results.json` for raw measurements.

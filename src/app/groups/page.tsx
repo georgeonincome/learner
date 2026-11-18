@@ -41,13 +41,13 @@ const reasons = [
 
 export default function GroupsPage() {
   return (
-    <div className="px-2.5 sm:px-5 pb-16">
-      <section className="bg-hero py-20">
-        <div className="mx-auto max-w-[1200px] text-center">
+    <div className="px-2 sm:px-2 pb-16">
+      <section data-layout-section className="bg-hero py-20">
+        <div className="mx-auto max-w-[1264px] text-center">
           <p className="text-primary font-heading font-bold tracking-wide mb-2">
             . Digital Marketing Mastery.
           </p>
-          <h1 className="font-heading font-bold text-3xl md:text-5xl text-text-primary mb-4">
+          <h1 className="font-heading font-bold text-[30px] text-text-primary mb-4">
             BEGINNER TO EXPERT.
           </h1>
           <p className="mx-auto max-w-[760px] text-text-secondary leading-relaxed mb-8">
@@ -73,7 +73,7 @@ export default function GroupsPage() {
         </div>
       </section>
 
-      <div className="mx-auto max-w-[1200px] pt-14 space-y-16">
+      <div data-layout-section className="mx-auto max-w-[1264px] pt-14 space-y-16">
         <section>
           <h2 className="font-heading font-bold text-2xl md:text-3xl text-text-primary mb-6">
             What is included?

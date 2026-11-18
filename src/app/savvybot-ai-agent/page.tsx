@@ -21,9 +21,9 @@ const faqs = [
 
 export default function SavvybotPage() {
   return (
-    <div className="py-10 md:py-16 px-2.5 sm:px-5">
-      <div className="mx-auto max-w-[1200px]">
-        <h1 className="font-heading font-bold text-2xl md:text-4xl text-text-primary mb-2">
+    <div data-layout-section className="py-10 md:py-16 px-2 sm:px-2">
+      <div className="mx-auto max-w-[1264px]">
+        <h1 className="font-heading font-bold text-[30px] text-text-primary mb-2">
           Savvybot AI AGENT
         </h1>
         <p className="text-text-secondary mb-8">

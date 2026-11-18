@@ -17,7 +17,7 @@ export function ReferenceLanding({
   sectionTitle?: string
 }) {
   return (
-    <div className="px-2.5 sm:px-5 pb-16">
+    <div className="px-2 sm:px-2 pb-16">
       <section className="bg-hero py-16">
         <div className="mx-auto max-w-[1000px]">
           <h1 className="font-heading font-bold text-3xl md:text-5xl text-text-primary mb-4">

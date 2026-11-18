@@ -31,3 +31,9 @@ Source: `_reference/SPECIFICATION.md` §2; captured program HTML. All measuremen
 
 ## Gaps
 - Module/session structure and pricing per program — [inferred].
+
+## Measured 2026-11-19
+
+Measured h1: 30px/35 at both breakpoints.
+
+See `COMPARISON.md` for pass/fail per template and breakpoint and `layout-results.json` for raw measurements.

@@ -3,11 +3,33 @@
 Source: `_reference/SPECIFICATION.md` §4 "Design system (reconstructed from homepage tokens)" plus
 `_reference/homepage_copy.txt` and the captured `index.html`.
 
-## Measurement method (gap)
-Playwright is not available in this environment, so computed font sizes/weights/line heights, margins, paddings,
-gaps, widths, radii and shadows could NOT be measured live by loading the captured HTML+CSS. Every token below is
-[inferred] from SPECIFICATION.md §4 (the authoritative reconstruction) and the homepage HTML/CSS class structure.
-These are the authoritative values for the rebuild Tailwind theme (see M1).
+## Measurement method (completed 2026-11-19)
+Playwright/Chromium is now installed and `scripts/layout-compare.mjs` loads the captured reference HTML+CSS
+from `_reference/site/www.savvypro.org` at 375/768/1024/1280/1536px and measures computed typography,
+bounding boxes and section metrics against our production build. Results (pass/fail per template and
+breakpoint, ±4px tolerance) are in `COMPARISON.md`; raw output is `layout-results.json`.
+
+Measured reference type scale (px, font-size / line-height):
+| Template | 375px | 1280px | Our target |
+|---|---|---|---|
+| home | 28/34 | 50/60 | `text-[28px] md:text-[50px] leading-[1.2]` |
+| catalog | 26/31 | 32/38 | `32px` |
+| all-products | 22/26 | 30/36 | `30px` |
+| course-detail | 25/30 | 36/43 | `36px` |
+| books | 43/52 | 43/52 | `43px` |
+| book | 37/47 | 37/47 | `37px` |
+| groups / path-landing / savvybot | 30/36 | 30/36 | `30px` |
+| program | 30/35 | 30/35 | `30px` |
+| webinar | 36/43 | 36/43 | `36px` |
+| legal (contact) | 19/23 | 19/23 | `19px` |
+| lead-magnet | 16/22 | 16/22 | `16px` |
+
+Measured container: 1264px content width at 1280px viewport (8px side margins); hero section padding
+100px top/bottom at desktop and 60px at 375px. Our wrappers were updated to `max-w-[1264px] px-2`
+and the hero to `py-[60px] md:py-[100px]`.
+
+The original inferred tokens below remain the palette/type-family source; the measured values above
+are authoritative for layout comparisons.
 
 ---
 

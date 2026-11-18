@@ -9,10 +9,10 @@ export const metadata = {
 
 export default function FreelancerWebinarPage() {
   return (
-    <div className="px-2.5 sm:px-5 pb-16">
-      <section className="bg-hero py-20">
+    <div className="px-2 sm:px-2 pb-16">
+      <section data-layout-section className="bg-hero py-20">
         <div className="mx-auto max-w-[1000px] text-center">
-          <h1 className="font-heading font-bold text-3xl md:text-5xl text-text-primary mb-4">
+          <h1 className="font-heading font-bold text-[36px] text-text-primary mb-4">
             The Beginner Freelancer Blueprint: Earn Your First $100 With Just Your Phone
           </h1>
           <p className="text-text-secondary text-lg mb-8">
@@ -26,7 +26,7 @@ export default function FreelancerWebinarPage() {
         </div>
       </section>
 
-      <div className="mx-auto max-w-[1000px] pt-14 space-y-6 text-text-secondary leading-relaxed">
+      <div data-layout-section className="mx-auto max-w-[1000px] pt-14 space-y-6 text-text-secondary leading-relaxed">
         <h2 className="font-heading font-bold text-2xl text-text-primary">
           What you&apos;ll learn
         </h2>

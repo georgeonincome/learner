@@ -52,7 +52,7 @@ export function Header() {
         height: '75px',
       }}
     >
-      <div className="mx-auto px-2.5 sm:px-5 flex items-center justify-between gap-1.5 w-full" style={{ height: '75px' }}>
+      <div className="mx-auto px-2 sm:px-2 flex items-center justify-between gap-1.5 w-full" style={{ height: '75px' }}>
         <Link href="/" className="flex h-full max-w-24 sm:max-w-40 items-center justify-center flex-col min-[440px]:max-w-32 no-underline">
           <span className="font-heading font-bold text-xl tracking-wide text-primary">SavvyPro</span>
         </Link>

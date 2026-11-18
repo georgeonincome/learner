@@ -36,3 +36,9 @@ Source: `_reference/SPECIFICATION.md` §2; captured signin/signup/login HTML (fo
 
 ## Gaps
 - Form fields, validation rules, social providers — [inferred] email+password only.
+
+## Measured 2026-11-19
+
+Reference login page exposes one section; ours uses a centered card (no data-layout-section).
+
+See `COMPARISON.md` for pass/fail per template and breakpoint and `layout-results.json` for raw measurements.

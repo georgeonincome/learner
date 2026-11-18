@@ -28,3 +28,9 @@ Source: `_reference/SPECIFICATION.md` §2; captured `/courses.html`. All measure
 
 ## Gaps
 - Filter set and sort options not observable — [inferred] minimal set.
+
+## Measured 2026-11-19
+
+Measured h1: 26px/31 at 375px, 32px/38 at 1280px (Figtree).
+
+See `COMPARISON.md` for pass/fail per template and breakpoint and `layout-results.json` for raw measurements.
