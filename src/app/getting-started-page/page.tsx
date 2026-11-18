@@ -3,7 +3,7 @@ import homeContent from '@/content/home.json'
 
 export const metadata = {
   title: 'Starting a Business — SavvyPro',
-  description: 'Getting started? Find the practical skills, resources and next steps to turn your idea into something real.',
+  description: 'Not sure where to begin? Discover the skills, resources and a clear path to make your idea real.',
 }
 
 const path = homeContent.paths.find((p) => p.id === 1)

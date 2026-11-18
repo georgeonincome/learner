@@ -1,8 +1,8 @@
 {
   "brand": {
     "name": "SavvyPro",
-    "tagline": "Explore · Learn · Get Guidance · Get Hands-On Help",
-    "description": "Courses, coaching and expert support for people building what's next.",
+    "tagline": "Explore · Learn · Get Support · Get Real-World Help",
+    "description": "Training, coaching and expert guidance for people creating what comes next.",
     "logo": "/logo.png",
     "colors": {
       "primary": "#00a3ff",
@@ -22,8 +22,8 @@
     }
   },
   "hero": {
-    "headline": "Build the Skills and Digital Systems to Grow Your Business.",
-    "sub": "Practical systems, skills, training and hands-on help to grow revenue and build your brand.",
+    "headline": "Build Real Skills and Digital Systems That Help Your Business Grow.",
+    "sub": "Practical tools, skills, training and hands-on support to grow revenue and strengthen your brand.",
     "stats": [
       { "value": "3,000+", "label": "students" },
       { "value": "12+", "label": "Countries" },
@@ -36,19 +36,19 @@
     ]
   },
   "paths": [
-    { "id": 1, "title": "I am Starting A Business", "button": "Get Started", "sub": "Getting started? Find the practical skills, resources and next steps to turn your idea into something real." },
-    { "id": 2, "title": "I want to learn Digital Skills", "button": "Start Free", "sub": "Get practical, hands-on training to build the digital skills you need to work, create, grow, and market." },
-    { "id": 3, "title": "I have a Small Business", "button": "Grow My Business", "sub": "Build the marketing, sales and business systems you need to strengthen your operations and grow revenue." },
-    { "id": 4, "title": "I have Expertise to Build On", "button": "Build My Brand", "sub": "Turn what you know into a stronger brand, business, product or service. Build the digital capability to take your expertise further." },
-    { "id": 5, "title": "My Business is Established", "button": "Business Solutions", "sub": "Strengthen the systems, digital capability and team capacity your business needs to operate and grow at the next level." }
+    { "id": 1, "title": "I am Starting A Business", "button": "Get Started", "sub": "Not sure where to begin? Discover the skills, resources and a clear path to make your idea real." },
+    { "id": 2, "title": "I want to learn Digital Skills", "button": "Start Free", "sub": "Build useful, hands-on digital skills for work, creating, growing and marketing what you offer." },
+    { "id": 3, "title": "I have a Small Business", "button": "Grow My Business", "sub": "Create the marketing, sales and business systems that strengthen your operations and lift revenue." },
+    { "id": 4, "title": "I have Expertise to Build On", "button": "Build My Brand", "sub": "Convert your knowledge into a stronger brand, an offer, or a service. Grow your digital capability to take your expertise further." },
+    { "id": 5, "title": "My Business is Established", "button": "Business Solutions", "sub": "Sharpen the tools, digital know-how your business needs, plus the team capacity to operate and reach the next level." }
   ],
   "testimonials": [
-    { "name": "Ken Gunsalu", "role": "Nutritionist & Agribusiness owner, NutriCare Malawi", "segment": "Small Business", "quote": "I used to pay designers for every poster. Now I do it myself in under an hour, even my porridge packaging.", "result": "Saves on designer fees and creates his own packaging." },
-    { "name": "Wyonna Jean Britten", "role": "CEO, The Organic Biochemist, Zimbabwe", "segment": "Established business", "quote": "The topics focused on exactly what my business needs. I never felt like I was wasting time on things I didn't need.", "result": "Stronger online presence, now helping other small businesses grow." },
-    { "name": "Timothy Choongo", "role": "Teacher & web programmer, Zambia", "segment": "Expertise", "quote": "CCS enabled me to use AI in my web programming, automate my WhatsApp, and advertise and sell my digital products.", "result": "Facebook page grew from 4,000 to almost 6,000 followers." },
-    { "name": "Marian K. Shevtsov", "role": "Economist & parenting coach, Netherlands", "segment": "Startup", "quote": "It was relatable, and it made it easy for me to finally give content creation a chance. The best journey I have ever been on.", "result": "Building the foundation to launch her own digital business." },
-    { "name": "Chisanga Simwenwa", "role": "Founder, digital marketing agency, Zambia", "segment": "Established business", "quote": "I joined CCS already doing digital marketing. Now I serve multiple clients efficiently, deliver more professionally, and can train my own team.", "result": "Now attracting high-end clients." },
-    { "name": "Suwilanji Phiri", "role": "Clinician & social media manager, Zambia", "segment": "Freelancer - Digital Skills", "quote": "It was very practical and easy to understand.", "result": "Now landing jobs, local and international." }
+    { "name": "Ken Gunsalu", "role": "Nutritionist & Agribusiness owner, NutriCare Malawi", "segment": "Small Business", "quote": "I once paid a designer for each poster. Now I create them myself in under an hour, including my porridge packaging.", "result": "Cuts design costs and produces his own packaging." },
+    { "name": "Wyonna Jean Britten", "role": "CEO, The Organic Biochemist, Zimbabwe", "segment": "Established business", "quote": "The lessons covered exactly what my business needed. I never felt I was spending time on irrelevant material.", "result": "Stronger web presence; now guides other small firms." },
+    { "name": "Timothy Choongo", "role": "Teacher & web programmer, Zambia", "segment": "Expertise", "quote": "Through CCS I applied AI to my web work, automated WhatsApp, and promoted and sold my digital products.", "result": "Facebook audience grew from 4,000 to nearly 6,000." },
+    { "name": "Marian K. Shevtsov", "role": "Economist & parenting coach, Netherlands", "segment": "Startup", "quote": "The lessons felt relevant and helped me finally try content creation. It has been a rewarding experience.", "result": "Building a base to launch her own digital business." },
+    { "name": "Chisanga Simwenwa", "role": "Founder, digital marketing agency, Zambia", "segment": "Established business", "quote": "I came to CCS already running digital marketing. Now I manage several clients efficiently, deliver more professional work, and can train my team.", "result": "Now winning higher-end clients." },
+    { "name": "Suwilanji Phiri", "role": "Clinician & social media manager, Zambia", "segment": "Freelancer - Digital Skills", "quote": "Very practical and simple to follow.", "result": "Now securing local and international gigs." }
   ],
   "pillars": [
     { "title": "Learn to do it yourself.", "sub": "Courses, programmes and practical resources that build the skills and knowledge you need." },

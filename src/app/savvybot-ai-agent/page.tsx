@@ -8,14 +8,14 @@ export const metadata = {
 
 const faqs = [
   {
-    question: 'I am looking for ways to make money online',
+    question: 'I want to find ways to earn money online',
     answer:
-      'Thank you for your question, there are many ways to make money online. At SavvyPro, we teach in various ways, mostly around offering something. Here are four main ways we teach you how to make money online:\n\n1. The Gig Economy — you offer services, coaching, or consulting online.\n2. E-commerce — you have goods you want to sell online.\n3. E-learning — providing educational materials such as courses online in exchange for a fee.\n4. Digital Marketing — get more customers for your business online.\n\nOur lead trainer teaches legitimate and straightforward ways to make money online. It takes an interest in learning, a willingness to practice, and resilience to keep going if things do not go well.',
+      'Thanks for asking — there are several legitimate routes to earning online. At SavvyPro we focus on offering value in one of four ways:\n\n1. The Gig Economy — sell services, coaching, or consulting.\n2. E-commerce — sell goods you create or source.\n3. E-learning — offer courses and educational materials for a fee.\n4. Digital Marketing — help businesses reach more customers online.\n\nOur lead trainer teaches straightforward methods that require real effort: curiosity, consistent practice, and the resilience to keep improving when things get tough.',
   },
   {
     question: 'Where can I find online jobs?',
     answer:
-      'There are many freelancing websites out there and many potential clients who are not even on freelancer websites. Once you have the right skill set and outlook you will realize that opportunities are everywhere. Many beginners make the mistake of searching for opportunities rather than problems they can solve. Entrepreneurs, individuals, and organizations are looking for solutions — learn to solve a problem and the opportunities will follow.',
+      'Freelance platforms are only one channel — plenty of clients never visit them. With the right skills and mindset, you will find opportunities all around you. A common beginner mistake is hunting for gigs instead of looking for problems to solve. Businesses and individuals want solutions: learn to solve a real problem and work will follow.',
   },
 ]
 

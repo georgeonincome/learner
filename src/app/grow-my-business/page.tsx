@@ -3,7 +3,7 @@ import homeContent from '@/content/home.json'
 
 export const metadata = {
   title: 'Grow My Business — SavvyPro',
-  description: 'Build the marketing, sales and business systems you need to strengthen your operations and grow revenue.',
+  description: 'Create the marketing, sales and business systems that strengthen your operations and lift revenue.',
 }
 
 const path = homeContent.paths.find((p) => p.id === 3)

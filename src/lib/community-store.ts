@@ -47,8 +47,8 @@ const seedGroups: CommunityGroup[] = [
   {
     id: '834',
     name: 'SavvyPro Starter Chatgroup',
-    tagline: 'Learn how to earn in the Gig Economy',
-    description: "Learn how to earn in the Gig Economy. Ask questions, share wins, and grow together with other learners.",
+    tagline: 'Discover ways to earn through online gigs',
+    description: "Discover ways to earn through online gigs. Ask questions, share wins, and learn alongside other members.",
     memberCount: 1505,
     channelCount: 3,
     postCount: 82,

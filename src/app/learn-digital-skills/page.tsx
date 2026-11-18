@@ -3,7 +3,7 @@ import homeContent from '@/content/home.json'
 
 export const metadata = {
   title: 'Learn Digital Skills — SavvyPro',
-  description: 'Get practical, hands-on training to build the digital skills you need to work, create, grow, and market.',
+  description: 'Build useful, hands-on digital skills for work, creating, growing and marketing what you offer.',
 }
 
 const path = homeContent.paths.find((p) => p.id === 2)

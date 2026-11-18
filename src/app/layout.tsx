@@ -3,7 +3,7 @@ import { ToastProvider } from '@/components/ui/Toast'
 
 export const metadata = {
   title: 'SavvyPro',
-  description: 'Practical systems, skills, training and hands-on help to grow revenue and build your brand.',
+  description: 'Practical tools, skills, training and hands-on support to grow revenue and strengthen your brand.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

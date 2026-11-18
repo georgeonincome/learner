@@ -26,11 +26,11 @@ Cloudinary, Nodemailer + React Email, Stripe test mode.
 - [x] M7 Engagement — community (groups/posts/comments/likes APIs + feed UI matching reference), coaching/appointments + webinars (with .ics), lead magnets/forms, AI assistant (mock streaming provider, per-user limits) — build passes
 - [x] M8 Admin — role-guarded admin area: overview, courses CRUD, lessons, blog posts CRUD, books, users, orders, memberships, settings — build passes
 - [x] M9 Hardening — zod validation on all mutating APIs, in-memory rate limiting (session/checkout/progress/community/appointments/webinars/leads/forms/AI), security headers, SECURITY.md, GAPS.md updated — build passes
-- [ ] Phase 4 Verification — tsc/lint/build, tests, Playwright journeys, sitemap crawler, layout comparison, Axe/Lighthouse, brand grep
-- [ ] Phase 5 Deliver — feature table, README, production checklist
+- [x] Phase 4 Verification — tsc, ESLint, 11 Vitest tests, production build, brand scan PASS, route coverage 181/181 — all green
+- [x] Phase 5 Deliver — README with feature table, PRODUCTION-CHECKLIST.md, BRAND-AUDIT.md, GAPS.md, SECURITY.md
 
 ## Current step
-Phase 4 Verification: run TypeScript check, ESLint (including the @mui/@emotion
-ban), production build, brand grep, sitemap/route coverage check, and add
-tests. Then Phase 5 deliverables (README, feature table, production checklist)
-and push all commits to origin main.
+All milestones and phases complete. Push the final commits to `origin main`.
+Note: Playwright journeys, Axe/Lighthouse and pixel-level layout comparison
+were not run (no browser/lighthouse setup in this environment) — recorded in
+GAPS.md as [unknown].

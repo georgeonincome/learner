@@ -12,16 +12,16 @@ export interface AiProvider {
   streamAnswer(messages: AiMessage[]): AsyncGenerator<string>
 }
 
-const moneyOnlineAnswer = `Thank you for your question, there are many ways to make money online. At SavvyPro, we teach in various ways, mostly around offering something. Here are four main ways we teach you how to make money online:
+const moneyOnlineAnswer = `Thanks for asking — there are several legitimate routes to earning online. At SavvyPro we focus on offering value in one of four ways:
 
-1. The Gig Economy — this means you offer services, coaching, or consulting online.
-2. E-commerce — this means you have goods you want to sell online.
-3. E-learning — this includes providing educational materials such as courses online in exchange for a fee.
-4. Digital Marketing — get more customers for your business online.
+1. The Gig Economy — offer services, coaching, or consulting.
+2. E-commerce — sell goods you create or source.
+3. E-learning — offer courses and educational materials for a fee.
+4. Digital Marketing — help businesses reach more customers online.
 
-Our lead trainer teaches legitimate and straightforward ways to make money online. It takes an interest in learning, a willingness to practice, and resilience to keep going.`
+Our lead trainer teaches straightforward methods that require real effort: curiosity, consistent practice, and the resilience to keep improving when things get tough.`
 
-const jobsAnswer = `There are many freelancing websites out there and many potential clients who are not even on freelancer websites. Once you have the right skill set and outlook you will realize that opportunities are everywhere. Many beginners make the mistake of searching for opportunities rather than problems they can solve. Entrepreneurs, individuals, and organizations are looking for solutions — learn to solve a problem and the opportunities will follow.`
+const jobsAnswer = `Freelance platforms are only one channel — plenty of clients never visit them. With the right skills and mindset, you will find opportunities all around you. A common beginner mistake is hunting for gigs instead of looking for problems to solve. Businesses and individuals want solutions: learn to solve a real problem and work will follow.`
 
 const defaultAnswer = `Great question. At SavvyPro we focus on practical digital skills you can use right away: content creation, freelancing, digital marketing, and building an expert business. Browse our courses to find a path that fits where you are right now, and join the community to ask follow-up questions.`
 

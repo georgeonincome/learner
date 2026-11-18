@@ -15,8 +15,7 @@ export default function WebinarRegistrationPage() {
           Webinar Registration — Freelancing
         </h1>
         <p className="text-text-secondary mb-8">
-          The Beginner Freelancer Blueprint: How to Make Your First $100 Using
-          Just Your Phone
+          The Beginner Freelancer Blueprint: Earn Your First $100 With Just Your Phone
         </p>
 
         <Card className="p-6 max-w-lg">

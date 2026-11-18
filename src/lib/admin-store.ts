@@ -67,7 +67,7 @@ export const adminStore: AdminStore =
     posts: initialPosts,
     settings: {
       siteName: 'SavvyPro',
-      tagline: 'Practical systems, skills, training and hands-on help.',
+      tagline: 'Practical tools, skills, training and hands-on support.',
       supportEmail: 'hello@savvypro.example',
       whatsapp: '+260 777 22 88 27',
       maintenanceMode: false,

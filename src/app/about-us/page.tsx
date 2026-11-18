@@ -4,7 +4,7 @@ import { Card } from '@/components/ui/Card'
 
 export const metadata = {
   title: 'About Us — SavvyPro',
-  description: 'Learn about SavvyPro — courses, coaching and expert support for people building what\'s next.',
+  description: 'Learn about SavvyPro — training, coaching and expert guidance for people creating what comes next.',
 }
 
 export default function AboutUsPage() {
@@ -32,7 +32,7 @@ export default function AboutUsPage() {
                 Our mission
               </h3>
               <p className="text-text-muted text-sm leading-relaxed mb-4">
-                Practical systems, skills, training and hands-on help to grow revenue and build your brand.
+                Practical tools, skills, training and hands-on support to grow revenue and strengthen your brand.
               </p>
               <div className="flex gap-3 text-sm">
                 <span className="text-text-primary">3,000+ students</span>

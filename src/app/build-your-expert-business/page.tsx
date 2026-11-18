@@ -3,7 +3,7 @@ import homeContent from '@/content/home.json'
 
 export const metadata = {
   title: 'Build Your Expert Business — SavvyPro',
-  description: 'Turn what you know into a stronger brand, business, product or service.',
+  description: 'Convert your knowledge into a stronger brand, an offer, or a service.',
 }
 
 const path = homeContent.paths.find((p) => p.id === 4)

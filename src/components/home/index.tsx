@@ -88,7 +88,7 @@ export function PathPicker() {
           marginBottom: '8px',
           color: REF.textPrimary,
         }}>
-          Pick an option: Where are you right now?
+          Choose an option — where are you today?
         </h1>
         <div className="flex gap-3 flex-wrap justify-center">
           {homeContent.paths.map((p) => (
@@ -146,7 +146,7 @@ export function SocialProof() {
             textAlign: 'center',
             marginBottom: '48px',
           }}>
-            Hear from students at every stage of their business journey.
+            Read stories from learners at every stage of their journey.
           </p>
         </div>
 

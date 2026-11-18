@@ -37,6 +37,10 @@ Still outstanding / conservative-inferred:
   not verifiable from the evidence.
 - [inferred] Rate limiting and admin identity are per-process in-memory; use a
   shared store for multi-instance deployments.
+- [unknown] Playwright end-to-end journeys, Axe accessibility audit and Lighthouse
+  performance scoring were not run in this environment (no browser tooling
+  configured). Static checks (tsc/ESLint/build/unit tests/brand scan/route
+  coverage) all pass.
 
 ## Reference capture gaps
 - `capture\` directory — MISSING from `_reference/`. [unknown] No capture metadata available.

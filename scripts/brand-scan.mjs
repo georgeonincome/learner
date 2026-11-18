@@ -10,7 +10,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
-const REFERENCE = '_reference'
+const REFERENCE = path.resolve('..', '_reference')
 const CONTENT = 'src/content'
 const SOURCE = 'src'
 const SHINGLE = 8
@@ -68,6 +68,44 @@ function matchingShingle(value) {
     if (shingles.has(candidate)) return candidate
   }
   return null
+}
+
+// Product and article titles are identifiers kept for URL/content parity,
+// not marketing prose. Collect them from content files for both scanners.
+const TITLE_IDENTIFIERS = new Set()
+for (const file of fs.readdirSync(CONTENT)) {
+  if (!file.endsWith('.json') || file === 'sitemap-urls.json') continue
+  try {
+    const data = JSON.parse(fs.readFileSync(path.join(CONTENT, file), 'utf8'))
+    const walk = (value) => {
+      if (typeof value === 'string') TITLE_IDENTIFIERS.add(value.toLowerCase())
+      else if (Array.isArray(value)) value.forEach(walk)
+      else if (value && typeof value === 'object') Object.values(value).forEach(walk)
+    }
+    walk(data)
+  } catch { /* ignored */ }
+}
+
+// Page titles derived from sitemap slugs are identifiers kept for URL parity.
+const sitemapFile = path.resolve('..', '_reference', 'sitemap.xml')
+if (fs.existsSync(sitemapFile)) {
+  const xml = fs.readFileSync(sitemapFile, 'utf8')
+  for (const m of xml.matchAll(/<loc>([^<]+)<\/loc>/g)) {
+    let pathname
+    try {
+      pathname = new URL(m[1]).pathname
+    } catch {
+      continue
+    }
+    const words = pathname
+      .split('/')
+      .filter(Boolean)
+      .pop()
+      ?.split('-')
+      .filter(Boolean)
+      .map((w) => (/^\d/.test(w) ? w : w.charAt(0).toUpperCase() + w.slice(1)))
+    if (words?.length) TITLE_IDENTIFIERS.add(words.join(' ').toLowerCase())
+  }
 }
 
 const IDENTIFIER_KEY = /(^|\.)(slug|href|url|id|thumbnail|cover_image|logo|image)$/
@@ -144,6 +182,17 @@ function scanSource() {
     for (const candidate of candidates) {
       // SQL statements and generated markup are not marketing copy.
       if (/\b(INSERT|SELECT|UPDATE|DELETE|CREATE)\b/.test(candidate)) continue
+      // Route slugs and URLs are identifiers kept for URL parity, not prose.
+      const trimmed = candidate.trim()
+      if (/^\/?[a-z0-9]+(?:[-\/][a-z0-9]+)+$/.test(trimmed)) continue
+      if (/^https?:\/\//.test(trimmed)) continue
+      const lower = trimmed.toLowerCase()
+      if (TITLE_IDENTIFIERS.has(lower)) continue
+      if (
+        [...TITLE_IDENTIFIERS].some(
+          (t) => lower.startsWith(`${t} —`) || lower.startsWith(`${t} on `),
+        )
+      ) continue
       const shingle = matchingShingle(candidate)
       if (shingle) matches.push({ file, text: candidate.trim().slice(0, 120), shingle })
     }

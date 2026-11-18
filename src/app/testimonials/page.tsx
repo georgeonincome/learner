@@ -3,7 +3,7 @@ import homeContent from '@/content/home.json'
 
 export const metadata = {
   title: 'Testimonials — SavvyPro',
-  description: 'Hear from students at every stage of their business journey.',
+  description: 'Read stories from learners at every stage of their journey.',
 }
 
 export default function TestimonialsPage() {
@@ -20,7 +20,7 @@ export default function TestimonialsPage() {
             Student & Client Stories
           </h1>
           <p className="text-text-secondary" style={{ lineHeight: '1.6' }}>
-            Hear from students at every stage of their business journey.
+            Read stories from learners at every stage of their journey.
           </p>
         </div>
 

@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/Button'
 export const metadata = {
   title: 'Freelancer Webinar — SavvyPro',
   description:
-    'Discover the easy formula we use to launch your freelancing with just your phone.',
+    'Learn the simple steps we use to start freelancing using only your phone.',
 }
 
 export default function FreelancerWebinarPage() {
@@ -13,11 +13,10 @@ export default function FreelancerWebinarPage() {
       <section className="bg-hero py-20">
         <div className="mx-auto max-w-[1000px] text-center">
           <h1 className="font-heading font-bold text-3xl md:text-5xl text-text-primary mb-4">
-            The Beginner Freelancer Blueprint: How to Make Your First $100 Using
-            Just Your Phone
+            The Beginner Freelancer Blueprint: Earn Your First $100 With Just Your Phone
           </h1>
           <p className="text-text-secondary text-lg mb-8">
-            Discover the easy formula we use to launch your freelancing
+            Learn the simple steps we use to start freelancing
           </p>
           <Link href="/webinar-registration-freelancing" className="no-underline">
             <Button variant="primary" size="lg">

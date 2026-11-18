@@ -5,15 +5,15 @@ import { Card } from '@/components/ui/Card'
 export const metadata = {
   title: 'Private 1-on-1 Consultation — SavvyPro',
   description:
-    'Turn your expertise into a coaching, consulting or service business with private consultation.',
+    'Build a coaching, consulting or service business from your expertise with private consultation.',
 }
 
 const offerings = [
   'Structure your offer using a 5-part transformation framework we use with our clients',
-  'Discover your profitable niche using our “sweet spot analysis”',
-  'A market entry plan with the low-fruit angles',
-  'A strategy to get leads from your current audience or circle',
-  'An evergreen approach to get leads beyond your current cycle with our litmus-test approach',
+  'Find your profitable niche with our “sweet spot analysis”',
+  'A market entry plan built around quick wins',
+  'A lead strategy using the audience you already have',
+  'A lasting lead approach beyond your current cycle using our litmus test',
   'A well-rounded product collection by selecting the business model combination that suits your individual goals, personal preferences and strengths',
 ]
 
@@ -38,12 +38,10 @@ export default function PrivateConsultationPage() {
             VIP PRIVATE CONSULTATION
           </p>
           <h1 className="font-heading font-bold text-3xl md:text-5xl text-text-primary mb-4">
-            Turn your expertise into a coaching, consulting or service business
+            Build a coaching, consulting or service business from your expertise
           </h1>
           <p className="text-text-secondary leading-relaxed mb-6">
-            Dear Coach/Consultant, are you an expert with lots of experience in
-            your field? Maybe you have been working in a corporate job and now
-            want to use your expertise to create your own gig.
+            Dear Coach/Consultant, do you have deep experience in your field? Perhaps you have spent years in corporate employment and now want to turn your expertise into your own venture.
           </p>
           <p className="text-text-secondary leading-relaxed mb-6">
             Your field of expertise could be: {fields.join(' · ')}, and so on.
@@ -52,8 +50,7 @@ export default function PrivateConsultationPage() {
             who value it and are willing to pay for it.
           </p>
           <p className="text-text-secondary leading-relaxed">
-            Does that sound like you? You could be my ideal client for private
-            consultation. If so, here is what I can offer you:
+            If that describes you, private consultation may be a good fit. Here is what I can offer:
           </p>
         </div>
       </section>
@@ -78,16 +75,14 @@ export default function PrivateConsultationPage() {
             Pricing
           </h2>
           <p className="text-text-secondary leading-relaxed mb-4">
-            Pricing is a range depending on how we deliver it. It starts from
-            K5,000 (about $200) and can be as high as K25,000 (about $1,000).
-            The final price depends on whether it will be online or in person
-            and other details.
+            Pricing varies by delivery format. Sessions start at K5,000 (about $200) and can reach K25,000 (about $1,000).
+            Your quote depends on the delivery format and session details.
           </p>
           <h3 className="font-heading font-bold text-text-primary mb-2">
             What this offer covers
           </h3>
           <ul className="space-y-2 text-text-secondary">
-            <li>✅ GROWTH PATH — we help you map out the next best move to hit your sales targets.</li>
+            <li>✅ GROWTH PATH — we map out the smartest next move toward your sales targets.</li>
             <li>✅ A clear plan for you to grow with confidence.</li>
           </ul>
         </Card>

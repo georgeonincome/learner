@@ -3,7 +3,7 @@ import homeContent from '@/content/home.json'
 
 export const metadata = {
   title: 'Business Solutions — SavvyPro',
-  description: 'Strengthen the systems, digital capability and team capacity your business needs to operate and grow at the next level.',
+  description: 'Sharpen the tools, digital know-how and the team capacity to run and grow the business.',
 }
 
 const path = homeContent.paths.find((p) => p.id === 5)

@@ -11,7 +11,7 @@ interface Message {
 }
 
 const suggestions = [
-  'I am looking for ways to make money online',
+  'I want to find ways to earn money online',
   'Where can I find online jobs?',
 ]
 

@@ -23,7 +23,7 @@ export default function ChooseYourPathPage() {
           lineHeight: '1.6',
           marginBottom: '48px',
         }}>
-          Pick an option: Where are you right now?
+          Choose an option — where are you today?
         </p>
 
         <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">

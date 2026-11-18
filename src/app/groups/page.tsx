@@ -5,7 +5,7 @@ import { Card } from '@/components/ui/Card'
 export const metadata = {
   title: 'Groups — SavvyPro Business Academy',
   description:
-    'Learn practical digital marketing skills and business strategies with the SavvyPro Business Academy.',
+    'Gain hands-on digital marketing skills and business strategy know-how with the SavvyPro Business Academy.',
 }
 
 const skills = [
@@ -27,15 +27,15 @@ const skills = [
 const reasons = [
   {
     title: 'Simple',
-    body: 'We keep all our lessons simple and easy to understand. We remove the fluff from the real stuff so you can avoid confusion.',
+    body: 'Our lessons stay simple and clear. We cut the filler and focus on what matters so you avoid confusion.',
   },
   {
     title: 'Practical',
-    body: 'We have no time for theories. Get lessons from real life experience and businesses.',
+    body: 'We skip heavy theory. Learn from real-world experience and actual businesses.',
   },
   {
     title: 'Mentorship',
-    body: 'Get mentored by peers, mentors and coaches so the journey does not feel alone or lost.',
+    body: 'Learn alongside peers, mentors and coaches so you never feel stuck on your own.',
   },
 ]
 
@@ -51,10 +51,7 @@ export default function GroupsPage() {
             BEGINNER TO EXPERT.
           </h1>
           <p className="mx-auto max-w-[760px] text-text-secondary leading-relaxed mb-8">
-            Learn practical Digital Marketing skills and business strategies to
-            help you build a business, get more clients, build your brand and
-            monetize your passion, experience, knowledge and expertise in order
-            to build your dream and spread your impact.
+            Gain useful digital marketing skills and business strategy know-how to grow a business, attract clients, strengthen your brand and turn your experience into income so you can build the dream and widen your impact.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/courses" className="no-underline">
@@ -122,17 +119,13 @@ export default function GroupsPage() {
               About us
             </h2>
             <p className="text-text-secondary text-sm leading-relaxed mb-3">
-              SavvyPro is a learning and mentoring platform with a passion to
-              deliver relevant and practical information aimed at building your
-              dream business in order to attain financial freedom and spread
-              your impact.
+              SavvyPro is a learning and mentoring platform focused on relevant, practical guidance to help you build your business, reach financial freedom and widen your impact.
             </p>
             <p className="text-text-secondary text-sm leading-relaxed">
-              Our mission is to help entrepreneurs thrive and grow so as to be
-              of wider use to society and the communities in which they operate.
-              We aim to be the go-to place for entrepreneurs in sub-Saharan
-              Africa where they can find knowledge, guidance, mentorship and
-              companionship relevant to business growth.
+              We aim to help entrepreneurs succeed and make a greater contribution to society and their local communities.
+              Our goal is to be a trusted hub for entrepreneurs across
+              sub-Saharan Africa, offering practical knowledge, coaching,
+              mentorship and peer support for business growth.
             </p>
           </Card>
           <Card className="p-6">
@@ -140,9 +133,7 @@ export default function GroupsPage() {
               Our Mission
             </h2>
             <p className="text-text-secondary text-sm leading-relaxed">
-              To grow small business owners and hustlers and set them up on a
-              path to real wealth through practical skills, training, mentorship
-              and hands-on help.
+              To help small business owners and hustlers build lasting wealth through practical skills, training, mentorship and hands-on support.
             </p>
           </Card>
         </section>
