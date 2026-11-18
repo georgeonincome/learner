@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server'
 import { communityStore, newId } from '@/lib/community-store'
 import { getCurrentUserId } from '@/lib/session'
+import { rateLimit } from '@/lib/rate-limit'
+import { commentSchema, safeParse } from '@/lib/validation'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -21,12 +23,20 @@ export async function POST(
   const post = findPost(postId)
   if (!post) return NextResponse.json({ error: 'Post not found' }, { status: 404 })
 
-  const { body } = await req.json()
-  if (typeof body !== 'string' || !body.trim()) {
-    return NextResponse.json({ error: 'body required' }, { status: 400 })
+  const authorId = await getCurrentUserId()
+  const limit = rateLimit(`comment:${authorId}`, { limit: 20, windowMs: 60 * 1000 })
+  if (!limit.allowed) {
+    return NextResponse.json(
+      { error: 'Too many comments. Try again shortly.' },
+      { status: 429, headers: { 'Retry-After': String(limit.retryAfterSeconds) } },
+    )
   }
 
-  const authorId = await getCurrentUserId()
+  const parsed = safeParse(commentSchema, await req.json())
+  if (!parsed.success) {
+    return NextResponse.json({ error: parsed.error }, { status: 400 })
+  }
+  const { body } = parsed.data
   const comment = {
     id: newId('comment'),
     authorId,

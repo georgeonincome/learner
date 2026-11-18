@@ -15,17 +15,28 @@ Completed (Tailwind CSS v4 rebuild):
 - Books catalog: `/books/` with preview/purchase gating
 - Book detail: `/book/<slug>/` with chapter list and preview gating
 
-Not yet built:
-- Auth pages: login, signup, forgot-password, reset-password, verify-email
-- Checkout page and success page
-- Dashboard and student area
-- Lesson player
-- Community pages
-- Appointment booking
-- Admin panel
-- Blog index/post/category
-- Mini-courses/programs
-- Legal/static pages
+Built after the initial audit (M2–M9):
+- Auth pages: login, signup, forgot-password, reset-password, verify-email — build passes
+- Checkout session + Stripe webhook (no dedicated checkout page yet) — build passes
+- Dashboard, course page, lesson player, progress API, certificates — build passes
+- Community feed (groups/posts/comments/likes), groups, contest — build passes
+- Appointment + webinar registration endpoints with .ics — build passes
+- Admin panel (courses, lessons, posts, books, users, orders, memberships, settings) — build passes
+- Blog index/post/category, legal/static pages, lead magnets, AI assistant — build passes
+
+Still outstanding / conservative-inferred:
+- [inferred] Many captured sitemap routes (e.g. video/audio libraries, mini-course
+  detail pages, PDF download pages) use generic content because backend data was
+  not capturable.
+- [inferred] Demo-mode fallbacks: community content store, admin store, progress
+  and certificate records use in-memory/globalThis storage when external
+  services (Firestore/Turso) are not configured. Wire to the real services for
+  production.
+- [unknown] Exact UI internals of the captured pages beyond visible HTML text
+  were reconstructed from class names and structure; pixel-perfect fidelity is
+  not verifiable from the evidence.
+- [inferred] Rate limiting and admin identity are per-process in-memory; use a
+  shared store for multi-instance deployments.
 
 ## Reference capture gaps
 - `capture\` directory — MISSING from `_reference/`. [unknown] No capture metadata available.

@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server'
 import { communityStore, findGroup, newId } from '@/lib/community-store'
 import { getCurrentUserId } from '@/lib/session'
+import { rateLimit } from '@/lib/rate-limit'
+import { postSchema, safeParse } from '@/lib/validation'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -23,15 +25,20 @@ export async function POST(
   const group = findGroup(groupId)
   if (!group) return NextResponse.json({ error: 'Group not found' }, { status: 404 })
 
-  const { title, body, channel } = await req.json()
-  if (typeof title !== 'string' || !title.trim()) {
-    return NextResponse.json({ error: 'title required' }, { status: 400 })
-  }
-  if (typeof body !== 'string' || !body.trim()) {
-    return NextResponse.json({ error: 'body required' }, { status: 400 })
+  const authorId = await getCurrentUserId()
+  const limit = rateLimit(`post:${authorId}`, { limit: 10, windowMs: 60 * 1000 })
+  if (!limit.allowed) {
+    return NextResponse.json(
+      { error: 'Too many posts. Try again shortly.' },
+      { status: 429, headers: { 'Retry-After': String(limit.retryAfterSeconds) } },
+    )
   }
 
-  const authorId = await getCurrentUserId()
+  const parsed = safeParse(postSchema, await req.json())
+  if (!parsed.success) {
+    return NextResponse.json({ error: parsed.error }, { status: 400 })
+  }
+  const { title, body, channel } = parsed.data
   const post = {
     id: newId('post'),
     groupId,

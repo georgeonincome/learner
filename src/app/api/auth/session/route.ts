@@ -1,14 +1,27 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getFirebaseAdminAuth, SESSION_COOKIE_NAME, SESSION_COOKIE_MAX_AGE } from '@/lib/firebase-admin'
 import { cookies } from 'next/headers'
+import { clientKey, rateLimit } from '@/lib/rate-limit'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
 export async function POST(req: NextRequest) {
   try {
-    const { idToken } = await req.json()
-    if (!idToken || typeof idToken !== 'string') {
+    const limit = rateLimit(`session:${await clientKey(req)}`, {
+      limit: 20,
+      windowMs: 60 * 1000,
+    })
+    if (!limit.allowed) {
+      return NextResponse.json(
+        { error: 'Too many attempts. Try again shortly.' },
+        { status: 429, headers: { 'Retry-After': String(limit.retryAfterSeconds) } },
+      )
+    }
+
+    const body = (await req.json()) as { idToken?: unknown }
+    const idToken = body.idToken
+    if (typeof idToken !== 'string' || !idToken) {
       return NextResponse.json({ error: 'idToken required' }, { status: 400 })
     }
 

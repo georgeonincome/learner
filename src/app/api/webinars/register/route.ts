@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server'
 import { getTursoClient } from '@/lib/turso'
 import { getCurrentUserId } from '@/lib/session'
 import { createIcsEvent } from '@/lib/ics'
+import { rateLimit } from '@/lib/rate-limit'
+import { webinarSchema, safeParse } from '@/lib/validation'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -9,13 +11,19 @@ export const dynamic = 'force-dynamic'
 export async function POST(req: Request) {
   try {
     const uid = await getCurrentUserId()
-    const { webinarId, name, email } = await req.json()
-    if (!webinarId || !email) {
+    const limit = rateLimit(`webinar:${uid}`, { limit: 10, windowMs: 60 * 1000 })
+    if (!limit.allowed) {
       return NextResponse.json(
-        { error: 'webinarId and email are required' },
-        { status: 400 },
+        { error: 'Too many registrations. Try again shortly.' },
+        { status: 429, headers: { 'Retry-After': String(limit.retryAfterSeconds) } },
       )
     }
+
+    const parsed = safeParse(webinarSchema, await req.json())
+    if (!parsed.success) {
+      return NextResponse.json({ error: parsed.error }, { status: 400 })
+    }
+    const { webinarId, name } = parsed.data
 
     await getTursoClient().execute(
       `CREATE TABLE IF NOT EXISTS webinar_registrations (

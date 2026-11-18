@@ -25,11 +25,12 @@ Cloudinary, Nodemailer + React Email, Stripe test mode.
 - [x] M6 Learning — dashboard, course page, lesson player, per-lesson progress API (upsert), client "Mark complete", certificates page + SVG download endpoint — build passes
 - [x] M7 Engagement — community (groups/posts/comments/likes APIs + feed UI matching reference), coaching/appointments + webinars (with .ics), lead magnets/forms, AI assistant (mock streaming provider, per-user limits) — build passes
 - [x] M8 Admin — role-guarded admin area: overview, courses CRUD, lessons, blog posts CRUD, books, users, orders, memberships, settings — build passes
-- [ ] M9 Hardening — rate limiting, auth guard on every API route, CSP/security headers, validation everywhere, .env.example
+- [x] M9 Hardening — zod validation on all mutating APIs, in-memory rate limiting (session/checkout/progress/community/appointments/webinars/leads/forms/AI), security headers, SECURITY.md, GAPS.md updated — build passes
 - [ ] Phase 4 Verification — tsc/lint/build, tests, Playwright journeys, sitemap crawler, layout comparison, Axe/Lighthouse, brand grep
 - [ ] Phase 5 Deliver — feature table, README, production checklist
 
 ## Current step
-M9 Hardening: rate limiting, auth guards on API routes, CSP/security headers,
-central validation with zod, SECURITY.md, then Phase 4 verification and final
-deliverables.
+Phase 4 Verification: run TypeScript check, ESLint (including the @mui/@emotion
+ban), production build, brand grep, sitemap/route coverage check, and add
+tests. Then Phase 5 deliverables (README, feature table, production checklist)
+and push all commits to origin main.

@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server'
 import { query, getTursoClient } from '@/lib/turso'
 import { getCurrentUserId } from '@/lib/session'
 import { createIcsEvent } from '@/lib/ics'
+import { rateLimit } from '@/lib/rate-limit'
+import { appointmentSchema, safeParse } from '@/lib/validation'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -9,18 +11,21 @@ export const dynamic = 'force-dynamic'
 export async function POST(req: Request) {
   try {
     const uid = await getCurrentUserId()
-    const { staffId, startsAt, durationMin, reason } = await req.json()
-    if (!staffId || !startsAt) {
+    const limit = rateLimit(`appt:${uid}`, { limit: 10, windowMs: 60 * 1000 })
+    if (!limit.allowed) {
       return NextResponse.json(
-        { error: 'staffId and startsAt are required' },
-        { status: 400 },
+        { error: 'Too many booking attempts. Try again shortly.' },
+        { status: 429, headers: { 'Retry-After': String(limit.retryAfterSeconds) } },
       )
     }
 
-    const start = new Date(startsAt)
-    if (Number.isNaN(start.getTime())) {
-      return NextResponse.json({ error: 'Invalid startsAt' }, { status: 400 })
+    const parsed = safeParse(appointmentSchema, await req.json())
+    if (!parsed.success) {
+      return NextResponse.json({ error: parsed.error }, { status: 400 })
     }
+    const { staffId, startsAt, durationMin, reason } = parsed.data
+
+    const start = new Date(startsAt)
     const minutes = typeof durationMin === 'number' ? durationMin : 30
     const end = new Date(start.getTime() + minutes * 60 * 1000)
 

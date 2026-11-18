@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server'
 import { query, getTursoClient } from '@/lib/turso'
 import { getCurrentUserId } from '@/lib/session'
+import { rateLimit } from '@/lib/rate-limit'
+import { progressSchema, safeParse } from '@/lib/validation'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -45,10 +47,19 @@ export async function GET(req: Request) {
 export async function POST(req: Request) {
   try {
     const uid = await getCurrentUserId()
-    const { lessonId, completed, percent, lastPositionSec } = await req.json()
-    if (typeof lessonId !== 'string' || !lessonId) {
-      return NextResponse.json({ error: 'lessonId required' }, { status: 400 })
+    const limit = rateLimit(`progress:${uid}`, { limit: 60, windowMs: 60 * 1000 })
+    if (!limit.allowed) {
+      return NextResponse.json(
+        { error: 'Too many updates. Try again shortly.' },
+        { status: 429, headers: { 'Retry-After': String(limit.retryAfterSeconds) } },
+      )
     }
+
+    const parsed = safeParse(progressSchema, await req.json())
+    if (!parsed.success) {
+      return NextResponse.json({ error: parsed.error }, { status: 400 })
+    }
+    const { lessonId, completed, percent, lastPositionSec } = parsed.data
 
     // Ensure the table exists in local/demo databases that were never seeded.
     await getTursoClient().execute(

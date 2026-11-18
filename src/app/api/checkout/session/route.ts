@@ -1,26 +1,33 @@
 import { NextResponse } from 'next/server'
+import type Stripe from 'stripe'
 import { getStripe, getBaseUrl } from '@/lib/stripe'
-import { cookies } from 'next/headers'
+import { getCurrentUserId } from '@/lib/session'
+import { rateLimit } from '@/lib/rate-limit'
+import { checkoutSchema, safeParse } from '@/lib/validation'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
 export async function POST(req: Request) {
   try {
-    const cookieStore = await cookies()
-    const sessionCookie = cookieStore.get('lena_session')?.value
-    if (!sessionCookie) {
-      return NextResponse.json({ error: 'Authentication required' }, { status: 401 })
+    const uid = await getCurrentUserId()
+    const limit = rateLimit(`checkout:${uid}`, { limit: 20, windowMs: 60 * 1000 })
+    if (!limit.allowed) {
+      return NextResponse.json(
+        { error: 'Too many checkout attempts. Try again shortly.' },
+        { status: 429, headers: { 'Retry-After': String(limit.retryAfterSeconds) } },
+      )
     }
 
-    const { lineItems, mode = 'payment', successUrl, cancelUrl } = await req.json()
-    if (!lineItems || !Array.isArray(lineItems) || lineItems.length === 0) {
-      return NextResponse.json({ error: 'lineItems required' }, { status: 400 })
+    const parsed = safeParse(checkoutSchema, await req.json())
+    if (!parsed.success) {
+      return NextResponse.json({ error: parsed.error }, { status: 400 })
     }
+    const { lineItems, mode, successUrl, cancelUrl } = parsed.data
 
     const session = await getStripe().checkout.sessions.create({
       mode,
-      line_items: lineItems,
+      line_items: lineItems as unknown as Stripe.Checkout.SessionCreateParams.LineItem[],
       success_url: successUrl ?? `${getBaseUrl()}/you-have-paid?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: cancelUrl ?? `${getBaseUrl()}/courses`,
       metadata: {},
