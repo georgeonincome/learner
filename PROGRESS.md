@@ -24,12 +24,12 @@ Cloudinary, Nodemailer + React Email, Stripe test mode.
 - [x] M5 Commerce — Stripe test-mode checkout, webhook signature + idempotency, order states, enrollment after confirmed payment, memberships + gating — build passes
 - [x] M6 Learning — dashboard, course page, lesson player, per-lesson progress API (upsert), client "Mark complete", certificates page + SVG download endpoint — build passes
 - [x] M7 Engagement — community (groups/posts/comments/likes APIs + feed UI matching reference), coaching/appointments + webinars (with .ics), lead magnets/forms, AI assistant (mock streaming provider, per-user limits) — build passes
-- [ ] M8 Admin — manage courses, lessons, posts, books, users, orders, memberships, settings
+- [x] M8 Admin — role-guarded admin area: overview, courses CRUD, lessons, blog posts CRUD, books, users, orders, memberships, settings — build passes
 - [ ] M9 Hardening — rate limiting, auth guard on every API route, CSP/security headers, validation everywhere, .env.example
 - [ ] Phase 4 Verification — tsc/lint/build, tests, Playwright journeys, sitemap crawler, layout comparison, Axe/Lighthouse, brand grep
 - [ ] Phase 5 Deliver — feature table, README, production checklist
 
 ## Current step
-M8 Admin: management screens for courses, lessons, posts, books, users, orders,
-memberships and settings, with role-guarded routes and APIs. Build after the
-phase; commit; then proceed to M9 Hardening and final verification.
+M9 Hardening: rate limiting, auth guards on API routes, CSP/security headers,
+central validation with zod, SECURITY.md, then Phase 4 verification and final
+deliverables.
