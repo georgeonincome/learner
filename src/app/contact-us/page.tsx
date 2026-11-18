@@ -45,7 +45,7 @@ export default function ContactUsPage() {
             <h2 className="font-heading font-bold text-text-primary mb-4" style={{ fontSize: '18px' }}>
               Send us a message
             </h2>
-            <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); }}>
+            <form className="space-y-4" action="#" method="GET">
               <Input
                 label="Name"
                 placeholder="Your name"

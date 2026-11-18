@@ -18,7 +18,7 @@ export function getTursoClient() {
 export async function query<T = unknown>(sql: string, args: InArgs = []) {
   const c = getTursoClient()
   const { rows } = await c.execute({ sql, args })
-  return rows as T[]
+  return rows as unknown as T[]
 }
 
 export async function getClient() {
