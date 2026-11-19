@@ -4,7 +4,9 @@ import path from 'node:path'
 export default defineConfig({
   test: {
     environment: 'node',
-    include: ['src/**/*.test.ts'],
+    include: ['src/**/*.test.ts', 'tests/**/*.test.ts'],
+    setupFiles: ['./vitest.setup.ts'],
+    fileParallelism: false,
   },
   resolve: {
     alias: {
