@@ -31,3 +31,17 @@ turso-data/
 
 # Coverage
 coverage/
+
+# Local audit/dev data
+.cache/
+local.db
+*.db-journal
+
+# Regenerable evidence captures (scripts/capture-live.mjs + capture-browser.mjs)
+captured/
+captured-browser/
+
+# Test/dev artifacts
+test-results/
+.tmp-test.db
+tsconfig.tsbuildinfo

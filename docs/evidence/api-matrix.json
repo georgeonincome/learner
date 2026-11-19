@@ -1,0 +1,455 @@
+[
+ {
+  "path": "/api/admin/courses/[id]",
+  "methods": [
+   "PATCH",
+   "DELETE"
+  ],
+  "guard": [
+   "admin"
+  ],
+  "zod": false,
+  "rateLimit": false,
+  "revalidate": false,
+  "sqlWrites": [],
+  "firestore": [],
+  "lines": 36
+ },
+ {
+  "path": "/api/admin/courses",
+  "methods": [
+   "GET",
+   "POST"
+  ],
+  "guard": [
+   "admin"
+  ],
+  "zod": false,
+  "rateLimit": false,
+  "revalidate": false,
+  "sqlWrites": [],
+  "firestore": [],
+  "lines": 43
+ },
+ {
+  "path": "/api/admin/posts/[slug]",
+  "methods": [
+   "PATCH",
+   "DELETE"
+  ],
+  "guard": [
+   "admin"
+  ],
+  "zod": false,
+  "rateLimit": false,
+  "revalidate": false,
+  "sqlWrites": [],
+  "firestore": [],
+  "lines": 35
+ },
+ {
+  "path": "/api/admin/posts",
+  "methods": [
+   "GET",
+   "POST"
+  ],
+  "guard": [
+   "admin"
+  ],
+  "zod": false,
+  "rateLimit": false,
+  "revalidate": false,
+  "sqlWrites": [],
+  "firestore": [],
+  "lines": 42
+ },
+ {
+  "path": "/api/admin/settings",
+  "methods": [
+   "GET",
+   "POST"
+  ],
+  "guard": [
+   "admin"
+  ],
+  "zod": false,
+  "rateLimit": false,
+  "revalidate": false,
+  "sqlWrites": [],
+  "firestore": [],
+  "lines": 22
+ },
+ {
+  "path": "/api/admin/users",
+  "methods": [
+   "GET"
+  ],
+  "guard": [
+   "admin"
+  ],
+  "zod": false,
+  "rateLimit": false,
+  "revalidate": false,
+  "sqlWrites": [],
+  "firestore": [
+   "users"
+  ],
+  "lines": 20
+ },
+ {
+  "path": "/api/ai/chat",
+  "methods": [
+   "POST"
+  ],
+  "guard": [
+   "uid(demo-fallback)"
+  ],
+  "zod": true,
+  "rateLimit": true,
+  "revalidate": false,
+  "sqlWrites": [],
+  "firestore": [],
+  "lines": 63
+ },
+ {
+  "path": "/api/appointments/[id]/ics",
+  "methods": [
+   "GET"
+  ],
+  "guard": [],
+  "zod": false,
+  "rateLimit": false,
+  "revalidate": false,
+  "sqlWrites": [],
+  "firestore": [],
+  "lines": 43
+ },
+ {
+  "path": "/api/appointments",
+  "methods": [
+   "POST"
+  ],
+  "guard": [
+   "uid(demo-fallback)"
+  ],
+  "zod": true,
+  "rateLimit": true,
+  "revalidate": false,
+  "sqlWrites": [
+   "appointments"
+  ],
+  "firestore": [],
+  "lines": 91
+ },
+ {
+  "path": "/api/auth/logout",
+  "methods": [
+   "POST"
+  ],
+  "guard": [],
+  "zod": false,
+  "rateLimit": false,
+  "revalidate": false,
+  "sqlWrites": [],
+  "firestore": [],
+  "lines": 18
+ },
+ {
+  "path": "/api/auth/me",
+  "methods": [
+   "GET"
+  ],
+  "guard": [
+   "session-verify"
+  ],
+  "zod": false,
+  "rateLimit": false,
+  "revalidate": false,
+  "sqlWrites": [],
+  "firestore": [],
+  "lines": 31
+ },
+ {
+  "path": "/api/auth/session",
+  "methods": [
+   "POST"
+  ],
+  "guard": [],
+  "zod": false,
+  "rateLimit": true,
+  "revalidate": false,
+  "sqlWrites": [],
+  "firestore": [],
+  "lines": 56
+ },
+ {
+  "path": "/api/certificates/download",
+  "methods": [
+   "GET"
+  ],
+  "guard": [
+   "uid(demo-fallback)"
+  ],
+  "zod": false,
+  "rateLimit": false,
+  "revalidate": false,
+  "sqlWrites": [],
+  "firestore": [],
+  "lines": 64
+ },
+ {
+  "path": "/api/checkout/session",
+  "methods": [
+   "POST"
+  ],
+  "guard": [
+   "uid(demo-fallback)"
+  ],
+  "zod": true,
+  "rateLimit": true,
+  "revalidate": false,
+  "sqlWrites": [],
+  "firestore": [],
+  "lines": 43
+ },
+ {
+  "path": "/api/community/groups/[groupId]/posts",
+  "methods": [
+   "GET",
+   "POST"
+  ],
+  "guard": [
+   "uid(demo-fallback)"
+  ],
+  "zod": true,
+  "rateLimit": true,
+  "revalidate": false,
+  "sqlWrites": [],
+  "firestore": [],
+  "lines": 58
+ },
+ {
+  "path": "/api/community/groups",
+  "methods": [
+   "GET"
+  ],
+  "guard": [],
+  "zod": false,
+  "rateLimit": false,
+  "revalidate": false,
+  "sqlWrites": [],
+  "firestore": [],
+  "lines": 19
+ },
+ {
+  "path": "/api/community/posts/[postId]/comments",
+  "methods": [
+   "POST"
+  ],
+  "guard": [
+   "uid(demo-fallback)"
+  ],
+  "zod": true,
+  "rateLimit": true,
+  "revalidate": false,
+  "sqlWrites": [],
+  "firestore": [],
+  "lines": 49
+ },
+ {
+  "path": "/api/community/posts/[postId]/like",
+  "methods": [
+   "POST"
+  ],
+  "guard": [
+   "uid(demo-fallback)"
+  ],
+  "zod": false,
+  "rateLimit": false,
+  "revalidate": false,
+  "sqlWrites": [],
+  "firestore": [],
+  "lines": 30
+ },
+ {
+  "path": "/api/enrollments",
+  "methods": [
+   "GET",
+   "POST"
+  ],
+  "guard": [
+   "uid(demo-fallback)",
+   "401-check"
+  ],
+  "zod": true,
+  "rateLimit": true,
+  "revalidate": false,
+  "sqlWrites": [
+   "enrollments"
+  ],
+  "firestore": [],
+  "lines": 48
+ },
+ {
+  "path": "/api/forms/submit",
+  "methods": [
+   "POST"
+  ],
+  "guard": [],
+  "zod": true,
+  "rateLimit": true,
+  "revalidate": false,
+  "sqlWrites": [
+   "form_submissions"
+  ],
+  "firestore": [],
+  "lines": 58
+ },
+ {
+  "path": "/api/leads/claim",
+  "methods": [
+   "POST"
+  ],
+  "guard": [],
+  "zod": true,
+  "rateLimit": true,
+  "revalidate": false,
+  "sqlWrites": [
+   "lead_claims"
+  ],
+  "firestore": [],
+  "lines": 52
+ },
+ {
+  "path": "/api/memberships/cancel",
+  "methods": [
+   "POST"
+  ],
+  "guard": [],
+  "zod": false,
+  "rateLimit": false,
+  "revalidate": false,
+  "sqlWrites": [
+   "memberships"
+  ],
+  "firestore": [],
+  "lines": 25
+ },
+ {
+  "path": "/api/memberships/gate",
+  "methods": [
+   "GET"
+  ],
+  "guard": [],
+  "zod": false,
+  "rateLimit": false,
+  "revalidate": false,
+  "sqlWrites": [],
+  "firestore": [],
+  "lines": 38
+ },
+ {
+  "path": "/api/memberships/purchase",
+  "methods": [
+   "POST"
+  ],
+  "guard": [],
+  "zod": false,
+  "rateLimit": false,
+  "revalidate": false,
+  "sqlWrites": [],
+  "firestore": [],
+  "lines": 39
+ },
+ {
+  "path": "/api/memberships",
+  "methods": [
+   "GET"
+  ],
+  "guard": [],
+  "zod": false,
+  "rateLimit": false,
+  "revalidate": false,
+  "sqlWrites": [],
+  "firestore": [],
+  "lines": 23
+ },
+ {
+  "path": "/api/orders",
+  "methods": [
+   "GET"
+  ],
+  "guard": [],
+  "zod": false,
+  "rateLimit": false,
+  "revalidate": false,
+  "sqlWrites": [],
+  "firestore": [],
+  "lines": 26
+ },
+ {
+  "path": "/api/progress",
+  "methods": [
+   "GET",
+   "POST"
+  ],
+  "guard": [
+   "uid(demo-fallback)"
+  ],
+  "zod": true,
+  "rateLimit": true,
+  "revalidate": false,
+  "sqlWrites": [
+   "SET",
+   "lesson_progress"
+  ],
+  "firestore": [],
+  "lines": 106
+ },
+ {
+  "path": "/api/webhooks/stripe",
+  "methods": [
+   "POST"
+  ],
+  "guard": [],
+  "zod": false,
+  "rateLimit": false,
+  "revalidate": false,
+  "sqlWrites": [
+   "order_items",
+   "orders"
+  ],
+  "firestore": [],
+  "lines": 120
+ },
+ {
+  "path": "/api/webinars/register/[id]/ics",
+  "methods": [
+   "GET"
+  ],
+  "guard": [],
+  "zod": false,
+  "rateLimit": false,
+  "revalidate": false,
+  "sqlWrites": [],
+  "firestore": [],
+  "lines": 41
+ },
+ {
+  "path": "/api/webinars/register",
+  "methods": [
+   "POST"
+  ],
+  "guard": [
+   "uid(demo-fallback)"
+  ],
+  "zod": true,
+  "rateLimit": true,
+  "revalidate": false,
+  "sqlWrites": [
+   "webinar_registrations"
+  ],
+  "firestore": [],
+  "lines": 73
+ }
+]

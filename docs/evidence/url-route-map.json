@@ -1,0 +1,726 @@
+{
+ "/": [
+  "static",
+  "/"
+ ],
+ "/101-digital-skills-pdf-download": [
+  "static",
+  "/101-digital-skills-pdf-download"
+ ],
+ "/3keys-to-getting-more-customers": [
+  "static",
+  "/3keys-to-getting-more-customers"
+ ],
+ "/5-types-of-expert-businesses-you-can-launch": [
+  "static",
+  "/5-types-of-expert-businesses-you-can-launch"
+ ],
+ "/7-daily-sales-and-marketing-actions-for-your-sales-team": [
+  "static",
+  "/7-daily-sales-and-marketing-actions-for-your-sales-team"
+ ],
+ "/7-step-whatspp-automation-system-setup": [
+  "static",
+  "/7-step-whatspp-automation-system-setup"
+ ],
+ "/7-steps-to-better-sales-book": [
+  "static",
+  "/7-steps-to-better-sales-book"
+ ],
+ "/7-sytem-whatsapp-automation-setup": [
+  "static",
+  "/7-sytem-whatsapp-automation-setup"
+ ],
+ "/about-us": [
+  "static",
+  "/about-us"
+ ],
+ "/all-products": [
+  "static",
+  "/all-products"
+ ],
+ "/appointment": [
+  "static",
+  "/appointment"
+ ],
+ "/audio-details": [
+  "static",
+  "/audio-details"
+ ],
+ "/audio-library": [
+  "static",
+  "/audio-library"
+ ],
+ "/blog": [
+  "static",
+  "/blog"
+ ],
+ "/blog/1-page-sales-and-marketing-strategy": [
+  "dynamic",
+  "/blog/[slug]"
+ ],
+ "/blog/11-reasons-customers-dont-buy-and-how-to-fix-them-fast": [
+  "dynamic",
+  "/blog/[slug]"
+ ],
+ "/blog/12-savvy-ways-to-use-whatsapp-for-marketing": [
+  "dynamic",
+  "/blog/[slug]"
+ ],
+ "/blog/14-types-of-clients-you-can-work-with-as-a-content-creator": [
+  "dynamic",
+  "/blog/[slug]"
+ ],
+ "/blog/17-proven-ways-to-make-your-brand-unmissable-online-even-on-a-tiny-budget": [
+  "dynamic",
+  "/blog/[slug]"
+ ],
+ "/blog/17-ways-african-businesses-use-whatsapp-to-get-customers-with-real-examples": [
+  "dynamic",
+  "/blog/[slug]"
+ ],
+ "/blog/5-types-of-expert-businesses-you-can-start": [
+  "dynamic",
+  "/blog/[slug]"
+ ],
+ "/blog/7-ways-to-find-mentorship": [
+  "dynamic",
+  "/blog/[slug]"
+ ],
+ "/blog/99-online-gigs-you-can-start-right-now-african-edition": [
+  "dynamic",
+  "/blog/[slug]"
+ ],
+ "/blog/are-linkedin-ads-really-the-cure-for-your-broke-ass-lead-problem": [
+  "dynamic",
+  "/blog/[slug]"
+ ],
+ "/blog/category/ceo-digital-strategies/766": [
+  "dynamic",
+  "/blog/category/[cat]/[id]"
+ ],
+ "/blog/category/digital-biz-ideas/1147": [
+  "dynamic",
+  "/blog/category/[cat]/[id]"
+ ],
+ "/blog/category/freelancer-listings/2817": [
+  "dynamic",
+  "/blog/category/[cat]/[id]"
+ ],
+ "/blog/category/growth-marketing/1149": [
+  "dynamic",
+  "/blog/category/[cat]/[id]"
+ ],
+ "/blog/category/personal-branding/3821": [
+  "dynamic",
+  "/blog/category/[cat]/[id]"
+ ],
+ "/blog/category/susan-lumba-mwenda/3870": [
+  "dynamic",
+  "/blog/category/[cat]/[id]"
+ ],
+ "/blog/ceo-mistakes-in-digital-growth-and-how-to-avoid-them": [
+  "dynamic",
+  "/blog/[slug]"
+ ],
+ "/blog/how-to-make-your-own-salary-part-2": [
+  "dynamic",
+  "/blog/[slug]"
+ ],
+ "/blog/how-to-make-your-own-salary-part-3": [
+  "dynamic",
+  "/blog/[slug]"
+ ],
+ "/blog/learn-content-creation-skills": [
+  "dynamic",
+  "/blog/[slug]"
+ ],
+ "/blog/learn-digital-marketing": [
+  "dynamic",
+  "/blog/[slug]"
+ ],
+ "/blog/making-your-own-salary-stay-home-mums": [
+  "dynamic",
+  "/blog/[slug]"
+ ],
+ "/blog/marketing-budget-recommendations-global-edition": [
+  "dynamic",
+  "/blog/[slug]"
+ ],
+ "/blog/marketing-budget-recommendations-zambia-edition": [
+  "dynamic",
+  "/blog/[slug]"
+ ],
+ "/blog/stop-losing-sales-to-unanswered-whatsapp-messages": [
+  "dynamic",
+  "/blog/[slug]"
+ ],
+ "/blog/susan-lumba-mwenda": [
+  "dynamic",
+  "/blog/[slug]"
+ ],
+ "/blog/the-11-elements-behind-a-high-value-expert-brand": [
+  "dynamic",
+  "/blog/[slug]"
+ ],
+ "/blog/why-you-avoid-creating-content": [
+  "dynamic",
+  "/blog/[slug]"
+ ],
+ "/books": [
+  "static",
+  "/books"
+ ],
+ "/books-stripe-payment": [
+  "static",
+  "/books-stripe-payment"
+ ],
+ "/botpenguin-images": [
+  "static",
+  "/botpenguin-images"
+ ],
+ "/build-your-expert-business": [
+  "static",
+  "/build-your-expert-business"
+ ],
+ "/business-solutions": [
+  "static",
+  "/business-solutions"
+ ],
+ "/ccp-pdf-program": [
+  "static",
+  "/ccp-pdf-program"
+ ],
+ "/ccs-program-outline-download": [
+  "static",
+  "/ccs-program-outline-download"
+ ],
+ "/ccs-testimonials": [
+  "static",
+  "/ccs-testimonials"
+ ],
+ "/ccs-vsl1": [
+  "static",
+  "/ccs-vsl1"
+ ],
+ "/ceo-digital-strategy": [
+  "static",
+  "/ceo-digital-strategy"
+ ],
+ "/chatbot-test-page": [
+  "static",
+  "/chatbot-test-page"
+ ],
+ "/choose-your-path": [
+  "static",
+  "/choose-your-path"
+ ],
+ "/coaching-program-detail": [
+  "static",
+  "/coaching-program-detail"
+ ],
+ "/community-detail": [
+  "static",
+  "/community-detail"
+ ],
+ "/community/4943": [
+  "dynamic",
+  "/community/[id]"
+ ],
+ "/community/4944": [
+  "dynamic",
+  "/community/[id]"
+ ],
+ "/community/650": [
+  "dynamic",
+  "/community/[id]"
+ ],
+ "/community/834": [
+  "dynamic",
+  "/community/[id]"
+ ],
+ "/community/853": [
+  "dynamic",
+  "/community/[id]"
+ ],
+ "/contact-us": [
+  "static",
+  "/contact-us"
+ ],
+ "/content-creation-school": [
+  "static",
+  "/content-creation-school"
+ ],
+ "/content-creation-school-main": [
+  "static",
+  "/content-creation-school-main"
+ ],
+ "/contest": [
+  "static",
+  "/contest"
+ ],
+ "/course-detail/1-year-content-plan-in-3-days/41281": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/audiobook-social-media-content-creation-copy-1792214327806/49797": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/audiobook-social-media-content-creation/12514": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/audiobook-zero-to-hero-social-media-manager-copy-1792212460894/49793": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/audiobook-zero-to-hero-social-media-manager/10199": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/content-creation-school-2026-copy-1776429703034/41634": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/content-creation-school-2026-copy-1790672869460/49068": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/content-creation-school-2026-tutor-1790673216325/49070": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/content-creation-school-2026/36467": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/content-creation-school/7107": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/copywriting-crash-course/23197": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/digital-marketing-conversion-mastery/18127": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/digital-skills-fasttrack/24115": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/digital-tools/17996": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/ebook-zero-to-hero-social-media-manager-copy-1792212437299/49792": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/ebook-zero-to-hero-social-media-manager/10317": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/free-audiobook-autopilot-sales-system/49908": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/free-audiobook-how-to-create-and-sell-your-first-online-course/49906": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/free-audiobook-social-media-paid-ads/49801": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/how-to-create-and-sell-your-first-online-course/49870": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/infopreneur-audiobook-copy-1792213073560/49794": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/infopreneur-audiobook/3986": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/infoprenuer-how-to-make-money-from-your-passion-knowledge-and-experience/4885": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/infoprenuer-roadmap-ebook-copy-1792213119365/49795": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/infoprenuer-roadmap-ebook/3982": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/manage-and-grow-your-business/42538": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/social-media-content-creation-ebook-copy-1792214265244/49796": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/social-media-content-creation-ebook/3995": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/start-smallthink-big/49186": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/start-where-you-are-audiobook-copy-1792925319820/50151": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/start-where-you-are-audiobook/49791": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/course-detail/visbility-course-why-you-are-invible-and-how-to-change-it/40331": [
+  "dynamic",
+  "/course-detail/[slug]/[id]"
+ ],
+ "/courses": [
+  "static",
+  "/courses"
+ ],
+ "/digital-entreprenuership-program": [
+  "static",
+  "/digital-entreprenuership-program"
+ ],
+ "/digital-savvypro": [
+  "static",
+  "/digital-savvypro"
+ ],
+ "/digital-skills-and-tools-to-build-your-business-signup": [
+  "static",
+  "/digital-skills-and-tools-to-build-your-business-signup"
+ ],
+ "/digital-skills-class": [
+  "static",
+  "/digital-skills-class"
+ ],
+ "/digital-skills-classes": [
+  "static",
+  "/digital-skills-classes"
+ ],
+ "/ebooks": [
+  "static",
+  "/ebooks"
+ ],
+ "/enroll-in-digital-ntreprenuership-academy": [
+  "static",
+  "/enroll-in-digital-ntreprenuership-academy"
+ ],
+ "/for-businesses": [
+  "static",
+  "/for-businesses"
+ ],
+ "/free": [
+  "static",
+  "/free"
+ ],
+ "/freebies": [
+  "static",
+  "/freebies"
+ ],
+ "/freelancer-bundle": [
+  "static",
+  "/freelancer-bundle"
+ ],
+ "/freelancer-connect": [
+  "static",
+  "/freelancer-connect"
+ ],
+ "/freelancer-fasttrack-bundle": [
+  "static",
+  "/freelancer-fasttrack-bundle"
+ ],
+ "/freelancer-webinar": [
+  "static",
+  "/freelancer-webinar"
+ ],
+ "/freelancers": [
+  "static",
+  "/freelancers"
+ ],
+ "/freelancing-free-tips": [
+  "static",
+  "/freelancing-free-tips"
+ ],
+ "/freelancing-tips-signup": [
+  "static",
+  "/freelancing-tips-signup"
+ ],
+ "/getting-started-page": [
+  "static",
+  "/getting-started-page"
+ ],
+ "/groups": [
+  "static",
+  "/groups"
+ ],
+ "/grow-my-business": [
+  "static",
+  "/grow-my-business"
+ ],
+ "/infopreneur-roadmap-book": [
+  "static",
+  "/infopreneur-roadmap-book"
+ ],
+ "/inner-circle": [
+  "static",
+  "/inner-circle"
+ ],
+ "/join-our-mailing-list": [
+  "static",
+  "/join-our-mailing-list"
+ ],
+ "/kcpay--redirect": [
+  "static",
+  "/kcpay--redirect"
+ ],
+ "/kcpay-registration-success": [
+  "static",
+  "/kcpay-registration-success"
+ ],
+ "/kinsumo-test": [
+  "static",
+  "/kinsumo-test"
+ ],
+ "/launch-your-expert-business-bootcamp": [
+  "static",
+  "/launch-your-expert-business-bootcamp"
+ ],
+ "/learn-digital-skills": [
+  "static",
+  "/learn-digital-skills"
+ ],
+ "/learn-with-expert-guidance": [
+  "static",
+  "/learn-with-expert-guidance"
+ ],
+ "/learning-hub": [
+  "static",
+  "/learning-hub"
+ ],
+ "/learning-with-a-coach": [
+  "static",
+  "/learning-with-a-coach"
+ ],
+ "/login": [
+  "static",
+  "/login"
+ ],
+ "/magnetic-personal-branding": [
+  "static",
+  "/magnetic-personal-branding"
+ ],
+ "/marketing-software": [
+  "static",
+  "/marketing-software"
+ ],
+ "/membership": [
+  "static",
+  "/membership"
+ ],
+ "/microgigs": [
+  "static",
+  "/microgigs"
+ ],
+ "/mini-courses": [
+  "static",
+  "/mini-courses"
+ ],
+ "/offers": [
+  "static",
+  "/offers"
+ ],
+ "/pabbly-form-test": [
+  "static",
+  "/pabbly-form-test"
+ ],
+ "/pay-for-savvypro-digital-skills-certification": [
+  "static",
+  "/pay-for-savvypro-digital-skills-certification"
+ ],
+ "/payforcontentcreationschool": [
+  "static",
+  "/payforcontentcreationschool"
+ ],
+ "/payments": [
+  "static",
+  "/payments"
+ ],
+ "/pdf-download-file-7-step-whatsapp-automation": [
+  "static",
+  "/pdf-download-file-7-step-whatsapp-automation"
+ ],
+ "/pdf-file-101-digital-skills": [
+  "static",
+  "/pdf-file-101-digital-skills"
+ ],
+ "/privacy-policy": [
+  "static",
+  "/privacy-policy"
+ ],
+ "/private-1-on-1-consultation": [
+  "static",
+  "/private-1-on-1-consultation"
+ ],
+ "/refund-policy": [
+  "static",
+  "/refund-policy"
+ ],
+ "/savvybot-ai-agent": [
+  "static",
+  "/savvybot-ai-agent"
+ ],
+ "/savvypro": [
+  "static",
+  "/savvypro"
+ ],
+ "/savvypro-digital-skills-certification": [
+  "static",
+  "/savvypro-digital-skills-certification"
+ ],
+ "/savvypro-digital-skills-class": [
+  "static",
+  "/savvypro-digital-skills-class"
+ ],
+ "/savvypro-digital-skills-club": [
+  "static",
+  "/savvypro-digital-skills-club"
+ ],
+ "/savvypro-home": [
+  "static",
+  "/savvypro-home"
+ ],
+ "/savvypro-lp1": [
+  "static",
+  "/savvypro-lp1"
+ ],
+ "/savvypro-main": [
+  "static",
+  "/savvypro-main"
+ ],
+ "/savvypro-mobile-apps": [
+  "static",
+  "/savvypro-mobile-apps"
+ ],
+ "/savvypro-privacy-policy": [
+  "static",
+  "/savvypro-privacy-policy"
+ ],
+ "/savvypro-refund-policy": [
+  "static",
+  "/savvypro-refund-policy"
+ ],
+ "/savvypro-terms-and-conditions": [
+  "static",
+  "/savvypro-terms-and-conditions"
+ ],
+ "/signin": [
+  "static",
+  "/signin"
+ ],
+ "/signup": [
+  "static",
+  "/signup"
+ ],
+ "/signup-for-free-email-tips": [
+  "static",
+  "/signup-for-free-email-tips"
+ ],
+ "/social-media-content-creation-book": [
+  "static",
+  "/social-media-content-creation-book"
+ ],
+ "/social-media-strategy-book": [
+  "static",
+  "/social-media-strategy-book"
+ ],
+ "/start-where-you-are-book": [
+  "static",
+  "/start-where-you-are-book"
+ ],
+ "/susan-mwenda-mulongoti": [
+  "static",
+  "/susan-mwenda-mulongoti"
+ ],
+ "/susan-mwenda-mulongoti-consultant": [
+  "static",
+  "/susan-mwenda-mulongoti-consultant"
+ ],
+ "/terms-and-conditions": [
+  "static",
+  "/terms-and-conditions"
+ ],
+ "/testimonials": [
+  "static",
+  "/testimonials"
+ ],
+ "/testing-social-media-sharing-buttons-for-pages": [
+  "static",
+  "/testing-social-media-sharing-buttons-for-pages"
+ ],
+ "/testkcpayment": [
+  "static",
+  "/testkcpayment"
+ ],
+ "/user": [
+  "static",
+  "/user"
+ ],
+ "/vacostcalculator": [
+  "static",
+  "/vacostcalculator"
+ ],
+ "/video-details": [
+  "static",
+  "/video-details"
+ ],
+ "/video-library": [
+  "static",
+  "/video-library"
+ ],
+ "/visibility-tips-signup": [
+  "static",
+  "/visibility-tips-signup"
+ ],
+ "/webinar-registration-freelancing": [
+  "static",
+  "/webinar-registration-freelancing"
+ ],
+ "/whatsapp-automation-toolkit": [
+  "static",
+  "/whatsapp-automation-toolkit"
+ ],
+ "/whatsapp-marketing-for-smes": [
+  "static",
+  "/whatsapp-marketing-for-smes"
+ ],
+ "/win-a-book": [
+  "static",
+  "/win-a-book"
+ ],
+ "/words-that-sell-copywriting-secrets-that-make-customers-buy": [
+  "static",
+  "/words-that-sell-copywriting-secrets-that-make-customers-buy"
+ ],
+ "/you-have-paid": [
+  "static",
+  "/you-have-paid"
+ ],
+ "/zero-to-hero-social-media-manager-book": [
+  "static",
+  "/zero-to-hero-social-media-manager-book"
+ ]
+}

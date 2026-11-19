@@ -1,44 +1,32 @@
-# UI-SPEC/blog.md — Blog templates (`/blog`, `/blog/<slug>`, `/blog/category/<name>/<id>`)
+# UI-SPEC/blog.md — reference measurements from block-tree code
 
-Source: `_reference/SPECIFICATION.md` §2; captured blog HTML. All measurements [inferred]. See TOKENS.md.
+Source: `__NEXT_DATA__` builder.present of _reference/site/www.savvypro.org/blog.html (captured 2026-11-16/19).
+Method: settings.style.desktop/tablet/mobile are literal CSS the reference applies per device.
+Audit viewport mapping: 375px→mobile styles; 768px→tablet (fallback desktop); 1024/1280/1536px→desktop.
+Grid: Bootstrap .container (max-width 540/720/960/1140/1320 at 576/768/992/1200/1400) + .row (12-col, 24px gutter).
 
-## Routes
-`/blog/` (list), 22 `/blog/<slug>/` posts, 6 `/blog/category/<name>/<id>/` categories (see COVERAGE.md)
+## Section order (2 top-level sections)
 
-## Sections (blog list)
-- Header / nav
-- Page heading: "Blog"
-- Search input
-- Category filter chips
-- Post grid: cards (thumbnail, title, excerpt, date, read-time, category badge `#e6f1fb`)
-- Pagination (prev/next + page numbers)
+### Section 1 (id 4246132d)
+- desktop: paddingTop:100px; paddingBottom:0px; paddingLeft:0; paddingRight:0; background:; backgroundImage:; backgroundSize:cover; backgroundRepeat:no-repeat; backgroundColor:#fafafa
+- tablet: paddingTop:100px; paddingBottom:0px; paddingLeft:0; paddingRight:0; background:; backgroundImage:; backgroundSize:cover; backgroundRepeat:no-repeat; backgroundColor:#fafafa
+- mobile: (inherits desktop)
+    - Row (2 col) align=start/center
+      - Column
+        - Box: paddingBottom:50px
+          - Heading: "Our Blog"
+            - desktop: fontSize=20px fontWeight=700 lineHeight=1.2 color=#3040C4
+          - Heading: "Resources for makers and creatives to learn, sell and grow"
+            - desktop: fontSize=40px fontWeight=800 lineHeight=1.2 color=#1B164F
+            - mobile: fontSize=30px fontWeight=800 lineHeight=1.2 color=#1B164F
+          - Heading: "Learn how to grow and scale your online course business using our online course platform. EzyCourse blog is designed to "
+            - desktop: fontSize=19px fontWeight=400 lineHeight=1.6 color=#606060
+      - Column — alignSelf:end
+          - Img: "" alt=""
 
-## Sections (blog post)
-- Header / nav
-- Post hero: featured image + `#090e21` or light bg; title (Verdana), date, author, category
-- Post content (rich text)
-- [inferred] Related posts
-- [inferred] Comments (if enabled)
-
-## Sections (blog category)
-- Header / nav
-- Category heading + description
-- Post grid filtered by category
-- Pagination
-
-## Breakpoint behavior (inferred)
-| Element | 375px | 768px | 1024px | 1280px | 1536px |
-|---|---|---|---|---|---|
-| Post grid | 1 col | 2 col | 3 col | 3 col | 3 col |
-| Search + filters | stacked | inline wrap | inline | inline | inline |
-
-## States
-- Loading: skeleton posts
-- Empty: "No posts found"
-- Error: error banner + retry
-
-## Accessibility
-- Search input with label; post cards as links; pagination aria-label
-
-## Gaps
-- Comment system, author bios, related-posts algorithm — [inferred] minimal.
+### Section 2 (id 7a730f39)
+- desktop: backgroundColor:#f4f4f4; paddingTop:30px; paddingBottom:50px; paddingLeft:0; paddingRight:0
+- tablet: backgroundColor:#f4f4f4; paddingTop:0px; paddingBottom:50px; paddingLeft:0; paddingRight:0
+- mobile: (inherits desktop)
+    - Row (1 col) align=start/start
+      - AllBlogs (dynamic blog card grid)
