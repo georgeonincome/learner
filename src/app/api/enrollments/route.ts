@@ -10,6 +10,7 @@ export const dynamic = 'force-dynamic'
 
 export async function GET() {
   const uid = await getCurrentUserId()
+  if (!uid) return NextResponse.json({ error: 'Sign in required' }, { status: 401 })
   const enrollments = await listEnrollments(uid)
   return NextResponse.json({ enrollments })
 }

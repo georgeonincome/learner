@@ -11,7 +11,7 @@ export const dynamic = 'force-dynamic'
 export async function POST(req: Request) {
   try {
     const uid = await getCurrentUserId()
-    const limit = rateLimit(`checkout:${uid}`, { limit: 20, windowMs: 60 * 1000 })
+    const limit = rateLimit(`checkout:${uid ?? 'guest'}`, { limit: 20, windowMs: 60 * 1000 })
     if (!limit.allowed) {
       return NextResponse.json(
         { error: 'Too many checkout attempts. Try again shortly.' },

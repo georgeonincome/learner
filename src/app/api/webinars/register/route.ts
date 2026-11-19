@@ -11,7 +11,7 @@ export const dynamic = 'force-dynamic'
 export async function POST(req: Request) {
   try {
     const uid = await getCurrentUserId()
-    const limit = rateLimit(`webinar:${uid}`, { limit: 10, windowMs: 60 * 1000 })
+    const limit = rateLimit(`webinar:${uid ?? 'guest'}`, { limit: 10, windowMs: 60 * 1000 })
     if (!limit.allowed) {
       return NextResponse.json(
         { error: 'Too many registrations. Try again shortly.' },
@@ -45,7 +45,7 @@ export async function POST(req: Request) {
     await getTursoClient().execute({
       sql: `INSERT INTO webinar_registrations (id, auth_user_id, webinar_id, ics_url, created_at)
             VALUES (?, ?, ?, ?, datetime('now'))`,
-      args: [id, uid, webinarId, icsUrl],
+      args: [id, uid ?? 'guest', webinarId, icsUrl],
     })
 
     const ics = createIcsEvent({

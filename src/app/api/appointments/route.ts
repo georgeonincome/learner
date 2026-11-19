@@ -11,6 +11,7 @@ export const dynamic = 'force-dynamic'
 export async function POST(req: Request) {
   try {
     const uid = await getCurrentUserId()
+    if (!uid) return NextResponse.json({ error: 'Sign in required' }, { status: 401 })
     const limit = rateLimit(`appt:${uid}`, { limit: 10, windowMs: 60 * 1000 })
     if (!limit.allowed) {
       return NextResponse.json(

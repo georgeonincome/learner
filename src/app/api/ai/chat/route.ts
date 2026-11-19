@@ -9,7 +9,7 @@ export const dynamic = 'force-dynamic'
 
 export async function POST(req: Request) {
   const uid = await getCurrentUserId()
-  const limit = rateLimit(`ai:${uid}`, {
+  const limit = rateLimit(`ai:${uid ?? 'anon'}`, {
     limit: 20,
     windowMs: 60 * 60 * 1000,
   })

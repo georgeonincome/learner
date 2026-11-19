@@ -22,6 +22,7 @@ export async function POST(
   if (!post) return NextResponse.json({ error: 'Post not found' }, { status: 404 })
 
   const uid = await getCurrentUserId()
+  if (!uid) return NextResponse.json({ error: 'Sign in required' }, { status: 401 })
   const index = post.likes.indexOf(uid)
   if (index >= 0) post.likes.splice(index, 1)
   else post.likes.push(uid)

@@ -1,3 +1,4 @@
+import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import { getCurrentUserId } from '@/lib/session'
 import { listEnrollments, listProgress, completionPercent } from '@/lib/learning'
@@ -12,6 +13,7 @@ export const dynamic = 'force-dynamic'
  */
 export default async function DashboardPage() {
   const uid = await getCurrentUserId()
+  if (!uid) redirect('/signin?callbackUrl=/dashboard')
   const [enrollments, progress] = await Promise.all([listEnrollments(uid), listProgress(uid)])
   const books = getBooks()
 

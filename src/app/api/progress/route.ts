@@ -20,6 +20,7 @@ interface ProgressRow {
 export async function GET(req: Request) {
   try {
     const uid = await getCurrentUserId()
+    if (!uid) return NextResponse.json({ error: 'Sign in required' }, { status: 401 })
     const { searchParams } = new URL(req.url)
     const lessonId = searchParams.get('lessonId')
 
@@ -47,6 +48,7 @@ export async function GET(req: Request) {
 export async function POST(req: Request) {
   try {
     const uid = await getCurrentUserId()
+    if (!uid) return NextResponse.json({ error: 'Sign in required' }, { status: 401 })
     const limit = rateLimit(`progress:${uid}`, { limit: 60, windowMs: 60 * 1000 })
     if (!limit.allowed) {
       return NextResponse.json(

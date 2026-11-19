@@ -26,6 +26,7 @@ export async function POST(
   if (!group) return NextResponse.json({ error: 'Group not found' }, { status: 404 })
 
   const authorId = await getCurrentUserId()
+  if (!authorId) return NextResponse.json({ error: 'Sign in required' }, { status: 401 })
   const limit = rateLimit(`post:${authorId}`, { limit: 10, windowMs: 60 * 1000 })
   if (!limit.allowed) {
     return NextResponse.json(

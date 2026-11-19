@@ -1,9 +1,21 @@
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import Stripe from 'stripe'
 import { POST as webhookPOST } from '../src/app/api/webhooks/stripe/route'
 import { GET as gateGET } from '../src/app/api/memberships/gate/route'
 import { POST as progressPOST } from '../src/app/api/progress/route'
 import { query } from '../src/lib/turso'
+
+// Session identity is mocked: route handlers run outside a Next request context.
+// Default: an authenticated integration user. Set mocks.uid = null to exercise
+// the fail-closed 401 path (audit B10/D8 — no demo-user fallback).
+const mocks = vi.hoisted(() => ({ uid: 'integration-user' as string | null }))
+vi.mock('@/lib/session', () => ({
+  getCurrentUserId: async () => mocks.uid,
+  getSessionUser: async () =>
+    mocks.uid
+      ? { uid: mocks.uid, email: 'integration@lena.local', emailVerified: true, role: 'student' }
+      : null,
+}))
 
 function jsonRequest(body: unknown, headers: Record<string, string> = {}) {
   return new Request('http://127.0.0.1:3000/api/test', {
@@ -69,7 +81,6 @@ describe('checkout webhook', () => {
       "SELECT id FROM enrollments WHERE auth_user_id = 'integration-user' AND course_id = 'course-1'",
     )
     expect(enrollments).toHaveLength(1)
-
     const second = await webhookPOST(req())
     expect(second.status).toBe(200)
     const ordersAfter = await query<{ id: string }>(
@@ -93,6 +104,17 @@ describe('enrollment / membership gating', () => {
 })
 
 describe('lesson progress', () => {
+  it('rejects unauthenticated writes with 401 (no demo fallback)', async () => {
+    mocks.uid = null
+    const res = await progressPOST(jsonRequest({ lessonId: 'anon-lesson', completed: true }))
+    expect(res.status).toBe(401)
+    const rows = await query<{ id: string }>(
+      "SELECT id FROM lesson_progress WHERE lesson_id = 'anon-lesson'",
+    )
+    expect(rows).toHaveLength(0)
+    mocks.uid = 'integration-user'
+  })
+
   it('rejects malformed payloads', async () => {
     const res = await progressPOST(jsonRequest({ lessonId: '' }))
     expect(res.status).toBe(400)

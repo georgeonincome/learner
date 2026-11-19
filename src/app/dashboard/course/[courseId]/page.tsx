@@ -1,3 +1,4 @@
+import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import { getCurrentUserId } from '@/lib/session'
 import { listProgress, completionPercent, isEnrolled } from '@/lib/learning'
@@ -32,6 +33,7 @@ export default async function DashboardCoursePage({
   }
 
   const uid = await getCurrentUserId()
+  if (!uid) redirect('/signin?callbackUrl=/dashboard')
   const enrolled = await isEnrolled(uid, String(course.id))
   const lessons = getCourseCurriculum(course)
   const [progress] = await Promise.all([listProgress(uid)])

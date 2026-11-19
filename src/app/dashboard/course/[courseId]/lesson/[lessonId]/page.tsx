@@ -1,3 +1,4 @@
+import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import { getCurrentUserId } from '@/lib/session'
 import { listProgress, isEnrolled, completionPercent } from '@/lib/learning'
@@ -33,6 +34,7 @@ export default async function LessonPlayerPage({
   }
 
   const uid = await getCurrentUserId()
+  if (!uid) redirect('/signin?callbackUrl=/dashboard')
   const enrolled = await isEnrolled(uid, String(course.id))
   const lessons = getCourseCurriculum(course)
   const progress = await listProgress(uid)

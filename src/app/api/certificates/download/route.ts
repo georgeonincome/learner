@@ -20,6 +20,7 @@ function escapeXml(value: string) {
  */
 export async function GET(req: Request) {
   const uid = await getCurrentUserId()
+  if (!uid) return NextResponse.json({ error: 'Sign in required' }, { status: 401 })
   const { searchParams } = new URL(req.url)
   const name = escapeXml(searchParams.get('name') || 'Learner')
   const course = escapeXml(searchParams.get('course') || 'Course')

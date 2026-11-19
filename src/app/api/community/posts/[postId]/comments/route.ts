@@ -24,6 +24,7 @@ export async function POST(
   if (!post) return NextResponse.json({ error: 'Post not found' }, { status: 404 })
 
   const authorId = await getCurrentUserId()
+  if (!authorId) return NextResponse.json({ error: 'Sign in required' }, { status: 401 })
   const limit = rateLimit(`comment:${authorId}`, { limit: 20, windowMs: 60 * 1000 })
   if (!limit.allowed) {
     return NextResponse.json(
