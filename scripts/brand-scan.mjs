@@ -9,6 +9,7 @@
 // Run: node scripts/brand-scan.mjs
 import fs from 'node:fs'
 import path from 'node:path'
+import crypto from 'node:crypto'
 
 const REFERENCE = path.resolve('..', '_reference')
 const CONTENT = 'src/content'
@@ -202,13 +203,33 @@ function scanSource() {
 }
 
 function findBinaryAssets(dir) {
-  const out = []
-  if (!fs.existsSync(dir)) return out
-  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    const full = path.join(dir, entry.name)
-    if (entry.isDirectory()) out.push(...findBinaryAssets(full))
-    else if (/\.(png|jpe?g|svg|webp|gif|ico|woff2?|ttf|otf)$/i.test(entry.name)) out.push(full)
+  // Flag only files byte-identical to a captured reference asset, rather than
+  // every SVG in public (our own original SVGs must not be false positives).
+  const hash = (p) => crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex')
+  const referenceHashes = new Set()
+  const collectRef = (d) => {
+    if (!fs.existsSync(d)) return
+    for (const e of fs.readdirSync(d, { withFileTypes: true })) {
+      const full = path.join(d, e.name)
+      if (e.isDirectory()) collectRef(full)
+      else if (/\.(png|jpe?g|svg|webp|gif|ico|woff2?|ttf|otf)$/i.test(e.name)) {
+        try { referenceHashes.add(hash(full)) } catch { /* unreadable */ }
+      }
+    }
   }
+  collectRef(path.join(REFERENCE, 'site'))
+  const out = []
+  const walk = (d) => {
+    if (!fs.existsSync(d)) return
+    for (const e of fs.readdirSync(d, { withFileTypes: true })) {
+      const full = path.join(d, e.name)
+      if (e.isDirectory()) walk(full)
+      else if (/\.(png|jpe?g|svg|webp|gif|ico|woff2?|ttf|otf)$/i.test(e.name)) {
+        try { if (referenceHashes.has(hash(full))) out.push(full) } catch { /* unreadable */ }
+      }
+    }
+  }
+  walk(dir)
   return out
 }
 
