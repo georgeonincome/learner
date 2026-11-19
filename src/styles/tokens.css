@@ -1,51 +1,72 @@
 /**
- * tokens.css — the single theme file.
- *
- * Three layers:
- *  1. Brand tokens (BRAND_NAME / logo / palette) — edit these to rebrand.
- *  2. Runtime theme variables the reference site injects per-installation
- *     (`--ezy_variable_*`), extracted from the captured pages.
- *  3. Tailwind v4 `@theme` color mappings so utilities such as
- *     `bg-ezy-primary-500` / `text-ezy-gray-400` compile to the same values the
- *     reference's own Tailwind build produced.
+ * tokens.css — Lena theme (ORIGINAL palette; audit J4/J5, decision D3).
+ * Variable NAMES are kept stable so components keep working; VALUES are the
+ * Lena brand, not the reference's. The reference palette (#6662ff/#00a3ff/
+ * #ff007a/navy) must never appear here — brand-scan enforces this.
+ * Brand facts live in src/content/brand.json; this file is the Tailwind theme.
  */
 
 :root {
   /* 1. Brand tokens ------------------------------------------------------- */
-  --brand-name: 'SavvyPro';
-  --brand-logo: 'https://letcheck.b-cdn.net/1887/clnizq4lo015wgq9nh2425qsy.jpg';
-  --brand-primary: #6662ff;
-  --brand-primary-hover: #3a34df;
-  --brand-action: #00a3ff;
-  --brand-action-hover: #3b3b3b;
-  --brand-cta: #ff007a;
-  --brand-cta-hover: #3b3b3b;
-  --brand-ink: #090e21;
-  --brand-surface: #101b2f;
-  --brand-surface-elevated: #16243e;
+  --brand-name: 'Lena';
+  --brand-logo: '/logo.svg';
+  --brand-primary: #0e7c66;
+  --brand-primary-hover: #0a5c4c;
+  --brand-action: #0e7c66;
+  --brand-action-hover: #0a5c4c;
+  --brand-cta: #e8a33d;
+  --brand-cta-hover: #c8862b;
+  --brand-ink: #0b1f1a;
+  --brand-surface: #12241e;
+  --brand-surface-elevated: #1a3129;
 
-  /* 2. Runtime theme variables (from the reference install) ---------------- */
-  --ezy_variable_WDV7i_LNXDl: #6662ff;
-  --ezy_variable_WDV7i_LNXDs: #3a34df;
+  /* 2. Runtime theme variables (legacy spec pages until M9 retirement).
+        Mapped to Lena tokens so no reference color leaks through. --------- */
+  --ezy_variable_WDV7i_LNXDl: var(--brand-primary);
+  --ezy_variable_WDV7i_LNXDs: var(--brand-primary-hover);
   --ezy_variable_WDV7i_LNXDt: #ffffff;
-  --ezy_variable_WDV7i_LNXDu: #000000;
-  --ezy_variable_WDV7i_LNXDv: #3a34df;
-  --ezy_variable_WDV7i_LNXDw: #000000;
+  --ezy_variable_WDV7i_LNXDu: #f2f7f4;
+  --ezy_variable_WDV7i_LNXDv: var(--brand-primary-hover);
+  --ezy_variable_WDV7i_LNXDw: #f2f7f4;
   --ezy_variable_WDV7i_LNXDx: #ffffff;
-  --ezy_variable_WDV7i_LNXDy: #000000;
+  --ezy_variable_WDV7i_LNXDy: #f2f7f4;
   --ezy_variable_WDV7i_LNXDz: #ffffff;
   --ezy_variable_WDV7i_LNXEo: #ffffff;
   --ezy_variable_WDV7i_LNXEp: #ffffff;
   --ezy_variable_WDV7i_LNXEq: #ffffff;
-  --ezy_variable_WDV7i_LNXEr: #000000;
-  --ezy_variable_WDV7i_LNXEs: #3a34df;
+  --ezy_variable_WDV7i_LNXEr: #0b1f1a;
+  --ezy_variable_WDV7i_LNXEs: var(--brand-primary-hover);
 
-  /* Reference type/scale tokens (from the captured styled-components CSS) -- */
   --ezy-header-height: 0px;
+
+  /* Ezy palette scale remapped to Lena teal/green-gray (original values). */
+  --ezyPrimary: #0e7c66;
+  --ezyPrimaryHover: #0a5c4c;
+  --ezyPrimary500: #0e7c66;
+  --ezyPrimary400: #17937a;
+  --ezyPrimary300: #3aab92;
+  --ezyPrimary200: #7cc7b4;
+  --ezyPrimary100: #bfe3d8;
+  --ezyPrimary50: #e6f4ef;
+  --ezyPrimary25: #f2faf7;
+  --ezyGray950: #0b1f1a;
+  --ezyGray900: #12241e;
+  --ezyGray800: #1a3129;
+  --ezyGray750: #224034;
+  --ezyGray700: #2e4a3f;
+  --ezyGray600: #466156;
+  --ezyGray500: #5f7d70;
+  --ezyGray400: #84a094;
+  --ezyGray300: #aec4ba;
+  --ezyGray250: #c9dad2;
+  --ezyGray200: #dce5e0;
+  --ezyGray100: #ecf2ef;
+  --ezyGray50: #f4f7f5;
+  --ezyGray25: #fafcfb;
 }
 
 @theme inline {
-  /* Ezy palette -> Tailwind color utilities */
+  /* Ezy palette -> Tailwind color utilities (Lena values) */
   --color-ezy-primary: var(--ezyPrimary);
   --color-ezy-primary-hover: var(--ezyPrimaryHover);
   --color-ezy-primary-500: var(--ezyPrimary500);
@@ -70,36 +91,42 @@
   --color-ezy-gray-50: var(--ezyGray50);
   --color-ezy-gray-25: var(--ezyGray25);
 
-  /* Legacy component tokens (pre-rebuild components) mapped to the same palette */
+  /* Component tokens (Lena values) */
   --color-primary: var(--brand-primary);
   --color-primary-hover: var(--brand-primary-hover);
+  --color-primary-text: #3aab92;
   --color-blue: var(--brand-action);
   --color-blue-hover: var(--brand-action-hover);
   --color-magenta: var(--brand-cta);
   --color-magenta-hover: var(--brand-cta-hover);
   --color-dark-navy: var(--brand-surface);
   --color-dark-slate: var(--brand-surface-elevated);
-  --color-near-black: #110011;
-  --color-light-gray: #d9d9d9;
-  --color-off-white: rgb(248 247 247);
-  --color-gray-text: #94a3b8;
-  --color-text-muted: #5b6475;
-  --color-border: #64748b;
-  --color-badge: #e6f1fb;
+  --color-near-black: #0b1f1a;
+  --color-light-gray: #dce5e0;
+  --color-off-white: #f2f7f4;
+  --color-gray-text: #84a094;
+  --color-text-muted: #9db3a8;
+  --color-border: #2e4a3f;
+  --color-badge: #1e3a31;
   --color-hero-bg: var(--brand-ink);
-  --color-nprogress: #29d;
+  --color-nprogress: #e8a33d;
 
   --color-bg-hero: var(--brand-ink);
   --color-bg-surface: var(--brand-surface);
   --color-bg-surface-elevated: var(--brand-surface-elevated);
   --color-text-primary: var(--color-off-white);
-  --color-text-secondary: #f7f3f3;
+  --color-text-secondary: #dce8e2;
   --color-border-card: var(--color-border);
   --color-text-dark-on-light: var(--brand-surface-elevated);
   --color-text-white: #ffffff;
   --color-border-light: var(--color-border);
   --color-surface: var(--brand-surface);
   --color-surface-elevated: var(--brand-surface-elevated);
+
+  --color-success: #1e7d46;
+  --color-danger: #c0392b;
+  --color-warning: #b7791f;
+  --color-info: #2c6e9b;
 
   --font-family-heading: Verdana, 'Lucida Sans Unicode', Arial, sans-serif;
   --font-family-body: Figtree, 'Lucida Sans Unicode', 'Twemoji Country Flags', sans-serif;

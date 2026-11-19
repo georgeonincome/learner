@@ -1,16 +1,14 @@
 import './globals.css'
-// The reference site's compiled CSS: Bootstrap grid + utilities, the EzyCourse
-// theme classes, and the styled-components rules captured from its pages.
-// Imported after globals.css so they take precedence over Tailwind's layered
-// preflight for shared properties.
+// Legacy reference stylesheets — retired in M9 (Tailwind-only rebuild).
+// Kept temporarily so the remaining spec-replay pages render during the build-out.
 import '@/styles/vendor.css'
 import '@/styles/reference.css'
 import { ToastProvider } from '@/components/ui/Toast'
+import brand from '@/lib/brand'
 
 export const metadata = {
-  title: 'SavvyPro',
-  description:
-    'Practical tools, skills, training and hands-on support to grow revenue and strengthen your brand.',
+  title: { default: `${brand.name} — ${brand.tagline}`, template: `%s — ${brand.name}` },
+  description: brand.description,
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
