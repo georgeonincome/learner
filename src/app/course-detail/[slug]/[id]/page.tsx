@@ -1,5 +1,65 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
+import coursesData from '@/content/courses.json'
+import courseDetailSlugs from '@/content/course-detail-slugs.json'
+
+type CourseView = {
+  id: string
+  slug: string
+  title: string
+  category: string
+  description: string
+  price: number
+  currency: string
+  strike_through_price?: number
+  is_free: boolean
+  chapters_count: number
+  lessons_count: number
+}
+
+function titleFromSlug(slug: string) {
+  return slug
+    .replace(/-\d{10,}$/, '')
+    .split('-')
+    .filter((w) => w && !/^\d+$/.test(w))
+    .map((w) => (w === 'copy' ? '' : w.charAt(0).toUpperCase() + w.slice(1)))
+    .filter(Boolean)
+    .join(' ')
+}
+
+function getCourse(slug: string, id: string): CourseView {
+  const found = (coursesData.courses ?? []).find(
+    (c) => String(c.id) === id || c.slug === slug,
+  )
+  if (found) {
+    return {
+      id: String(found.id),
+      slug: found.slug,
+      title: found.title,
+      category: found.category,
+      description: found.description,
+      price: found.price,
+      currency: found.currency || 'USD',
+      strike_through_price: found.strike_through_price ?? 0,
+      is_free: found.is_free ?? false,
+      chapters_count: found.chapters_count ?? 0,
+      lessons_count: found.lessons_count ?? 0,
+    }
+  }
+  // Sitemap URLs without a matching content entry: derive an original title.
+  return {
+    id,
+    slug,
+    title: `${titleFromSlug(slug) || 'Course'} (${id})`,
+    category: 'Course',
+    description: `Explore ${titleFromSlug(slug) || 'this course'} (${id}) on SavvyPro — practical digital skills and training.`,
+    price: 0,
+    currency: 'USD',
+    is_free: true,
+    chapters_count: 0,
+    lessons_count: 0,
+  }
+}
 
 const REF = {
   primary: '#00a3ff',
@@ -11,20 +71,6 @@ const REF = {
   textSecondary: '#f7f3f3',
   textMuted: '#5b6475',
   borderCard: '#64748b',
-}
-
-const course = {
-  id: 36467,
-  slug: 'content-creation-school-2026',
-  title: 'Content Creation School 2026',
-  category: 'Content Creation',
-  description: 'Learn to create compelling content for social media, blogs, and video platforms. From strategy to execution, this course covers everything you need to build an audience and monetize your content.',
-  price: 75,
-  currency: 'USD',
-  strike_through_price: 149,
-  is_free: false,
-  chapters_count: 6,
-  lessons_count: 18,
 }
 
 const chapters = [
@@ -60,28 +106,23 @@ const chapters = [
 export const dynamicParams = true
 
 export async function generateStaticParams() {
-  return [
-    { slug: 'content-creation-school-2026', id: '36467' },
-    { slug: 'how-to-create-and-sell-your-first-online-course', id: '49870' },
-    { slug: 'ebook-zero-to-hero-social-media-manager', id: '10317' },
-    { slug: 'start-where-you-are-book', id: '50151' },
-    { slug: 'audiobook-zero-to-hero-social-media-manager', id: '10199' },
-    { slug: 'free-audiobook-how-to-create-and-sell-your-first-online-course', id: '49906' },
-  ]
+  return courseDetailSlugs
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string; id: string }> }) {
-  await params
+  const { slug, id } = await params
+  const c = getCourse(slug, id)
   return {
-    title: course.title,
-    description: course.description,
-    alternates: { canonical: `/course-detail/${course.slug}/${course.id}` },
-    openGraph: { title: course.title, description: course.description, type: 'website' },
+    title: `${c.title} — SavvyPro`,
+    description: c.description,
+    alternates: { canonical: `/course-detail/${c.slug}/${c.id}` },
+    openGraph: { title: c.title, description: c.description, type: 'website' },
   }
 }
 
 export default async function CourseDetailPage({ params }: { params: Promise<{ slug: string; id: string }> }) {
-  await params
+  const { slug, id } = await params
+  const course = getCourse(slug, id)
   return (
     <div data-layout-section className="py-10 md:py-16 px-2 sm:px-2">
       <div className="mx-auto max-w-[1264px]">
@@ -157,7 +198,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
               }}>
                 {course.is_free ? 'Free' : `$${course.currency} ${course.price}`}
               </h2>
-              {course.strike_through_price > 0 && (
+              {(course.strike_through_price ?? 0) > 0 && (
                 <p className="mb-4" style={{ color: REF.textSecondary, textDecoration: 'line-through' }}>
                   {course.currency} {course.strike_through_price}
                 </p>

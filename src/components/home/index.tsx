@@ -161,7 +161,7 @@ export function SocialProof() {
           {homeContent.testimonials.map((t) => (
             <div key={t.name} className="flex flex-col h-full p-3 border border-border-card rounded-xl bg-surface-elevated" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
               <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', height: '100%' }}>
-                <img src="/logo.png" alt="Widget image" style={{ width: '100%', height: '160px', objectFit: 'cover', borderRadius: '6px' }} />
+                <img src="/logo.svg" alt="Widget image" style={{ width: '100%', height: '160px', objectFit: 'cover', borderRadius: '6px' }} />
                 <h1 className="font-heading font-bold" style={{ fontSize: '20px', marginTop: '8px', marginBottom: '4px', color: REF.textPrimary }}>
                   {t.name}
                 </h1>

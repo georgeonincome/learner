@@ -1,0 +1,1631 @@
+[
+  {
+    "url": "/all-products",
+    "status": 200,
+    "title": "All Products — SavvyPro",
+    "description": "Explore our full catalog of courses, programs and books to build your digital skills and grow your business.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/all-products"
+  },
+  {
+    "url": "/blog",
+    "status": 200,
+    "title": "Blog — SavvyPro",
+    "description": "Articles on digital skills, marketing, content creation, and growing your business online.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/blog"
+  },
+  {
+    "url": "/login",
+    "status": 200,
+    "title": "Sign In — SavvyPro",
+    "description": "Sign in to your SavvyPro account.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/login"
+  },
+  {
+    "url": "/signup",
+    "status": 200,
+    "title": "Sign Up — SavvyPro",
+    "description": "Create your SavvyPro account.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/signup"
+  },
+  {
+    "url": "/video-details",
+    "status": 200,
+    "title": "Video Details — SavvyPro",
+    "description": "Video Details on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/video-details"
+  },
+  {
+    "url": "/community-detail",
+    "status": 200,
+    "title": "Community detail — SavvyPro",
+    "description": "Explore SavvyPro communities and chat groups.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/community-detail"
+  },
+  {
+    "url": "/signup-for-free-email-tips",
+    "status": 200,
+    "title": "Signup For Free Email Tips — SavvyPro",
+    "description": "Signup For Free Email Tips on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/signup-for-free-email-tips"
+  },
+  {
+    "url": "/susan-mwenda-mulongoti-consultant",
+    "status": 200,
+    "title": "Susan Mwenda Mulongoti Consultant — SavvyPro",
+    "description": "Susan Mwenda Mulongoti Consultant on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/susan-mwenda-mulongoti-consultant"
+  },
+  {
+    "url": "/enroll-in-digital-ntreprenuership-academy",
+    "status": 200,
+    "title": "Enroll In Digital Ntreprenuership Academy — SavvyPro",
+    "description": "Enroll In Digital Ntreprenuership Academy on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/enroll-in-digital-ntreprenuership-academy"
+  },
+  {
+    "url": "/about-us",
+    "status": 200,
+    "title": "About Us — SavvyPro",
+    "description": "Learn about SavvyPro — training, coaching and expert guidance for people creating what comes next.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/about-us"
+  },
+  {
+    "url": "/testimonials",
+    "status": 200,
+    "title": "Testimonials — SavvyPro",
+    "description": "Read stories from learners at every stage of their journey.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/testimonials"
+  },
+  {
+    "url": "/contact-us",
+    "status": 200,
+    "title": "Contact Us — SavvyPro",
+    "description": "Have a question? Get in touch with the SavvyPro team.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/contact-us"
+  },
+  {
+    "url": "/digital-entreprenuership-program",
+    "status": 200,
+    "title": "Digital Entreprenuership Program — SavvyPro",
+    "description": "Digital Entreprenuership Program on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/digital-entreprenuership-program"
+  },
+  {
+    "url": "/audio-details",
+    "status": 200,
+    "title": "Audio Details — SavvyPro",
+    "description": "Audio Details on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/audio-details"
+  },
+  {
+    "url": "/video-library",
+    "status": 200,
+    "title": "Video Library — SavvyPro",
+    "description": "Video Library on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/video-library"
+  },
+  {
+    "url": "/audio-library",
+    "status": 200,
+    "title": "Audio Library — SavvyPro",
+    "description": "Audio Library on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/audio-library"
+  },
+  {
+    "url": "/savvypro-terms-and-conditions",
+    "status": 200,
+    "title": "Savvypro Terms And Conditions — SavvyPro",
+    "description": "Savvypro Terms And Conditions on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/savvypro-terms-and-conditions"
+  },
+  {
+    "url": "/savvypro-privacy-policy",
+    "status": 200,
+    "title": "Savvypro Privacy Policy — SavvyPro",
+    "description": "Savvypro Privacy Policy on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/savvypro-privacy-policy"
+  },
+  {
+    "url": "/for-businesses",
+    "status": 200,
+    "title": "For Businesses — SavvyPro",
+    "description": "For Businesses on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/for-businesses"
+  },
+  {
+    "url": "/inner-circle",
+    "status": 200,
+    "title": "Inner Circle — SavvyPro",
+    "description": "Inner Circle on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/inner-circle"
+  },
+  {
+    "url": "/private-1-on-1-consultation",
+    "status": 200,
+    "title": "Private 1-on-1 Consultation — SavvyPro",
+    "description": "Build a coaching, consulting or service business from your expertise with private consultation.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/private-1-on-1-consultation"
+  },
+  {
+    "url": "/offers",
+    "status": 200,
+    "title": "Offers — SavvyPro",
+    "description": "Offers on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/offers"
+  },
+  {
+    "url": "/7-daily-sales-and-marketing-actions-for-your-sales-team",
+    "status": 200,
+    "title": "7 Daily Sales And Marketing Actions For Your Sales Team — SavvyPro",
+    "description": "7 Daily Sales And Marketing Actions For Your Sales Team on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/7-daily-sales-and-marketing-actions-for-your-sales-team"
+  },
+  {
+    "url": "/mini-courses",
+    "status": 200,
+    "title": "Mini Courses — SavvyPro",
+    "description": "Mini Courses on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/mini-courses"
+  },
+  {
+    "url": "/payments",
+    "status": 200,
+    "title": "Payments — SavvyPro",
+    "description": "Payments on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/payments"
+  },
+  {
+    "url": "/books",
+    "status": 200,
+    "title": "Books",
+    "description": "Explore our library of ebooks on digital skills and business growth. Read free books or purchase premium titles.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/books"
+  },
+  {
+    "url": "/content-creation-school",
+    "status": 200,
+    "title": "Content Creation School — SavvyPro",
+    "description": "Content Creation School on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/content-creation-school"
+  },
+  {
+    "url": "/ccs-vsl1",
+    "status": 200,
+    "title": "Ccs Vsl1 — SavvyPro",
+    "description": "Ccs Vsl1 on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/ccs-vsl1"
+  },
+  {
+    "url": "/freebies",
+    "status": 200,
+    "title": "Freebies — SavvyPro",
+    "description": "Freebies on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/freebies"
+  },
+  {
+    "url": "/savvypro-mobile-apps",
+    "status": 200,
+    "title": "Savvypro Mobile Apps — SavvyPro",
+    "description": "Savvypro Mobile Apps on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/savvypro-mobile-apps"
+  },
+  {
+    "url": "/freelancers",
+    "status": 200,
+    "title": "Freelancers — SavvyPro",
+    "description": "Freelancers on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/freelancers"
+  },
+  {
+    "url": "/testkcpayment",
+    "status": 200,
+    "title": "Testkcpayment — SavvyPro",
+    "description": "Testkcpayment on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/testkcpayment"
+  },
+  {
+    "url": "/pabbly-form-test",
+    "status": 200,
+    "title": "Pabbly Form Test — SavvyPro",
+    "description": "Pabbly Form Test on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/pabbly-form-test"
+  },
+  {
+    "url": "/vacostcalculator",
+    "status": 200,
+    "title": "Vacostcalculator — SavvyPro",
+    "description": "Vacostcalculator on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/vacostcalculator"
+  },
+  {
+    "url": "/kcpay--redirect",
+    "status": 200,
+    "title": "Kcpay Redirect — SavvyPro",
+    "description": "Kcpay Redirect on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/kcpay--redirect"
+  },
+  {
+    "url": "/kinsumo-test",
+    "status": 200,
+    "title": "Kinsumo Test — SavvyPro",
+    "description": "Kinsumo Test on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/kinsumo-test"
+  },
+  {
+    "url": "/5-types-of-expert-businesses-you-can-launch",
+    "status": 200,
+    "title": "5 Types Of Expert Businesses You Can Launch — SavvyPro",
+    "description": "5 Types Of Expert Businesses You Can Launch on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/5-types-of-expert-businesses-you-can-launch"
+  },
+  {
+    "url": "/join-our-mailing-list",
+    "status": 200,
+    "title": "Join Our Mailing List — SavvyPro",
+    "description": "Get practical digital skills tips and resources delivered to your inbox.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/join-our-mailing-list"
+  },
+  {
+    "url": "/launch-your-expert-business-bootcamp",
+    "status": 200,
+    "title": "Launch Your Expert Business Bootcamp — SavvyPro",
+    "description": "Launch Your Expert Business Bootcamp on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/launch-your-expert-business-bootcamp"
+  },
+  {
+    "url": "/testing-social-media-sharing-buttons-for-pages",
+    "status": 200,
+    "title": "Testing Social Media Sharing Buttons For Pages — SavvyPro",
+    "description": "Testing Social Media Sharing Buttons For Pages on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/testing-social-media-sharing-buttons-for-pages"
+  },
+  {
+    "url": "/you-have-paid",
+    "status": 200,
+    "title": "You Have Paid — SavvyPro",
+    "description": "You Have Paid on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/you-have-paid"
+  },
+  {
+    "url": "/botpenguin-images",
+    "status": 200,
+    "title": "Botpenguin Images — SavvyPro",
+    "description": "Botpenguin Images on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/botpenguin-images"
+  },
+  {
+    "url": "/books-stripe-payment",
+    "status": 200,
+    "title": "Books Stripe Payment — SavvyPro",
+    "description": "Books Stripe Payment on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/books-stripe-payment"
+  },
+  {
+    "url": "/zero-to-hero-social-media-manager-book",
+    "status": 200,
+    "title": "Zero To Hero Social Media Manager Book — SavvyPro",
+    "description": "Zero To Hero Social Media Manager Book on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/zero-to-hero-social-media-manager-book"
+  },
+  {
+    "url": "/social-media-content-creation-book",
+    "status": 200,
+    "title": "Social Media Content Creation Book — SavvyPro",
+    "description": "Social Media Content Creation Book on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/social-media-content-creation-book"
+  },
+  {
+    "url": "/kcpay-registration-success",
+    "status": 200,
+    "title": "Kcpay Registration Success — SavvyPro",
+    "description": "Kcpay Registration Success on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/kcpay-registration-success"
+  },
+  {
+    "url": "/marketing-software",
+    "status": 200,
+    "title": "Marketing Software — SavvyPro",
+    "description": "Marketing Software on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/marketing-software"
+  },
+  {
+    "url": "/free",
+    "status": 200,
+    "title": "Free — SavvyPro",
+    "description": "Free on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/free"
+  },
+  {
+    "url": "/user",
+    "status": 200,
+    "title": "User — SavvyPro",
+    "description": "User on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/user"
+  },
+  {
+    "url": "/payforcontentcreationschool",
+    "status": 200,
+    "title": "Payforcontentcreationschool — SavvyPro",
+    "description": "Payforcontentcreationschool on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/payforcontentcreationschool"
+  },
+  {
+    "url": "/freelancer-bundle",
+    "status": 200,
+    "title": "Freelancer Bundle — SavvyPro",
+    "description": "Freelancer Bundle on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/freelancer-bundle"
+  },
+  {
+    "url": "/groups",
+    "status": 200,
+    "title": "Groups — SavvyPro Business Academy",
+    "description": "Gain hands-on digital marketing skills and business strategy know-how with the SavvyPro Business Academy.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/groups"
+  },
+  {
+    "url": "/savvybot-ai-agent",
+    "status": 200,
+    "title": "Savvybot AI Agent — SavvyPro",
+    "description": "Ask the SavvyPro AI assistant about digital skills, freelancing and growing your business.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/savvybot-ai-agent"
+  },
+  {
+    "url": "/win-a-book",
+    "status": 200,
+    "title": "Win a Book — SavvyPro",
+    "description": "Enter our book giveaway and get a free digital skills resource.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/win-a-book"
+  },
+  {
+    "url": "/chatbot-test-page",
+    "status": 200,
+    "title": "Chatbot Test Page — SavvyPro",
+    "description": "Test the SavvyPro AI assistant.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/chatbot-test-page"
+  },
+  {
+    "url": "/ccs-testimonials",
+    "status": 200,
+    "title": "CCS Testimonials — SavvyPro",
+    "description": "Student stories from the Content Creation School.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/ccs-testimonials"
+  },
+  {
+    "url": "/ccs-program-outline-download",
+    "status": 200,
+    "title": "Ccs Program Outline Download — SavvyPro",
+    "description": "Ccs Program Outline Download on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/ccs-program-outline-download"
+  },
+  {
+    "url": "/ccp-pdf-program",
+    "status": 200,
+    "title": "Ccp Pdf Program — SavvyPro",
+    "description": "Ccp Pdf Program on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/ccp-pdf-program"
+  },
+  {
+    "url": "/savvypro-lp1",
+    "status": 200,
+    "title": "Savvypro Lp1 — SavvyPro",
+    "description": "Savvypro Lp1 on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/savvypro-lp1"
+  },
+  {
+    "url": "/infopreneur-roadmap-book",
+    "status": 200,
+    "title": "Infopreneur Roadmap Book — SavvyPro",
+    "description": "Infopreneur Roadmap Book on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/infopreneur-roadmap-book"
+  },
+  {
+    "url": "/digital-skills-class",
+    "status": 200,
+    "title": "Digital Skills Class — SavvyPro",
+    "description": "Digital Skills Class on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/digital-skills-class"
+  },
+  {
+    "url": "/3keys-to-getting-more-customers",
+    "status": 200,
+    "title": "3keys To Getting More Customers — SavvyPro",
+    "description": "3keys To Getting More Customers on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/3keys-to-getting-more-customers"
+  },
+  {
+    "url": "/digital-skills-and-tools-to-build-your-business-signup",
+    "status": 200,
+    "title": "Digital Skills And Tools To Build Your Business Signup — SavvyPro",
+    "description": "Digital Skills And Tools To Build Your Business Signup on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/digital-skills-and-tools-to-build-your-business-signup"
+  },
+  {
+    "url": "/choose-your-path",
+    "status": 200,
+    "title": "Choose Your Path — SavvyPro",
+    "description": "Where are you right now? Pick your path to get started.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/choose-your-path"
+  },
+  {
+    "url": "/savvypro-digital-skills-class",
+    "status": 200,
+    "title": "Savvypro Digital Skills Class — SavvyPro",
+    "description": "Savvypro Digital Skills Class on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/savvypro-digital-skills-class"
+  },
+  {
+    "url": "/freelancer-fasttrack-bundle",
+    "status": 200,
+    "title": "Freelancer Fasttrack Bundle — SavvyPro",
+    "description": "Freelancer Fasttrack Bundle on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/freelancer-fasttrack-bundle"
+  },
+  {
+    "url": "/freelancer-connect",
+    "status": 200,
+    "title": "Freelancer Connect — SavvyPro",
+    "description": "Freelancer Connect on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/freelancer-connect"
+  },
+  {
+    "url": "/microgigs",
+    "status": 200,
+    "title": "Microgigs — SavvyPro",
+    "description": "Microgigs on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/microgigs"
+  },
+  {
+    "url": "/freelancer-webinar",
+    "status": 200,
+    "title": "Freelancer Webinar — SavvyPro",
+    "description": "Learn the simple steps we use to start freelancing using only your phone.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/freelancer-webinar"
+  },
+  {
+    "url": "/webinar-registration-freelancing",
+    "status": 200,
+    "title": "Webinar Registration — Freelancing — SavvyPro",
+    "description": "Register for the Beginner Freelancer Blueprint webinar.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/webinar-registration-freelancing"
+  },
+  {
+    "url": "/101-digital-skills-pdf-download",
+    "status": 200,
+    "title": "101 Digital Skills PDF Download — SavvyPro",
+    "description": "Download our free guide to 101 digital skills for modern businesses.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/101-digital-skills-pdf-download"
+  },
+  {
+    "url": "/susan-mwenda-mulongoti",
+    "status": 200,
+    "title": "Susan Mwenda Mulongoti — SavvyPro",
+    "description": "Susan Mwenda Mulongoti on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/susan-mwenda-mulongoti"
+  },
+  {
+    "url": "/savvypro-digital-skills-club",
+    "status": 200,
+    "title": "Savvypro Digital Skills Club — SavvyPro",
+    "description": "Savvypro Digital Skills Club on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/savvypro-digital-skills-club"
+  },
+  {
+    "url": "/pdf-file-101-digital-skills",
+    "status": 200,
+    "title": "PDF File: 101 Digital Skills — SavvyPro",
+    "description": "The 101 Digital Skills PDF guide.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/pdf-file-101-digital-skills"
+  },
+  {
+    "url": "/content-creation-school-main",
+    "status": 200,
+    "title": "Content Creation School Main — SavvyPro",
+    "description": "Content Creation School Main on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/content-creation-school-main"
+  },
+  {
+    "url": "/digital-savvypro",
+    "status": 200,
+    "title": "Digital Savvypro — SavvyPro",
+    "description": "Digital Savvypro on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/digital-savvypro"
+  },
+  {
+    "url": "/ebooks",
+    "status": 200,
+    "title": "Ebooks — SavvyPro",
+    "description": "Ebooks on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/ebooks"
+  },
+  {
+    "url": "/freelancing-free-tips",
+    "status": 200,
+    "title": "Freelancing Free Tips — SavvyPro",
+    "description": "Freelancing Free Tips on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/freelancing-free-tips"
+  },
+  {
+    "url": "/freelancing-tips-signup",
+    "status": 200,
+    "title": "Freelancing Tips Signup — SavvyPro",
+    "description": "Freelancing Tips Signup on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/freelancing-tips-signup"
+  },
+  {
+    "url": "/words-that-sell-copywriting-secrets-that-make-customers-buy",
+    "status": 200,
+    "title": "Words That Sell Copywriting Secrets That Make Customers Buy — SavvyPro",
+    "description": "Words That Sell Copywriting Secrets That Make Customers Buy on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/words-that-sell-copywriting-secrets-that-make-customers-buy"
+  },
+  {
+    "url": "/savvypro-main",
+    "status": 200,
+    "title": "Savvypro Main — SavvyPro",
+    "description": "Savvypro Main on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/savvypro-main"
+  },
+  {
+    "url": "/visibility-tips-signup",
+    "status": 200,
+    "title": "Visibility Tips Signup — SavvyPro",
+    "description": "Sign up for practical tips to grow your online visibility.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/visibility-tips-signup"
+  },
+  {
+    "url": "/signin",
+    "status": 200,
+    "title": "Signin — SavvyPro",
+    "description": "Signin on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/signin"
+  },
+  {
+    "url": "/7-sytem-whatsapp-automation-setup",
+    "status": 200,
+    "title": "7 Sytem Whatsapp Automation Setup — SavvyPro",
+    "description": "7 Sytem Whatsapp Automation Setup on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/7-sytem-whatsapp-automation-setup"
+  },
+  {
+    "url": "/courses",
+    "status": 200,
+    "title": "Courses",
+    "description": "Explore our catalog of courses and programs to build your digital skills and grow your business.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/courses"
+  },
+  {
+    "url": "/learning-hub",
+    "status": 200,
+    "title": "Learning Hub — SavvyPro",
+    "description": "Learning Hub on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/learning-hub"
+  },
+  {
+    "url": "/magnetic-personal-branding",
+    "status": 200,
+    "title": "Magnetic Personal Branding — SavvyPro",
+    "description": "Magnetic Personal Branding on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/magnetic-personal-branding"
+  },
+  {
+    "url": "/contest",
+    "status": 200,
+    "title": "Contest — SavvyPro",
+    "description": "Enter the SavvyPro contest and win a book.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/contest"
+  },
+  {
+    "url": "/ceo-digital-strategy",
+    "status": 200,
+    "title": "Ceo Digital Strategy — SavvyPro",
+    "description": "Ceo Digital Strategy on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/ceo-digital-strategy"
+  },
+  {
+    "url": "/7-step-whatspp-automation-system-setup",
+    "status": 200,
+    "title": "7 Step Whatspp Automation System Setup — SavvyPro",
+    "description": "7 Step Whatspp Automation System Setup on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/7-step-whatspp-automation-system-setup"
+  },
+  {
+    "url": "/pdf-download-file-7-step-whatsapp-automation",
+    "status": 200,
+    "title": "7-Step WhatsApp Automation PDF — SavvyPro",
+    "description": "Download the free 7-step WhatsApp automation guide.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/pdf-download-file-7-step-whatsapp-automation"
+  },
+  {
+    "url": "/whatsapp-automation-toolkit",
+    "status": 200,
+    "title": "Whatsapp Automation Toolkit — SavvyPro",
+    "description": "Whatsapp Automation Toolkit on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/whatsapp-automation-toolkit"
+  },
+  {
+    "url": "/7-steps-to-better-sales-book",
+    "status": 200,
+    "title": "7 Steps To Better Sales Book — SavvyPro",
+    "description": "7 Steps To Better Sales Book on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/7-steps-to-better-sales-book"
+  },
+  {
+    "url": "/whatsapp-marketing-for-smes",
+    "status": 200,
+    "title": "Whatsapp Marketing For Smes — SavvyPro",
+    "description": "Whatsapp Marketing For Smes on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/whatsapp-marketing-for-smes"
+  },
+  {
+    "url": "/social-media-strategy-book",
+    "status": 200,
+    "title": "Social Media Strategy Book — SavvyPro",
+    "description": "Social Media Strategy Book on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/social-media-strategy-book"
+  },
+  {
+    "url": "/start-where-you-are-book",
+    "status": 200,
+    "title": "Start Where You Are Book — SavvyPro",
+    "description": "Start Where You Are Book on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/start-where-you-are-book"
+  },
+  {
+    "url": "/savvypro",
+    "status": 200,
+    "title": "Savvypro — SavvyPro",
+    "description": "Savvypro on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/savvypro"
+  },
+  {
+    "url": "/digital-skills-classes",
+    "status": 200,
+    "title": "Digital Skills Classes — SavvyPro",
+    "description": "Digital Skills Classes on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/digital-skills-classes"
+  },
+  {
+    "url": "/savvypro-digital-skills-certification",
+    "status": 200,
+    "title": "Savvypro Digital Skills Certification — SavvyPro",
+    "description": "Savvypro Digital Skills Certification on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/savvypro-digital-skills-certification"
+  },
+  {
+    "url": "/pay-for-savvypro-digital-skills-certification",
+    "status": 200,
+    "title": "Pay For Savvypro Digital Skills Certification — SavvyPro",
+    "description": "Pay For Savvypro Digital Skills Certification on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/pay-for-savvypro-digital-skills-certification"
+  },
+  {
+    "url": "/savvypro-refund-policy",
+    "status": 200,
+    "title": "Savvypro Refund Policy — SavvyPro",
+    "description": "Savvypro Refund Policy on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/savvypro-refund-policy"
+  },
+  {
+    "url": "/refund-policy",
+    "status": 200,
+    "title": "Refund Policy — SavvyPro",
+    "description": "SavvyPro refund policy.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/refund-policy"
+  },
+  {
+    "url": "/privacy-policy",
+    "status": 200,
+    "title": "Privacy Policy — SavvyPro",
+    "description": "SavvyPro privacy policy.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/privacy-policy"
+  },
+  {
+    "url": "/appointment",
+    "status": 200,
+    "title": "Book an Appointment — SavvyPro",
+    "description": "Book a coaching or consulting appointment with a SavvyPro expert.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/appointment"
+  },
+  {
+    "url": "/membership",
+    "status": 200,
+    "title": "Membership — SavvyPro",
+    "description": "Membership on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/membership"
+  },
+  {
+    "url": "/coaching-program-detail",
+    "status": 200,
+    "title": "Coaching Program Detail — SavvyPro",
+    "description": "Coaching Program Detail on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/coaching-program-detail"
+  },
+  {
+    "url": "/savvypro-home",
+    "status": 200,
+    "title": "Savvypro Home — SavvyPro",
+    "description": "Savvypro Home on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/savvypro-home"
+  },
+  {
+    "url": "/",
+    "status": 200,
+    "title": "SavvyPro",
+    "description": "Practical tools, skills, training and hands-on support to grow revenue and strengthen your brand.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/"
+  },
+  {
+    "url": "/getting-started-page",
+    "status": 200,
+    "title": "Starting a Business — SavvyPro",
+    "description": "Not sure where to begin? Discover the skills, resources and a clear path to make your idea real.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/getting-started-page"
+  },
+  {
+    "url": "/learn-digital-skills",
+    "status": 200,
+    "title": "Learn Digital Skills — SavvyPro",
+    "description": "Build useful, hands-on digital skills for work, creating, growing and marketing what you offer.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/learn-digital-skills"
+  },
+  {
+    "url": "/grow-my-business",
+    "status": 200,
+    "title": "Grow My Business — SavvyPro",
+    "description": "Create the marketing, sales and business systems that strengthen your operations and lift revenue.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/grow-my-business"
+  },
+  {
+    "url": "/build-your-expert-business",
+    "status": 200,
+    "title": "Build Your Expert Business — SavvyPro",
+    "description": "Convert your knowledge into a stronger brand, an offer, or a service.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/build-your-expert-business"
+  },
+  {
+    "url": "/business-solutions",
+    "status": 200,
+    "title": "Business Solutions — SavvyPro",
+    "description": "Sharpen the tools, digital know-how and the team capacity to run and grow the business.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/business-solutions"
+  },
+  {
+    "url": "/terms-and-conditions",
+    "status": 200,
+    "title": "Terms and Conditions — SavvyPro",
+    "description": "SavvyPro terms and conditions.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/terms-and-conditions"
+  },
+  {
+    "url": "/learn-with-expert-guidance",
+    "status": 200,
+    "title": "Learn With Expert Guidance — SavvyPro",
+    "description": "Learn With Expert Guidance on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/learn-with-expert-guidance"
+  },
+  {
+    "url": "/learning-with-a-coach",
+    "status": 200,
+    "title": "Learning With A Coach — SavvyPro",
+    "description": "Learning With A Coach on SavvyPro — practical digital skills, training and support.",
+    "consoleErrors": [],
+    "handler": "dedicated page",
+    "route": "/learning-with-a-coach"
+  },
+  {
+    "url": "/blog/making-your-own-salary-stay-home-mums",
+    "status": 200,
+    "title": "Making Your Own Salary: Stay Home Mums — SavvyPro Blog",
+    "description": "How stay-at-home mums can build an income from home with digital skills.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/blog/[slug]"
+  },
+  {
+    "url": "/blog/how-to-make-your-own-salary-part-2",
+    "status": 200,
+    "title": "How to Make Your Own Salary Part 2 — SavvyPro Blog",
+    "description": "Continuing the guide to building your own income as a stay-home mum.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/blog/[slug]"
+  },
+  {
+    "url": "/blog/how-to-make-your-own-salary-part-3",
+    "status": 200,
+    "title": "How to Make Your Own Salary Part 3 — SavvyPro Blog",
+    "description": "Scaling your home-based income beyond the basics.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/blog/[slug]"
+  },
+  {
+    "url": "/blog/7-ways-to-find-mentorship",
+    "status": 200,
+    "title": "7 Ways to Find Mentorship — SavvyPro Blog",
+    "description": "How to find a mentor who can guide your digital business journey.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/blog/[slug]"
+  },
+  {
+    "url": "/blog/learn-content-creation-skills",
+    "status": 200,
+    "title": "Learn Content Creation Skills — SavvyPro Blog",
+    "description": "Practical skills for creating content that builds an audience.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/blog/[slug]"
+  },
+  {
+    "url": "/blog/learn-digital-marketing",
+    "status": 200,
+    "title": "Learn Digital Marketing — SavvyPro Blog",
+    "description": "A beginner's guide to digital marketing fundamentals.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/blog/[slug]"
+  },
+  {
+    "url": "/blog/5-types-of-expert-businesses-you-can-start",
+    "status": 200,
+    "title": "5 Types of Expert Businesses You Can Start — SavvyPro Blog",
+    "description": "Turn your expertise into a business with one of these five models.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/blog/[slug]"
+  },
+  {
+    "url": "/blog/1-page-sales-and-marketing-strategy",
+    "status": 200,
+    "title": "1-Page Sales and Marketing Strategy — SavvyPro Blog",
+    "description": "A simple one-page framework for planning your sales and marketing.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/blog/[slug]"
+  },
+  {
+    "url": "/blog/ceo-mistakes-in-digital-growth-and-how-to-avoid-them",
+    "status": 200,
+    "title": "CEO Mistakes in Digital Growth and How to Avoid Them — SavvyPro Blog",
+    "description": "Common mistakes CEOs make when growing digitally, and how to avoid them.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/blog/[slug]"
+  },
+  {
+    "url": "/blog/17-proven-ways-to-make-your-brand-unmissable-online-even-on-a-tiny-budget",
+    "status": 200,
+    "title": "17 Proven Ways to Make Your Brand Unmissable Online — SavvyPro Blog",
+    "description": "Brand-building tactics that work even on a tiny budget.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/blog/[slug]"
+  },
+  {
+    "url": "/blog/11-reasons-customers-dont-buy-and-how-to-fix-them-fast",
+    "status": 200,
+    "title": "11 Reasons Customers Don't Buy (and How to Fix Them) — SavvyPro Blog",
+    "description": "Diagnose why customers aren't buying and fix it quickly.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/blog/[slug]"
+  },
+  {
+    "url": "/blog/99-online-gigs-you-can-start-right-now-african-edition",
+    "status": 200,
+    "title": "99 Online Gigs You Can Start Right Now (African Edition) — SavvyPro Blog",
+    "description": "Online gig opportunities tailored for African freelancers.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/blog/[slug]"
+  },
+  {
+    "url": "/blog/14-types-of-clients-you-can-work-with-as-a-content-creator",
+    "status": 200,
+    "title": "14 Types of Clients You Can Work With as a Content Creator — SavvyPro Blog",
+    "description": "The different client types content creators encounter and how to serve them.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/blog/[slug]"
+  },
+  {
+    "url": "/blog/12-savvy-ways-to-use-whatsapp-for-marketing",
+    "status": 200,
+    "title": "12 Savvy Ways to Use WhatsApp for Marketing — SavvyPro Blog",
+    "description": "Practical WhatsApp marketing tactics for small businesses.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/blog/[slug]"
+  },
+  {
+    "url": "/blog/why-you-avoid-creating-content",
+    "status": 200,
+    "title": "Why You Avoid Creating Content — SavvyPro Blog",
+    "description": "Understanding and overcoming content creation blocks.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/blog/[slug]"
+  },
+  {
+    "url": "/blog/marketing-budget-recommendations-zambia-edition",
+    "status": 200,
+    "title": "Marketing Budget Recommendations: Zambia Edition — SavvyPro Blog",
+    "description": "Marketing budget guidance for Zambian small businesses.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/blog/[slug]"
+  },
+  {
+    "url": "/blog/marketing-budget-recommendations-global-edition",
+    "status": 200,
+    "title": "Marketing Budget Recommendations: Global Edition — SavvyPro Blog",
+    "description": "Global marketing budget benchmarks and guidance.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/blog/[slug]"
+  },
+  {
+    "url": "/blog/susan-lumba-mwenda",
+    "status": 200,
+    "title": "Susan Lumba-Mwenda — SavvyPro Blog",
+    "description": "Spotlight on Susan Lumba-Mwenda.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/blog/[slug]"
+  },
+  {
+    "url": "/blog/the-11-elements-behind-a-high-value-expert-brand",
+    "status": 200,
+    "title": "The 11 Elements Behind a High-Value Expert Brand — SavvyPro Blog",
+    "description": "The elements that make an expert brand high-value.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/blog/[slug]"
+  },
+  {
+    "url": "/blog/are-linkedin-ads-really-the-cure-for-your-broke-ass-lead-problem",
+    "status": 200,
+    "title": "Are LinkedIn Ads Really the Cure for Your Broke-Ass Lead Problem? — SavvyPro Blog",
+    "description": "A critical look at LinkedIn Ads for lead generation.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/blog/[slug]"
+  },
+  {
+    "url": "/blog/17-ways-african-businesses-use-whatsapp-to-get-customers-with-real-examples",
+    "status": 200,
+    "title": "17 Ways African Businesses Use WhatsApp to Get Customers — SavvyPro Blog",
+    "description": "Real examples of WhatsApp marketing for African businesses.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/blog/[slug]"
+  },
+  {
+    "url": "/blog/stop-losing-sales-to-unanswered-whatsapp-messages",
+    "status": 200,
+    "title": "Stop Losing Sales to Unanswered WhatsApp Messages — SavvyPro Blog",
+    "description": "How to respond to WhatsApp messages and recover lost sales.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/blog/[slug]"
+  },
+  {
+    "url": "/blog/category/ceo-digital-strategies/766",
+    "status": 200,
+    "title": "CEO Digital Strategies — Category — SavvyPro Blog",
+    "description": "Articles in the CEO Digital Strategies category.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/blog/category/[cat]/[id]"
+  },
+  {
+    "url": "/blog/category/digital-biz-ideas/1147",
+    "status": 200,
+    "title": "Digital Biz Ideas — Category — SavvyPro Blog",
+    "description": "Articles in the Digital Biz Ideas category.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/blog/category/[cat]/[id]"
+  },
+  {
+    "url": "/blog/category/growth-marketing/1149",
+    "status": 200,
+    "title": "Growth Marketing — Category — SavvyPro Blog",
+    "description": "Articles in the Growth Marketing category.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/blog/category/[cat]/[id]"
+  },
+  {
+    "url": "/blog/category/freelancer-listings/2817",
+    "status": 200,
+    "title": "Freelancer Listings — Category — SavvyPro Blog",
+    "description": "Articles in the Freelancer Listings category.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/blog/category/[cat]/[id]"
+  },
+  {
+    "url": "/blog/category/personal-branding/3821",
+    "status": 200,
+    "title": "Personal Branding — Category — SavvyPro Blog",
+    "description": "Articles in the Personal Branding category.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/blog/category/[cat]/[id]"
+  },
+  {
+    "url": "/blog/category/susan-lumba-mwenda/3870",
+    "status": 200,
+    "title": "Susan Lumba-Mwenda — Category — SavvyPro Blog",
+    "description": "Articles in the Susan Lumba-Mwenda category.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/blog/category/[cat]/[id]"
+  },
+  {
+    "url": "/course-detail/infoprenuer-roadmap-ebook/3982",
+    "status": 200,
+    "title": "Infoprenuer Roadmap Ebook (3982) — SavvyPro",
+    "description": "Explore Infoprenuer Roadmap Ebook (3982) on SavvyPro — practical digital skills and training.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/infopreneur-audiobook/3986",
+    "status": 200,
+    "title": "Infopreneur Audiobook (3986) — SavvyPro",
+    "description": "Explore Infopreneur Audiobook (3986) on SavvyPro — practical digital skills and training.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/social-media-content-creation-ebook/3995",
+    "status": 200,
+    "title": "Social Media Content Creation Ebook (3995) — SavvyPro",
+    "description": "Explore Social Media Content Creation Ebook (3995) on SavvyPro — practical digital skills and training.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/infoprenuer-how-to-make-money-from-your-passion-knowledge-and-experience/4885",
+    "status": 200,
+    "title": "Infoprenuer How To Make Money From Your Passion Knowledge And Experience (4885) — SavvyPro",
+    "description": "Explore Infoprenuer How To Make Money From Your Passion Knowledge And Experience (4885) on SavvyPro — practical digital skills and training.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/content-creation-school/7107",
+    "status": 200,
+    "title": "Content Creation School (7107) — SavvyPro",
+    "description": "Explore Content Creation School (7107) on SavvyPro — practical digital skills and training.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/audiobook-zero-to-hero-social-media-manager/10199",
+    "status": 200,
+    "title": "Zero to Hero Social Media Manager (Audiobook) — SavvyPro",
+    "description": "Audiobook version of our social media management guide. Learn client acquisition, content strategy, and campaign management on the go.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/ebook-zero-to-hero-social-media-manager/10317",
+    "status": 200,
+    "title": "Zero to Hero Social Media Manager — SavvyPro",
+    "description": "Complete guide to becoming a professional social media manager. From platform setup to client acquisition, this ebook covers everything you need to start your social media management business.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/audiobook-social-media-content-creation/12514",
+    "status": 200,
+    "title": "Audiobook Social Media Content Creation (12514) — SavvyPro",
+    "description": "Explore Audiobook Social Media Content Creation (12514) on SavvyPro — practical digital skills and training.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/digital-tools/17996",
+    "status": 200,
+    "title": "Digital Tools (17996) — SavvyPro",
+    "description": "Explore Digital Tools (17996) on SavvyPro — practical digital skills and training.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/digital-marketing-conversion-mastery/18127",
+    "status": 200,
+    "title": "Digital Marketing Conversion Mastery (18127) — SavvyPro",
+    "description": "Explore Digital Marketing Conversion Mastery (18127) on SavvyPro — practical digital skills and training.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/copywriting-crash-course/23197",
+    "status": 200,
+    "title": "Copywriting Crash Course (23197) — SavvyPro",
+    "description": "Explore Copywriting Crash Course (23197) on SavvyPro — practical digital skills and training.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/digital-skills-fasttrack/24115",
+    "status": 200,
+    "title": "Digital Skills Fasttrack (24115) — SavvyPro",
+    "description": "Explore Digital Skills Fasttrack (24115) on SavvyPro — practical digital skills and training.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/content-creation-school-2026/36467",
+    "status": 200,
+    "title": "Content Creation School 2026 — SavvyPro",
+    "description": "Learn to create compelling content for social media, blogs, and video platforms. From strategy to execution, this course covers everything you need to build an audience and monetize your content.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/visbility-course-why-you-are-invible-and-how-to-change-it/40331",
+    "status": 200,
+    "title": "Visbility Course Why You Are Invible And How To Change It (40331) — SavvyPro",
+    "description": "Explore Visbility Course Why You Are Invible And How To Change It (40331) on SavvyPro — practical digital skills and training.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/1-year-content-plan-in-3-days/41281",
+    "status": 200,
+    "title": "Year Content Plan In Days (41281) — SavvyPro",
+    "description": "Explore Year Content Plan In Days (41281) on SavvyPro — practical digital skills and training.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/content-creation-school-2026-copy-1776429703034/41634",
+    "status": 200,
+    "title": "Content Creation School (41634) — SavvyPro",
+    "description": "Explore Content Creation School (41634) on SavvyPro — practical digital skills and training.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/manage-and-grow-your-business/42538",
+    "status": 200,
+    "title": "Manage And Grow Your Business (42538) — SavvyPro",
+    "description": "Explore Manage And Grow Your Business (42538) on SavvyPro — practical digital skills and training.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/content-creation-school-2026-copy-1790672869460/49068",
+    "status": 200,
+    "title": "Content Creation School (49068) — SavvyPro",
+    "description": "Explore Content Creation School (49068) on SavvyPro — practical digital skills and training.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/content-creation-school-2026-tutor-1790673216325/49070",
+    "status": 200,
+    "title": "Content Creation School Tutor (49070) — SavvyPro",
+    "description": "Explore Content Creation School Tutor (49070) on SavvyPro — practical digital skills and training.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/start-smallthink-big/49186",
+    "status": 200,
+    "title": "Start Smallthink Big (49186) — SavvyPro",
+    "description": "Explore Start Smallthink Big (49186) on SavvyPro — practical digital skills and training.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/start-where-you-are-audiobook/49791",
+    "status": 200,
+    "title": "Start Where You Are Audiobook (49791) — SavvyPro",
+    "description": "Explore Start Where You Are Audiobook (49791) on SavvyPro — practical digital skills and training.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/ebook-zero-to-hero-social-media-manager-copy-1792212437299/49792",
+    "status": 200,
+    "title": "Ebook Zero To Hero Social Media Manager (49792) — SavvyPro",
+    "description": "Explore Ebook Zero To Hero Social Media Manager (49792) on SavvyPro — practical digital skills and training.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/audiobook-zero-to-hero-social-media-manager-copy-1792212460894/49793",
+    "status": 200,
+    "title": "Audiobook Zero To Hero Social Media Manager (49793) — SavvyPro",
+    "description": "Explore Audiobook Zero To Hero Social Media Manager (49793) on SavvyPro — practical digital skills and training.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/infopreneur-audiobook-copy-1792213073560/49794",
+    "status": 200,
+    "title": "Infopreneur Audiobook (49794) — SavvyPro",
+    "description": "Explore Infopreneur Audiobook (49794) on SavvyPro — practical digital skills and training.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/infoprenuer-roadmap-ebook-copy-1792213119365/49795",
+    "status": 200,
+    "title": "Infoprenuer Roadmap Ebook (49795) — SavvyPro",
+    "description": "Explore Infoprenuer Roadmap Ebook (49795) on SavvyPro — practical digital skills and training.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/social-media-content-creation-ebook-copy-1792214265244/49796",
+    "status": 200,
+    "title": "Social Media Content Creation Ebook (49796) — SavvyPro",
+    "description": "Explore Social Media Content Creation Ebook (49796) on SavvyPro — practical digital skills and training.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/audiobook-social-media-content-creation-copy-1792214327806/49797",
+    "status": 200,
+    "title": "Audiobook Social Media Content Creation (49797) — SavvyPro",
+    "description": "Explore Audiobook Social Media Content Creation (49797) on SavvyPro — practical digital skills and training.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/free-audiobook-social-media-paid-ads/49801",
+    "status": 200,
+    "title": "Free Audiobook Social Media Paid Ads (49801) — SavvyPro",
+    "description": "Explore Free Audiobook Social Media Paid Ads (49801) on SavvyPro — practical digital skills and training.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/how-to-create-and-sell-your-first-online-course/49870",
+    "status": 200,
+    "title": "How to Create and Sell Your First Online Course — SavvyPro",
+    "description": "Step-by-step guide to designing, recording, and launching your first online course. Includes curriculum design, recording setup, pricing strategy, and launch execution.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/free-audiobook-how-to-create-and-sell-your-first-online-course/49906",
+    "status": 200,
+    "title": "How to Create and Sell Your First Online Course (Audiobook) — SavvyPro",
+    "description": "Audiobook version of our flagship course creation guide. Listen on the go while you build your first online course.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/free-audiobook-autopilot-sales-system/49908",
+    "status": 200,
+    "title": "Free Audiobook Autopilot Sales System (49908) — SavvyPro",
+    "description": "Explore Free Audiobook Autopilot Sales System (49908) on SavvyPro — practical digital skills and training.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/course-detail/start-where-you-are-audiobook-copy-1792925319820/50151",
+    "status": 200,
+    "title": "Start Where You Are — SavvyPro",
+    "description": "A practical guide to starting your business journey from wherever you are right now. No prerequisites, no fancy equipment needed - just actionable steps to move forward.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/course-detail/[slug]/[id]"
+  },
+  {
+    "url": "/community/650",
+    "status": 200,
+    "title": "VIP (650) — SavvyPro Community",
+    "description": "By invitation only. Community 650 on SavvyPro.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/community/[groupId]"
+  },
+  {
+    "url": "/community/834",
+    "status": 200,
+    "title": "SavvyPro Starter Chatgroup (834) — SavvyPro Community",
+    "description": "Discover ways to earn through online gigs Community 834 on SavvyPro.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/community/[groupId]"
+  },
+  {
+    "url": "/community/853",
+    "status": 200,
+    "title": "Content Creation School Chatgroup (853) — SavvyPro Community",
+    "description": "Let’s discuss Freelancing Community 853 on SavvyPro.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/community/[groupId]"
+  },
+  {
+    "url": "/community/4943",
+    "status": 200,
+    "title": "Digital Skills Bundle Forum (4943) — SavvyPro Community",
+    "description": "Digital Skills Bundle Forum Community 4943 on SavvyPro.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/community/[groupId]"
+  },
+  {
+    "url": "/community/4944",
+    "status": 200,
+    "title": "Digital Skills Bundle Forum (4944) — SavvyPro Community",
+    "description": "Digital Skills Bundle Forum Community 4944 on SavvyPro.",
+    "consoleErrors": [],
+    "handler": "dynamic template",
+    "route": "/community/[groupId]"
+  }
+]

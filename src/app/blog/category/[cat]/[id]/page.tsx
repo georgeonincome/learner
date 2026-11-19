@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ cat: stri
   const category = blogData.categories.find((c) => c.slug === cat)
   if (!category) return { title: 'Category not found' }
   return {
-    title: `${category.name} — SavvyPro Blog`,
+    title: `${category.name} — Category — SavvyPro Blog`,
     description: `Articles in the ${category.name} category.`,
     openGraph: { title: category.name, type: 'website' },
   }

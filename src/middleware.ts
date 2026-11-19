@@ -8,8 +8,7 @@ const PROTECTED_PREFIXES = [
   '/checkout',
   '/orders',
   '/library',
-  '/community',
-  '/appointment',
+  // Community and appointment pages are public to read; write APIs enforce auth.
 ]
 
 // Auth routes that should redirect to / if already authenticated

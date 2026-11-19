@@ -12,8 +12,10 @@ export async function generateMetadata({
   const { groupId } = await params
   const group = communityStore.groups.find((g) => g.id === groupId)
   return {
-    title: group ? `${group.name} — SavvyPro Community` : 'Community — SavvyPro',
-    description: group?.tagline,
+    title: group
+      ? `${group.name} (${group.id}) — SavvyPro Community`
+      : 'Community — SavvyPro',
+    description: group ? `${group.tagline} Community ${group.id} on SavvyPro.` : undefined,
   }
 }
 

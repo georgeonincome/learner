@@ -3,7 +3,7 @@
     "name": "SavvyPro",
     "tagline": "Explore · Learn · Get Support · Get Real-World Help",
     "description": "Training, coaching and expert guidance for people creating what comes next.",
-    "logo": "/logo.png",
+    "logo": "/logo.svg",
     "colors": {
       "primary": "#00a3ff",
       "blue": "#00a3ff",
@@ -25,34 +25,124 @@
     "headline": "Build Real Skills and Digital Systems That Help Your Business Grow.",
     "sub": "Practical tools, skills, training and hands-on support to grow revenue and strengthen your brand.",
     "stats": [
-      { "value": "3,000+", "label": "students" },
-      { "value": "12+", "label": "Countries" },
-      { "value": "30+", "label": "corporate clients" },
-      { "value": "14+", "label": "years of real results." }
+      {
+        "value": "3,000+",
+        "label": "students"
+      },
+      {
+        "value": "12+",
+        "label": "Countries"
+      },
+      {
+        "value": "30+",
+        "label": "corporate clients"
+      },
+      {
+        "value": "14+",
+        "label": "years of real results."
+      }
     ],
     "ctas": [
-      { "label": "Start a Free Class", "href": "/learning-hub", "variant": "blue" },
-      { "label": "Explore CEO Digital Strategies", "href": "/ceo-digital-strategy", "variant": "magenta" }
+      {
+        "label": "Start a Free Class",
+        "href": "/learning-hub",
+        "variant": "blue"
+      },
+      {
+        "label": "Explore CEO Digital Strategies",
+        "href": "/ceo-digital-strategy",
+        "variant": "magenta"
+      }
     ]
   },
   "paths": [
-    { "id": 1, "title": "I am Starting A Business", "button": "Get Started", "sub": "Not sure where to begin? Discover the skills, resources and a clear path to make your idea real." },
-    { "id": 2, "title": "I want to learn Digital Skills", "button": "Start Free", "sub": "Build useful, hands-on digital skills for work, creating, growing and marketing what you offer." },
-    { "id": 3, "title": "I have a Small Business", "button": "Grow My Business", "sub": "Create the marketing, sales and business systems that strengthen your operations and lift revenue." },
-    { "id": 4, "title": "I have Expertise to Build On", "button": "Build My Brand", "sub": "Convert your knowledge into a stronger brand, an offer, or a service. Grow your digital capability to take your expertise further." },
-    { "id": 5, "title": "My Business is Established", "button": "Business Solutions", "sub": "Sharpen the tools, digital know-how your business needs, plus the team capacity to operate and reach the next level." }
+    {
+      "id": 1,
+      "title": "I am Starting A Business",
+      "button": "Get Started",
+      "sub": "Not sure where to begin? Discover the skills, resources and a clear path to make your idea real."
+    },
+    {
+      "id": 2,
+      "title": "I want to learn Digital Skills",
+      "button": "Start Free",
+      "sub": "Build useful, hands-on digital skills for work, creating, growing and marketing what you offer."
+    },
+    {
+      "id": 3,
+      "title": "I have a Small Business",
+      "button": "Grow My Business",
+      "sub": "Create the marketing, sales and business systems that strengthen your operations and lift revenue."
+    },
+    {
+      "id": 4,
+      "title": "I have Expertise to Build On",
+      "button": "Build My Brand",
+      "sub": "Convert your knowledge into a stronger brand, an offer, or a service. Grow your digital capability to take your expertise further."
+    },
+    {
+      "id": 5,
+      "title": "My Business is Established",
+      "button": "Business Solutions",
+      "sub": "Sharpen the tools, digital know-how your business needs, plus the team capacity to operate and reach the next level."
+    }
   ],
   "testimonials": [
-    { "name": "Ken Gunsalu", "role": "Nutritionist & Agribusiness owner, NutriCare Malawi", "segment": "Small Business", "quote": "I once paid a designer for each poster. Now I create them myself in under an hour, including my porridge packaging.", "result": "Cuts design costs and produces his own packaging." },
-    { "name": "Wyonna Jean Britten", "role": "CEO, The Organic Biochemist, Zimbabwe", "segment": "Established business", "quote": "The lessons covered exactly what my business needed. I never felt I was spending time on irrelevant material.", "result": "Stronger web presence; now guides other small firms." },
-    { "name": "Timothy Choongo", "role": "Teacher & web programmer, Zambia", "segment": "Expertise", "quote": "Through CCS I applied AI to my web work, automated WhatsApp, and promoted and sold my digital products.", "result": "Facebook audience grew from 4,000 to nearly 6,000." },
-    { "name": "Marian K. Shevtsov", "role": "Economist & parenting coach, Netherlands", "segment": "Startup", "quote": "The lessons felt relevant and helped me finally try content creation. It has been a rewarding experience.", "result": "Building a base to launch her own digital business." },
-    { "name": "Chisanga Simwenwa", "role": "Founder, digital marketing agency, Zambia", "segment": "Established business", "quote": "I came to CCS already running digital marketing. Now I manage several clients efficiently, deliver more professional work, and can train my team.", "result": "Now winning higher-end clients." },
-    { "name": "Suwilanji Phiri", "role": "Clinician & social media manager, Zambia", "segment": "Freelancer - Digital Skills", "quote": "Very practical and simple to follow.", "result": "Now securing local and international gigs." }
+    {
+      "name": "Ken Gunsalu",
+      "role": "Nutritionist & Agribusiness owner, NutriCare Malawi",
+      "segment": "Small Business",
+      "quote": "I once paid a designer for each poster. Now I create them myself in under an hour, including my porridge packaging.",
+      "result": "Cuts design costs and produces his own packaging."
+    },
+    {
+      "name": "Wyonna Jean Britten",
+      "role": "CEO, The Organic Biochemist, Zimbabwe",
+      "segment": "Established business",
+      "quote": "The lessons covered exactly what my business needed. I never felt I was spending time on irrelevant material.",
+      "result": "Stronger web presence; now guides other small firms."
+    },
+    {
+      "name": "Timothy Choongo",
+      "role": "Teacher & web programmer, Zambia",
+      "segment": "Expertise",
+      "quote": "Through CCS I applied AI to my web work, automated WhatsApp, and promoted and sold my digital products.",
+      "result": "Facebook audience grew from 4,000 to nearly 6,000."
+    },
+    {
+      "name": "Marian K. Shevtsov",
+      "role": "Economist & parenting coach, Netherlands",
+      "segment": "Startup",
+      "quote": "The lessons felt relevant and helped me finally try content creation. It has been a rewarding experience.",
+      "result": "Building a base to launch her own digital business."
+    },
+    {
+      "name": "Chisanga Simwenwa",
+      "role": "Founder, digital marketing agency, Zambia",
+      "segment": "Established business",
+      "quote": "I came to CCS already running digital marketing. Now I manage several clients efficiently, deliver more professional work, and can train my team.",
+      "result": "Now winning higher-end clients."
+    },
+    {
+      "name": "Suwilanji Phiri",
+      "role": "Clinician & social media manager, Zambia",
+      "segment": "Freelancer - Digital Skills",
+      "quote": "Very practical and simple to follow.",
+      "result": "Now securing local and international gigs."
+    }
   ],
   "pillars": [
-    { "title": "Learn to do it yourself.", "sub": "Courses, programmes and practical resources that build the skills and knowledge you need." },
-    { "title": "Get expert guidance.", "sub": "Get advice. Coaching, feedback and strategic direction so you can make better decisions and keep moving." },
-    { "title": "Bring in help.", "sub": "Bring in expert support to strengthen the systems, digital skills and team capacity your business needs for its next stage." }
+    {
+      "title": "Learn to do it yourself.",
+      "sub": "Courses, programmes and practical resources that build the skills and knowledge you need."
+    },
+    {
+      "title": "Get expert guidance.",
+      "sub": "Get advice. Coaching, feedback and strategic direction so you can make better decisions and keep moving."
+    },
+    {
+      "title": "Bring in help.",
+      "sub": "Bring in expert support to strengthen the systems, digital skills and team capacity your business needs for its next stage."
+    }
   ]
 }
