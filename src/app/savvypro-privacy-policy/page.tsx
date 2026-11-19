@@ -1,10 +1,7 @@
-import { ReferenceLanding } from '@/components/routes/ReferenceLanding'
+import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
 
-export const metadata = {
-  title: 'Savvypro Privacy Policy — SavvyPro',
-  description: 'Savvypro Privacy Policy on SavvyPro — practical digital skills, training and support.',
-}
+export const metadata = specMetadata('savvypro-privacy-policy', '/savvypro-privacy-policy')
 
 export default function Page() {
-  return <ReferenceLanding title="Savvypro Privacy Policy" />
+  return <PublicPage specKey="savvypro-privacy-policy" />
 }

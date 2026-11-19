@@ -1,10 +1,7 @@
-import { ReferenceLanding } from '@/components/routes/ReferenceLanding'
+import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
 
-export const metadata = {
-  title: 'Whatsapp Automation Toolkit — SavvyPro',
-  description: 'Whatsapp Automation Toolkit on SavvyPro — practical digital skills, training and support.',
-}
+export const metadata = specMetadata('whatsapp-automation-toolkit', '/whatsapp-automation-toolkit')
 
 export default function Page() {
-  return <ReferenceLanding title="Whatsapp Automation Toolkit" />
+  return <PublicPage specKey="whatsapp-automation-toolkit" />
 }

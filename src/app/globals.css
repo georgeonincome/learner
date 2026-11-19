@@ -1,143 +1,46 @@
 @import "tailwindcss";
+@import "../styles/tokens.css";
 
-@theme {
-  /* Brand colors (TOKENS.md) */
-  --color-primary: #6662ff;
-  --color-primary-hover: #3a34df;
-  --color-blue: #00a3ff;
-  --color-blue-hover: #3b3b3b;
-  --color-magenta: #ff007a;
-  --color-magenta-hover: #3b3b3b;
-  --color-dark-navy: #101b2f;
-  --color-dark-slate: #16243e;
-  --color-near-black: #110011;
-  --color-light-gray: #d9d9d9;
-  --color-off-white: rgb(248, 247, 247);
-  --color-gray-text: #94a3b8;
-  --color-text-muted: #5b6475;
-  --color-border: #64748b;
-  --color-badge: #e6f1fb;
-  --color-hero-bg: #090e21;
-  --color-nprogress: #29d;
+/*
+ * Base layer. The reference's compiled CSS (vendor.css) and the captured
+ * styled-components rules (reference.css) are imported by app/layout.tsx after
+ * this file, so they win over Tailwind's layered preflight for shared
+ * properties. Only what the reference does not already set lives here.
+ */
 
-  /* Aliases for existing components/content */
-  --color-bg-hero: var(--color-hero-bg);
-  --color-bg-surface: var(--color-dark-navy);
-  --color-bg-surface-elevated: var(--color-dark-slate);
-  --color-text-primary: var(--color-off-white);
-  --color-text-secondary: #f7f3f3;
-  --color-border-card: var(--color-border);
-  --color-text-dark-on-light: var(--color-dark-slate);
-  --color-text-white: #ffffff;
-
-  /* Typography (TOKENS.md) */
-  --font-family-heading: "Verdana", "Lucida Sans Unicode", Arial, sans-serif;
-  --font-family-body: "Figtree", "Lucida Sans Unicode", "Twemoji Country Flags", sans-serif;
-  --font-family-hero: "Lucida Sans Unicode", sans-serif;
-
-  /* Font sizes (TOKENS.md + UI-SPEC) */
-  --font-size-hero-xs: 36px;
-  --font-size-hero-md: 50px;
-  --font-size-sub-xs: 25px;
-  --font-size-sub-md: 25px;
-  --font-size-h1-xs: 20px;
-  --font-size-h1-md: 24px;
-  --font-size-h2-xs: 34px;
-  --font-size-h2-md: 50px;
-  --font-size-base-xs: 14px;
-  --font-size-base-md: 16px;
-  --font-size-sm: 14px;
-  --font-size-xs: 12px;
-  --font-size-button-xs: 16px;
-  --font-size-button-md: 18px;
-
-  --line-height-tight: 1.2;
-  --line-height-copy: 48px;
-  --line-height-relaxed: 1.6;
-
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-bold: 700;
-
-  --letter-spacing-wide: 0.05em;
-
-  /* Spacing (TOKENS.md) */
-  --space-button: 10px 20px;
-  --space-cta-h: 42px;
-  --space-cta-px: 40px;
-  --space-hero-tb: 100px;
-  --space-card-min-h: 430px;
-  --space-forgot-margin: 8px 0 0;
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 12px;
-  --space-4: 16px;
-  --space-5: 20px;
-  --space-6: 24px;
-  --space-8: 32px;
-  --space-10: 40px;
-  --space-12: 48px;
-  --space-16: 64px;
-  --space-20: 80px;
-  --space-24: 96px;
-
-  /* Radius (TOKENS.md) */
-  --radius-button: 5px;
-  --radius-card: 10px;
-  --radius-cta: 50px;
-  --radius-sm: 4px;
-  --radius-md: 6px;
-  --radius-lg: 8px;
-  --radius-xl: 10px;
-  --radius-full: 9999px;
-
-  /* Breakpoints (TOKENS.md) */
-  --breakpoint-sm: 480px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-xl: 1280px;
-  --breakpoint-2xl: 1536px;
-
-  /* Layout */
-  --layout-header-height: 75px;
-  --layout-container-max-width: 1200px;
-  --layout-container-px-base: 10px;
-  --layout-container-px-sm: 20px;
-  --layout-card-p: 12px;
-  --layout-card-min-width: 260px;
-
-  /* Shadow (inferred) */
-  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-
-  --transition-all: all 300ms ease-in-out;
+* {
+  box-sizing: border-box;
 }
 
-* { box-sizing: border-box; }
+html,
+body {
+  min-height: 100%;
+}
 
-html, body {
-  background-color: var(--color-bg-hero);
-  color: var(--color-text-primary);
+body {
   font-family: var(--font-family-body);
-  font-size: var(--font-size-base-xs);
-  line-height: var(--line-height-relaxed);
-  margin: 0;
-  min-height: 100vh;
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-a { color: var(--color-primary); cursor: pointer; text-decoration: underline; transition: color var(--transition-all); }
-a:hover { color: var(--color-primary-hover); }
-button { font-family: inherit; cursor: pointer; }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-family-heading);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-tight);
-  margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
 }
 
-p { margin: 0; }
+/* Accessible text tint: the brand primary (#6662ff) is 4.33:1 on the hero
+   background, below WCAG AA. Keep the brand token for fills/buttons but use
+   this lighter tint for text and links so axe passes AA. */
+:root {
+  --color-primary-text: #a5a2ff;
+}
 
-/* nProgress loading bar (reference) */
+/* nProgress loading bar (present in the reference) */
 #nprogress {
   pointer-events: none;
 }
@@ -186,6 +89,10 @@ p { margin: 0; }
   position: absolute;
 }
 @keyframes nprogress-spinner {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

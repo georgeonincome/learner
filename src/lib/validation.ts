@@ -22,6 +22,11 @@ export const progressSchema = z.object({
   lastPositionSec: z.number().int().nonnegative().optional(),
 })
 
+/** Enrollment: a course id (numeric) or slug. */
+export const enrollSchema = z.object({
+  courseId: z.string().min(1).max(200),
+})
+
 export const postSchema = z.object({
   title: z.string().min(1).max(200),
   body: z.string().min(1).max(5000),
@@ -42,6 +47,9 @@ export const formSchema = z.object({
   name: z.string().max(200).optional(),
   email: z.string().email(),
   message: z.string().max(5000).optional(),
+  /** Extra fields captured from the reference page's own form markup. */
+  fields: z.record(z.string(), z.string()).optional(),
+  page: z.string().max(300).optional(),
 })
 
 export const appointmentSchema = z.object({

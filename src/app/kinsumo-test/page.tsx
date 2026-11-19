@@ -1,10 +1,7 @@
-import { ReferenceLanding } from '@/components/routes/ReferenceLanding'
+import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
 
-export const metadata = {
-  title: 'Kinsumo Test — SavvyPro',
-  description: 'Kinsumo Test on SavvyPro — practical digital skills, training and support.',
-}
+export const metadata = specMetadata('kinsumo-test', '/kinsumo-test')
 
 export default function Page() {
-  return <ReferenceLanding title="Kinsumo Test" />
+  return <PublicPage specKey="kinsumo-test" />
 }

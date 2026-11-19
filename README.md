@@ -1,68 +1,117 @@
-# learner — SavvyPro-equivalent platform rebuild
+# lena — SavvyPro-equivalent platform
 
-A from-scratch rebuild of the captured reference platform at
-`web/clone/savvypro/_reference/`, using original branding, copy, imagery and
-design tokens. Built with Next.js 15 App Router, TypeScript, Tailwind CSS v4,
-Firebase Auth + Firestore, Turso/libSQL, Stripe test mode and Radix UI.
+Rebuild of the captured reference platform in `web/clone/savvypro/_reference/`
+(181 sitemap URLs). Next.js 15 App Router, TypeScript, Tailwind CSS v4, Firebase Auth,
+Turso/libSQL, Stripe test mode.
 
 ## Quick start
 
 ```bash
 npm install
-cp .env.example .env.local   # fill in your own keys
+cp .env.example .env.local   # optional — the public site renders without credentials
 npm run dev                  # http://localhost:3000
 ```
+
+Production:
+
+```bash
+npm run build
+npm run start
+```
+
+Nothing in the public marketing site requires credentials. Firebase is only needed for
+login/signup, and Turso only for the commerce/learning APIs.
 
 ## Scripts
 
 | Command | Purpose |
 |---|---|
-| `npm run dev` | Development server |
-| `npm run build` | Production build |
-| `npm run start` | Serve the production build |
-| `npm run lint` | ESLint (includes `@mui/*` / `@emotion/*` ban) |
-| `npm run type-check` | TypeScript check |
-| `npm test` | Vitest unit tests |
-| `node scripts/brand-scan.mjs` | Copy / brand / tracking provenance scan |
+| `npm run dev` / `build` / `start` | Dev server / production build / serve |
+| `npm run type-check` | `tsc --noEmit` |
+| `npm test` | Vitest (unit + integration) |
+| `npm run lint` | ESLint (fails on `@mui/*` and `@emotion/*` imports) |
 | `node scripts/route-coverage.mjs` | Sitemap URL → app route coverage |
-| `node scripts/generate-route-pages.mjs` | Generate missing sitemap route pages |
-| `npx tsx scripts/seed.ts` | Seed Turso + Firestore from `src/content/*.json` |
+| `node scripts/sitemap-audit.mjs` | Crawl all 181 URLs: status, title, description, console errors, handler |
+| `node scripts/layout-compare.mjs` | Visual fidelity vs the captured reference |
+| `node scripts/capture-browser.mjs` | Re-capture the live reference (HTML + CSSOM) |
+| `node scripts/extract-page-specs.mjs` | Rebuild `src/content/pages/*.json` |
+| `node scripts/build-design-system.mjs` | Rebuild `src/styles/{reference,vendor}.css` |
+| `node scripts/capture-button-targets.mjs` | Click reference CTAs and record destinations |
+| `node scripts/build-course-index.mjs` | Index every course-detail slug the reference links to |
+| `node scripts/generate-routes.mjs` | Regenerate spec-driven route files |
 
-## What is built
+## How the UI parity works
 
-| Area | Routes / features | Status |
-|---|---|---|
-| Foundation | Tailwind v4 theme from `docs/UI-SPEC/TOKENS.md`, component library, layout shell, SEO metadata | ✅ |
-| Auth | Firebase Auth, httpOnly session cookies, email verification, password reset, middleware route protection, roles | ✅ |
-| Data | Turso schema (orders, enrollments, memberships, lesson progress, appointments, webinar registrations, leads, forms), Firestore rules, seed script | ✅ |
-| Public pages | Home, 6 path landings, all-products catalog, course & book detail, blog list/post/category, legal, about, contact, testimonials, appointment, 181 sitemap routes | ✅ |
-| Commerce | Stripe test-mode checkout, webhook signature + idempotency, order states, enrollment after payment, memberships + gating | ✅ |
-| Learning | Dashboard, course page, lesson player, per-lesson progress API, mark-complete, certificates + SVG download | ✅ |
-| Engagement | Community feed (groups/posts/comments/likes), appointments + webinars with `.ics`, lead magnets/forms, streaming mock AI assistant with rate limits | ✅ |
-| Admin | Role-guarded area: courses/posts CRUD, lessons, books, users, orders, memberships, settings | ✅ |
-| Hardening | zod validation, rate limiting, security headers, `SECURITY.md` | ✅ |
-| Verification | tsc, ESLint, Vitest (11 tests), build, brand scan, route coverage | ✅ |
+The reference is a styled-components v5 app. Its per-page rules are captured to
+`src/styles/reference.css`; its compiled theme stylesheet (Bootstrap + EzyCourse) is
+`src/styles/vendor.css`. Page markup is **data**, not hand-written:
+
+```
+scripts/capture-browser.mjs      →  captured-browser/*.html + *.css (CSSOM)
+scripts/extract-page-specs.mjs   →  src/content/pages/<key>.json
+scripts/generate-routes.mjs      →  src/app/<route>/page.tsx  (PublicPage)
+src/components/ref/RefNode.tsx   →  renders a spec as React, class names preserved
+src/components/layout/PublicPage →  SiteHeader + spec blocks
+```
+
+Class names are carried over verbatim, so the reference's own CSS applies unchanged.
+Brand name, logo and palette stay editable in `src/styles/tokens.css`; every piece of copy
+lives in `src/content/pages/*.json`.
+
+Do **not** hand-write page markup — edit the spec JSON or the capture pipeline instead.
+
+## Commerce and learning engines
+
+- `/checkout?course=<id|slug>` / `/checkout?book=<id|slug>` — resolves the product,
+  shows price, and creates a Stripe session (`/api/checkout/session`). Free products
+  enrol immediately (`/api/enrollments`).
+- `/dashboard` — real enrollments (`enrollments` table) and real per-lesson progress.
+- `/dashboard/course/<id>` — real curriculum from `src/content/courses.json`, gated on
+  enrollment, with a working buy/enrol path.
+- `/dashboard/course/<id>/lesson/<lessonId>` — lesson player with a working
+  "Mark complete" (`/api/progress`).
+- `/read/<slug>` — book reader rendering the book's real chapters, with the chapters
+  beyond `preview_chapters` behind a purchase CTA.
+- `/course-detail/<slug>/<id>` — renders the captured reference page where one exists;
+  otherwise the catalog-driven `CourseDetail` page. Every course-detail slug the
+  reference links to resolves (see `src/content/course-index.json`).
+
+## Verified status
+
+| Check | Result |
+| --- | --- |
+| `npx tsc --noEmit` | 0 errors |
+| `npm run build` | exit 0, 191 static pages |
+| `npm test` | 20/20 pass |
+| `node scripts/route-coverage.mjs` | 181 sitemap URLs, **0 unmatched** |
+| `node scripts/layout-compare.mjs` | see COMPARISON.md |
 
 ## Architecture
 
-- **Firestore**: auth profiles, content (courses, lessons, books, blog posts), community, certificates, settings.
-- **Turso/libSQL**: orders, enrollments, memberships, lesson progress, appointments, webinar registrations, lead claims, form submissions.
-- Firebase Auth `uid` links the two stores. See `docs/DATA-ARCHITECTURE.md`.
+- **Turso/libSQL** — system of record for orders, order items, enrollments, memberships,
+  lesson progress, appointments, webinar registrations, lead claims, form submissions.
+  Schema: `database/schema.sql`. Firebase `uid` is the join key.
+- **Firebase Auth** — email/password + OAuth redirect; idToken exchanged for an HttpOnly
+  session cookie (`src/lib/session.ts`).
+- **Firestore** — scaffolded (`src/lib/firestore-server.ts`, security rules) but currently
+  unused; community and admin run on in-memory stores seeded from `src/content/*.json`.
+- **Spec-driven pages** — 106 static routes + 5 dynamic routes render captured reference
+  content. 26 functional routes (auth, cart, checkout, dashboard, admin, API) are real
+  implementation code.
+
+See `DATA-ARCHITECTURE.md`.
 
 ## Docs
 
-- `PROGRESS.md` — milestone status
-- `docs/COVERAGE.md` — all 181 sitemap URLs mapped to templates
-- `docs/FEATURES.md` — feature inventory with evidence markers
-- `docs/API-CONTRACT.md`, `docs/DATA-MODEL.md`, `docs/DATA-ARCHITECTURE.md`
+- `AUDIT.md` — route audit + feature status with evidence
+- `COMPARISON.md` — measured visual fidelity per template and breakpoint
+- `DATA-ARCHITECTURE.md` — stores, tables, indexes, ID linking
+- `GAPS.md` — inferred / unknown / missing
+- `docs/FEATURES.md`, `docs/API-CONTRACT.md`, `docs/COVERAGE.md`
 - `docs/UI-SPEC/` — tokens and template specs
-- `docs/BRAND-AUDIT.md` — copy / brand provenance audit
-- `docs/DEPLOYMENT.md`, `PRODUCTION-CHECKLIST.md` — deployment guidance
-- `GAPS.md` — inferred / unknown items
-- `SECURITY.md` — security notes
 
 ## Production notes
 
-Demo-mode fallbacks exist for community, admin and progress data when external
-services are not configured. Review `GAPS.md` and `PRODUCTION-CHECKLIST.md`
-before deploying.
+Community, admin and progress data fall back to in-memory storage when external services
+are not configured. Email sending, Cloudinary uploads, `sitemap.xml`/`robots.txt`, OG tag
+emission and the Turso migration runner are not implemented — see `GAPS.md`.

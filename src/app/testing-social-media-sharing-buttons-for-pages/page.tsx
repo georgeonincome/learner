@@ -1,10 +1,7 @@
-import { ReferenceLanding } from '@/components/routes/ReferenceLanding'
+import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
 
-export const metadata = {
-  title: 'Testing Social Media Sharing Buttons For Pages — SavvyPro',
-  description: 'Testing Social Media Sharing Buttons For Pages on SavvyPro — practical digital skills, training and support.',
-}
+export const metadata = specMetadata('testing-social-media-sharing-buttons-for-pages', '/testing-social-media-sharing-buttons-for-pages')
 
 export default function Page() {
-  return <ReferenceLanding title="Testing Social Media Sharing Buttons For Pages" />
+  return <PublicPage specKey="testing-social-media-sharing-buttons-for-pages" />
 }

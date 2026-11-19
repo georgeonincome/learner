@@ -1,10 +1,7 @@
-import { ReferenceLanding } from '@/components/routes/ReferenceLanding'
+import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
 
-export const metadata = {
-  title: '5 Types Of Expert Businesses You Can Launch — SavvyPro',
-  description: '5 Types Of Expert Businesses You Can Launch on SavvyPro — practical digital skills, training and support.',
-}
+export const metadata = specMetadata('5-types-of-expert-businesses-you-can-launch', '/5-types-of-expert-businesses-you-can-launch')
 
 export default function Page() {
-  return <ReferenceLanding title="5 Types Of Expert Businesses You Can Launch" />
+  return <PublicPage specKey="5-types-of-expert-businesses-you-can-launch" />
 }

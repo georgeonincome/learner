@@ -85,24 +85,24 @@ export function PathPicker() {
   return (
     <div data-layout-section className="py-10 md:py-16 px-2 sm:px-2">
       <div className="mx-auto max-w-[1264px]">
-        <h1 className="font-heading font-bold text-center" style={{
+        <h2 className="font-heading font-bold text-center" style={{
           fontSize: '24px',
           marginBottom: '8px',
           color: REF.textPrimary,
         }}>
           Choose an option — where are you today?
-        </h1>
+        </h2>
         <div className="flex gap-3 flex-wrap justify-center">
           {homeContent.paths.map((p) => (
             <div key={p.id} className="flex-1 min-w-[260px] flex-col h-full border border-border-card rounded-xl bg-surface-elevated p-3 flex" style={{ flexBasis: '25%' }}>
               <Link href={`/paths/${p.id}`} className="no-underline block">
-                <h1 className="font-heading font-bold" style={{
+                <h3 className="font-heading font-bold" style={{
                   fontSize: '20px',
                   color: REF.textDark,
                   marginBottom: '8px',
                 }}>
                   {p.title}
-                </h1>
+                </h3>
                 <p className="flex-1" style={{
                   fontSize: '16px',
                   lineHeight: '1.6',
@@ -127,22 +127,22 @@ export function SocialProof() {
     <div data-layout-section className="py-5 px-2 sm:px-2">
       <div className="mx-auto max-w-[1264px]">
         <div className="text-center">
-          <h1 className="font-heading font-bold uppercase tracking-wide" style={{
+          <h2 className="font-heading font-bold uppercase tracking-wide" style={{
             color: REF.goldLight,
             fontSize: '20px',
             marginBottom: '8px',
             letterSpacing: '0.05em',
           }}>
             STUDENT & CLIENT STORIES
-          </h1>
-          <h1 className="font-heading font-bold" style={{
+          </h2>
+          <h2 className="font-heading font-bold" style={{
             fontSize: '34px',
             lineHeight: '1.2',
             marginBottom: '24px',
             color: REF.textPrimary,
           }}>
             Real People. Real Skills. Real Results.
-          </h1>
+          </h2>
           <p className="mx-auto max-w-[720px] text-text-muted" style={{
             fontFamily: "'anthropic-sans', sans-serif",
             fontSize: '14px',
@@ -162,9 +162,9 @@ export function SocialProof() {
             <div key={t.name} className="flex flex-col h-full p-3 border border-border-card rounded-xl bg-surface-elevated" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
               <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', height: '100%' }}>
                 <img src="/logo.svg" alt="Widget image" style={{ width: '100%', height: '160px', objectFit: 'cover', borderRadius: '6px' }} />
-                <h1 className="font-heading font-bold" style={{ fontSize: '20px', marginTop: '8px', marginBottom: '4px', color: REF.textPrimary }}>
+                <h3 className="font-heading font-bold" style={{ fontSize: '20px', marginTop: '8px', marginBottom: '4px', color: REF.textPrimary }}>
                   {t.name}
-                </h1>
+                </h3>
                 <p style={{ color: REF.textSecondary, fontSize: '14px', marginBottom: '8px' }}>
                   {t.role}
                 </p>
@@ -180,7 +180,7 @@ export function SocialProof() {
                   "{t.quote}"
                 </p>
                 <div style={{ marginTop: 'auto' }}>
-                  <h1 className="font-heading font-bold uppercase" style={{
+                  <h4 className="font-heading font-bold uppercase" style={{
                     color: REF.resultGold,
                     fontWeight: '700',
                     fontSize: '16px',
@@ -188,7 +188,7 @@ export function SocialProof() {
                     letterSpacing: '0.05em',
                   }}>
                     THE RESULT
-                  </h1>
+                  </h4>
                   <p style={{ color: REF.textSecondary, fontSize: '14px', margin: 0 }}>
                     {t.result}
                   </p>
@@ -208,14 +208,14 @@ export function ServicePillars() {
     <div data-layout-section className="py-10 md:py-16 px-2 sm:px-2">
       <div className="mx-auto max-w-[1264px]">
         <div className="text-center mb-[48px]">
-          <h1 className="font-heading font-bold uppercase tracking-wide" style={{
+          <h2 className="font-heading font-bold uppercase tracking-wide" style={{
             color: REF.goldLight,
             fontSize: '20px',
             marginBottom: '8px',
             letterSpacing: '0.05em',
           }}>
             MORE THAN COURSES
-          </h1>
+          </h2>
           <p className="mx-auto max-w-[720px] text-gray-light" style={{
             fontSize: '16px',
             textAlign: 'center',
@@ -238,11 +238,11 @@ export function ServicePillars() {
               <div key={p.title} className="flex flex-col gap-2 items-center text-center">
                 <div className="flex items-center gap-1 text-primary" style={{ fontSize: '24px', marginBottom: '8px' }}>
                   <span className="font-[FontAwesome]">\uf017</span>
-                  <h1 className="font-heading font-bold" style={{ fontSize: '18px', margin: 0 }}>{label}</h1>
+                  <h3 className="font-heading font-bold" style={{ fontSize: '18px', margin: 0 }}>{label}</h3>
                 </div>
-                <h1 className="font-heading font-bold" style={{ fontSize: '20px', color: REF.textPrimary, marginBottom: '8px' }}>
+                <h3 className="font-heading font-bold" style={{ fontSize: '20px', color: REF.textPrimary, marginBottom: '8px' }}>
                   {p.title}
-                </h1>
+                </h3>
                 <p style={{ color: REF.grayLight, fontSize: '14px', lineHeight: '1.6', margin: 0 }}>
                   {p.sub}
                 </p>

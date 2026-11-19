@@ -17,23 +17,27 @@ import path from 'node:path'
 import { chromium } from '@playwright/test'
 
 const ROOT = process.cwd()
-const REF_SITE = path.resolve(ROOT, '..', '_reference', 'site', 'www.savvypro.org')
+const REF_SITE = process.env.REF_DIR
+  ? path.resolve(ROOT, process.env.REF_DIR)
+  : path.resolve(ROOT, '..', '_reference', 'site', 'www.savvypro.org')
+// Compiled CSS lives in the read-only reference archive either way.
+const CSS_SITE = path.resolve(ROOT, '..', '_reference', 'site', 'www.savvypro.org')
 const OUR_BASE = process.env.OUR_BASE || 'http://127.0.0.1:3000'
 const REF_PORT = 3100
 const WIDTHS = [375, 768, 1024, 1280, 1536]
 const TOLERANCE = 4
 
-const PAIRS = [
+const ALL_PAIRS = [
   { template: 'home', ref: 'index.html', ours: '/' },
   { template: 'catalog', ref: 'courses.html', ours: '/courses' },
   { template: 'all-products', ref: 'all-products.html', ours: '/all-products' },
-  { template: 'course-detail', ref: 'course-detail-content-creation-school-2026-36467.html', ours: '/course-detail/content-creation-school-2026/36467' },
+  { template: 'course-detail', ref: 'course-detail__content-creation-school-2026__36467.html', ours: '/course-detail/content-creation-school-2026/36467' },
   { template: 'books', ref: 'books.html', ours: '/books' },
-  { template: 'book', ref: 'zero-to-hero-social-media-manager-book.html', ours: '/book/zero-to-hero-social-media-manager-book' },
+  { template: 'book', ref: 'zero-to-hero-social-media-manager-book.html', ours: '/zero-to-hero-social-media-manager-book' },
   { template: 'blog', ref: 'blog.html', ours: '/blog' },
-  { template: 'blog-post', ref: 'blog.html', ours: '/blog/making-your-own-salary-stay-home-mums' },
-  { template: 'blog-category', ref: 'blog-category-freelancer-listings.html', ours: '/blog/category/freelancer-listings/2817' },
-  { template: 'community', ref: 'community-834.html', ours: '/community/834' },
+  { template: 'blog-post', ref: 'blog__making-your-own-salary-stay-home-mums.html', ours: '/blog/making-your-own-salary-stay-home-mums' },
+  { template: 'blog-category', ref: 'blog__category__freelancer-listings__2817.html', ours: '/blog/category/freelancer-listings/2817' },
+  { template: 'community', ref: 'community__834.html', ours: '/community/834' },
   { template: 'groups', ref: 'groups.html', ours: '/groups' },
   { template: 'path-landing', ref: 'getting-started-page.html', ours: '/getting-started-page' },
   { template: 'legal', ref: 'contact-us.html', ours: '/contact-us' },
@@ -43,6 +47,8 @@ const PAIRS = [
   { template: 'lead-magnet', ref: 'join-our-mailing-list.html', ours: '/join-our-mailing-list' },
   { template: 'auth', ref: 'login.html', ours: '/login' },
 ]
+
+const PAIRS = ALL_PAIRS.filter((p) => !process.env.ONLY || p.template.includes(process.env.ONLY))
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
@@ -86,6 +92,14 @@ function startStaticServer(root, port) {
 
 async function measure(page, url, isRef) {
   await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30_000 })
+  if (isRef) {
+    // Re-inject the captured CSSOM: page.content() drops speedy-mode sheets.
+    const name = decodeURIComponent(new URL(url).pathname).replace(/^\/+|\.html$/g, '')
+    const cssFile = path.join(REF_SITE, `${name}.css`)
+    if (fs.existsSync(cssFile)) {
+      await page.addStyleTag({ content: fs.readFileSync(cssFile, 'utf8') }).catch(() => {})
+    }
+  }
   await page.waitForTimeout(400)
   return page.evaluate((isRefLocal) => {
     const px = (v, fontPx = 0) => {
@@ -94,8 +108,29 @@ async function measure(page, url, isRef) {
       // Computed `normal` line-height: use browser-typical 1.2 ratio.
       return fontPx ? Math.round(fontPx * 1.2) : 0
     }
-    const selector = isRefLocal ? 'section' : '[data-layout-section]'
-    const sections = [...document.querySelectorAll(selector)]
+    const selector = isRefLocal ? null : '[data-layout-section]'
+    // The reference measurement must mirror the extractor: the element children
+    // of the #__next content container (header/scripts/styles excluded), so it
+    // counts exactly the same blocks the page spec carries.
+    const sections = (isRefLocal
+      ? (() => {
+          let el = document.getElementById('__next') || document.body
+          for (let i = 0; i < 8; i++) {
+            const kids = [...el.children].filter(
+              (n) => n.tagName && !['SCRIPT', 'STYLE', 'NOSCRIPT', 'NEXT-ROUTE-ANNOUNCER'].includes(n.tagName),
+            )
+            if (kids.length === 1 && kids[0].tagName === 'DIV') {
+              el = kids[0]
+              continue
+            }
+            break
+          }
+          return [...el.children].filter(
+            (n) => n.tagName && !['SCRIPT', 'STYLE', 'NOSCRIPT', 'NEXT-ROUTE-ANNOUNCER', 'HEADER'].includes(n.tagName),
+          )
+        })()
+      : [...document.querySelectorAll(selector)]
+    )
       .filter((el) => {
         const r = el.getBoundingClientRect()
         return r.height > 20 && r.width > 100
@@ -187,12 +222,22 @@ async function main() {
   await context.route('**/*', (route) => {
     const u = route.request().url()
     if (u.startsWith(`http://127.0.0.1:${REF_PORT}`) || u.startsWith(OUR_BASE)) return route.continue()
-    // The captured HTML references its CSS on cdn.ezycourse.net. Serve the
-    // captured copy from _reference instead of blocking it.
+    // Diagnostic mode: let the reference's own CDN images load so image-related
+    // height deltas can be separated from CSS differences.
+    if (process.env.ALLOW_IMAGES && /b-cdn\.net|cloudinary\.com|gstatic\.com/.test(u)) {
+      return route.continue()
+    }
+    // The captured HTML references its CSS on cdn.ezycourse.net. The captured
+    // pages were saved with a different build hash than the archived copy, so
+    // serve the archived stylesheet for any hash.
     const m = u.match(/cdn\.ezycourse\.net\/_next\/static\/css\/([\w.-]+\.css)/)
     if (m) {
-      const file = path.join(REF_SITE, '_next', 'static', 'css', m[1])
-      if (fs.existsSync(file)) {
+      const candidates = [
+        path.join(CSS_SITE, '_next', 'static', 'css', m[1]),
+        path.join(CSS_SITE, '_next', 'static', 'css', 'bba21c04c9008d1b.css'),
+      ]
+      const file = candidates.find((f) => fs.existsSync(f))
+      if (file) {
         return route.fulfill({
           status: 200,
           contentType: 'text/css',

@@ -43,3 +43,59 @@ Cloudinary, Nodemailer + React Email, Stripe test mode.
 
 Remaining steps: layout comparison, sitemap crawl, E2E/integration tests +
 axe/Lighthouse, GAPS.md completion, final report.
+
+### Step 2 — Layout fidelity — DONE
+- `scripts/layout-compare.mjs` measures the captured reference (`captured-browser/*.html`
+  + re-injected CSSOM) against the clone at 375/768/1024/1280/1536px, ±4px.
+- Result: 10/18 templates pass at 375px, 13/18 at 768, 15/18 at 1024, 15/18 at 1280,
+  16/18 at 1536. Residual failures are single-section height deltas of 7–23px.
+- Full table and method notes in `COMPARISON.md`.
+
+### Step 3 — Sitemap crawl — DONE
+- `scripts/sitemap-audit.mjs` visits all 181 sitemap URLs and reports status, title,
+  meta description, console/page errors and the handler that serves each route.
+- Output: `sitemap-audit.json` (summary + per-route rows).
+
+### Step 4 — Tests / journeys — PARTIAL
+- `npx vitest run`: 20/20 pass (validation, rate limit, ics, ai-provider, checkout
+  webhook idempotency, lesson progress, auth session).
+- Playwright journeys (signup → verify → browse → enroll → pay → learn → complete →
+  logout) and axe/Lighthouse runs: NOT DONE. Requires configured Firebase/Turso/Stripe
+  credentials and a running sandbox.
+
+### Step 5 — GAPS.md — DONE
+- Every remaining item is listed and marked `unknown from the reference` or
+  `not yet built`.
+
+### Step 6 — Final report — DONE
+- See the feature → status → evidence table in the delivery summary.
+
+## Control-wiring work (user report: "most of the buttons are not working")
+
+Root cause: the reference renders CTAs as styled-components `<button>` elements with
+minified React `onClick` closures, and wraps some in `<a href="#uuid">`. A static
+capture carries neither, so every CTA was inert.
+
+- `scripts/capture-button-targets.mjs` clicked 173 controls across 24 live reference
+  pages and recorded their destinations → `src/content/button-targets.json`.
+- `src/lib/button-targets.ts` resolves a control label to its destination (route-specific
+  first, then a site-wide label index; same-page "navigate" targets are treated as
+  in-page anchors and skipped).
+- `src/components/ref/RefNode.tsx` attaches the recorded destination to `<button>` and
+  to `<a>` elements whose href is missing or a `#fragment`.
+
+## Course engine work (user report: course/book pages blank or white text)
+
+- 22 of the 54 course-detail URLs the reference links to are absent from the sitemap, so
+  they had no captured spec and rendered a blank page.
+  `scripts/build-course-index.mjs` harvested all 54 from the reference's own anchors →
+  `src/content/course-index.json`; `src/app/course-detail/[slug]/[id]/page.tsx` now falls
+  back to `src/components/commerce/CourseDetail.tsx`.
+- Functional screens (checkout, dashboard, course, lesson, book reader) used the
+  off-white text tokens on a white body — white-on-white. They now sit on
+  `AppSurface` (brand ink) with the site header. Measured contrast: 0 low-contrast
+  elements on those screens.
+- `/checkout` (was missing entirely) resolves a course or book and creates a Stripe
+  session; `/dashboard` lists real enrollments and progress; the course page renders a
+  real curriculum with an enrollment gate; the lesson player records real progress;
+  `/read/<slug>` renders the book's real chapters behind a paywall.

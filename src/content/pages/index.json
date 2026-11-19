@@ -1,0 +1,1454 @@
+{
+  "generated": "2026-11-19T07:36:07.794Z",
+  "count": 181,
+  "pages": [
+    {
+      "route": "/",
+      "key": "home",
+      "template": "home",
+      "title": "Savvypro",
+      "source": "captured-browser/index.html",
+      "bytes": 33694
+    },
+    {
+      "route": "/101-digital-skills-pdf-download/",
+      "key": "101-digital-skills-pdf-download",
+      "template": "lead-magnet",
+      "title": "101 Digital Skills PDF Download",
+      "source": "captured-browser/101-digital-skills-pdf-download.html",
+      "bytes": 11224
+    },
+    {
+      "route": "/3keys-to-getting-more-customers/",
+      "key": "3keys-to-getting-more-customers",
+      "template": "page",
+      "title": "3 Keys to Getting More Customers Signup",
+      "source": "captured-browser/3keys-to-getting-more-customers.html",
+      "bytes": 10647
+    },
+    {
+      "route": "/5-types-of-expert-businesses-you-can-launch/",
+      "key": "5-types-of-expert-businesses-you-can-launch",
+      "template": "page",
+      "title": "5 Types of Expert Businesses You Can Launch",
+      "source": "captured-browser/5-types-of-expert-businesses-you-can-launch.html",
+      "bytes": 13015
+    },
+    {
+      "route": "/7-daily-sales-and-marketing-actions-for-your-sales-team/",
+      "key": "7-daily-sales-and-marketing-actions-for-your-sales-team",
+      "template": "page",
+      "title": "7 Daily Sales and Marketing Actions for Your Sales Team",
+      "source": "captured-browser/7-daily-sales-and-marketing-actions-for-your-sales-team.html",
+      "bytes": 11381
+    },
+    {
+      "route": "/7-step-whatspp-automation-system-setup/",
+      "key": "7-step-whatspp-automation-system-setup",
+      "template": "page",
+      "title": "7-Step Whatspp Automation System Setup",
+      "source": "captured-browser/7-step-whatspp-automation-system-setup.html",
+      "bytes": 35400
+    },
+    {
+      "route": "/7-steps-to-better-sales-book/",
+      "key": "7-steps-to-better-sales-book",
+      "template": "page",
+      "title": "7 Steps to Better Sales Book",
+      "source": "captured-browser/7-steps-to-better-sales-book.html",
+      "bytes": 17869
+    },
+    {
+      "route": "/7-sytem-whatsapp-automation-setup/",
+      "key": "7-sytem-whatsapp-automation-setup",
+      "template": "page",
+      "title": "7-Step WhatsApp Automation System Setup",
+      "source": "captured-browser/7-sytem-whatsapp-automation-setup.html",
+      "bytes": 17262
+    },
+    {
+      "route": "/about-us/",
+      "key": "about-us",
+      "template": "legal",
+      "title": "About Us",
+      "source": "captured-browser/about-us.html",
+      "bytes": 7180
+    },
+    {
+      "route": "/all-products/",
+      "key": "all-products",
+      "template": "catalog",
+      "title": "All products",
+      "source": "captured-browser/all-products.html",
+      "bytes": 56610
+    },
+    {
+      "route": "/appointment",
+      "key": "appointment",
+      "template": "coaching",
+      "title": "Book an Appointment – Schedule Your Session Online",
+      "source": "captured-browser/appointment.html",
+      "bytes": 13487
+    },
+    {
+      "route": "/audio-details/",
+      "key": "audio-details",
+      "template": "page",
+      "title": "Default audio watch page",
+      "source": "captured-browser/audio-details.html",
+      "bytes": 7242
+    },
+    {
+      "route": "/audio-library/",
+      "key": "audio-library",
+      "template": "page",
+      "title": "Default audio page",
+      "source": "captured-browser/audio-library.html",
+      "bytes": 7224
+    },
+    {
+      "route": "/blog/",
+      "key": "blog",
+      "template": "blog-list",
+      "title": "Tips & Strategies for Online Course Creators",
+      "source": "captured-browser/blog.html",
+      "bytes": 22903
+    },
+    {
+      "route": "/blog/1-page-sales-and-marketing-strategy/",
+      "key": "blog__1-page-sales-and-marketing-strategy",
+      "template": "blog-post",
+      "title": "1 Page Sales and Marketing Strategy",
+      "source": "captured-browser/blog__1-page-sales-and-marketing-strategy.html",
+      "bytes": 16769
+    },
+    {
+      "route": "/blog/11-reasons-customers-dont-buy-and-how-to-fix-them-fast/",
+      "key": "blog__11-reasons-customers-dont-buy-and-how-to-fix-them-fast",
+      "template": "blog-post",
+      "title": "11 Reasons Customers Don’t Buy & How to Fix Them Fast",
+      "source": "captured-browser/blog__11-reasons-customers-dont-buy-and-how-to-fix-them-fast.html",
+      "bytes": 41251
+    },
+    {
+      "route": "/blog/12-savvy-ways-to-use-whatsapp-for-marketing/",
+      "key": "blog__12-savvy-ways-to-use-whatsapp-for-marketing",
+      "template": "blog-post",
+      "title": "💬 12 Savvy Ways to Use WhatsApp for Marketing",
+      "source": "captured-browser/blog__12-savvy-ways-to-use-whatsapp-for-marketing.html",
+      "bytes": 29823
+    },
+    {
+      "route": "/blog/14-types-of-clients-you-can-work-with-as-a-content-creator/",
+      "key": "blog__14-types-of-clients-you-can-work-with-as-a-content-creator",
+      "template": "blog-post",
+      "title": "🎯 14 Types of Clients You Can Work With as a Content Creator",
+      "source": "captured-browser/blog__14-types-of-clients-you-can-work-with-as-a-content-creator.html",
+      "bytes": 31287
+    },
+    {
+      "route": "/blog/17-proven-ways-to-make-your-brand-unmissable-online-even-on-a-tiny-budget/",
+      "key": "blog__17-proven-ways-to-make-your-brand-unmissable-online-even-on-a-tiny-budget",
+      "template": "blog-post",
+      "title": "17 Proven Ways to Make Your Brand Unmissable Online (Even on a Tiny Budget)",
+      "source": "captured-browser/blog__17-proven-ways-to-make-your-brand-unmissable-online-even-on-a-tiny-budget.html",
+      "bytes": 36338
+    },
+    {
+      "route": "/blog/17-ways-african-businesses-use-whatsapp-to-get-customers-with-real-examples/",
+      "key": "blog__17-ways-african-businesses-use-whatsapp-to-get-customers-with-real-examples",
+      "template": "blog-post",
+      "title": "📱 17 Ways African Businesses Use WhatsApp to Get Customers (With Real Examples)",
+      "source": "captured-browser/blog__17-ways-african-businesses-use-whatsapp-to-get-customers-with-real-examples.html",
+      "bytes": 34732
+    },
+    {
+      "route": "/blog/5-types-of-expert-businesses-you-can-start/",
+      "key": "blog__5-types-of-expert-businesses-you-can-start",
+      "template": "blog-post",
+      "title": "5 Types of Expert Businesses You Can Start",
+      "source": "captured-browser/blog__5-types-of-expert-businesses-you-can-start.html",
+      "bytes": 12726
+    },
+    {
+      "route": "/blog/7-ways-to-find-mentorship/",
+      "key": "blog__7-ways-to-find-mentorship",
+      "template": "blog-post",
+      "title": "7 Ways to Find Mentorship",
+      "source": "captured-browser/blog__7-ways-to-find-mentorship.html",
+      "bytes": 19855
+    },
+    {
+      "route": "/blog/99-online-gigs-you-can-start-right-now-african-edition/",
+      "key": "blog__99-online-gigs-you-can-start-right-now-african-edition",
+      "template": "blog-post",
+      "title": "💼 99+ Online Gigs You Can Start Right Now (African Edition)",
+      "source": "captured-browser/blog__99-online-gigs-you-can-start-right-now-african-edition.html",
+      "bytes": 43016
+    },
+    {
+      "route": "/blog/are-linkedin-ads-really-the-cure-for-your-broke-ass-lead-problem/",
+      "key": "blog__are-linkedin-ads-really-the-cure-for-your-broke-ass-lead-problem",
+      "template": "blog-post",
+      "title": "ARE LINKEDIN ADS REALLY THE CURE FOR YOUR BROKE-ASS LEAD PROBLEM?",
+      "source": "captured-browser/blog__are-linkedin-ads-really-the-cure-for-your-broke-ass-lead-problem.html",
+      "bytes": 25764
+    },
+    {
+      "route": "/blog/category/ceo-digital-strategies/766/",
+      "key": "blog__category__ceo-digital-strategies__766",
+      "template": "blog-category",
+      "title": "CEO Digital Strategies",
+      "source": "captured-browser/blog__category__ceo-digital-strategies__766.html",
+      "bytes": 10838
+    },
+    {
+      "route": "/blog/category/digital-biz-ideas/1147/",
+      "key": "blog__category__digital-biz-ideas__1147",
+      "template": "blog-category",
+      "title": "Digital Biz Ideas",
+      "source": "captured-browser/blog__category__digital-biz-ideas__1147.html",
+      "bytes": 14276
+    },
+    {
+      "route": "/blog/category/freelancer-listings/2817/",
+      "key": "blog__category__freelancer-listings__2817",
+      "template": "blog-category",
+      "title": "Freelancer Listings",
+      "source": "captured-browser/blog__category__freelancer-listings__2817.html",
+      "bytes": 3685
+    },
+    {
+      "route": "/blog/category/growth-marketing/1149/",
+      "key": "blog__category__growth-marketing__1149",
+      "template": "blog-category",
+      "title": "Growth Marketing",
+      "source": "captured-browser/blog__category__growth-marketing__1149.html",
+      "bytes": 10935
+    },
+    {
+      "route": "/blog/category/personal-branding/3821/",
+      "key": "blog__category__personal-branding__3821",
+      "template": "blog-category",
+      "title": "Personal Branding",
+      "source": "captured-browser/blog__category__personal-branding__3821.html",
+      "bytes": 4804
+    },
+    {
+      "route": "/blog/category/susan-lumba-mwenda/3870/",
+      "key": "blog__category__susan-lumba-mwenda__3870",
+      "template": "blog-category",
+      "title": "Susan Lumba Mwenda",
+      "source": "captured-browser/blog__category__susan-lumba-mwenda__3870.html",
+      "bytes": 4820
+    },
+    {
+      "route": "/blog/ceo-mistakes-in-digital-growth-and-how-to-avoid-them/",
+      "key": "blog__ceo-mistakes-in-digital-growth-and-how-to-avoid-them",
+      "template": "blog-post",
+      "title": "CEO Mistakes in Digital Growth (and How to Avoid Them)",
+      "source": "captured-browser/blog__ceo-mistakes-in-digital-growth-and-how-to-avoid-them.html",
+      "bytes": 25865
+    },
+    {
+      "route": "/blog/how-to-make-your-own-salary-part-2/",
+      "key": "blog__how-to-make-your-own-salary-part-2",
+      "template": "blog-post",
+      "title": "How to Make Your Own Salary PART 2",
+      "source": "captured-browser/blog__how-to-make-your-own-salary-part-2.html",
+      "bytes": 13185
+    },
+    {
+      "route": "/blog/how-to-make-your-own-salary-part-3/",
+      "key": "blog__how-to-make-your-own-salary-part-3",
+      "template": "blog-post",
+      "title": "How to Make Your Own Salary Part 3",
+      "source": "captured-browser/blog__how-to-make-your-own-salary-part-3.html",
+      "bytes": 12678
+    },
+    {
+      "route": "/blog/learn-content-creation-skills/",
+      "key": "blog__learn-content-creation-skills",
+      "template": "blog-post",
+      "title": "Learn Content Creation Skills",
+      "source": "captured-browser/blog__learn-content-creation-skills.html",
+      "bytes": 28035
+    },
+    {
+      "route": "/blog/learn-digital-marketing/",
+      "key": "blog__learn-digital-marketing",
+      "template": "blog-post",
+      "title": "Learn Digital Marketing",
+      "source": "captured-browser/blog__learn-digital-marketing.html",
+      "bytes": 16461
+    },
+    {
+      "route": "/blog/making-your-own-salary-stay-home-mums/",
+      "key": "blog__making-your-own-salary-stay-home-mums",
+      "template": "blog-post",
+      "title": "Making Your Own Salary - Stay Home Mums",
+      "source": "captured-browser/blog__making-your-own-salary-stay-home-mums.html",
+      "bytes": 17731
+    },
+    {
+      "route": "/blog/marketing-budget-recommendations-global-edition/",
+      "key": "blog__marketing-budget-recommendations-global-edition",
+      "template": "blog-post",
+      "title": "Marketing Budget Recommendations (Global Edition)",
+      "source": "captured-browser/blog__marketing-budget-recommendations-global-edition.html",
+      "bytes": 31181
+    },
+    {
+      "route": "/blog/marketing-budget-recommendations-zambia-edition/",
+      "key": "blog__marketing-budget-recommendations-zambia-edition",
+      "template": "blog-post",
+      "title": "Marketing Budget Recommendations (Zambia Edition)",
+      "source": "captured-browser/blog__marketing-budget-recommendations-zambia-edition.html",
+      "bytes": 37338
+    },
+    {
+      "route": "/blog/stop-losing-sales-to-unanswered-whatsapp-messages/",
+      "key": "blog__stop-losing-sales-to-unanswered-whatsapp-messages",
+      "template": "blog-post",
+      "title": "Stop Losing Sales to Unanswered WhatsApp Messages",
+      "source": "captured-browser/blog__stop-losing-sales-to-unanswered-whatsapp-messages.html",
+      "bytes": 23902
+    },
+    {
+      "route": "/blog/susan-lumba-mwenda/",
+      "key": "blog__susan-lumba-mwenda",
+      "template": "blog-post",
+      "title": "Susan Lumba Mwenda",
+      "source": "captured-browser/blog__susan-lumba-mwenda.html",
+      "bytes": 28644
+    },
+    {
+      "route": "/blog/the-11-elements-behind-a-high-value-expert-brand/",
+      "key": "blog__the-11-elements-behind-a-high-value-expert-brand",
+      "template": "blog-post",
+      "title": "The 11 Elements Behind a High-Value Expert Brand",
+      "source": "captured-browser/blog__the-11-elements-behind-a-high-value-expert-brand.html",
+      "bytes": 20962
+    },
+    {
+      "route": "/blog/why-you-avoid-creating-content/",
+      "key": "blog__why-you-avoid-creating-content",
+      "template": "blog-post",
+      "title": "👀 WHY YOU AVOID CREATING CONTENT",
+      "source": "captured-browser/blog__why-you-avoid-creating-content.html",
+      "bytes": 13534
+    },
+    {
+      "route": "/books-stripe-payment/",
+      "key": "books-stripe-payment",
+      "template": "checkout",
+      "title": "Books Stripe Payment",
+      "source": "captured-browser/books-stripe-payment.html",
+      "bytes": 9092
+    },
+    {
+      "route": "/books/",
+      "key": "books",
+      "template": "books",
+      "title": "Books",
+      "source": "captured-browser/books.html",
+      "bytes": 25688
+    },
+    {
+      "route": "/botpenguin-images/",
+      "key": "botpenguin-images",
+      "template": "page",
+      "title": "Botpenguin Images",
+      "source": "captured-browser/botpenguin-images.html",
+      "bytes": 7955
+    },
+    {
+      "route": "/build-your-expert-business/",
+      "key": "build-your-expert-business",
+      "template": "page",
+      "title": "Build Your Expert Business",
+      "source": "captured-browser/build-your-expert-business.html",
+      "bytes": 18327
+    },
+    {
+      "route": "/business-solutions/",
+      "key": "business-solutions",
+      "template": "page",
+      "title": "Business Solutions",
+      "source": "captured-browser/business-solutions.html",
+      "bytes": 26770
+    },
+    {
+      "route": "/ccp-pdf-program/",
+      "key": "ccp-pdf-program",
+      "template": "lead-magnet",
+      "title": "CCP PDF PROGRAM",
+      "source": "captured-browser/ccp-pdf-program.html",
+      "bytes": 7999
+    },
+    {
+      "route": "/ccs-program-outline-download/",
+      "key": "ccs-program-outline-download",
+      "template": "page",
+      "title": "CCS Program Signup to Download",
+      "source": "captured-browser/ccs-program-outline-download.html",
+      "bytes": 10993
+    },
+    {
+      "route": "/ccs-testimonials/",
+      "key": "ccs-testimonials",
+      "template": "legal",
+      "title": "CCS Testimonials",
+      "source": "captured-browser/ccs-testimonials.html",
+      "bytes": 12169
+    },
+    {
+      "route": "/ccs-vsl1/",
+      "key": "ccs-vsl1",
+      "template": "page",
+      "title": "Content Creation School",
+      "source": "captured-browser/ccs-vsl1.html",
+      "bytes": 58098
+    },
+    {
+      "route": "/ceo-digital-strategy/",
+      "key": "ceo-digital-strategy",
+      "template": "page",
+      "title": "CEO Digital Strategy",
+      "source": "captured-browser/ceo-digital-strategy.html",
+      "bytes": 11335
+    },
+    {
+      "route": "/chatbot-test-page/",
+      "key": "chatbot-test-page",
+      "template": "ai",
+      "title": "Chatbot Test Page",
+      "source": "captured-browser/chatbot-test-page.html",
+      "bytes": 2795
+    },
+    {
+      "route": "/choose-your-path/",
+      "key": "choose-your-path",
+      "template": "page",
+      "title": "Choose Your Path",
+      "source": "captured-browser/choose-your-path.html",
+      "bytes": 11061
+    },
+    {
+      "route": "/coaching-program-detail/",
+      "key": "coaching-program-detail",
+      "template": "page",
+      "title": "Default coaching program detail page",
+      "source": "captured-browser/coaching-program-detail.html",
+      "bytes": 7308
+    },
+    {
+      "route": "/community-detail/",
+      "key": "community-detail",
+      "template": "page",
+      "title": "Community detail",
+      "source": "captured-browser/community-detail.html",
+      "bytes": 1891
+    },
+    {
+      "route": "/community/4943/",
+      "key": "community__4943",
+      "template": "community-group",
+      "title": "Digital Skills Bundle Forum",
+      "source": "captured-browser/community__4943.html",
+      "bytes": 11268
+    },
+    {
+      "route": "/community/4944/",
+      "key": "community__4944",
+      "template": "community-group",
+      "title": "Digital Skills Bundle Forum",
+      "source": "captured-browser/community__4944.html",
+      "bytes": 11268
+    },
+    {
+      "route": "/community/650/",
+      "key": "community__650",
+      "template": "community-group",
+      "title": "VIP",
+      "source": "captured-browser/community__650.html",
+      "bytes": 19538
+    },
+    {
+      "route": "/community/834/",
+      "key": "community__834",
+      "template": "community-group",
+      "title": "Savvypro Starter Chatgroup",
+      "source": "captured-browser/community__834.html",
+      "bytes": 146846
+    },
+    {
+      "route": "/community/853/",
+      "key": "community__853",
+      "template": "community-group",
+      "title": "Content Creation School Chatgroup",
+      "source": "captured-browser/community__853.html",
+      "bytes": 20209
+    },
+    {
+      "route": "/contact-us/",
+      "key": "contact-us",
+      "template": "legal",
+      "title": "Contact Us",
+      "source": "captured-browser/contact-us.html",
+      "bytes": 9650
+    },
+    {
+      "route": "/content-creation-school-main/",
+      "key": "content-creation-school-main",
+      "template": "page",
+      "title": "Savvypro Digital Skills Class",
+      "source": "captured-browser/content-creation-school-main.html",
+      "bytes": 76036
+    },
+    {
+      "route": "/content-creation-school/",
+      "key": "content-creation-school",
+      "template": "page",
+      "title": "Home",
+      "source": "captured-browser/content-creation-school.html",
+      "bytes": 69030
+    },
+    {
+      "route": "/contest/",
+      "key": "contest",
+      "template": "community",
+      "title": "Contest",
+      "source": "captured-browser/contest.html",
+      "bytes": 3155
+    },
+    {
+      "route": "/course-detail/1-year-content-plan-in-3-days/41281/",
+      "key": "course-detail__1-year-content-plan-in-3-days__41281",
+      "template": "course-detail",
+      "title": "1 Year Content Plan in 3 Days",
+      "source": "captured-browser/course-detail__1-year-content-plan-in-3-days__41281.html",
+      "bytes": 24234
+    },
+    {
+      "route": "/course-detail/audiobook-social-media-content-creation-copy-1792214327806/49797/",
+      "key": "course-detail__audiobook-social-media-content-creation-copy-1792214327806__49797",
+      "template": "course-detail",
+      "title": "Free Audiobook - Social Media Content Creation",
+      "source": "captured-browser/course-detail__audiobook-social-media-content-creation-copy-1792214327806__49797.html",
+      "bytes": 45411
+    },
+    {
+      "route": "/course-detail/audiobook-social-media-content-creation/12514/",
+      "key": "course-detail__audiobook-social-media-content-creation__12514",
+      "template": "course-detail",
+      "title": "Audiobook - Social Media Content Creation",
+      "source": "captured-browser/course-detail__audiobook-social-media-content-creation__12514.html",
+      "bytes": 45298
+    },
+    {
+      "route": "/course-detail/audiobook-zero-to-hero-social-media-manager-copy-1792212460894/49793/",
+      "key": "course-detail__audiobook-zero-to-hero-social-media-manager-copy-1792212460894__49793",
+      "template": "course-detail",
+      "title": "Free Audiobook - Zero to Hero Social Media Manager",
+      "source": "captured-browser/course-detail__audiobook-zero-to-hero-social-media-manager-copy-1792212460894__49793.html",
+      "bytes": 68559
+    },
+    {
+      "route": "/course-detail/audiobook-zero-to-hero-social-media-manager/10199/",
+      "key": "course-detail__audiobook-zero-to-hero-social-media-manager__10199",
+      "template": "course-detail",
+      "title": "Audiobook - Zero to Hero Social Media Manager",
+      "source": "captured-browser/course-detail__audiobook-zero-to-hero-social-media-manager__10199.html",
+      "bytes": 68489
+    },
+    {
+      "route": "/course-detail/content-creation-school-2026-copy-1776429703034/41634/",
+      "key": "course-detail__content-creation-school-2026-copy-1776429703034__41634",
+      "template": "course-detail",
+      "title": "Savvypro Digital Skills Certification 2026",
+      "source": "captured-browser/course-detail__content-creation-school-2026-copy-1776429703034__41634.html",
+      "bytes": 215469
+    },
+    {
+      "route": "/course-detail/content-creation-school-2026-copy-1790672869460/49068/",
+      "key": "course-detail__content-creation-school-2026-copy-1790672869460__49068",
+      "template": "course-detail",
+      "title": "CCS Free Program",
+      "source": "captured-browser/course-detail__content-creation-school-2026-copy-1790672869460__49068.html",
+      "bytes": 218808
+    },
+    {
+      "route": "/course-detail/content-creation-school-2026-tutor-1790673216325/49070/",
+      "key": "course-detail__content-creation-school-2026-tutor-1790673216325__49070",
+      "template": "course-detail",
+      "title": "Content Creation School",
+      "source": "captured-browser/course-detail__content-creation-school-2026-tutor-1790673216325__49070.html",
+      "bytes": 216095
+    },
+    {
+      "route": "/course-detail/content-creation-school-2026/36467/",
+      "key": "course-detail__content-creation-school-2026__36467",
+      "template": "course-detail",
+      "title": "Content Creation School 2026",
+      "source": "captured-browser/course-detail__content-creation-school-2026__36467.html",
+      "bytes": 216204
+    },
+    {
+      "route": "/course-detail/content-creation-school/7107/",
+      "key": "course-detail__content-creation-school__7107",
+      "template": "course-detail",
+      "title": "Content Creation Strategy",
+      "source": "captured-browser/course-detail__content-creation-school__7107.html",
+      "bytes": 110390
+    },
+    {
+      "route": "/course-detail/copywriting-crash-course/23197/",
+      "key": "course-detail__copywriting-crash-course__23197",
+      "template": "course-detail",
+      "title": "Words That Sell",
+      "source": "captured-browser/course-detail__copywriting-crash-course__23197.html",
+      "bytes": 38727
+    },
+    {
+      "route": "/course-detail/digital-marketing-conversion-mastery/18127/",
+      "key": "course-detail__digital-marketing-conversion-mastery__18127",
+      "template": "course-detail",
+      "title": "Digital Marketing - Conversion Mastery",
+      "source": "captured-browser/course-detail__digital-marketing-conversion-mastery__18127.html",
+      "bytes": 40649
+    },
+    {
+      "route": "/course-detail/digital-skills-fasttrack/24115/",
+      "key": "course-detail__digital-skills-fasttrack__24115",
+      "template": "course-detail",
+      "title": "Digital Skills FastTrack",
+      "source": "captured-browser/course-detail__digital-skills-fasttrack__24115.html",
+      "bytes": 58450
+    },
+    {
+      "route": "/course-detail/digital-tools/17996/",
+      "key": "course-detail__digital-tools__17996",
+      "template": "course-detail",
+      "title": "Digital Tools",
+      "source": "captured-browser/course-detail__digital-tools__17996.html",
+      "bytes": 90553
+    },
+    {
+      "route": "/course-detail/ebook-zero-to-hero-social-media-manager-copy-1792212437299/49792/",
+      "key": "course-detail__ebook-zero-to-hero-social-media-manager-copy-1792212437299__49792",
+      "template": "course-detail",
+      "title": "Free Ebook - Zero to Hero Social Media Manager",
+      "source": "captured-browser/course-detail__ebook-zero-to-hero-social-media-manager-copy-1792212437299__49792.html",
+      "bytes": 32906
+    },
+    {
+      "route": "/course-detail/ebook-zero-to-hero-social-media-manager/10317/",
+      "key": "course-detail__ebook-zero-to-hero-social-media-manager__10317",
+      "template": "course-detail",
+      "title": "Ebook - Zero to Hero Social Media Manager",
+      "source": "captured-browser/course-detail__ebook-zero-to-hero-social-media-manager__10317.html",
+      "bytes": 32832
+    },
+    {
+      "route": "/course-detail/free-audiobook-autopilot-sales-system/49908/",
+      "key": "course-detail__free-audiobook-autopilot-sales-system__49908",
+      "template": "course-detail",
+      "title": "Free Audiobook - Autopilot Sales System",
+      "source": "captured-browser/course-detail__free-audiobook-autopilot-sales-system__49908.html",
+      "bytes": 7873
+    },
+    {
+      "route": "/course-detail/free-audiobook-how-to-create-and-sell-your-first-online-course/49906/",
+      "key": "course-detail__free-audiobook-how-to-create-and-sell-your-first-online-course__49906",
+      "template": "course-detail",
+      "title": "Free Audiobook - How to Create and Sell Your First Online Course",
+      "source": "captured-browser/course-detail__free-audiobook-how-to-create-and-sell-your-first-online-course__49906.html",
+      "bytes": 48653
+    },
+    {
+      "route": "/course-detail/free-audiobook-social-media-paid-ads/49801/",
+      "key": "course-detail__free-audiobook-social-media-paid-ads__49801",
+      "template": "course-detail",
+      "title": "Free Audiobook - Social Media Paid Ads",
+      "source": "captured-browser/course-detail__free-audiobook-social-media-paid-ads__49801.html",
+      "bytes": 32042
+    },
+    {
+      "route": "/course-detail/how-to-create-and-sell-your-first-online-course/49870/",
+      "key": "course-detail__how-to-create-and-sell-your-first-online-course__49870",
+      "template": "course-detail",
+      "title": "Free Ebook - How to Create and Sell Your First Online Course",
+      "source": "captured-browser/course-detail__how-to-create-and-sell-your-first-online-course__49870.html",
+      "bytes": 26281
+    },
+    {
+      "route": "/course-detail/infopreneur-audiobook-copy-1792213073560/49794/",
+      "key": "course-detail__infopreneur-audiobook-copy-1792213073560__49794",
+      "template": "course-detail",
+      "title": "Infopreneur - Free Audiobook",
+      "source": "captured-browser/course-detail__infopreneur-audiobook-copy-1792213073560__49794.html",
+      "bytes": 43009
+    },
+    {
+      "route": "/course-detail/infopreneur-audiobook/3986/",
+      "key": "course-detail__infopreneur-audiobook__3986",
+      "template": "course-detail",
+      "title": "Infopreneur - Audiobook",
+      "source": "captured-browser/course-detail__infopreneur-audiobook__3986.html",
+      "bytes": 42936
+    },
+    {
+      "route": "/course-detail/infoprenuer-how-to-make-money-from-your-passion-knowledge-and-experience/4885/",
+      "key": "course-detail__infoprenuer-how-to-make-money-from-your-passion-knowledge-and-experience__4885",
+      "template": "course-detail",
+      "title": "Create and Sell Courses Infoprenuer:- How to Make Money from Your Passion, Knowledge and Experience",
+      "source": "captured-browser/course-detail__infoprenuer-how-to-make-money-from-your-passion-knowledge-and-experience__4885.html",
+      "bytes": 21097
+    },
+    {
+      "route": "/course-detail/infoprenuer-roadmap-ebook-copy-1792213119365/49795/",
+      "key": "course-detail__infoprenuer-roadmap-ebook-copy-1792213119365__49795",
+      "template": "course-detail",
+      "title": "Free Ebook - Infoprenuer Roadmap",
+      "source": "captured-browser/course-detail__infoprenuer-roadmap-ebook-copy-1792213119365__49795.html",
+      "bytes": 22542
+    },
+    {
+      "route": "/course-detail/infoprenuer-roadmap-ebook/3982/",
+      "key": "course-detail__infoprenuer-roadmap-ebook__3982",
+      "template": "course-detail",
+      "title": "Ebook - Infoprenuer Roadmap",
+      "source": "captured-browser/course-detail__infoprenuer-roadmap-ebook__3982.html",
+      "bytes": 22446
+    },
+    {
+      "route": "/course-detail/manage-and-grow-your-business/42538/",
+      "key": "course-detail__manage-and-grow-your-business__42538",
+      "template": "course-detail",
+      "title": "Manage and Grow Your Business",
+      "source": "captured-browser/course-detail__manage-and-grow-your-business__42538.html",
+      "bytes": 7722
+    },
+    {
+      "route": "/course-detail/social-media-content-creation-ebook-copy-1792214265244/49796/",
+      "key": "course-detail__social-media-content-creation-ebook-copy-1792214265244__49796",
+      "template": "course-detail",
+      "title": "Free Ebook - Social Media Content Creation",
+      "source": "captured-browser/course-detail__social-media-content-creation-ebook-copy-1792214265244__49796.html",
+      "bytes": 19509
+    },
+    {
+      "route": "/course-detail/social-media-content-creation-ebook/3995/",
+      "key": "course-detail__social-media-content-creation-ebook__3995",
+      "template": "course-detail",
+      "title": "Ebook - Social Media Content Creation",
+      "source": "captured-browser/course-detail__social-media-content-creation-ebook__3995.html",
+      "bytes": 19398
+    },
+    {
+      "route": "/course-detail/start-smallthink-big/49186/",
+      "key": "course-detail__start-smallthink-big__49186",
+      "template": "course-detail",
+      "title": "Start Small.Think Big",
+      "source": "captured-browser/course-detail__start-smallthink-big__49186.html",
+      "bytes": 14639
+    },
+    {
+      "route": "/course-detail/start-where-you-are-audiobook-copy-1792925319820/50151/",
+      "key": "course-detail__start-where-you-are-audiobook-copy-1792925319820__50151",
+      "template": "course-detail",
+      "title": "Start Where You Are - Free Audiobook",
+      "source": "captured-browser/course-detail__start-where-you-are-audiobook-copy-1792925319820__50151.html",
+      "bytes": 27406
+    },
+    {
+      "route": "/course-detail/start-where-you-are-audiobook/49791/",
+      "key": "course-detail__start-where-you-are-audiobook__49791",
+      "template": "course-detail",
+      "title": "Start Where You Are - Audiobook",
+      "source": "captured-browser/course-detail__start-where-you-are-audiobook__49791.html",
+      "bytes": 27301
+    },
+    {
+      "route": "/course-detail/visbility-course-why-you-are-invible-and-how-to-change-it/40331/",
+      "key": "course-detail__visbility-course-why-you-are-invible-and-how-to-change-it__40331",
+      "template": "course-detail",
+      "title": "Visbility Course: Why You Are Invisible and How to Change It",
+      "source": "captured-browser/course-detail__visbility-course-why-you-are-invible-and-how-to-change-it__40331.html",
+      "bytes": 67790
+    },
+    {
+      "route": "/courses/",
+      "key": "courses",
+      "template": "catalog",
+      "title": "Courses",
+      "source": "captured-browser/courses.html",
+      "bytes": 162609
+    },
+    {
+      "route": "/digital-entreprenuership-program/",
+      "key": "digital-entreprenuership-program",
+      "template": "page",
+      "title": "Digital Entreprenuership PROGRAM",
+      "source": "captured-browser/digital-entreprenuership-program.html",
+      "bytes": 10815
+    },
+    {
+      "route": "/digital-savvypro/",
+      "key": "digital-savvypro",
+      "template": "page",
+      "title": "Content Creation School Zambia | Learn Digital Skills, Freelancing & Online Marketing in 30 Days",
+      "source": "captured-browser/digital-savvypro.html",
+      "bytes": 76524
+    },
+    {
+      "route": "/digital-skills-and-tools-to-build-your-business-signup/",
+      "key": "digital-skills-and-tools-to-build-your-business-signup",
+      "template": "lead-magnet",
+      "title": "Digital Skills and Tools to Build Your Business Signup",
+      "source": "captured-browser/digital-skills-and-tools-to-build-your-business-signup.html",
+      "bytes": 10768
+    },
+    {
+      "route": "/digital-skills-class/",
+      "key": "digital-skills-class",
+      "template": "page",
+      "title": "Savvypro LP1",
+      "source": "captured-browser/digital-skills-class.html",
+      "bytes": 55437
+    },
+    {
+      "route": "/digital-skills-classes/",
+      "key": "digital-skills-classes",
+      "template": "page",
+      "title": "Content Creation School Zambia",
+      "source": "captured-browser/digital-skills-classes.html",
+      "bytes": 74661
+    },
+    {
+      "route": "/ebooks/",
+      "key": "ebooks",
+      "template": "books",
+      "title": "Ebooks",
+      "source": "captured-browser/ebooks.html",
+      "bytes": 11811
+    },
+    {
+      "route": "/enroll-in-digital-ntreprenuership-academy/",
+      "key": "enroll-in-digital-ntreprenuership-academy",
+      "template": "page",
+      "title": "Enroll in Digital Entrepreneurship ACADEMY",
+      "source": "captured-browser/enroll-in-digital-ntreprenuership-academy.html",
+      "bytes": 27197
+    },
+    {
+      "route": "/for-businesses/",
+      "key": "for-businesses",
+      "template": "page",
+      "title": "For Businesses",
+      "source": "captured-browser/for-businesses.html",
+      "bytes": 15021
+    },
+    {
+      "route": "/free/",
+      "key": "free",
+      "template": "lead-magnet",
+      "title": "Free",
+      "source": "captured-browser/free.html",
+      "bytes": 17041
+    },
+    {
+      "route": "/freebies/",
+      "key": "freebies",
+      "template": "lead-magnet",
+      "title": "Freebies",
+      "source": "captured-browser/freebies.html",
+      "bytes": 33718
+    },
+    {
+      "route": "/freelancer-bundle/",
+      "key": "freelancer-bundle",
+      "template": "page",
+      "title": "Freelancer Bundle",
+      "source": "captured-browser/freelancer-bundle.html",
+      "bytes": 42793
+    },
+    {
+      "route": "/freelancer-connect",
+      "key": "freelancer-connect",
+      "template": "page",
+      "title": "Freelancer Connect",
+      "source": "captured-browser/freelancer-connect.html",
+      "bytes": 36154
+    },
+    {
+      "route": "/freelancer-fasttrack-bundle",
+      "key": "freelancer-fasttrack-bundle",
+      "template": "page",
+      "title": "Freelancer FastTrack Bundle",
+      "source": "captured-browser/freelancer-fasttrack-bundle.html",
+      "bytes": 29051
+    },
+    {
+      "route": "/freelancer-webinar/",
+      "key": "freelancer-webinar",
+      "template": "coaching",
+      "title": "Freelancer Webinar",
+      "source": "captured-browser/freelancer-webinar.html",
+      "bytes": 9257
+    },
+    {
+      "route": "/freelancers/",
+      "key": "freelancers",
+      "template": "page",
+      "title": "Freelancers",
+      "source": "captured-browser/freelancers.html",
+      "bytes": 62250
+    },
+    {
+      "route": "/freelancing-free-tips",
+      "key": "freelancing-free-tips",
+      "template": "page",
+      "title": "Freelancing FREE TIPS",
+      "source": "captured-browser/freelancing-free-tips.html",
+      "bytes": 3562
+    },
+    {
+      "route": "/freelancing-tips-signup/",
+      "key": "freelancing-tips-signup",
+      "template": "lead-magnet",
+      "title": "Freelancing Tips Signup",
+      "source": "captured-browser/freelancing-tips-signup.html",
+      "bytes": 9498
+    },
+    {
+      "route": "/getting-started-page/",
+      "key": "getting-started-page",
+      "template": "page",
+      "title": "Getting Started Page",
+      "source": "captured-browser/getting-started-page.html",
+      "bytes": 17234
+    },
+    {
+      "route": "/groups/",
+      "key": "groups",
+      "template": "community",
+      "title": "Groups",
+      "source": "captured-browser/groups.html",
+      "bytes": 10771
+    },
+    {
+      "route": "/grow-my-business/",
+      "key": "grow-my-business",
+      "template": "page",
+      "title": "Grow My Business",
+      "source": "captured-browser/grow-my-business.html",
+      "bytes": 18253
+    },
+    {
+      "route": "/infopreneur-roadmap-book/",
+      "key": "infopreneur-roadmap-book",
+      "template": "page",
+      "title": "Infopreneur Roadmap Book",
+      "source": "captured-browser/infopreneur-roadmap-book.html",
+      "bytes": 50790
+    },
+    {
+      "route": "/inner-circle/",
+      "key": "inner-circle",
+      "template": "page",
+      "title": "Inner Circle",
+      "source": "captured-browser/inner-circle.html",
+      "bytes": 7203
+    },
+    {
+      "route": "/join-our-mailing-list/",
+      "key": "join-our-mailing-list",
+      "template": "page",
+      "title": "Join Our Mailing List",
+      "source": "captured-browser/join-our-mailing-list.html",
+      "bytes": 12370
+    },
+    {
+      "route": "/kcpay--redirect/",
+      "key": "kcpay--redirect",
+      "template": "page",
+      "title": "KCPAY - Redirect URL",
+      "source": "captured-browser/kcpay--redirect.html",
+      "bytes": 14083
+    },
+    {
+      "route": "/kcpay-registration-success/",
+      "key": "kcpay-registration-success",
+      "template": "page",
+      "title": "KCPAY Registration Success",
+      "source": "captured-browser/kcpay-registration-success.html",
+      "bytes": 9542
+    },
+    {
+      "route": "/kinsumo-test/",
+      "key": "kinsumo-test",
+      "template": "page",
+      "title": "Kinsumo Test",
+      "source": "captured-browser/kinsumo-test.html",
+      "bytes": 8480
+    },
+    {
+      "route": "/launch-your-expert-business-bootcamp/",
+      "key": "launch-your-expert-business-bootcamp",
+      "template": "page",
+      "title": "Launch Your Expert Business Bootcamp",
+      "source": "captured-browser/launch-your-expert-business-bootcamp.html",
+      "bytes": 79201
+    },
+    {
+      "route": "/learn-digital-skills/",
+      "key": "learn-digital-skills",
+      "template": "page",
+      "title": "Learn Digital Skills",
+      "source": "captured-browser/learn-digital-skills.html",
+      "bytes": 22946
+    },
+    {
+      "route": "/learn-with-expert-guidance/",
+      "key": "learn-with-expert-guidance",
+      "template": "page",
+      "title": "404 - Not found",
+      "source": "captured-browser/learn-with-expert-guidance.html",
+      "bytes": 2895
+    },
+    {
+      "route": "/learning-hub/",
+      "key": "learning-hub",
+      "template": "page",
+      "title": "404 - Not found",
+      "source": "captured-browser/learning-hub.html",
+      "bytes": 2853
+    },
+    {
+      "route": "/learning-with-a-coach/",
+      "key": "learning-with-a-coach",
+      "template": "page",
+      "title": "Learning With a Coach",
+      "source": "captured-browser/learning-with-a-coach.html",
+      "bytes": 26812
+    },
+    {
+      "route": "/login/",
+      "key": "login",
+      "template": "auth",
+      "title": "Login",
+      "source": "captured-browser/login.html",
+      "bytes": 4849
+    },
+    {
+      "route": "/magnetic-personal-branding/",
+      "key": "magnetic-personal-branding",
+      "template": "page",
+      "title": "Magnetic Personal Branding",
+      "source": "captured-browser/magnetic-personal-branding.html",
+      "bytes": 13897
+    },
+    {
+      "route": "/marketing-software/",
+      "key": "marketing-software",
+      "template": "page",
+      "title": "Marketing Software",
+      "source": "captured-browser/marketing-software.html",
+      "bytes": 9865
+    },
+    {
+      "route": "/membership",
+      "key": "membership",
+      "template": "account",
+      "title": "Membership Plans & Features – Join & Become a Member",
+      "source": "captured-browser/membership.html",
+      "bytes": 59744
+    },
+    {
+      "route": "/microgigs/",
+      "key": "microgigs",
+      "template": "page",
+      "title": "Microgigs",
+      "source": "captured-browser/microgigs.html",
+      "bytes": 58457
+    },
+    {
+      "route": "/mini-courses/",
+      "key": "mini-courses",
+      "template": "catalog",
+      "title": "Mini Courses",
+      "source": "captured-browser/mini-courses.html",
+      "bytes": 39347
+    },
+    {
+      "route": "/offers/",
+      "key": "offers",
+      "template": "checkout",
+      "title": "Savvypro Business Academy",
+      "source": "captured-browser/offers.html",
+      "bytes": 47966
+    },
+    {
+      "route": "/pabbly-form-test/",
+      "key": "pabbly-form-test",
+      "template": "page",
+      "title": "Pabbly Form Test",
+      "source": "captured-browser/pabbly-form-test.html",
+      "bytes": 8035
+    },
+    {
+      "route": "/pay-for-savvypro-digital-skills-certification/",
+      "key": "pay-for-savvypro-digital-skills-certification",
+      "template": "page",
+      "title": "Pay for Savvypro Digital Skills Certification",
+      "source": "captured-browser/pay-for-savvypro-digital-skills-certification.html",
+      "bytes": 9808
+    },
+    {
+      "route": "/payforcontentcreationschool/",
+      "key": "payforcontentcreationschool",
+      "template": "page",
+      "title": "Pay for Content Creation School",
+      "source": "captured-browser/payforcontentcreationschool.html",
+      "bytes": 11899
+    },
+    {
+      "route": "/payments/",
+      "key": "payments",
+      "template": "checkout",
+      "title": "Payments",
+      "source": "captured-browser/payments.html",
+      "bytes": 13580
+    },
+    {
+      "route": "/pdf-download-file-7-step-whatsapp-automation/",
+      "key": "pdf-download-file-7-step-whatsapp-automation",
+      "template": "lead-magnet",
+      "title": "PDF Download FILE - 7 STEP WHATSAPP AUTOMATION",
+      "source": "captured-browser/pdf-download-file-7-step-whatsapp-automation.html",
+      "bytes": 8695
+    },
+    {
+      "route": "/pdf-file-101-digital-skills/",
+      "key": "pdf-file-101-digital-skills",
+      "template": "lead-magnet",
+      "title": "PDF File - 101 Digital Skills",
+      "source": "captured-browser/pdf-file-101-digital-skills.html",
+      "bytes": 3005
+    },
+    {
+      "route": "/privacy-policy",
+      "key": "privacy-policy",
+      "template": "legal",
+      "title": "Privacy Policy",
+      "source": "captured-browser/privacy-policy.html",
+      "bytes": 27106
+    },
+    {
+      "route": "/private-1-on-1-consultation/",
+      "key": "private-1-on-1-consultation",
+      "template": "page",
+      "title": "Private 1-on-1 Consultation",
+      "source": "captured-browser/private-1-on-1-consultation.html",
+      "bytes": 26461
+    },
+    {
+      "route": "/refund-policy/",
+      "key": "refund-policy",
+      "template": "legal",
+      "title": "Refund Policy",
+      "source": "captured-browser/refund-policy.html",
+      "bytes": 9147
+    },
+    {
+      "route": "/savvybot-ai-agent/",
+      "key": "savvybot-ai-agent",
+      "template": "ai",
+      "title": "Savvybot AI AGENT",
+      "source": "captured-browser/savvybot-ai-agent.html",
+      "bytes": 132129
+    },
+    {
+      "route": "/savvypro-digital-skills-certification/",
+      "key": "savvypro-digital-skills-certification",
+      "template": "page",
+      "title": "Content Creation School Zambia",
+      "source": "captured-browser/savvypro-digital-skills-certification.html",
+      "bytes": 69290
+    },
+    {
+      "route": "/savvypro-digital-skills-class/",
+      "key": "savvypro-digital-skills-class",
+      "template": "page",
+      "title": "Digital Skills Class",
+      "source": "captured-browser/savvypro-digital-skills-class.html",
+      "bytes": 87128
+    },
+    {
+      "route": "/savvypro-digital-skills-club/",
+      "key": "savvypro-digital-skills-club",
+      "template": "page",
+      "title": "Savvypro Digital Skills Club",
+      "source": "captured-browser/savvypro-digital-skills-club.html",
+      "bytes": 7299
+    },
+    {
+      "route": "/savvypro-home/",
+      "key": "savvypro-home",
+      "template": "page",
+      "title": "Savvypro Home",
+      "source": "captured-browser/savvypro-home.html",
+      "bytes": 29531
+    },
+    {
+      "route": "/savvypro-lp1/",
+      "key": "savvypro-lp1",
+      "template": "page",
+      "title": "CCS VSL1",
+      "source": "captured-browser/savvypro-lp1.html",
+      "bytes": 69795
+    },
+    {
+      "route": "/savvypro-main/",
+      "key": "savvypro-main",
+      "template": "page",
+      "title": "Content Creation School Zambia",
+      "source": "captured-browser/savvypro-main.html",
+      "bytes": 75835
+    },
+    {
+      "route": "/savvypro-mobile-apps/",
+      "key": "savvypro-mobile-apps",
+      "template": "page",
+      "title": "savvypro mobile apps",
+      "source": "captured-browser/savvypro-mobile-apps.html",
+      "bytes": 11259
+    },
+    {
+      "route": "/savvypro-privacy-policy/",
+      "key": "savvypro-privacy-policy",
+      "template": "legal",
+      "title": "Savvypro Privacy Policy",
+      "source": "captured-browser/savvypro-privacy-policy.html",
+      "bytes": 12954
+    },
+    {
+      "route": "/savvypro-refund-policy",
+      "key": "savvypro-refund-policy",
+      "template": "legal",
+      "title": "Savvypro Refund Policy",
+      "source": "captured-browser/savvypro-refund-policy.html",
+      "bytes": 3573
+    },
+    {
+      "route": "/savvypro-terms-and-conditions/",
+      "key": "savvypro-terms-and-conditions",
+      "template": "legal",
+      "title": "Savvypro Terms and Conditions",
+      "source": "captured-browser/savvypro-terms-and-conditions.html",
+      "bytes": 13518
+    },
+    {
+      "route": "/savvypro/",
+      "key": "savvypro",
+      "template": "page",
+      "title": "Digital Savvypro Home",
+      "source": "captured-browser/savvypro.html",
+      "bytes": 29462
+    },
+    {
+      "route": "/signin/",
+      "key": "signin",
+      "template": "auth",
+      "title": "Signin",
+      "source": "captured-browser/signin.html",
+      "bytes": 10180
+    },
+    {
+      "route": "/signup-for-free-email-tips/",
+      "key": "signup-for-free-email-tips",
+      "template": "lead-magnet",
+      "title": "Beginner Free Tips Signup",
+      "source": "captured-browser/signup-for-free-email-tips.html",
+      "bytes": 5261
+    },
+    {
+      "route": "/signup/",
+      "key": "signup",
+      "template": "auth",
+      "title": "Signup",
+      "source": "captured-browser/signup.html",
+      "bytes": 6597
+    },
+    {
+      "route": "/social-media-content-creation-book/",
+      "key": "social-media-content-creation-book",
+      "template": "page",
+      "title": "Social Media Content Creation BOOK",
+      "source": "captured-browser/social-media-content-creation-book.html",
+      "bytes": 35079
+    },
+    {
+      "route": "/social-media-strategy-book/",
+      "key": "social-media-strategy-book",
+      "template": "page",
+      "title": "Social Media Strategy Book",
+      "source": "captured-browser/social-media-strategy-book.html",
+      "bytes": 14711
+    },
+    {
+      "route": "/start-where-you-are-book/",
+      "key": "start-where-you-are-book",
+      "template": "page",
+      "title": "Start Where You Are Book",
+      "source": "captured-browser/start-where-you-are-book.html",
+      "bytes": 17807
+    },
+    {
+      "route": "/susan-mwenda-mulongoti-consultant/",
+      "key": "susan-mwenda-mulongoti-consultant",
+      "template": "page",
+      "title": "Susan MM",
+      "source": "captured-browser/susan-mwenda-mulongoti-consultant.html",
+      "bytes": 17141
+    },
+    {
+      "route": "/susan-mwenda-mulongoti/",
+      "key": "susan-mwenda-mulongoti",
+      "template": "page",
+      "title": "Susan Mwenda Mulongoti",
+      "source": "captured-browser/susan-mwenda-mulongoti.html",
+      "bytes": 21633
+    },
+    {
+      "route": "/terms-and-conditions",
+      "key": "terms-and-conditions",
+      "template": "legal",
+      "title": "Terms & Conditions",
+      "source": "captured-browser/terms-and-conditions.html",
+      "bytes": 17465
+    },
+    {
+      "route": "/testimonials/",
+      "key": "testimonials",
+      "template": "legal",
+      "title": "Testimonials",
+      "source": "captured-browser/testimonials.html",
+      "bytes": 13652
+    },
+    {
+      "route": "/testing-social-media-sharing-buttons-for-pages/",
+      "key": "testing-social-media-sharing-buttons-for-pages",
+      "template": "page",
+      "title": "Testing social media sharing buttons for pages",
+      "source": "captured-browser/testing-social-media-sharing-buttons-for-pages.html",
+      "bytes": 7407
+    },
+    {
+      "route": "/testkcpayment/",
+      "key": "testkcpayment",
+      "template": "page",
+      "title": "TestKCPayment",
+      "source": "captured-browser/testkcpayment.html",
+      "bytes": 8017
+    },
+    {
+      "route": "/user/",
+      "key": "user",
+      "template": "account",
+      "title": "User public profile page",
+      "source": "captured-browser/user.html",
+      "bytes": 1882
+    },
+    {
+      "route": "/vacostcalculator/",
+      "key": "vacostcalculator",
+      "template": "page",
+      "title": "VACostCalculator",
+      "source": "captured-browser/vacostcalculator.html",
+      "bytes": 7707
+    },
+    {
+      "route": "/video-details/",
+      "key": "video-details",
+      "template": "page",
+      "title": "404 - Not found",
+      "source": "captured-browser/video-details.html",
+      "bytes": 2856
+    },
+    {
+      "route": "/video-library/",
+      "key": "video-library",
+      "template": "page",
+      "title": "Unpublished",
+      "source": "captured-browser/video-library.html",
+      "bytes": 2634
+    },
+    {
+      "route": "/visibility-tips-signup/",
+      "key": "visibility-tips-signup",
+      "template": "lead-magnet",
+      "title": "Visibility Tips Signup",
+      "source": "captured-browser/visibility-tips-signup.html",
+      "bytes": 13060
+    },
+    {
+      "route": "/webinar-registration-freelancing/",
+      "key": "webinar-registration-freelancing",
+      "template": "coaching",
+      "title": "Webinar Registration - Freelancing",
+      "source": "captured-browser/webinar-registration-freelancing.html",
+      "bytes": 7333
+    },
+    {
+      "route": "/whatsapp-automation-toolkit/",
+      "key": "whatsapp-automation-toolkit",
+      "template": "page",
+      "title": "WhatsApp Automation Toolkit",
+      "source": "captured-browser/whatsapp-automation-toolkit.html",
+      "bytes": 55251
+    },
+    {
+      "route": "/whatsapp-marketing-for-smes/",
+      "key": "whatsapp-marketing-for-smes",
+      "template": "page",
+      "title": "WhatsApp Marketing for SMEs",
+      "source": "captured-browser/whatsapp-marketing-for-smes.html",
+      "bytes": 17633
+    },
+    {
+      "route": "/win-a-book/",
+      "key": "win-a-book",
+      "template": "lead-magnet",
+      "title": "Application error: a client-side exception has occurred",
+      "source": "captured-browser/win-a-book.html",
+      "bytes": 330
+    },
+    {
+      "route": "/words-that-sell-copywriting-secrets-that-make-customers-buy/",
+      "key": "words-that-sell-copywriting-secrets-that-make-customers-buy",
+      "template": "page",
+      "title": "Words That Sell: Copywriting Secrets That Make Customers Buy",
+      "source": "captured-browser/words-that-sell-copywriting-secrets-that-make-customers-buy.html",
+      "bytes": 30981
+    },
+    {
+      "route": "/you-have-paid/",
+      "key": "you-have-paid",
+      "template": "checkout",
+      "title": "You Have Paid",
+      "source": "captured-browser/you-have-paid.html",
+      "bytes": 8506
+    },
+    {
+      "route": "/zero-to-hero-social-media-manager-book/",
+      "key": "zero-to-hero-social-media-manager-book",
+      "template": "page",
+      "title": "Zero to Hero Social Media Manager BOOK",
+      "source": "captured-browser/zero-to-hero-social-media-manager-book.html",
+      "bytes": 46555
+    }
+  ]
+}

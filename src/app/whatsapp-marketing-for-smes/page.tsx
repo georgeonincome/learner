@@ -1,10 +1,7 @@
-import { ReferenceLanding } from '@/components/routes/ReferenceLanding'
+import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
 
-export const metadata = {
-  title: 'Whatsapp Marketing For Smes — SavvyPro',
-  description: 'Whatsapp Marketing For Smes on SavvyPro — practical digital skills, training and support.',
-}
+export const metadata = specMetadata('whatsapp-marketing-for-smes', '/whatsapp-marketing-for-smes')
 
 export default function Page() {
-  return <ReferenceLanding title="Whatsapp Marketing For Smes" />
+  return <PublicPage specKey="whatsapp-marketing-for-smes" />
 }

@@ -1,10 +1,7 @@
-import { ReferenceLanding } from '@/components/routes/ReferenceLanding'
+import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
 
-export const metadata = {
-  title: 'Savvypro Mobile Apps — SavvyPro',
-  description: 'Savvypro Mobile Apps on SavvyPro — practical digital skills, training and support.',
-}
+export const metadata = specMetadata('savvypro-mobile-apps', '/savvypro-mobile-apps')
 
 export default function Page() {
-  return <ReferenceLanding title="Savvypro Mobile Apps" />
+  return <PublicPage specKey="savvypro-mobile-apps" />
 }

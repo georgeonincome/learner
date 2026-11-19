@@ -1,10 +1,7 @@
-import { ReferenceLanding } from '@/components/routes/ReferenceLanding'
+import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
 
-export const metadata = {
-  title: 'Ccp Pdf Program — SavvyPro',
-  description: 'Ccp Pdf Program on SavvyPro — practical digital skills, training and support.',
-}
+export const metadata = specMetadata('ccp-pdf-program', '/ccp-pdf-program')
 
 export default function Page() {
-  return <ReferenceLanding title="Ccp Pdf Program" />
+  return <PublicPage specKey="ccp-pdf-program" />
 }

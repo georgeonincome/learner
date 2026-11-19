@@ -23,7 +23,7 @@ export async function POST(req: Request) {
     if (!parsed.success) {
       return NextResponse.json({ error: parsed.error }, { status: 400 })
     }
-    const { formType, name, email, message } = parsed.data
+    const { formType, name, email, message, fields, page } = parsed.data
 
     await getTursoClient().execute(
       `CREATE TABLE IF NOT EXISTS form_submissions (
@@ -32,18 +32,22 @@ export async function POST(req: Request) {
         name TEXT,
         email TEXT NOT NULL,
         message TEXT,
+        page TEXT,
+        fields TEXT,
         created_at DATETIME DEFAULT CURRENT_TIMESTAMP
       )`,
     )
     await getTursoClient().execute({
-      sql: `INSERT INTO form_submissions (id, form_type, name, email, message, created_at)
-            VALUES (?, ?, ?, ?, ?, datetime('now'))`,
+      sql: `INSERT INTO form_submissions (id, form_type, name, email, message, page, fields, created_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?, datetime('now'))`,
       args: [
         `form_${Date.now()}`,
         formType,
         typeof name === 'string' ? name : '',
         email,
         typeof message === 'string' ? message : '',
+        page || '',
+        JSON.stringify(fields || {}),
       ],
     })
     return NextResponse.json({ ok: true }, { status: 201 })

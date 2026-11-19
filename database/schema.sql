@@ -119,14 +119,17 @@ CREATE TABLE IF NOT EXISTS lead_claims (
 CREATE INDEX IF NOT EXISTS idx_lead_claims_email ON lead_claims(email);
 CREATE INDEX IF NOT EXISTS idx_lead_claims_slug ON lead_claims(lead_magnet_slug);
 
--- Form submissions (contact, mailing list)
+-- Form submissions (contact, mailing list, and any reference form)
 CREATE TABLE IF NOT EXISTS form_submissions (
   id TEXT PRIMARY KEY,
-  form_type TEXT NOT NULL, -- contact | mailing-list
+  form_type TEXT NOT NULL, -- contact | mailing-list | <reference form key>
   name TEXT,
   email TEXT NOT NULL,
   message TEXT,
+  page TEXT, -- route the submission came from
+  fields TEXT, -- JSON blob of the remaining reference form fields
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE INDEX IF NOT EXISTS idx_form_submissions_type ON form_submissions(form_type);
+CREATE INDEX IF NOT EXISTS idx_form_submissions_page ON form_submissions(page);

@@ -1,10 +1,7 @@
-import { ReferenceLanding } from '@/components/routes/ReferenceLanding'
+import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
 
-export const metadata = {
-  title: 'Video Library — SavvyPro',
-  description: 'Video Library on SavvyPro — practical digital skills, training and support.',
-}
+export const metadata = specMetadata('video-library', '/video-library')
 
 export default function Page() {
-  return <ReferenceLanding title="Video Library" />
+  return <PublicPage specKey="video-library" />
 }

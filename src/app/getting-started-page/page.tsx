@@ -1,14 +1,7 @@
-import { PathLanding } from '@/components/home'
-import homeContent from '@/content/home.json'
+import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
 
-export const metadata = {
-  title: 'Starting a Business — SavvyPro',
-  description: 'Not sure where to begin? Discover the skills, resources and a clear path to make your idea real.',
-}
+export const metadata = specMetadata('getting-started-page', '/getting-started-page')
 
-const path = homeContent.paths.find((p) => p.id === 1)
-
-export default function GettingStartedPage() {
-  if (!path) return null
-  return <PathLanding path={path} />
+export default function Page() {
+  return <PublicPage specKey="getting-started-page" />
 }

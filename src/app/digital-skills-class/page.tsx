@@ -1,10 +1,7 @@
-import { ReferenceLanding } from '@/components/routes/ReferenceLanding'
+import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
 
-export const metadata = {
-  title: 'Digital Skills Class — SavvyPro',
-  description: 'Digital Skills Class on SavvyPro — practical digital skills, training and support.',
-}
+export const metadata = specMetadata('digital-skills-class', '/digital-skills-class')
 
 export default function Page() {
-  return <ReferenceLanding title="Digital Skills Class" />
+  return <PublicPage specKey="digital-skills-class" />
 }

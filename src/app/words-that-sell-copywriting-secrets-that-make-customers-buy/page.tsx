@@ -1,10 +1,7 @@
-import { ReferenceLanding } from '@/components/routes/ReferenceLanding'
+import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
 
-export const metadata = {
-  title: 'Words That Sell Copywriting Secrets That Make Customers Buy — SavvyPro',
-  description: 'Words That Sell Copywriting Secrets That Make Customers Buy on SavvyPro — practical digital skills, training and support.',
-}
+export const metadata = specMetadata('words-that-sell-copywriting-secrets-that-make-customers-buy', '/words-that-sell-copywriting-secrets-that-make-customers-buy')
 
 export default function Page() {
-  return <ReferenceLanding title="Words That Sell Copywriting Secrets That Make Customers Buy" />
+  return <PublicPage specKey="words-that-sell-copywriting-secrets-that-make-customers-buy" />
 }

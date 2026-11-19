@@ -47,7 +47,6 @@ export function GroupFeed({ group }: { group: Group }) {
   const [commentFor, setCommentFor] = useState<string | null>(null)
   const [commentBody, setCommentBody] = useState('')
   const [loading, setLoading] = useState(true)
-  const [signedIn, setSignedIn] = useState(false)
 
   const loadPosts = useCallback(async () => {
     setLoading(true)
@@ -68,9 +67,6 @@ export function GroupFeed({ group }: { group: Group }) {
 
   useEffect(() => {
     loadPosts()
-    fetch('/api/auth/me', { cache: 'no-store' })
-      .then((r) => setSignedIn(r.ok))
-      .catch(() => setSignedIn(false))
   }, [loadPosts])
 
   async function createPost(e: React.FormEvent) {
@@ -184,7 +180,7 @@ export function GroupFeed({ group }: { group: Group }) {
               You&apos;re now in <span className="text-primary font-medium"># {activeChannel}</span>
             </div>
 
-            {tab === 'feed' && signedIn && (
+            {tab === 'feed' && (
               <Card className="p-4">
                 <form onSubmit={createPost} className="space-y-3">
                   <Input

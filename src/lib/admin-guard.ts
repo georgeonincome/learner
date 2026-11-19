@@ -21,6 +21,9 @@ export async function getAdminIdentity(): Promise<AdminIdentity | null> {
     const cookieStore = await cookies()
     const sessionCookie = cookieStore.get(SESSION_COOKIE_NAME)?.value
     if (!sessionCookie) {
+      if (process.env.DEMO_MODE === 'true') {
+        return { uid: 'demo-user', role: 'admin', demo: true }
+      }
       return process.env.NODE_ENV === 'production'
         ? null
         : { uid: 'demo-user', role: 'admin', demo: true }

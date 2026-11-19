@@ -8,7 +8,25 @@ import {
 let app: FirebaseApp | undefined
 let auth: Auth | undefined
 
+/**
+ * Firebase is optional at runtime: the public marketing pages must render even
+ * when no NEXT_PUBLIC_FIREBASE_* credentials are present (local preview, static
+ * export). Auth calls fail loudly only when actually used.
+ */
+export function isFirebaseConfigured(): boolean {
+  return Boolean(
+    process.env.NEXT_PUBLIC_FIREBASE_API_KEY &&
+      process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID &&
+      process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  )
+}
+
 export function getFirebaseApp(): FirebaseApp {
+  if (!isFirebaseConfigured()) {
+    throw new Error(
+      'Firebase is not configured. Add NEXT_PUBLIC_FIREBASE_API_KEY, NEXT_PUBLIC_FIREBASE_PROJECT_ID and NEXT_PUBLIC_FIREBASE_APP_ID to .env.local.',
+    )
+  }
   if (!app) {
     app = initializeApp(
       {
@@ -42,14 +60,21 @@ export function getFirebaseAuth(): Auth {
   return auth
 }
 
-// Backwards-compatible singletons (lazily initialized on first access)
-export const firebaseApp = (() => {
-  if (typeof window === 'undefined' && !getApps().length) return null as unknown as FirebaseApp
-  if (getApps().length > 0) return getApps()[0]
-  return getFirebaseApp()
+// Backwards-compatible singletons (lazily initialized on first access).
+// Null when Firebase is not configured, so public pages render without creds.
+export const firebaseApp: FirebaseApp | null = (() => {
+  if (typeof window === 'undefined') return null
+  if (!isFirebaseConfigured()) return null
+  if (getApps().length > 0) return getApps()[0] ?? null
+  try {
+    return getFirebaseApp()
+  } catch {
+    return null
+  }
 })()
-export function getClientFirebaseAuth(): Auth {
-  if (typeof window === 'undefined') return null as unknown as Auth
+export function getClientFirebaseAuth(): Auth | null {
+  if (typeof window === 'undefined') return null
+  if (!firebaseApp) return null
   return getFirebaseAuth()
 }
 export const firebaseAuth = getClientFirebaseAuth()

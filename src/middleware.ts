@@ -1,9 +1,10 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
-// Routes that require an authenticated session
+// Routes that require an authenticated session. Route-group folder names never
+// appear in the request pathname, so these are real URL prefixes.
 const PROTECTED_PREFIXES = [
-  '/(account)',
+  '/user',
   '/dashboard',
   '/checkout',
   '/orders',
@@ -11,8 +12,8 @@ const PROTECTED_PREFIXES = [
   // Community and appointment pages are public to read; write APIs enforce auth.
 ]
 
-// Auth routes that should redirect to / if already authenticated
-const AUTH_PREFIXES = ['/(auth)']
+// Auth routes that should redirect to / when a session already exists.
+const AUTH_PREFIXES = ['/login', '/signup', '/signin', '/reset-password', '/verify']
 
 const PUBLIC_PREFIXES = [
   '/',
@@ -21,6 +22,7 @@ const PUBLIC_PREFIXES = [
   '/course-detail',
   '/books',
   '/book',
+  '/community',
   '/api',
   '/_next',
   '/static',
@@ -30,6 +32,8 @@ const PUBLIC_PREFIXES = [
   '/signup',
   '/verify',
   '/reset-password',
+  '/robots.txt',
+  '/sitemap.xml',
 ]
 
 function isProtected(pathname: string) {

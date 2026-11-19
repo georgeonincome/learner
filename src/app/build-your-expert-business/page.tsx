@@ -1,14 +1,7 @@
-import { PathLanding } from '@/components/home'
-import homeContent from '@/content/home.json'
+import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
 
-export const metadata = {
-  title: 'Build Your Expert Business — SavvyPro',
-  description: 'Convert your knowledge into a stronger brand, an offer, or a service.',
-}
+export const metadata = specMetadata('build-your-expert-business', '/build-your-expert-business')
 
-const path = homeContent.paths.find((p) => p.id === 4)
-
-export default function BuildYourExpertBusinessPage() {
-  if (!path) return null
-  return <PathLanding path={path} />
+export default function Page() {
+  return <PublicPage specKey="build-your-expert-business" />
 }

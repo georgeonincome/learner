@@ -1,10 +1,7 @@
-import { ReferenceLanding } from '@/components/routes/ReferenceLanding'
+import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
 
-export const metadata = {
-  title: 'Magnetic Personal Branding — SavvyPro',
-  description: 'Magnetic Personal Branding on SavvyPro — practical digital skills, training and support.',
-}
+export const metadata = specMetadata('magnetic-personal-branding', '/magnetic-personal-branding')
 
 export default function Page() {
-  return <ReferenceLanding title="Magnetic Personal Branding" />
+  return <PublicPage specKey="magnetic-personal-branding" />
 }

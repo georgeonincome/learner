@@ -1,10 +1,7 @@
-import { ReferenceLanding } from '@/components/routes/ReferenceLanding'
+import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
 
-export const metadata = {
-  title: 'Botpenguin Images — SavvyPro',
-  description: 'Botpenguin Images on SavvyPro — practical digital skills, training and support.',
-}
+export const metadata = specMetadata('botpenguin-images', '/botpenguin-images')
 
 export default function Page() {
-  return <ReferenceLanding title="Botpenguin Images" />
+  return <PublicPage specKey="botpenguin-images" />
 }

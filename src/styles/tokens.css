@@ -1,0 +1,111 @@
+/**
+ * tokens.css — the single theme file.
+ *
+ * Three layers:
+ *  1. Brand tokens (BRAND_NAME / logo / palette) — edit these to rebrand.
+ *  2. Runtime theme variables the reference site injects per-installation
+ *     (`--ezy_variable_*`), extracted from the captured pages.
+ *  3. Tailwind v4 `@theme` color mappings so utilities such as
+ *     `bg-ezy-primary-500` / `text-ezy-gray-400` compile to the same values the
+ *     reference's own Tailwind build produced.
+ */
+
+:root {
+  /* 1. Brand tokens ------------------------------------------------------- */
+  --brand-name: 'SavvyPro';
+  --brand-logo: 'https://letcheck.b-cdn.net/1887/clnizq4lo015wgq9nh2425qsy.jpg';
+  --brand-primary: #6662ff;
+  --brand-primary-hover: #3a34df;
+  --brand-action: #00a3ff;
+  --brand-action-hover: #3b3b3b;
+  --brand-cta: #ff007a;
+  --brand-cta-hover: #3b3b3b;
+  --brand-ink: #090e21;
+  --brand-surface: #101b2f;
+  --brand-surface-elevated: #16243e;
+
+  /* 2. Runtime theme variables (from the reference install) ---------------- */
+  --ezy_variable_WDV7i_LNXDl: #6662ff;
+  --ezy_variable_WDV7i_LNXDs: #3a34df;
+  --ezy_variable_WDV7i_LNXDt: #ffffff;
+  --ezy_variable_WDV7i_LNXDu: #000000;
+  --ezy_variable_WDV7i_LNXDv: #3a34df;
+  --ezy_variable_WDV7i_LNXDw: #000000;
+  --ezy_variable_WDV7i_LNXDx: #ffffff;
+  --ezy_variable_WDV7i_LNXDy: #000000;
+  --ezy_variable_WDV7i_LNXDz: #ffffff;
+  --ezy_variable_WDV7i_LNXEo: #ffffff;
+  --ezy_variable_WDV7i_LNXEp: #ffffff;
+  --ezy_variable_WDV7i_LNXEq: #ffffff;
+  --ezy_variable_WDV7i_LNXEr: #000000;
+  --ezy_variable_WDV7i_LNXEs: #3a34df;
+
+  /* Reference type/scale tokens (from the captured styled-components CSS) -- */
+  --ezy-header-height: 0px;
+}
+
+@theme inline {
+  /* Ezy palette -> Tailwind color utilities */
+  --color-ezy-primary: var(--ezyPrimary);
+  --color-ezy-primary-hover: var(--ezyPrimaryHover);
+  --color-ezy-primary-500: var(--ezyPrimary500);
+  --color-ezy-primary-400: var(--ezyPrimary400);
+  --color-ezy-primary-300: var(--ezyPrimary300);
+  --color-ezy-primary-200: var(--ezyPrimary200);
+  --color-ezy-primary-100: var(--ezyPrimary100);
+  --color-ezy-primary-50: var(--ezyPrimary50);
+  --color-ezy-primary-25: var(--ezyPrimary25);
+  --color-ezy-gray-950: var(--ezyGray950);
+  --color-ezy-gray-900: var(--ezyGray900);
+  --color-ezy-gray-800: var(--ezyGray800);
+  --color-ezy-gray-750: var(--ezyGray750);
+  --color-ezy-gray-700: var(--ezyGray700);
+  --color-ezy-gray-600: var(--ezyGray600);
+  --color-ezy-gray-500: var(--ezyGray500);
+  --color-ezy-gray-400: var(--ezyGray400);
+  --color-ezy-gray-300: var(--ezyGray300);
+  --color-ezy-gray-250: var(--ezyGray250);
+  --color-ezy-gray-200: var(--ezyGray200);
+  --color-ezy-gray-100: var(--ezyGray100);
+  --color-ezy-gray-50: var(--ezyGray50);
+  --color-ezy-gray-25: var(--ezyGray25);
+
+  /* Legacy component tokens (pre-rebuild components) mapped to the same palette */
+  --color-primary: var(--brand-primary);
+  --color-primary-hover: var(--brand-primary-hover);
+  --color-blue: var(--brand-action);
+  --color-blue-hover: var(--brand-action-hover);
+  --color-magenta: var(--brand-cta);
+  --color-magenta-hover: var(--brand-cta-hover);
+  --color-dark-navy: var(--brand-surface);
+  --color-dark-slate: var(--brand-surface-elevated);
+  --color-near-black: #110011;
+  --color-light-gray: #d9d9d9;
+  --color-off-white: rgb(248 247 247);
+  --color-gray-text: #94a3b8;
+  --color-text-muted: #5b6475;
+  --color-border: #64748b;
+  --color-badge: #e6f1fb;
+  --color-hero-bg: var(--brand-ink);
+  --color-nprogress: #29d;
+
+  --color-bg-hero: var(--brand-ink);
+  --color-bg-surface: var(--brand-surface);
+  --color-bg-surface-elevated: var(--brand-surface-elevated);
+  --color-text-primary: var(--color-off-white);
+  --color-text-secondary: #f7f3f3;
+  --color-border-card: var(--color-border);
+  --color-text-dark-on-light: var(--brand-surface-elevated);
+  --color-text-white: #ffffff;
+  --color-border-light: var(--color-border);
+  --color-surface: var(--brand-surface);
+  --color-surface-elevated: var(--brand-surface-elevated);
+
+  --font-family-heading: Verdana, 'Lucida Sans Unicode', Arial, sans-serif;
+  --font-family-body: Figtree, 'Lucida Sans Unicode', 'Twemoji Country Flags', sans-serif;
+  --font-family-hero: 'Lucida Sans Unicode', sans-serif;
+
+  --radius-button: 5px;
+  --radius-card: 10px;
+  --radius-cta: 50px;
+}

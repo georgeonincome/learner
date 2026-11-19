@@ -1,10 +1,7 @@
-import { ReferenceLanding } from '@/components/routes/ReferenceLanding'
+import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
 
-export const metadata = {
-  title: 'Savvypro Refund Policy — SavvyPro',
-  description: 'Savvypro Refund Policy on SavvyPro — practical digital skills, training and support.',
-}
+export const metadata = specMetadata('savvypro-refund-policy', 'Savvypro Refund Policy')
 
 export default function Page() {
-  return <ReferenceLanding title="Savvypro Refund Policy" />
+  return <PublicPage specKey="savvypro-refund-policy" />
 }
