@@ -63,6 +63,21 @@ export async function POST(req: Request) {
     }
     const { lessonId, completed, percent, lastPositionSec } = parsed.data
 
+    // Server-side access gate for REAL lessons: a learner may only record
+    // progress in courses they are actively enrolled in (audit C8/I).
+    const lessonRows = await query<{ course_id: number }>(
+      'SELECT course_id FROM lessons WHERE CAST(id AS TEXT) = ? LIMIT 1', [String(lessonId)],
+    )
+    if (lessonRows.length) {
+      const enrollment = await query<{ id: string }>(
+        `SELECT id FROM enrollments WHERE auth_user_id = ? AND course_id = ? LIMIT 1`,
+        [uid, String(lessonRows[0]?.course_id)],
+      )
+      if (!enrollment.length) {
+        return NextResponse.json({ error: 'Enrol in this course before recording progress.' }, { status: 403 })
+      }
+    }
+
     // Ensure the table exists in local/demo databases that were never seeded.
     await getTursoClient().execute(
       `CREATE TABLE IF NOT EXISTS lesson_progress (
@@ -80,6 +95,20 @@ export async function POST(req: Request) {
        ON lesson_progress(auth_user_id, lesson_id)`,
     )
 
+    // Partial updates: a resume heartbeat sends only lastPositionSec and must
+    // never reset an existing completion (audit C9 resume).
+    const existing = await query<ProgressRow>(
+      `SELECT id, completed, percent, last_position_sec FROM lesson_progress
+        WHERE auth_user_id = ? AND lesson_id = ? LIMIT 1`, [uid, String(lessonId)],
+    )
+    const prev = existing[0]
+    const nextCompleted = completed === undefined ? (prev?.completed ?? 0) : completed ? 1 : 0
+    const nextPercent = typeof percent === 'number'
+      ? percent
+      : completed === true ? 100 : (prev?.percent ?? 0)
+    const nextPosition = typeof lastPositionSec === 'number'
+      ? lastPositionSec
+      : (prev?.last_position_sec ?? 0)
     const id = `prog_${uid}_${lessonId}`
     await getTursoClient().execute({
       sql: `INSERT INTO lesson_progress
@@ -90,14 +119,7 @@ export async function POST(req: Request) {
               percent = excluded.percent,
               last_position_sec = excluded.last_position_sec,
               updated_at = datetime('now')`,
-      args: [
-        id,
-        uid,
-        lessonId,
-        completed ? 1 : 0,
-        typeof percent === 'number' ? percent : completed ? 100 : 0,
-        typeof lastPositionSec === 'number' ? lastPositionSec : 0,
-      ],
+      args: [id, uid, String(lessonId), nextCompleted, nextPercent, nextPosition],
     })
 
     return NextResponse.json({ ok: true })

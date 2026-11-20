@@ -1,43 +1,30 @@
 import { NextResponse } from 'next/server'
-import type Stripe from 'stripe'
-import { getStripe, getBaseUrl } from '@/lib/stripe'
 import { getCurrentUserId } from '@/lib/session'
 import { rateLimit } from '@/lib/rate-limit'
 import { checkoutSchema, safeParse } from '@/lib/validation'
+import { createCheckout } from '@/lib/commerce'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
+/**
+ * Server-priced checkout (M7, audit E1/E2). The client supplies only the item
+ * identity; the amount is resolved from the `prices` table. A pending order is
+ * persisted and linked via Stripe metadata so the webhook can fulfil it.
+ */
 export async function POST(req: Request) {
+  const uid = await getCurrentUserId()
+  if (!uid) return NextResponse.json({ error: 'Sign in to checkout.' }, { status: 401 })
+  const limit = rateLimit(`checkout:${uid}`, { limit: 20, windowMs: 60_000 })
+  if (!limit.allowed) {
+    return NextResponse.json({ error: 'Too many checkout attempts. Try again shortly.' }, { status: 429, headers: { 'Retry-After': String(limit.retryAfterSeconds) } })
+  }
+  const parsed = safeParse(checkoutSchema, await req.json())
+  if (!parsed.success) return NextResponse.json({ error: parsed.error }, { status: 400 })
   try {
-    const uid = await getCurrentUserId()
-    const limit = rateLimit(`checkout:${uid ?? 'guest'}`, { limit: 20, windowMs: 60 * 1000 })
-    if (!limit.allowed) {
-      return NextResponse.json(
-        { error: 'Too many checkout attempts. Try again shortly.' },
-        { status: 429, headers: { 'Retry-After': String(limit.retryAfterSeconds) } },
-      )
-    }
-
-    const parsed = safeParse(checkoutSchema, await req.json())
-    if (!parsed.success) {
-      return NextResponse.json({ error: parsed.error }, { status: 400 })
-    }
-    const { lineItems, mode, successUrl, cancelUrl } = parsed.data
-
-    const session = await getStripe().checkout.sessions.create({
-      mode,
-      line_items: lineItems as unknown as Stripe.Checkout.SessionCreateParams.LineItem[],
-      success_url: successUrl ?? `${getBaseUrl()}/you-have-paid?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: cancelUrl ?? `${getBaseUrl()}/courses`,
-      metadata: {},
-    })
-
-    return NextResponse.json({ sessionId: session.id, url: session.url })
+    const { url, sessionId, orderId } = await createCheckout({ uid, ...parsed.data })
+    return NextResponse.json({ sessionId, orderId, url })
   } catch (err) {
-    return NextResponse.json(
-      { error: (err instanceof Error ? err.message : "Unknown error") ?? 'Failed to create checkout session' },
-      { status: 400 },
-    )
+    return NextResponse.json({ error: err instanceof Error ? err.message : 'Failed to create checkout session' }, { status: 400 })
   }
 }

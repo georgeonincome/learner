@@ -27,7 +27,15 @@ for (const file of files) {
   const version = file.replace(/\.sql$/, '')
   if (applied.has(version)) continue
   const sql = fs.readFileSync(path.join(dir, file), 'utf8')
-  const statements = sql.split(';').map((s) => s.trim()).filter(Boolean)
+  // Strip -- line comments BEFORE splitting on ';'. A semicolon inside a comment
+  // would otherwise split a statement in half (audit: migration 0003 comment).
+  const statements = sql
+    .split('\n')
+    .map((line) => line.replace(/--.*$/, ''))
+    .join('\n')
+    .split(';')
+    .map((s) => s.trim())
+    .filter(Boolean)
   for (const stmt of statements) {
     try {
       await client.execute(stmt)

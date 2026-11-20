@@ -1,23 +1,18 @@
 import { z } from 'zod'
 
+/** Checkout: the client names the item; the SERVER resolves the price (M7). */
 export const checkoutSchema = z.object({
-  lineItems: z
-    .array(
-      z.object({
-        price: z.string().optional(),
-        price_data: z.record(z.string(), z.unknown()).optional(),
-        quantity: z.number().int().positive().default(1),
-      }),
-    )
-    .min(1),
-  mode: z.enum(['payment', 'subscription']).default('payment'),
+  entityType: z.enum(['course', 'book', 'program', 'membership', 'product']),
+  entityId: z.number().int().positive(),
+  currency: z.string().length(3).optional(),
+  couponCode: z.string().max(60).optional(),
   successUrl: z.string().url().optional(),
   cancelUrl: z.string().url().optional(),
 })
 
 export const progressSchema = z.object({
   lessonId: z.string().min(1),
-  completed: z.boolean().default(false),
+  completed: z.boolean().optional(),
   percent: z.number().int().min(0).max(100).optional(),
   lastPositionSec: z.number().int().nonnegative().optional(),
 })

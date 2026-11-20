@@ -99,6 +99,9 @@
   --color-blue-hover: var(--brand-action-hover);
   --color-magenta: var(--brand-cta);
   --color-magenta-hover: var(--brand-cta-hover);
+  --color-cta: var(--brand-cta);
+  --color-cta-hover: var(--brand-cta-hover);
+  --color-cta-text: #0b1f1a;
   --color-dark-navy: var(--brand-surface);
   --color-dark-slate: var(--brand-surface-elevated);
   --color-near-black: #0b1f1a;

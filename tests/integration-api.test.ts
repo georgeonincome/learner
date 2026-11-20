@@ -43,8 +43,18 @@ describe('checkout webhook', () => {
     expect(res.status).toBe(400)
   })
 
-  it('verifies a valid signature, creates an order, and is idempotent', async () => {
+  it('verifies a valid signature, fulfils the pending order by id, and is idempotent', async () => {
     const secret = process.env.STRIPE_WEBHOOK_SECRET!
+    // Server-authoritative flow (M7): checkout writes the pending order first and
+    // stamps its id on the session. The webhook never trusts a client amount/id.
+    await query(
+      `INSERT INTO orders (id, auth_user_id, status, total, currency, entity_type, entity_id)
+       VALUES ('order_integration_1', 'integration-user', 'pending', 7500, 'usd', 'course', 1)`,
+    )
+    await query(
+      `INSERT INTO order_items (id, order_id, product_type, product_id, price)
+       VALUES ('item_integration_1', 'order_integration_1', 'course', '1', 7500)`,
+    )
     const payload = JSON.stringify({
       id: 'evt_integration_1',
       object: 'event',
@@ -55,14 +65,11 @@ describe('checkout webhook', () => {
           object: 'checkout.session',
           amount_total: 7500,
           currency: 'usd',
-          metadata: { auth_user_id: 'integration-user', course_id: 'course-1' },
+          metadata: { orderId: 'order_integration_1', uid: 'integration-user', entityType: 'course', entityId: '1' },
         },
       },
     })
-    const header = Stripe.webhooks.generateTestHeaderString({
-      payload,
-      secret,
-    })
+    const header = Stripe.webhooks.generateTestHeaderString({ payload, secret })
     const req = () => new Request('http://127.0.0.1:3000/api/webhooks/stripe', {
       method: 'POST',
       headers: { 'stripe-signature': header },
@@ -78,15 +85,22 @@ describe('checkout webhook', () => {
     expect(orders[0]?.status).toBe('paid')
 
     const enrollments = await query<{ id: string }>(
-      "SELECT id FROM enrollments WHERE auth_user_id = 'integration-user' AND course_id = 'course-1'",
+      "SELECT id FROM enrollments WHERE auth_user_id = 'integration-user' AND course_id = '1'",
     )
     expect(enrollments).toHaveLength(1)
+
+    // Replaying the same event id must be a no-op (persisted idempotency).
     const second = await webhookPOST(req())
     expect(second.status).toBe(200)
+    expect((await second.json()).duplicate).toBe(true)
     const ordersAfter = await query<{ id: string }>(
       "SELECT id FROM orders WHERE stripe_session_id = 'cs_integration_1'",
     )
     expect(ordersAfter).toHaveLength(1)
+    const enrollmentsAfter = await query<{ id: string }>(
+      "SELECT id FROM enrollments WHERE auth_user_id = 'integration-user' AND course_id = '1'",
+    )
+    expect(enrollmentsAfter).toHaveLength(1)
   })
 })
 

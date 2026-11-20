@@ -13,12 +13,13 @@ export interface SeoInput {
   description: string
   path: string
   ogImage?: string | null
+  canonical?: string | null
   noIndex?: boolean
   type?: 'website' | 'article'
 }
 
 export function buildMetadata(input: SeoInput): Metadata {
-  const url = `${BRAND_URL}${input.path.startsWith('/') ? input.path : `/${input.path}`}`
+  const url = input.canonical || `${BRAND_URL}${input.path.startsWith('/') ? input.path : `/${input.path}`}`
   const image = input.ogImage || `${BRAND_URL}${BRAND_LOGO}`
   const title = input.title.includes(BRAND_NAME) ? input.title : `${input.title} — ${BRAND_NAME}`
   return {

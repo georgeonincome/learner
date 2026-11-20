@@ -38,9 +38,39 @@ session). Audit targets the WORKING TREE (newest state); divergence noted in AUD
       (regenerated + session-2 diagnosis), layout-results.json, scratch build2/crawl2/layout2 logs.
 - [x] PHASE 3 COMPLETION-PLAN.md — COMPLETE (M0–M10, data architecture Turso-authoritative
       + Firestore realtime-only, CMS design, brand reset, risks R1–R12). STOPPED HERE.
-- [ ] APPROVAL — awaiting George on D1–D9 + plan go-ahead
-- [ ] PHASE 4 execute (blocked on approval)
-- [ ] PHASE 5 verify (blocked on approval)
+- [x] APPROVAL — George: "build all end to end … build all strategically" (2026-11-19). Executing.
+- [~] PHASE 4 execute — M0–M4 DONE (committed + pushed). M5–M10 in progress.
+- [ ] PHASE 5 verify (after M10)
+
+## Session 3 execution log (2026-11-19/20) — resume here
+Commits (origin/main): 2ab43ed M0 → fc8922c M1 → 2a90b88 M2 → ce02a11 M3+M4.
+Local stack: dev/prod server :3000; Firebase emulators demo-lena (auth :9099, firestore :8080);
+stripe-mock :12111; Turso file:local.db. Start all: `bash scripts/dev-local.sh`.
+- M0 fail-closed auth + local env (no prod keys): firebase-admin lazy/emulator-aware; session
+  verifySessionCookie(checkRevoked=true); admin-guard fail-closed; 401 on all uid APIs;
+  .env.local emulator hosts + MEDIA_DRIVER=local + EMAIL_DRIVER=outbox + stripe-mock.
+- M1 Turso content model: database/migrations/0002_content.sql (all content+commerce entities,
+  status/publish_at/SEO cols); scripts/migrate.mts versioned runner; import-reference.mts seed
+  (32 courses/305 chapters/1106 lessons/30 books/blog/pages); Lena brand reset (tokens.css,
+  brand.json, debrand(), placeholder.svg).
+- M2 routing/SEO + rendering: blocks/compile.ts (builder tree → original Tailwind, mobile-first
+  base/md/lg at 375/768/1024/1280/1536); content.ts published-only reads + TAGS; BlockPage/
+  BlockRenderer/BlogGrid; seo.ts + JsonLd; blog list/post/category DB-driven ISR; sitemap-registry
+  (181) + sitemap.ts + robots.ts; 3 live-404s notFound(); codemod migrated ~100 pages to BlockPage.
+- M3 auth gating: RefAuthForm persists names → /verify; dashboard + getVerifiedUserId gate;
+  enrollments verified+FREE only (paid via webhook); admin role API (claim+profiles+Firestore);
+  /verify force-refresh idToken; AccountSettings + /user.
+- M4 CMS: cms/store.ts (entity whitelist/revisions/audit/revalidate); generic /api/admin/cms
+  [entity]+[id] (CRUD/duplicate/restore/publish/schedule/reorder); media lib + /api/admin/media
+  (local dev / Cloudinary signed prod); cron publish-scheduled; JSON import/export; admin UI
+  CmsManager+CurriculumEditor+MediaLibrary wired (courses/lessons/books/posts/pages/testimonials/
+  memberships/media); in-memory adminStore removed.
+Verification (real output): tsc=0; build=0; vitest 21/21; backend smoke .cache/smoke-m3m4.mjs
+18/18 (signup→profile→session→verify-gate→verify→enroll free/paid-402; CMS create/publish/
+revision/duplicate/delete/export; scheduled-publish tick; media upload).
+OPEN (M5–M10): courses catalog/detail/lesson-player from DB; books reader/download unlock;
+checkout price-from-server + webhook→enrollment + memberships; dashboard/admin polish;
+community/booking/webinar/lead/AI wiring + emails; UI fidelity 35 real-diff cells; axe/Lighthouse.
 
 ## Session 2 results (2026-11-19 evening) — audit headline
 - Build/tsc/lint/vitest all green (20/20 tests); 170 routes; crawl 181/181 200 but

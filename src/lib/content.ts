@@ -31,6 +31,7 @@ export interface CourseRow {
   seo_description: string | null; og_image: string | null; canonical: string | null; no_index: number
 }
 export interface ChapterRow { id: number; course_id: number; position: number; title: string; content: string; is_published: number }
+export type BookChapter = { title: string; body: string }
 export interface LessonRow {
   id: number; chapter_id: number; course_id: number; position: number; title: string
   lesson_type: string; is_free: number; content: string; duration_sec: number
