@@ -1,7 +1,7 @@
-import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
+import { notFound } from 'next/navigation'
 
-export const metadata = specMetadata('video-details', '/video-details')
-
+// Live reference returns 404 for this URL (audit A6 / decision D1). Replicate
+// the true 404 status rather than serving 200-with-404-content.
 export default function Page() {
-  return <PublicPage specKey="video-details" />
+  notFound()
 }

@@ -1,7 +1,11 @@
-import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
+import { BlockPage, blockPageMetadata } from '@/components/layout/BlockPage'
 
-export const metadata = specMetadata('savvypro-privacy-policy', '/savvypro-privacy-policy')
+export const revalidate = 3600
+
+export async function generateMetadata() {
+  return blockPageMetadata('savvypro-privacy-policy')
+}
 
 export default function Page() {
-  return <PublicPage specKey="savvypro-privacy-policy" />
+  return <BlockPage slug="savvypro-privacy-policy" />
 }

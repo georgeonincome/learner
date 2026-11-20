@@ -1,7 +1,11 @@
-import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
+import { BlockPage, blockPageMetadata } from '@/components/layout/BlockPage'
 
-export const metadata = specMetadata('susan-mwenda-mulongoti-consultant', '/susan-mwenda-mulongoti-consultant')
+export const revalidate = 3600
+
+export async function generateMetadata() {
+  return blockPageMetadata('susan-mwenda-mulongoti-consultant')
+}
 
 export default function Page() {
-  return <PublicPage specKey="susan-mwenda-mulongoti-consultant" />
+  return <BlockPage slug="susan-mwenda-mulongoti-consultant" />
 }

@@ -1,7 +1,11 @@
-import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
+import { BlockPage, blockPageMetadata } from '@/components/layout/BlockPage'
 
-export const metadata = specMetadata('7-step-whatspp-automation-system-setup', '/7-step-whatspp-automation-system-setup')
+export const revalidate = 3600
+
+export async function generateMetadata() {
+  return blockPageMetadata('7-step-whatspp-automation-system-setup')
+}
 
 export default function Page() {
-  return <PublicPage specKey="7-step-whatspp-automation-system-setup" />
+  return <BlockPage slug="7-step-whatspp-automation-system-setup" />
 }

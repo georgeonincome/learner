@@ -1,7 +1,11 @@
-import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
+import { BlockPage, blockPageMetadata } from '@/components/layout/BlockPage'
 
-export const metadata = specMetadata('inner-circle', '/inner-circle')
+export const revalidate = 3600
+
+export async function generateMetadata() {
+  return blockPageMetadata('inner-circle')
+}
 
 export default function Page() {
-  return <PublicPage specKey="inner-circle" />
+  return <BlockPage slug="inner-circle" />
 }

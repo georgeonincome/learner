@@ -1,7 +1,11 @@
-import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
+import { BlockPage, blockPageMetadata } from '@/components/layout/BlockPage'
 
-export const metadata = specMetadata('words-that-sell-copywriting-secrets-that-make-customers-buy', '/words-that-sell-copywriting-secrets-that-make-customers-buy')
+export const revalidate = 3600
+
+export async function generateMetadata() {
+  return blockPageMetadata('words-that-sell-copywriting-secrets-that-make-customers-buy')
+}
 
 export default function Page() {
-  return <PublicPage specKey="words-that-sell-copywriting-secrets-that-make-customers-buy" />
+  return <BlockPage slug="words-that-sell-copywriting-secrets-that-make-customers-buy" />
 }

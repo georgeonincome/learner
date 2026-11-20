@@ -1,7 +1,6 @@
-import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
+import { notFound } from 'next/navigation'
 
-export const metadata = specMetadata('learn-with-expert-guidance', '/learn-with-expert-guidance')
-
+// Live reference returns 404 for this URL (audit A6 / decision D1).
 export default function Page() {
-  return <PublicPage specKey="learn-with-expert-guidance" />
+  notFound()
 }

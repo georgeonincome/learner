@@ -10,7 +10,9 @@ export async function GET() {
     const cookieStore = await cookies()
     const sessionCookie = cookieStore.get(SESSION_COOKIE_NAME)?.value
     if (!sessionCookie) {
-      return NextResponse.json({ error: 'No session' }, { status: 401 })
+      // 200 + null body: a "who am I" probe. Avoids 401 console noise on public
+      // pages (SiteHeader reads null as signed-out). Guards use getSessionUser.
+      return NextResponse.json(null)
     }
 
     // Verify the session cookie (checks revocation)
@@ -26,6 +28,6 @@ export async function GET() {
       role: decoded.role,
     })
   } catch {
-    return NextResponse.json({ error: 'Invalid session' }, { status: 401 })
+    return NextResponse.json(null)
   }
 }

@@ -1,37 +1,117 @@
-/**
- * SEO fallbacks. The reference site emits a <title> on every page but no meta
- * description, so descriptions are derived per template. Override by adding a
- * `description` to the page spec (src/content/pages/<key>.json).
- */
+import type { Metadata } from 'next'
+import { BRAND_NAME, BRAND_URL, BRAND_DESCRIPTION, BRAND_LOGO } from '@/lib/brand'
 
-const BY_TEMPLATE: Record<string, string> = {
-  home: 'Practical systems, skills, training and hands-on help to grow revenue and build your brand.',
-  catalog: 'Browse courses, programs, books and digital products.',
-  'course-detail': 'Course details, curriculum and enrollment.',
-  'blog-list': 'Tips, strategies and stories on digital business, marketing and growth.',
-  'blog-post': 'Tips, strategies and stories on digital business, marketing and growth.',
-  'blog-category': 'Articles in this category.',
-  books: 'Books and ebooks on digital business, marketing and content creation.',
-  book: 'Book details and how to get your copy.',
-  community: 'Community groups, discussions and member libraries.',
-  'community-group': 'Group discussion, posts and member contributions.',
-  auth: 'Sign in or create your account.',
-  account: 'Your account, membership and settings.',
-  checkout: 'Complete your purchase securely.',
-  legal: 'Information about our programmes, policies and how to reach us.',
-  coaching: 'Coaching, appointments and webinar registration.',
-  ai: 'AI assistant and chatbot.',
-  'lead-magnet': 'Free resources, guides and templates.',
-  page: 'Courses, coaching and digital skills programmes.',
+/**
+ * SEO factory (M2, audit A4). Every public route gets: unique title +
+ * description, canonical, Open Graph, Twitter card. JSON-LD is emitted by the
+ * page via <JsonLd> (BlogPosting/BreadcrumbList/CollectionPage/Course/Product —
+ * the reference's observed schema types, with Lena values).
+ * No template-fallback descriptions: uniqueness is enforced per entity.
+ */
+export interface SeoInput {
+  title: string
+  description: string
+  path: string
+  ogImage?: string | null
+  noIndex?: boolean
+  type?: 'website' | 'article'
 }
 
-export function seoDescription(template: string, route: string): string {
-  if (BY_TEMPLATE[template]) return BY_TEMPLATE[template]
-  const name = route
-    .split('/')
-    .filter(Boolean)
-    .pop()
-    ?.replace(/-/g, ' ')
-    .replace(/\b\w/g, (c) => c.toUpperCase())
-  return name ? `${name} — courses, coaching and digital skills programmes.` : 'Courses, coaching and digital skills programmes.'
+export function buildMetadata(input: SeoInput): Metadata {
+  const url = `${BRAND_URL}${input.path.startsWith('/') ? input.path : `/${input.path}`}`
+  const image = input.ogImage || `${BRAND_URL}${BRAND_LOGO}`
+  const title = input.title.includes(BRAND_NAME) ? input.title : `${input.title} — ${BRAND_NAME}`
+  return {
+    title,
+    description: input.description || BRAND_DESCRIPTION,
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description: input.description || BRAND_DESCRIPTION,
+      url,
+      siteName: BRAND_NAME,
+      locale: 'en_US',
+      type: input.type ?? 'website',
+      images: [{ url: image, width: 1200, height: 630, alt: input.title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description: input.description || BRAND_DESCRIPTION,
+      images: [image],
+    },
+    robots: input.noIndex ? { index: false, follow: false } : { index: true, follow: true },
+  }
+}
+
+/** Absolute URL helper for JSON-LD. */
+export function absUrl(path: string): string {
+  return `${BRAND_URL}${path.startsWith('/') ? path : `/${path}`}`
+}
+
+export function breadcrumbLd(items: { name: string; path: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((it, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: it.name,
+      item: absUrl(it.path),
+    })),
+  }
+}
+
+export function blogPostingLd(p: { title: string; description: string; slug: string; datePublished?: string; dateModified?: string; author?: string }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: p.title,
+    description: p.description,
+    url: absUrl(`/blog/${p.slug}`),
+    mainEntityOfPage: absUrl(`/blog/${p.slug}`),
+    author: { '@type': 'Organization', name: p.author || BRAND_NAME },
+    publisher: { '@type': 'Organization', name: BRAND_NAME, logo: { '@type': 'ImageObject', url: absUrl(BRAND_LOGO) } },
+    ...(p.datePublished ? { datePublished: p.datePublished } : {}),
+    ...(p.dateModified ? { dateModified: p.dateModified } : {}),
+  }
+}
+
+export function collectionPageLd(c: { name: string; description: string; path: string; items: { name: string; path: string }[] }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: c.name,
+    description: c.description,
+    url: absUrl(c.path),
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: c.items.map((it, i) => ({ '@type': 'ListItem', position: i + 1, name: it.name, url: absUrl(it.path) })),
+    },
+  }
+}
+
+export function courseLd(c: { title: string; description: string; slug: string; id: number; provider?: string }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: c.title,
+    description: c.description,
+    url: absUrl(`/course-detail/${c.slug}/${c.id}`),
+    provider: { '@type': 'Organization', name: c.provider || BRAND_NAME, sameAs: absUrl('/') },
+  }
+}
+
+export function productLd(p: { name: string; description: string; path: string; price?: number; currency?: string }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: p.name,
+    description: p.description,
+    url: absUrl(p.path),
+    brand: { '@type': 'Brand', name: BRAND_NAME },
+    ...(p.price != null
+      ? { offers: { '@type': 'Offer', price: p.price, priceCurrency: p.currency ?? 'USD', availability: 'https://schema.org/InStock', url: absUrl(p.path) } }
+      : {}),
+  }
 }

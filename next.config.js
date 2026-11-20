@@ -2,10 +2,9 @@
 const isProd = process.env.NODE_ENV === 'production'
 
 /**
- * Hosts the captured reference content actually references (see
- * src/content/pages/*.json). The brief requires a strict CSP; these are the
- * origins the reference's own markup depends on. Override with
- * NEXT_PUBLIC_MEDIA_HOSTS / _FONTS / _FRAMES once brand assets are re-hosted.
+ * CSP: lena serves its own assets + Cloudinary + Stripe + local emulators.
+ * Reference CDN hosts remain ONLY until the last spec-replay routes are
+ * migrated (M5/M8) and are removed in M9 with the DOM-replay layer.
  */
 const list = (v) => v.split(' ').map((s) => s.trim()).filter(Boolean).join(' ')
 
@@ -33,7 +32,7 @@ const styleHosts = list(process.env.NEXT_PUBLIC_STYLE_HOSTS || 'https://ezysuper
 
 const frameHosts = list(
   process.env.NEXT_PUBLIC_FRAME_HOSTS ||
-    ['https://kingsumo.com', 'https://iframe.mediadelivery.net', 'https://web.facebook.com'].join(' '),
+    ['https://kingsumo.com', 'https://iframe.mediadelivery.net', 'https://web.facebook.com', 'https://www.canva.com'].join(' '),
 )
 
 const csp = [
@@ -42,7 +41,7 @@ const csp = [
   `style-src 'self' 'unsafe-inline' data: ${styleHosts}`,
   `img-src 'self' data: blob: ${mediaHosts}`,
   `font-src 'self' data: ${fontHosts}`,
-  "connect-src 'self' http://127.0.0.1:9099 http://127.0.0.1:8080 https://api.stripe.com https://api.cloudinary.com ws:",
+  "connect-src 'self' http://127.0.0.1:9099 http://127.0.0.1:8080 http://127.0.0.1:12111 https://api.stripe.com https://api.cloudinary.com ws:",
   `frame-src 'self' ${frameHosts}`,
   "frame-ancestors 'self'",
   "base-uri 'self'",
@@ -64,9 +63,38 @@ if (isProd) {
   })
 }
 
+/**
+ * Alias + legacy redirects (audit A2/A7, decisions D1/D6). Reference test/legacy
+ * payment pages redirect to real commerce surfaces; auth aliases canonicalize.
+ */
+const redirects = [
+  { source: '/signin', destination: '/login', permanent: true },
+  { source: '/home', destination: '/', permanent: true },
+  { source: '/forgot-password', destination: '/reset-password', permanent: true },
+  { source: '/password-reset-link', destination: '/reset-password', permanent: true },
+  { source: '/set-password', destination: '/reset-password', permanent: true },
+  { source: '/set-new-password', destination: '/reset-password', permanent: true },
+  { source: '/verify-email', destination: '/verify', permanent: true },
+  { source: '/verify-reset-code', destination: '/verify', permanent: true },
+  { source: '/student-signup', destination: '/signup', permanent: true },
+  { source: '/teacher/signup', destination: '/signup', permanent: true },
+  { source: '/student', destination: '/dashboard', permanent: true },
+  { source: '/student/dashboard', destination: '/dashboard', permanent: true },
+  { source: '/kcpay-redirect', destination: '/checkout', permanent: true },
+  { source: '/kcpay--redirect', destination: '/checkout', permanent: true },
+  { source: '/kcpay-registration-success', destination: '/you-have-paid', permanent: true },
+  { source: '/payments', destination: '/checkout', permanent: true },
+  { source: '/testkcpayment', destination: '/checkout', permanent: true },
+  { source: '/payforcontentcreationschool', destination: '/checkout', permanent: true },
+  { source: '/books-stripe-payment', destination: '/books', permanent: true },
+]
+
 const nextConfig = {
   async headers() {
     return [{ source: '/:path*', headers: securityHeaders }]
+  },
+  async redirects() {
+    return redirects
   },
   reactStrictMode: true,
 }

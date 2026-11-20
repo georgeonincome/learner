@@ -1,7 +1,11 @@
-import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
+import { BlockPage, blockPageMetadata } from '@/components/layout/BlockPage'
 
-export const metadata = specMetadata('groups', '/groups')
+export const revalidate = 3600
+
+export async function generateMetadata() {
+  return blockPageMetadata('groups')
+}
 
 export default function Page() {
-  return <PublicPage specKey="groups" />
+  return <BlockPage slug="groups" />
 }

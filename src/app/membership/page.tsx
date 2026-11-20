@@ -1,10 +1,9 @@
-import { ReferenceLanding } from '@/components/routes/ReferenceLanding'
+import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
 
-export const metadata = {
-  title: 'Membership — SavvyPro',
-  description: 'Membership on SavvyPro — practical digital skills, training and support.',
-}
+// Interim: real captured membership content (removes the ReferenceLanding stub).
+// M7 replaces this with the CMS-driven tiers + purchase flow.
+export const metadata = specMetadata('membership', 'Membership')
 
 export default function Page() {
-  return <ReferenceLanding title="Membership" />
+  return <PublicPage specKey="membership" />
 }

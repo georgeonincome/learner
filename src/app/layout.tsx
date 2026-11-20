@@ -7,7 +7,10 @@ import { ToastProvider } from '@/components/ui/Toast'
 import brand from '@/lib/brand'
 
 export const metadata = {
-  title: { default: `${brand.name} — ${brand.tagline}`, template: `%s — ${brand.name}` },
+  // No title.template: buildMetadata() already produces the final branded title
+  // (a template here would double the "— Lena" suffix). Pages without their own
+  // metadata fall back to this default.
+  title: { default: `${brand.name} — ${brand.tagline}` },
   description: brand.description,
 }
 

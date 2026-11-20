@@ -1,7 +1,11 @@
-import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
+import { BlockPage, blockPageMetadata } from '@/components/layout/BlockPage'
 
-export const metadata = specMetadata('whatsapp-marketing-for-smes', '/whatsapp-marketing-for-smes')
+export const revalidate = 3600
+
+export async function generateMetadata() {
+  return blockPageMetadata('whatsapp-marketing-for-smes')
+}
 
 export default function Page() {
-  return <PublicPage specKey="whatsapp-marketing-for-smes" />
+  return <BlockPage slug="whatsapp-marketing-for-smes" />
 }

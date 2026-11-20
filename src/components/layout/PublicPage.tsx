@@ -1,22 +1,29 @@
 import React from 'react'
 import { SiteHeader } from './SiteHeader'
+import { Footer } from './Footer'
 import { RefBlocks } from '@/components/ref/RefNode'
 import { getSpecByKey, type PageSpec } from '@/lib/page-spec'
-import { seoDescription } from '@/lib/seo'
+import { buildMetadata } from '@/lib/seo'
+import { JsonLd } from '@/components/seo/JsonLd'
 
 /**
- * PublicPage — renders a captured reference route: the reproduced site header
- * followed by the reference's own section markup (from the page spec).
+ * PublicPage — INTERIM spec renderer for the few routes not yet migrated to
+ * DB-driven templates (course-detail until M5, community until M8). SEO is
+ * fully wired from the captured spec meta (canonical/OG/JSON-LD). The DOM-replay
+ * layer itself is retired in M9 (Tailwind-only rebuild).
  */
 export function PublicPage({ specKey }: { specKey: string }) {
   const spec: PageSpec | null = getSpecByKey(specKey)
   if (!spec) return null
+  const jsonLd = Array.isArray(spec.meta?.jsonLd) ? spec.meta.jsonLd : []
   return (
     <>
       <SiteHeader />
       <main id="__next-content">
         <RefBlocks blocks={spec.blocks} route={spec.route} />
       </main>
+      <Footer />
+      {jsonLd.length ? <JsonLd data={jsonLd as object[]} /> : null}
     </>
   )
 }
@@ -28,9 +35,18 @@ export function specMetadata(specKey: string, fallback: string) {
 
 /** Metadata for a spec already resolved by a dynamic route. */
 export function specMetadataForSpec(spec: PageSpec | null, fallback: string) {
-  const template = spec?.template || 'page'
-  return {
-    title: spec?.title || fallback,
-    description: spec?.meta?.description || seoDescription(template, spec?.route || ''),
-  }
+  const title = spec?.meta?.title || spec?.title || fallback
+  const rawDesc = spec?.meta?.description
+  const cleanDesc = rawDesc && !/^(null|undefined)$/i.test(String(rawDesc).trim()) ? String(rawDesc) : ''
+  const description =
+    cleanDesc ||
+    `${title} — courses, books and digital skills training from Lena.`
+  const path = spec?.route || `/${fallback.toLowerCase().replace(/\s+/g, '-')}`
+  return buildMetadata({
+    title,
+    description,
+    path,
+    ogImage: spec?.meta?.og?.['og:image'] ?? spec?.meta?.og?.image ?? null,
+    type: spec?.template === 'blog-post' ? 'article' : 'website',
+  })
 }

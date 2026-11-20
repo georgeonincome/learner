@@ -1,7 +1,11 @@
-import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
+import { BlockPage, blockPageMetadata } from '@/components/layout/BlockPage'
 
-export const metadata = specMetadata('microgigs', '/microgigs')
+export const revalidate = 3600
+
+export async function generateMetadata() {
+  return blockPageMetadata('microgigs')
+}
 
 export default function Page() {
-  return <PublicPage specKey="microgigs" />
+  return <BlockPage slug="microgigs" />
 }

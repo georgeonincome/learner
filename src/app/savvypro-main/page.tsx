@@ -1,7 +1,11 @@
-import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
+import { BlockPage, blockPageMetadata } from '@/components/layout/BlockPage'
 
-export const metadata = specMetadata('savvypro-main', '/savvypro-main')
+export const revalidate = 3600
+
+export async function generateMetadata() {
+  return blockPageMetadata('savvypro-main')
+}
 
 export default function Page() {
-  return <PublicPage specKey="savvypro-main" />
+  return <BlockPage slug="savvypro-main" />
 }

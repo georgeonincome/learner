@@ -1,7 +1,11 @@
-import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
+import { BlockPage, blockPageMetadata } from '@/components/layout/BlockPage'
 
-export const metadata = specMetadata('ccs-vsl1', '/ccs-vsl1')
+export const revalidate = 3600
+
+export async function generateMetadata() {
+  return blockPageMetadata('ccs-vsl1')
+}
 
 export default function Page() {
-  return <PublicPage specKey="ccs-vsl1" />
+  return <BlockPage slug="ccs-vsl1" />
 }

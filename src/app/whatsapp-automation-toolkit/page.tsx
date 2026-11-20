@@ -1,7 +1,11 @@
-import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
+import { BlockPage, blockPageMetadata } from '@/components/layout/BlockPage'
 
-export const metadata = specMetadata('whatsapp-automation-toolkit', '/whatsapp-automation-toolkit')
+export const revalidate = 3600
+
+export async function generateMetadata() {
+  return blockPageMetadata('whatsapp-automation-toolkit')
+}
 
 export default function Page() {
-  return <PublicPage specKey="whatsapp-automation-toolkit" />
+  return <BlockPage slug="whatsapp-automation-toolkit" />
 }

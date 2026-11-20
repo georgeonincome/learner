@@ -1,10 +1,11 @@
-import { ReferenceLanding } from '@/components/routes/ReferenceLanding'
+import { BlockPage, blockPageMetadata } from '@/components/layout/BlockPage'
 
-export const metadata = {
-  title: 'You Have Paid — SavvyPro',
-  description: 'You Have Paid on SavvyPro — practical digital skills, training and support.',
+export const revalidate = 3600
+
+export async function generateMetadata() {
+  return blockPageMetadata('you-have-paid')
 }
 
 export default function Page() {
-  return <ReferenceLanding title="You Have Paid" />
+  return <BlockPage slug="you-have-paid" />
 }

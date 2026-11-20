@@ -1,7 +1,11 @@
-import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
+import { BlockPage, blockPageMetadata } from '@/components/layout/BlockPage'
 
-export const metadata = specMetadata('pabbly-form-test', '/pabbly-form-test')
+export const revalidate = 3600
+
+export async function generateMetadata() {
+  return blockPageMetadata('pabbly-form-test')
+}
 
 export default function Page() {
-  return <PublicPage specKey="pabbly-form-test" />
+  return <BlockPage slug="pabbly-form-test" />
 }

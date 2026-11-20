@@ -282,7 +282,7 @@ function classify(key: string, spec: any): string {
 for (const k of pageKeys) {
   const pp = nextData[k]
   const spec = specs[k]
-  const slug = (pp.page_slug ?? spec?.route ?? k).replace(/^\//, '') || k
+  const slug = (pp.page_slug ?? spec?.route ?? k).replace(/^\//, '').replace(/\/$/, '') || k
   const title = debrand(pp.page_name ?? spec?.title ?? slug.replace(/-/g, ' '))
   const present = pp.initialState?.builder?.present ?? {}
   const blocksRaw = { nodeTreeIDS: present.nodeTreeIDS ?? [], nodes: present.nodes ?? {} }

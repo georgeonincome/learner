@@ -1,7 +1,11 @@
-import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
+import { BlockPage, blockPageMetadata } from '@/components/layout/BlockPage'
 
-export const metadata = specMetadata('refund-policy', '/refund-policy')
+export const revalidate = 3600
+
+export async function generateMetadata() {
+  return blockPageMetadata('refund-policy')
+}
 
 export default function Page() {
-  return <PublicPage specKey="refund-policy" />
+  return <BlockPage slug="refund-policy" />
 }

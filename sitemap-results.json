@@ -2,8 +2,8 @@
   {
     "url": "/all-products",
     "status": 200,
-    "title": "All products",
-    "description": "Browse courses, programs, books and digital products.",
+    "title": "All products — Lena — Lena",
+    "description": "All products — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/all-products"
@@ -11,8 +11,8 @@
   {
     "url": "/blog",
     "status": 200,
-    "title": "Tips & Strategies for Online Course Creators",
-    "description": "Learn how to grow and scale your online course business using our online course platform. EzyCourse blog is designed to teach you how to create and sell online courses.",
+    "title": "Blog — tips & strategies for digital business — Lena — Lena",
+    "description": "Practical articles on freelancing, content creation, digital marketing and growing an online business from Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/blog"
@@ -20,8 +20,8 @@
   {
     "url": "/login",
     "status": 200,
-    "title": "Login",
-    "description": "Sign in or create your account.",
+    "title": "Login — Lena — Lena",
+    "description": "Login — courses, books and digital skills training from Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/login"
@@ -29,26 +29,28 @@
   {
     "url": "/signup",
     "status": 200,
-    "title": "Signup",
-    "description": "Sign in or create your account.",
+    "title": "Signup — Lena — Lena",
+    "description": "Signup — courses, books and digital skills training from Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/signup"
   },
   {
     "url": "/video-details",
-    "status": 200,
-    "title": "404 - Not found",
-    "description": "Courses, coaching and digital skills programmes.",
-    "consoleErrors": [],
+    "status": 404,
+    "title": "Lena — Practical digital skills, training and tools to grow your income.",
+    "description": "Lena is a digital skills academy: courses, books, coaching and a community that help ordinary people earn online.",
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
     "handler": "dedicated page",
     "route": "/video-details"
   },
   {
     "url": "/community-detail",
     "status": 200,
-    "title": "Community detail",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Community detail — Lena — Lena",
+    "description": "Community detail — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/community-detail"
@@ -56,8 +58,8 @@
   {
     "url": "/signup-for-free-email-tips",
     "status": 200,
-    "title": "Beginner Free Tips Signup",
-    "description": "Free resources, guides and templates.",
+    "title": "Beginner Free Tips Signup — Lena — Lena",
+    "description": "Beginner Free Tips Signup — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/signup-for-free-email-tips"
@@ -65,8 +67,8 @@
   {
     "url": "/susan-mwenda-mulongoti-consultant",
     "status": 200,
-    "title": "Susan MM",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Susan MM — Lena — Lena",
+    "description": "Susan MM — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/susan-mwenda-mulongoti-consultant"
@@ -74,8 +76,8 @@
   {
     "url": "/enroll-in-digital-ntreprenuership-academy",
     "status": 200,
-    "title": "Enroll in Digital Entrepreneurship ACADEMY",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Enroll in Digital Entrepreneurship ACADEMY — Lena — Lena",
+    "description": "Enroll in Digital Entrepreneurship ACADEMY — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/enroll-in-digital-ntreprenuership-academy"
@@ -83,8 +85,8 @@
   {
     "url": "/about-us",
     "status": 200,
-    "title": "About Us",
-    "description": "Information about our programmes, policies and how to reach us.",
+    "title": "About Us — Lena — Lena",
+    "description": "About Us — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/about-us"
@@ -92,8 +94,8 @@
   {
     "url": "/testimonials",
     "status": 200,
-    "title": "Testimonials",
-    "description": "Information about our programmes, policies and how to reach us.",
+    "title": "Testimonials — Lena — Lena",
+    "description": "Testimonials — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/testimonials"
@@ -101,8 +103,8 @@
   {
     "url": "/contact-us",
     "status": 200,
-    "title": "Contact Us",
-    "description": "Information about our programmes, policies and how to reach us.",
+    "title": "Contact Us — Lena — Lena",
+    "description": "Contact Us — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/contact-us"
@@ -110,8 +112,8 @@
   {
     "url": "/digital-entreprenuership-program",
     "status": 200,
-    "title": "Digital Entreprenuership PROGRAM",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Digital Entreprenuership PROGRAM — Lena — Lena",
+    "description": "Digital Entreprenuership PROGRAM — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/digital-entreprenuership-program"
@@ -119,8 +121,8 @@
   {
     "url": "/audio-details",
     "status": 200,
-    "title": "Default audio watch page",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Default audio watch page — Lena — Lena",
+    "description": "Default audio watch page — courses, books and digital skills training from Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/audio-details"
@@ -128,8 +130,8 @@
   {
     "url": "/video-library",
     "status": 200,
-    "title": "Unpublished",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Unpublished — Lena — Lena",
+    "description": "Unpublished — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/video-library"
@@ -137,8 +139,8 @@
   {
     "url": "/audio-library",
     "status": 200,
-    "title": "Default audio page",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Default audio page — Lena — Lena",
+    "description": "Default audio page — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/audio-library"
@@ -146,8 +148,8 @@
   {
     "url": "/savvypro-terms-and-conditions",
     "status": 200,
-    "title": "Savvypro Terms and Conditions",
-    "description": "Information about our programmes, policies and how to reach us.",
+    "title": "Lena Terms and Conditions — Lena",
+    "description": "Lena Terms and Conditions — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/savvypro-terms-and-conditions"
@@ -155,8 +157,8 @@
   {
     "url": "/savvypro-privacy-policy",
     "status": 200,
-    "title": "Savvypro Privacy Policy",
-    "description": "Information about our programmes, policies and how to reach us.",
+    "title": "Lena Privacy Policy — Lena",
+    "description": "Lena Privacy Policy — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/savvypro-privacy-policy"
@@ -164,8 +166,8 @@
   {
     "url": "/for-businesses",
     "status": 200,
-    "title": "For Businesses",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "For Businesses — Lena — Lena",
+    "description": "For Businesses — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/for-businesses"
@@ -173,8 +175,8 @@
   {
     "url": "/inner-circle",
     "status": 200,
-    "title": "Inner Circle",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Inner Circle — Lena — Lena",
+    "description": "Inner Circle — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/inner-circle"
@@ -182,8 +184,8 @@
   {
     "url": "/private-1-on-1-consultation",
     "status": 200,
-    "title": "Private 1-on-1 Consultation",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Private 1-on-1 Consultation — Lena — Lena",
+    "description": "Private 1-on-1 Consultation — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/private-1-on-1-consultation"
@@ -191,8 +193,8 @@
   {
     "url": "/offers",
     "status": 200,
-    "title": "Offers — SavvyPro",
-    "description": "Offers on SavvyPro — practical digital skills, training and support.",
+    "title": "Lena Business Academy — Lena",
+    "description": "Lena Business Academy — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/offers"
@@ -200,8 +202,8 @@
   {
     "url": "/7-daily-sales-and-marketing-actions-for-your-sales-team",
     "status": 200,
-    "title": "7 Daily Sales and Marketing Actions for Your Sales Team",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "7 Daily Sales and Marketing Actions for Your Sales Team — Lena — Lena",
+    "description": "7 Daily Sales and Marketing Actions for Your Sales Team — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/7-daily-sales-and-marketing-actions-for-your-sales-team"
@@ -209,8 +211,8 @@
   {
     "url": "/mini-courses",
     "status": 200,
-    "title": "Mini Courses",
-    "description": "Browse courses, programs, books and digital products.",
+    "title": "Mini Courses — Lena — Lena",
+    "description": "Mini Courses — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/mini-courses"
@@ -218,8 +220,8 @@
   {
     "url": "/payments",
     "status": 200,
-    "title": "Payments — SavvyPro",
-    "description": "Payments on SavvyPro — practical digital skills, training and support.",
+    "title": "Login — Lena — Lena",
+    "description": "Login — courses, books and digital skills training from Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/payments"
@@ -227,8 +229,8 @@
   {
     "url": "/books",
     "status": 200,
-    "title": "Books",
-    "description": "Books and ebooks on digital business, marketing and content creation.",
+    "title": "Books — Lena — Lena",
+    "description": "Books — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/books"
@@ -236,8 +238,8 @@
   {
     "url": "/content-creation-school",
     "status": 200,
-    "title": "Home",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Home — Lena — Lena",
+    "description": "Home — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/content-creation-school"
@@ -245,8 +247,8 @@
   {
     "url": "/ccs-vsl1",
     "status": 200,
-    "title": "Content Creation School",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Content Creation School — Lena — Lena",
+    "description": "Content Creation School — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/ccs-vsl1"
@@ -254,8 +256,8 @@
   {
     "url": "/freebies",
     "status": 200,
-    "title": "Freebies",
-    "description": "Free resources, guides and templates.",
+    "title": "Freebies — Lena — Lena",
+    "description": "Freebies — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/freebies"
@@ -263,8 +265,8 @@
   {
     "url": "/savvypro-mobile-apps",
     "status": 200,
-    "title": "savvypro mobile apps",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Lena mobile apps — Lena",
+    "description": "Lena mobile apps — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/savvypro-mobile-apps"
@@ -272,8 +274,8 @@
   {
     "url": "/freelancers",
     "status": 200,
-    "title": "Freelancers",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Freelancers — Lena — Lena",
+    "description": "Freelancers — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/freelancers"
@@ -281,8 +283,8 @@
   {
     "url": "/testkcpayment",
     "status": 200,
-    "title": "Testkcpayment — SavvyPro",
-    "description": "Testkcpayment on SavvyPro — practical digital skills, training and support.",
+    "title": "Login — Lena — Lena",
+    "description": "Login — courses, books and digital skills training from Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/testkcpayment"
@@ -290,8 +292,8 @@
   {
     "url": "/pabbly-form-test",
     "status": 200,
-    "title": "Pabbly Form Test",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Pabbly Form Test — Lena — Lena",
+    "description": "Pabbly Form Test — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/pabbly-form-test"
@@ -299,8 +301,8 @@
   {
     "url": "/vacostcalculator",
     "status": 200,
-    "title": "VACostCalculator",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "VACostCalculator — Lena — Lena",
+    "description": "VACostCalculator — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/vacostcalculator"
@@ -308,8 +310,8 @@
   {
     "url": "/kcpay--redirect",
     "status": 200,
-    "title": "Kcpay Redirect — SavvyPro",
-    "description": "Kcpay Redirect on SavvyPro — practical digital skills, training and support.",
+    "title": "Login — Lena — Lena",
+    "description": "Login — courses, books and digital skills training from Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/kcpay--redirect"
@@ -317,8 +319,8 @@
   {
     "url": "/kinsumo-test",
     "status": 200,
-    "title": "Kinsumo Test",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Kinsumo Test — Lena — Lena",
+    "description": "Kinsumo Test — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/kinsumo-test"
@@ -326,8 +328,8 @@
   {
     "url": "/5-types-of-expert-businesses-you-can-launch",
     "status": 200,
-    "title": "5 Types of Expert Businesses You Can Launch",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "5 Types of Expert Businesses You Can Launch — Lena — Lena",
+    "description": "5 Types of Expert Businesses You Can Launch — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/5-types-of-expert-businesses-you-can-launch"
@@ -335,8 +337,8 @@
   {
     "url": "/join-our-mailing-list",
     "status": 200,
-    "title": "Join Our Mailing List",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Join Our Mailing List — Lena — Lena",
+    "description": "Join Our Mailing List — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/join-our-mailing-list"
@@ -344,8 +346,8 @@
   {
     "url": "/launch-your-expert-business-bootcamp",
     "status": 200,
-    "title": "Launch Your Expert Business Bootcamp",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Launch Your Expert Business Bootcamp — Lena — Lena",
+    "description": "Launch Your Expert Business Bootcamp — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/launch-your-expert-business-bootcamp"
@@ -353,8 +355,8 @@
   {
     "url": "/testing-social-media-sharing-buttons-for-pages",
     "status": 200,
-    "title": "Testing social media sharing buttons for pages",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Testing social media sharing buttons for pages — Lena — Lena",
+    "description": "Testing social media sharing buttons for pages — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/testing-social-media-sharing-buttons-for-pages"
@@ -362,8 +364,8 @@
   {
     "url": "/you-have-paid",
     "status": 200,
-    "title": "You Have Paid — SavvyPro",
-    "description": "You Have Paid on SavvyPro — practical digital skills, training and support.",
+    "title": "You Have Paid — Lena — Lena",
+    "description": "You Have Paid — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/you-have-paid"
@@ -371,8 +373,8 @@
   {
     "url": "/botpenguin-images",
     "status": 200,
-    "title": "Botpenguin Images",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Botpenguin Images — Lena — Lena",
+    "description": "Botpenguin Images — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/botpenguin-images"
@@ -380,8 +382,8 @@
   {
     "url": "/books-stripe-payment",
     "status": 200,
-    "title": "Books Stripe Payment — SavvyPro",
-    "description": "Books Stripe Payment on SavvyPro — practical digital skills, training and support.",
+    "title": "Books — Lena — Lena",
+    "description": "Books — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/books-stripe-payment"
@@ -389,8 +391,8 @@
   {
     "url": "/zero-to-hero-social-media-manager-book",
     "status": 200,
-    "title": "Zero to Hero Social Media Manager BOOK",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Zero to Hero Social Media Manager BOOK — Lena — Lena",
+    "description": "Zero to Hero Social Media Manager BOOK — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/zero-to-hero-social-media-manager-book"
@@ -398,8 +400,8 @@
   {
     "url": "/social-media-content-creation-book",
     "status": 200,
-    "title": "Social Media Content Creation BOOK",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Social Media Content Creation BOOK — Lena — Lena",
+    "description": "Social Media Content Creation BOOK — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/social-media-content-creation-book"
@@ -407,8 +409,8 @@
   {
     "url": "/kcpay-registration-success",
     "status": 200,
-    "title": "Kcpay Registration Success — SavvyPro",
-    "description": "Kcpay Registration Success on SavvyPro — practical digital skills, training and support.",
+    "title": "You Have Paid — Lena — Lena",
+    "description": "You Have Paid — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/kcpay-registration-success"
@@ -416,8 +418,8 @@
   {
     "url": "/marketing-software",
     "status": 200,
-    "title": "Marketing Software",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Marketing Software — Lena — Lena",
+    "description": "Marketing Software — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/marketing-software"
@@ -425,8 +427,8 @@
   {
     "url": "/free",
     "status": 200,
-    "title": "Free",
-    "description": "Free resources, guides and templates.",
+    "title": "Free — Lena — Lena",
+    "description": "Free — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/free"
@@ -434,8 +436,8 @@
   {
     "url": "/user",
     "status": 200,
-    "title": "Signin",
-    "description": "Sign in or create your account.",
+    "title": "Login — Lena — Lena",
+    "description": "Login — courses, books and digital skills training from Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/user"
@@ -443,8 +445,8 @@
   {
     "url": "/payforcontentcreationschool",
     "status": 200,
-    "title": "Payforcontentcreationschool — SavvyPro",
-    "description": "Payforcontentcreationschool on SavvyPro — practical digital skills, training and support.",
+    "title": "Login — Lena — Lena",
+    "description": "Login — courses, books and digital skills training from Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/payforcontentcreationschool"
@@ -452,8 +454,8 @@
   {
     "url": "/freelancer-bundle",
     "status": 200,
-    "title": "Freelancer Bundle",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Freelancer Bundle — Lena — Lena",
+    "description": "Freelancer Bundle — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/freelancer-bundle"
@@ -461,8 +463,8 @@
   {
     "url": "/groups",
     "status": 200,
-    "title": "Groups",
-    "description": "Community groups, discussions and member libraries.",
+    "title": "Groups — Lena — Lena",
+    "description": "Groups — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/groups"
@@ -470,8 +472,8 @@
   {
     "url": "/savvybot-ai-agent",
     "status": 200,
-    "title": "Savvybot AI AGENT",
-    "description": "AI assistant and chatbot.",
+    "title": "Savvybot AI AGENT — Lena — Lena",
+    "description": "Savvybot AI AGENT — courses, books and digital skills training from Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/savvybot-ai-agent"
@@ -479,8 +481,8 @@
   {
     "url": "/win-a-book",
     "status": 200,
-    "title": "Application error: a client-side exception has occurred",
-    "description": "Free resources, guides and templates.",
+    "title": "Application error: a client-side exception has occurred — Lena — Lena",
+    "description": "Win a Book — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/win-a-book"
@@ -488,8 +490,8 @@
   {
     "url": "/chatbot-test-page",
     "status": 200,
-    "title": "Chatbot Test Page",
-    "description": "AI assistant and chatbot.",
+    "title": "Chatbot Test Page — Lena — Lena",
+    "description": "Chatbot Test Page — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/chatbot-test-page"
@@ -497,8 +499,8 @@
   {
     "url": "/ccs-testimonials",
     "status": 200,
-    "title": "CCS Testimonials",
-    "description": "Information about our programmes, policies and how to reach us.",
+    "title": "CCS Testimonials — Lena — Lena",
+    "description": "CCS Testimonials — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/ccs-testimonials"
@@ -506,8 +508,8 @@
   {
     "url": "/ccs-program-outline-download",
     "status": 200,
-    "title": "CCS Program Signup to Download",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "CCS Program Signup to Download — Lena — Lena",
+    "description": "CCS Program Signup to Download — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/ccs-program-outline-download"
@@ -515,8 +517,8 @@
   {
     "url": "/ccp-pdf-program",
     "status": 200,
-    "title": "CCP PDF PROGRAM",
-    "description": "Free resources, guides and templates.",
+    "title": "CCP PDF PROGRAM — Lena — Lena",
+    "description": "CCP PDF PROGRAM — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/ccp-pdf-program"
@@ -524,8 +526,8 @@
   {
     "url": "/savvypro-lp1",
     "status": 200,
-    "title": "CCS VSL1",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "CCS VSL1 — Lena — Lena",
+    "description": "CCS VSL1 — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/savvypro-lp1"
@@ -533,8 +535,8 @@
   {
     "url": "/infopreneur-roadmap-book",
     "status": 200,
-    "title": "Infopreneur Roadmap Book",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Infopreneur Roadmap Book — Lena — Lena",
+    "description": "Infopreneur Roadmap Book — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/infopreneur-roadmap-book"
@@ -542,8 +544,8 @@
   {
     "url": "/digital-skills-class",
     "status": 200,
-    "title": "Savvypro LP1",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Lena LP1 — Lena",
+    "description": "Lena LP1 — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/digital-skills-class"
@@ -551,8 +553,8 @@
   {
     "url": "/3keys-to-getting-more-customers",
     "status": 200,
-    "title": "3 Keys to Getting More Customers Signup",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "3 Keys to Getting More Customers Signup — Lena — Lena",
+    "description": "3 Keys to Getting More Customers Signup — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/3keys-to-getting-more-customers"
@@ -560,8 +562,8 @@
   {
     "url": "/digital-skills-and-tools-to-build-your-business-signup",
     "status": 200,
-    "title": "Digital Skills and Tools to Build Your Business Signup",
-    "description": "Free resources, guides and templates.",
+    "title": "Digital Skills and Tools to Build Your Business Signup — Lena — Lena",
+    "description": "Digital Skills and Tools to Build Your Business Signup — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/digital-skills-and-tools-to-build-your-business-signup"
@@ -569,8 +571,8 @@
   {
     "url": "/choose-your-path",
     "status": 200,
-    "title": "Choose Your Path",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Choose Your Path — Lena — Lena",
+    "description": "Choose Your Path — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/choose-your-path"
@@ -578,8 +580,8 @@
   {
     "url": "/savvypro-digital-skills-class",
     "status": 200,
-    "title": "Digital Skills Class",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Digital Skills Class — Lena — Lena",
+    "description": "Digital Skills Class — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/savvypro-digital-skills-class"
@@ -587,7 +589,7 @@
   {
     "url": "/freelancer-fasttrack-bundle",
     "status": 200,
-    "title": "Freelancer FastTrack Bundle",
+    "title": "Freelancer FastTrack Bundle — Lena — Lena",
     "description": "Freelancer FastTrack Bundle",
     "consoleErrors": [],
     "handler": "dedicated page",
@@ -596,7 +598,7 @@
   {
     "url": "/freelancer-connect",
     "status": 200,
-    "title": "Freelancer Connect",
+    "title": "Freelancer Connect — Lena — Lena",
     "description": "Freelancer Connect",
     "consoleErrors": [],
     "handler": "dedicated page",
@@ -605,8 +607,8 @@
   {
     "url": "/microgigs",
     "status": 200,
-    "title": "Microgigs",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Microgigs — Lena — Lena",
+    "description": "Microgigs — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/microgigs"
@@ -614,8 +616,8 @@
   {
     "url": "/freelancer-webinar",
     "status": 200,
-    "title": "Freelancer Webinar",
-    "description": "Coaching, appointments and webinar registration.",
+    "title": "Freelancer Webinar — Lena — Lena",
+    "description": "Freelancer Webinar — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/freelancer-webinar"
@@ -623,8 +625,8 @@
   {
     "url": "/webinar-registration-freelancing",
     "status": 200,
-    "title": "Webinar Registration - Freelancing",
-    "description": "Coaching, appointments and webinar registration.",
+    "title": "Webinar Registration - Freelancing — Lena — Lena",
+    "description": "Webinar Registration - Freelancing — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/webinar-registration-freelancing"
@@ -632,8 +634,8 @@
   {
     "url": "/101-digital-skills-pdf-download",
     "status": 200,
-    "title": "101 Digital Skills PDF Download",
-    "description": "Free resources, guides and templates.",
+    "title": "101 Digital Skills PDF Download — Lena — Lena",
+    "description": "101 Digital Skills PDF Download — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/101-digital-skills-pdf-download"
@@ -641,8 +643,8 @@
   {
     "url": "/susan-mwenda-mulongoti",
     "status": 200,
-    "title": "Susan Mwenda Mulongoti",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Susan Mwenda Mulongoti — Lena — Lena",
+    "description": "Susan Mwenda Mulongoti — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/susan-mwenda-mulongoti"
@@ -650,8 +652,8 @@
   {
     "url": "/savvypro-digital-skills-club",
     "status": 200,
-    "title": "Savvypro Digital Skills Club",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Lena Digital Skills Club — Lena",
+    "description": "Lena Digital Skills Club — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/savvypro-digital-skills-club"
@@ -659,8 +661,8 @@
   {
     "url": "/pdf-file-101-digital-skills",
     "status": 200,
-    "title": "PDF File - 101 Digital Skills",
-    "description": "Free resources, guides and templates.",
+    "title": "PDF File - 101 Digital Skills — Lena — Lena",
+    "description": "PDF File - 101 Digital Skills — Lena.",
     "consoleErrors": [
       "Framing 'https://www.canva.com/' violates the following Content Security Policy directive: \"frame-src 'self' https://kingsumo.com https://iframe.mediadelivery.net https://web.facebook.com\". The reques"
     ],
@@ -670,8 +672,8 @@
   {
     "url": "/content-creation-school-main",
     "status": 200,
-    "title": "Savvypro Digital Skills Class",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Lena Digital Skills Class — Lena",
+    "description": "Lena Digital Skills Class — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/content-creation-school-main"
@@ -679,7 +681,7 @@
   {
     "url": "/digital-savvypro",
     "status": 200,
-    "title": "Content Creation School Zambia | Learn Digital Skills, Freelancing & Online Marketing in 30 Days",
+    "title": "Content Creation School Zambia | Learn Digital Skills, Freelancing & Online Marketing in 30 Days — Lena — Lena",
     "description": "Join Zambia’s leading digital skills school. Learn content creation, freelancing, personal branding, and online marketing in 30 days. Build skills, visibility, and income with guided online classes.",
     "consoleErrors": [],
     "handler": "dedicated page",
@@ -688,8 +690,8 @@
   {
     "url": "/ebooks",
     "status": 200,
-    "title": "Ebooks",
-    "description": "Books and ebooks on digital business, marketing and content creation.",
+    "title": "Ebooks — Lena — Lena",
+    "description": "Ebooks — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/ebooks"
@@ -697,7 +699,7 @@
   {
     "url": "/freelancing-free-tips",
     "status": 200,
-    "title": "Freelancing FREE TIPS",
+    "title": "Freelancing FREE TIPS — Lena — Lena",
     "description": "Freelancing FREE TIPS",
     "consoleErrors": [],
     "handler": "dedicated page",
@@ -706,8 +708,8 @@
   {
     "url": "/freelancing-tips-signup",
     "status": 200,
-    "title": "Freelancing Tips Signup",
-    "description": "Free resources, guides and templates.",
+    "title": "Freelancing Tips Signup — Lena — Lena",
+    "description": "Freelancing Tips Signup — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/freelancing-tips-signup"
@@ -715,8 +717,8 @@
   {
     "url": "/words-that-sell-copywriting-secrets-that-make-customers-buy",
     "status": 200,
-    "title": "Words That Sell: Copywriting Secrets That Make Customers Buy",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Words That Sell: Copywriting Secrets That Make Customers Buy — Lena — Lena",
+    "description": "Words That Sell: Copywriting Secrets That Make Customers Buy — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/words-that-sell-copywriting-secrets-that-make-customers-buy"
@@ -724,8 +726,8 @@
   {
     "url": "/savvypro-main",
     "status": 200,
-    "title": "Content Creation School Zambia",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Content Creation School Zambia — Lena — Lena",
+    "description": "Content Creation School Zambia — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/savvypro-main"
@@ -733,8 +735,8 @@
   {
     "url": "/visibility-tips-signup",
     "status": 200,
-    "title": "Visibility Tips Signup",
-    "description": "Free resources, guides and templates.",
+    "title": "Visibility Tips Signup — Lena — Lena",
+    "description": "Visibility Tips Signup — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/visibility-tips-signup"
@@ -742,8 +744,8 @@
   {
     "url": "/signin",
     "status": 200,
-    "title": "Signin",
-    "description": "Sign in or create your account.",
+    "title": "Login — Lena — Lena",
+    "description": "Login — courses, books and digital skills training from Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/signin"
@@ -751,8 +753,8 @@
   {
     "url": "/7-sytem-whatsapp-automation-setup",
     "status": 200,
-    "title": "7-Step WhatsApp Automation System Setup",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "7-Step WhatsApp Automation System Setup — Lena — Lena",
+    "description": "7-Step WhatsApp Automation System Setup — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/7-sytem-whatsapp-automation-setup"
@@ -760,26 +762,28 @@
   {
     "url": "/courses",
     "status": 200,
-    "title": "Courses",
-    "description": "Browse courses, programs, books and digital products.",
+    "title": "Courses — Lena — Lena",
+    "description": "Courses — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/courses"
   },
   {
     "url": "/learning-hub",
-    "status": 200,
-    "title": "404 - Not found",
-    "description": "Courses, coaching and digital skills programmes.",
-    "consoleErrors": [],
+    "status": 404,
+    "title": "Lena — Practical digital skills, training and tools to grow your income.",
+    "description": "Lena is a digital skills academy: courses, books, coaching and a community that help ordinary people earn online.",
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
     "handler": "dedicated page",
     "route": "/learning-hub"
   },
   {
     "url": "/magnetic-personal-branding",
     "status": 200,
-    "title": "Magnetic Personal Branding",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Magnetic Personal Branding — Lena — Lena",
+    "description": "Magnetic Personal Branding — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/magnetic-personal-branding"
@@ -787,8 +791,8 @@
   {
     "url": "/contest",
     "status": 200,
-    "title": "Contest",
-    "description": "Community groups, discussions and member libraries.",
+    "title": "Contest — Lena — Lena",
+    "description": "Contest — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/contest"
@@ -796,8 +800,8 @@
   {
     "url": "/ceo-digital-strategy",
     "status": 200,
-    "title": "CEO Digital Strategy",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "CEO Digital Strategy — Lena — Lena",
+    "description": "CEO Digital Strategy — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/ceo-digital-strategy"
@@ -805,8 +809,8 @@
   {
     "url": "/7-step-whatspp-automation-system-setup",
     "status": 200,
-    "title": "7-Step Whatspp Automation System Setup",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "7-Step Whatspp Automation System Setup — Lena — Lena",
+    "description": "7-Step Whatspp Automation System Setup — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/7-step-whatspp-automation-system-setup"
@@ -814,8 +818,8 @@
   {
     "url": "/pdf-download-file-7-step-whatsapp-automation",
     "status": 200,
-    "title": "PDF Download FILE - 7 STEP WHATSAPP AUTOMATION",
-    "description": "Free resources, guides and templates.",
+    "title": "PDF Download FILE - 7 STEP WHATSAPP AUTOMATION — Lena — Lena",
+    "description": "PDF Download FILE - 7 STEP WHATSAPP AUTOMATION — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/pdf-download-file-7-step-whatsapp-automation"
@@ -823,8 +827,8 @@
   {
     "url": "/whatsapp-automation-toolkit",
     "status": 200,
-    "title": "WhatsApp Automation Toolkit",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "WhatsApp Automation Toolkit — Lena — Lena",
+    "description": "WhatsApp Automation Toolkit — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/whatsapp-automation-toolkit"
@@ -832,8 +836,8 @@
   {
     "url": "/7-steps-to-better-sales-book",
     "status": 200,
-    "title": "7 Steps to Better Sales Book",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "7 Steps to Better Sales Book — Lena — Lena",
+    "description": "7 Steps to Better Sales Book — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/7-steps-to-better-sales-book"
@@ -841,8 +845,8 @@
   {
     "url": "/whatsapp-marketing-for-smes",
     "status": 200,
-    "title": "WhatsApp Marketing for SMEs",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "WhatsApp Marketing for SMEs — Lena — Lena",
+    "description": "WhatsApp Marketing for SMEs — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/whatsapp-marketing-for-smes"
@@ -850,8 +854,8 @@
   {
     "url": "/social-media-strategy-book",
     "status": 200,
-    "title": "Social Media Strategy Book",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Social Media Strategy Book — Lena — Lena",
+    "description": "Social Media Strategy Book — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/social-media-strategy-book"
@@ -859,8 +863,8 @@
   {
     "url": "/start-where-you-are-book",
     "status": 200,
-    "title": "Start Where You Are Book",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Start Where You Are Book — Lena — Lena",
+    "description": "Start Where You Are Book — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/start-where-you-are-book"
@@ -868,8 +872,8 @@
   {
     "url": "/savvypro",
     "status": 200,
-    "title": "Digital Savvypro Home",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Digital Lena Home — Lena",
+    "description": "Digital Lena Home — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/savvypro"
@@ -877,8 +881,8 @@
   {
     "url": "/digital-skills-classes",
     "status": 200,
-    "title": "Content Creation School Zambia",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Content Creation School Zambia — Lena — Lena",
+    "description": "Digital Skills Classes — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/digital-skills-classes"
@@ -886,8 +890,8 @@
   {
     "url": "/savvypro-digital-skills-certification",
     "status": 200,
-    "title": "Content Creation School Zambia",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Content Creation School Zambia — Lena — Lena",
+    "description": "Lena Digital Skills Certification — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/savvypro-digital-skills-certification"
@@ -895,8 +899,8 @@
   {
     "url": "/pay-for-savvypro-digital-skills-certification",
     "status": 200,
-    "title": "Pay for Savvypro Digital Skills Certification",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Pay for Lena Digital Skills Certification — Lena",
+    "description": "Pay for Lena Digital Skills Certification — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/pay-for-savvypro-digital-skills-certification"
@@ -904,7 +908,7 @@
   {
     "url": "/savvypro-refund-policy",
     "status": 200,
-    "title": "Savvypro Refund Policy",
+    "title": "Savvypro Refund Policy — Lena — Lena",
     "description": "Savvypro Refund Policy",
     "consoleErrors": [],
     "handler": "dedicated page",
@@ -913,8 +917,8 @@
   {
     "url": "/refund-policy",
     "status": 200,
-    "title": "Refund Policy",
-    "description": "Information about our programmes, policies and how to reach us.",
+    "title": "Refund Policy — Lena — Lena",
+    "description": "Refund Policy — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/refund-policy"
@@ -922,7 +926,7 @@
   {
     "url": "/privacy-policy",
     "status": 200,
-    "title": "Privacy Policy",
+    "title": "Privacy Policy — Lena — Lena",
     "description": "Privacy Policy",
     "consoleErrors": [],
     "handler": "dedicated page",
@@ -931,7 +935,7 @@
   {
     "url": "/appointment",
     "status": 200,
-    "title": "Book an Appointment – Schedule Your Session Online",
+    "title": "Book an Appointment – Schedule Your Session Online — Lena — Lena",
     "description": "Easily schedule your appointment online. Choose a date and time that works for you to get personalized support, coaching, or consultation.",
     "consoleErrors": [],
     "handler": "dedicated page",
@@ -940,8 +944,8 @@
   {
     "url": "/membership",
     "status": 200,
-    "title": "Membership — SavvyPro",
-    "description": "Membership on SavvyPro — practical digital skills, training and support.",
+    "title": "Membership Plans & Features – Join & Become a Member — Lena — Lena",
+    "description": "Explore our membership options, benefits, and pricing. Join now to access exclusive courses, support, and community.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/membership"
@@ -949,8 +953,8 @@
   {
     "url": "/coaching-program-detail",
     "status": 200,
-    "title": "Default coaching program detail page",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Default coaching program detail page — Lena — Lena",
+    "description": "Default coaching program detail page — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/coaching-program-detail"
@@ -958,8 +962,8 @@
   {
     "url": "/savvypro-home",
     "status": 200,
-    "title": "Savvypro Home",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Lena Home — Lena",
+    "description": "Lena Home — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/savvypro-home"
@@ -967,8 +971,8 @@
   {
     "url": "/",
     "status": 200,
-    "title": "Savvypro",
-    "description": "Practical systems, skills, training and hands-on help to grow revenue and build your brand.",
+    "title": "Lena — Practical digital skills, training and tools to grow your income.",
+    "description": "Lena is a digital skills academy: courses, books, coaching and a community that help ordinary people earn online.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/"
@@ -976,8 +980,8 @@
   {
     "url": "/getting-started-page",
     "status": 200,
-    "title": "Getting Started Page",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Getting Started Page — Lena — Lena",
+    "description": "Getting Started Page — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/getting-started-page"
@@ -985,8 +989,8 @@
   {
     "url": "/learn-digital-skills",
     "status": 200,
-    "title": "Learn Digital Skills",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Learn Digital Skills — Lena — Lena",
+    "description": "Learn Digital Skills — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/learn-digital-skills"
@@ -994,8 +998,8 @@
   {
     "url": "/grow-my-business",
     "status": 200,
-    "title": "Grow My Business",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Grow My Business — Lena — Lena",
+    "description": "Grow My Business — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/grow-my-business"
@@ -1003,8 +1007,8 @@
   {
     "url": "/build-your-expert-business",
     "status": 200,
-    "title": "Build Your Expert Business",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Build Your Expert Business — Lena — Lena",
+    "description": "Build Your Expert Business — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/build-your-expert-business"
@@ -1012,8 +1016,8 @@
   {
     "url": "/business-solutions",
     "status": 200,
-    "title": "Business Solutions",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Business Solutions — Lena — Lena",
+    "description": "Business Solutions — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/business-solutions"
@@ -1021,7 +1025,7 @@
   {
     "url": "/terms-and-conditions",
     "status": 200,
-    "title": "Terms & Conditions",
+    "title": "Terms & Conditions — Lena — Lena",
     "description": "Terms & Conditions",
     "consoleErrors": [],
     "handler": "dedicated page",
@@ -1029,18 +1033,20 @@
   },
   {
     "url": "/learn-with-expert-guidance",
-    "status": 200,
-    "title": "404 - Not found",
-    "description": "Courses, coaching and digital skills programmes.",
-    "consoleErrors": [],
+    "status": 404,
+    "title": "Lena — Practical digital skills, training and tools to grow your income.",
+    "description": "Lena is a digital skills academy: courses, books, coaching and a community that help ordinary people earn online.",
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
     "handler": "dedicated page",
     "route": "/learn-with-expert-guidance"
   },
   {
     "url": "/learning-with-a-coach",
     "status": 200,
-    "title": "Learning With a Coach",
-    "description": "Courses, coaching and digital skills programmes.",
+    "title": "Learning With a Coach — Lena — Lena",
+    "description": "Learning With a Coach — Lena.",
     "consoleErrors": [],
     "handler": "dedicated page",
     "route": "/learning-with-a-coach"
@@ -1048,8 +1054,8 @@
   {
     "url": "/blog/making-your-own-salary-stay-home-mums",
     "status": 200,
-    "title": "Making Your Own Salary - Stay Home Mums",
-    "description": "Learn how to make your own salary from home as a stay-home mum.",
+    "title": "Making Your Own Salary - Stay Home Mums — Lena — Lena",
+    "description": "Making Your Own Salary - Stay Home Mums — practical steps from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/blog/[slug]"
@@ -1057,8 +1063,8 @@
   {
     "url": "/blog/how-to-make-your-own-salary-part-2",
     "status": 200,
-    "title": "How to Make Your Own Salary PART 2",
-    "description": "How to Make Your Own Salary Part 2",
+    "title": "How to Make Your Own Salary PART 2 — Lena — Lena",
+    "description": "How to Make Your Own Salary PART 2 — practical steps from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/blog/[slug]"
@@ -1066,8 +1072,8 @@
   {
     "url": "/blog/how-to-make-your-own-salary-part-3",
     "status": 200,
-    "title": "How to Make Your Own Salary Part 3",
-    "description": "Part 3 of the sries",
+    "title": "How to Make Your Own Salary Part 3 — Lena — Lena",
+    "description": "How to Make Your Own Salary Part 3 — practical steps from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/blog/[slug]"
@@ -1075,8 +1081,8 @@
   {
     "url": "/blog/7-ways-to-find-mentorship",
     "status": 200,
-    "title": "7 Ways to Find Mentorship",
-    "description": "7 ways an entreprenuer can find mentorship.",
+    "title": "7 Ways to Find Mentorship — Lena — Lena",
+    "description": "7 Ways to Find Mentorship — practical steps from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/blog/[slug]"
@@ -1084,8 +1090,8 @@
   {
     "url": "/blog/learn-content-creation-skills",
     "status": 200,
-    "title": "Learn Content Creation Skills",
-    "description": "Learn about different ways you can acquire Content Creation Skills and social media management skills from Susan Mwenda-Mulongoti.",
+    "title": "Learn Content Creation Skills — Lena — Lena",
+    "description": "Learn Content Creation Skills — practical steps from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/blog/[slug]"
@@ -1093,8 +1099,8 @@
   {
     "url": "/blog/learn-digital-marketing",
     "status": 200,
-    "title": "Learn Digital Marketing",
-    "description": "Learn Digital Marketing",
+    "title": "Learn Digital Marketing — Lena — Lena",
+    "description": "Learn Digital Marketing — practical steps from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/blog/[slug]"
@@ -1102,8 +1108,8 @@
   {
     "url": "/blog/5-types-of-expert-businesses-you-can-start",
     "status": 200,
-    "title": "5 Types of Expert Businesses You Can Start",
-    "description": "5 Types of Expert Businesses You Can Start",
+    "title": "5 Types of Expert Businesses You Can Start — Lena — Lena",
+    "description": "5 Types of Expert Businesses You Can Start — practical steps from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/blog/[slug]"
@@ -1111,8 +1117,8 @@
   {
     "url": "/blog/1-page-sales-and-marketing-strategy",
     "status": 200,
-    "title": "1 Page Sales and Marketing Strategy",
-    "description": "1 Page Sales and Marketing Strategy",
+    "title": "1 Page Sales and Marketing Strategy — Lena — Lena",
+    "description": "1 Page Sales and Marketing Strategy — practical steps from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/blog/[slug]"
@@ -1120,8 +1126,8 @@
   {
     "url": "/blog/ceo-mistakes-in-digital-growth-and-how-to-avoid-them",
     "status": 200,
-    "title": "CEO Mistakes in Digital Growth (and How to Avoid Them)",
-    "description": "CEO Mistakes in Digital Growth (and How to Avoid Them)",
+    "title": "CEO Mistakes in Digital Growth (and How to Avoid Them) — Lena — Lena",
+    "description": "CEO Mistakes in Digital Growth (and How to Avoid Them) — practical steps from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/blog/[slug]"
@@ -1129,8 +1135,8 @@
   {
     "url": "/blog/17-proven-ways-to-make-your-brand-unmissable-online-even-on-a-tiny-budget",
     "status": 200,
-    "title": "17 Proven Ways to Make Your Brand Unmissable Online (Even on a Tiny Budget)",
-    "description": "Every day, thousands of small business owners post online… and fade into the background.\n\nYou’re doing the work — creating content, showing up — but no one seems to notice. The truth?\n It’s strategy.",
+    "title": "17 Proven Ways to Make Your Brand Unmissable Online (Even on a Tiny Budget) — Lena — Lena",
+    "description": "17 Proven Ways to Make Your Brand Unmissable Online (Even on a Tiny Budget) — practical steps from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/blog/[slug]"
@@ -1138,8 +1144,8 @@
   {
     "url": "/blog/11-reasons-customers-dont-buy-and-how-to-fix-them-fast",
     "status": 200,
-    "title": "11 Reasons Customers Don’t Buy & How to Fix Them Fast",
-    "description": "Discover 11 hidden blockers killing your sales and 24-hour fixes to rebuild trust, value & revenue.",
+    "title": "11 Reasons Customers Don’t Buy & How to Fix Them Fast — Lena — Lena",
+    "description": "11 Reasons Customers Don’t Buy & How to Fix Them Fast — practical steps from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/blog/[slug]"
@@ -1147,8 +1153,8 @@
   {
     "url": "/blog/99-online-gigs-you-can-start-right-now-african-edition",
     "status": 200,
-    "title": "💼 99+ Online Gigs You Can Start Right Now (African Edition)",
-    "description": "The gig economy is not coming — it’s already here.\nAcross Africa, over 21 million people earn part or all of their income online",
+    "title": "💼 99+ Online Gigs You Can Start Right Now (African Edition) — Lena — Lena",
+    "description": "💼 99+ Online Gigs You Can Start Right Now (African Edition) — practical steps from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/blog/[slug]"
@@ -1156,8 +1162,8 @@
   {
     "url": "/blog/14-types-of-clients-you-can-work-with-as-a-content-creator",
     "status": 200,
-    "title": "🎯 14 Types of Clients You Can Work With as a Content Creator",
-    "description": "Discover 14 real client types you can serve using content creation skills — from executives and authors to coaches and nonprofits.",
+    "title": "🎯 14 Types of Clients You Can Work With as a Content Creator — Lena — Lena",
+    "description": "🎯 14 Types of Clients You Can Work With as a Content Creator — practical steps from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/blog/[slug]"
@@ -1165,8 +1171,8 @@
   {
     "url": "/blog/12-savvy-ways-to-use-whatsapp-for-marketing",
     "status": 200,
-    "title": "💬 12 Savvy Ways to Use WhatsApp for Marketing",
-    "description": "💬 12 Savvy Ways to Use WhatsApp for Marketing",
+    "title": "💬 12 Savvy Ways to Use WhatsApp for Marketing — Lena — Lena",
+    "description": "💬 12 Savvy Ways to Use WhatsApp for Marketing — practical steps from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/blog/[slug]"
@@ -1174,8 +1180,8 @@
   {
     "url": "/blog/why-you-avoid-creating-content",
     "status": 200,
-    "title": "👀 WHY YOU AVOID CREATING CONTENT",
-    "description": "WHY YOU AVOID CREATING CONTENT",
+    "title": "👀 WHY YOU AVOID CREATING CONTENT — Lena — Lena",
+    "description": "👀 WHY YOU AVOID CREATING CONTENT — practical steps from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/blog/[slug]"
@@ -1183,8 +1189,8 @@
   {
     "url": "/blog/marketing-budget-recommendations-zambia-edition",
     "status": 200,
-    "title": "Marketing Budget Recommendations (Zambia Edition)",
-    "description": "Marketing Budget Recommendations (Zambia Edition)",
+    "title": "Marketing Budget Recommendations (Zambia Edition) — Lena — Lena",
+    "description": "Marketing Budget Recommendations (Zambia Edition) — practical steps from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/blog/[slug]"
@@ -1192,8 +1198,8 @@
   {
     "url": "/blog/marketing-budget-recommendations-global-edition",
     "status": 200,
-    "title": "Marketing Budget Recommendations (Global Edition)",
-    "description": "Marketing Budget Recommendations (Global Edition)",
+    "title": "Marketing Budget Recommendations (Global Edition) — Lena — Lena",
+    "description": "Marketing Budget Recommendations (Global Edition) — practical steps from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/blog/[slug]"
@@ -1201,8 +1207,8 @@
   {
     "url": "/blog/susan-lumba-mwenda",
     "status": 200,
-    "title": "Susan Lumba Mwenda",
-    "description": "Susan Lumba Mwenda. Also known as Susan Mwenda-Mulongoti or Susan at Savvypro",
+    "title": "Susan Lumba Mwenda — Lena — Lena",
+    "description": "Susan Lumba Mwenda — practical steps from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/blog/[slug]"
@@ -1210,8 +1216,8 @@
   {
     "url": "/blog/the-11-elements-behind-a-high-value-expert-brand",
     "status": 200,
-    "title": "The 11 Elements Behind a High-Value Expert Brand",
-    "description": "The 11 Elements Behind a High-Value Expert Brand by Susan Mwenda-Mulongoti, also known as Susan Lumba Mwenda",
+    "title": "The 11 Elements Behind a High-Value Expert Brand — Lena — Lena",
+    "description": "The 11 Elements Behind a High-Value Expert Brand — practical steps from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/blog/[slug]"
@@ -1219,8 +1225,8 @@
   {
     "url": "/blog/are-linkedin-ads-really-the-cure-for-your-broke-ass-lead-problem",
     "status": 200,
-    "title": "ARE LINKEDIN ADS REALLY THE CURE FOR YOUR BROKE-ASS LEAD PROBLEM?",
-    "description": "🚨 ARE LINKEDIN ADS REALLY THE CURE FOR YOUR BROKE-ASS LEAD PROBLEM?\n",
+    "title": "ARE LINKEDIN ADS REALLY THE CURE FOR YOUR BROKE-ASS LEAD PROBLEM? — Lena — Lena",
+    "description": "ARE LINKEDIN ADS REALLY THE CURE FOR YOUR BROKE-ASS LEAD PROBLEM? — practical steps from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/blog/[slug]"
@@ -1228,8 +1234,8 @@
   {
     "url": "/blog/17-ways-african-businesses-use-whatsapp-to-get-customers-with-real-examples",
     "status": 200,
-    "title": "📱 17 Ways African Businesses Use WhatsApp to Get Customers (With Real Examples)",
-    "description": "📱 17 Ways African Businesses Use WhatsApp to Get Customers (With Real Examples)",
+    "title": "📱 17 Ways African Businesses Use WhatsApp to Get Customers (With Real Examples) — Lena — Lena",
+    "description": "📱 17 Ways African Businesses Use WhatsApp to Get Customers (With Real Examples) — practical steps from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/blog/[slug]"
@@ -1237,8 +1243,8 @@
   {
     "url": "/blog/stop-losing-sales-to-unanswered-whatsapp-messages",
     "status": 200,
-    "title": "Stop Losing Sales to Unanswered WhatsApp Messages",
-    "description": "Stop Losing Sales to Unanswered WhatsApp Messages",
+    "title": "Stop Losing Sales to Unanswered WhatsApp Messages — Lena — Lena",
+    "description": "Stop Losing Sales to Unanswered WhatsApp Messages — practical steps from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/blog/[slug]"
@@ -1246,8 +1252,8 @@
   {
     "url": "/blog/category/ceo-digital-strategies/766",
     "status": 200,
-    "title": "CEO Digital Strategies",
-    "description": "Sales and Marketing",
+    "title": "CEO Digital Strategies articles — Lena — Lena",
+    "description": "Articles on ceo digital strategies from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/blog/category/[cat]/[id]"
@@ -1255,8 +1261,8 @@
   {
     "url": "/blog/category/digital-biz-ideas/1147",
     "status": 200,
-    "title": "Digital Biz Ideas",
-    "description": "Making Money Online : Side-Hustle Ideas",
+    "title": "Digital Biz Ideas articles — Lena — Lena",
+    "description": "Articles on digital biz ideas from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/blog/category/[cat]/[id]"
@@ -1264,8 +1270,8 @@
   {
     "url": "/blog/category/growth-marketing/1149",
     "status": 200,
-    "title": "Growth Marketing",
-    "description": "Growth Marketing in the digital era",
+    "title": "Growth Marketing articles — Lena — Lena",
+    "description": "Articles on growth marketing from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/blog/category/[cat]/[id]"
@@ -1273,8 +1279,8 @@
   {
     "url": "/blog/category/freelancer-listings/2817",
     "status": 200,
-    "title": "Freelancer Listings",
-    "description": "Freelancer Listings",
+    "title": "Freelancer Listings articles — Lena — Lena",
+    "description": "Articles on freelancer listings from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/blog/category/[cat]/[id]"
@@ -1282,8 +1288,8 @@
   {
     "url": "/blog/category/personal-branding/3821",
     "status": 200,
-    "title": "Personal Branding",
-    "description": "Personal Branding",
+    "title": "Personal Branding articles — Lena — Lena",
+    "description": "Articles on personal branding from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/blog/category/[cat]/[id]"
@@ -1291,8 +1297,8 @@
   {
     "url": "/blog/category/susan-lumba-mwenda/3870",
     "status": 200,
-    "title": "Susan Lumba Mwenda",
-    "description": "Susan Mwenda-Mulongoti",
+    "title": "Susan Lumba Mwenda articles — Lena — Lena",
+    "description": "Articles on susan lumba mwenda from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/blog/category/[cat]/[id]"
@@ -1300,7 +1306,7 @@
   {
     "url": "/course-detail/infoprenuer-roadmap-ebook/3982",
     "status": 200,
-    "title": "Ebook - Infoprenuer Roadmap",
+    "title": "Ebook - Infoprenuer Roadmap — Lena — Lena",
     "description": "null",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1309,7 +1315,7 @@
   {
     "url": "/course-detail/infopreneur-audiobook/3986",
     "status": 200,
-    "title": "Infopreneur - Audiobook",
+    "title": "Infopreneur - Audiobook — Lena — Lena",
     "description": "null",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1318,7 +1324,7 @@
   {
     "url": "/course-detail/social-media-content-creation-ebook/3995",
     "status": 200,
-    "title": "Ebook - Social Media Content Creation",
+    "title": "Ebook - Social Media Content Creation — Lena — Lena",
     "description": "Buy with Zambian mobile money\n\nEbook: https://productcheckout.kundananjicreations.com/checkout?pId=545\nAudiobook: https://productcheckout.kundananjicreations.com/checkout?pId=1218\n\n",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1327,7 +1333,7 @@
   {
     "url": "/course-detail/infoprenuer-how-to-make-money-from-your-passion-knowledge-and-experience/4885",
     "status": 200,
-    "title": "Create and Sell Courses Infoprenuer:- How to Make Money from Your Passion, Knowledge and Experience",
+    "title": "Create and Sell Courses Infoprenuer:- How to Make Money from Your Passion, Knowledge and Experience — Lena — Lena",
     "description": "null",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1336,7 +1342,7 @@
   {
     "url": "/course-detail/content-creation-school/7107",
     "status": 200,
-    "title": "Content Creation Strategy",
+    "title": "Content Creation Strategy — Lena — Lena",
     "description": "Learn digital skills for modern businesses in our 3-IN-1 program where you learn Content Creation, Basics of Digital Marketing, and Digital tools.",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1345,7 +1351,7 @@
   {
     "url": "/course-detail/audiobook-zero-to-hero-social-media-manager/10199",
     "status": 200,
-    "title": "Audiobook - Zero to Hero Social Media Manager",
+    "title": "Audiobook - Zero to Hero Social Media Manager — Lena — Lena",
     "description": "A step-by-step guide to becoming a well-paid social media manager.",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1354,7 +1360,7 @@
   {
     "url": "/course-detail/ebook-zero-to-hero-social-media-manager/10317",
     "status": 200,
-    "title": "Ebook - Zero to Hero Social Media Manager",
+    "title": "Ebook - Zero to Hero Social Media Manager — Lena — Lena",
     "description": "A Step-by-Step Guide for a Complete Beginner to Becoming a Well-Paid Social Media Manager\n",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1363,7 +1369,7 @@
   {
     "url": "/course-detail/audiobook-social-media-content-creation/12514",
     "status": 200,
-    "title": "Audiobook - Social Media Content Creation",
+    "title": "Audiobook - Social Media Content Creation — Lena — Lena",
     "description": "Audiobook - Social Media Content Creation",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1372,7 +1378,7 @@
   {
     "url": "/course-detail/digital-tools/17996",
     "status": 200,
-    "title": "Digital Tools",
+    "title": "Digital Tools — Lena — Lena",
     "description": "null",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1381,7 +1387,7 @@
   {
     "url": "/course-detail/digital-marketing-conversion-mastery/18127",
     "status": 200,
-    "title": "Digital Marketing - Conversion Mastery",
+    "title": "Digital Marketing - Conversion Mastery — Lena — Lena",
     "description": "null",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1390,7 +1396,7 @@
   {
     "url": "/course-detail/copywriting-crash-course/23197",
     "status": 200,
-    "title": "Words That Sell",
+    "title": "Words That Sell — Lena — Lena",
     "description": "Copywriting Crash Course",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1399,7 +1405,7 @@
   {
     "url": "/course-detail/digital-skills-fasttrack/24115",
     "status": 200,
-    "title": "Digital Skills FastTrack",
+    "title": "Digital Skills FastTrack — Lena — Lena",
     "description": "null",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1408,7 +1414,7 @@
   {
     "url": "/course-detail/content-creation-school-2026/36467",
     "status": 200,
-    "title": "Content Creation School 2026",
+    "title": "Content Creation School 2026 — Lena — Lena",
     "description": "Content Creation School 2026",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1417,7 +1423,7 @@
   {
     "url": "/course-detail/visbility-course-why-you-are-invible-and-how-to-change-it/40331",
     "status": 200,
-    "title": "Visbility Course: Why You Are Invisible and How to Change It",
+    "title": "Visbility Course: Why You Are Invisible and How to Change It — Lena — Lena",
     "description": "null",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1426,7 +1432,7 @@
   {
     "url": "/course-detail/1-year-content-plan-in-3-days/41281",
     "status": 200,
-    "title": "1 Year Content Plan in 3 Days",
+    "title": "1 Year Content Plan in 3 Days — Lena — Lena",
     "description": "1 Year Content Plan in 3 Days",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1435,7 +1441,7 @@
   {
     "url": "/course-detail/content-creation-school-2026-copy-1776429703034/41634",
     "status": 200,
-    "title": "Savvypro Digital Skills Certification 2026",
+    "title": "Savvypro Digital Skills Certification 2026 — Lena — Lena",
     "description": "Savvypro Digital Skills Certification 2026",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1444,7 +1450,7 @@
   {
     "url": "/course-detail/manage-and-grow-your-business/42538",
     "status": 200,
-    "title": "Manage and Grow Your Business",
+    "title": "Manage and Grow Your Business — Lena — Lena",
     "description": "Manage and Grow Your Business",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1453,7 +1459,7 @@
   {
     "url": "/course-detail/content-creation-school-2026-copy-1790672869460/49068",
     "status": 200,
-    "title": "CCS Free Program",
+    "title": "CCS Free Program — Lena — Lena",
     "description": "Content Creation School - Free Program",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1462,7 +1468,7 @@
   {
     "url": "/course-detail/content-creation-school-2026-tutor-1790673216325/49070",
     "status": 200,
-    "title": "Content Creation School",
+    "title": "Content Creation School — Lena — Lena",
     "description": "Content Creation School ",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1471,7 +1477,7 @@
   {
     "url": "/course-detail/start-smallthink-big/49186",
     "status": 200,
-    "title": "Start Small.Think Big",
+    "title": "Start Small.Think Big — Lena — Lena",
     "description": "Start Small.Think Big",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1480,7 +1486,7 @@
   {
     "url": "/course-detail/start-where-you-are-audiobook/49791",
     "status": 200,
-    "title": "Start Where You Are - Audiobook",
+    "title": "Start Where You Are - Audiobook — Lena — Lena",
     "description": "STWYA",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1489,7 +1495,7 @@
   {
     "url": "/course-detail/ebook-zero-to-hero-social-media-manager-copy-1792212437299/49792",
     "status": 200,
-    "title": "Free Ebook - Zero to Hero Social Media Manager",
+    "title": "Free Ebook - Zero to Hero Social Media Manager — Lena — Lena",
     "description": "A Step-by-Step Guide for a Complete Beginner to Becoming a Well-Paid Social Media Manager\n",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1498,7 +1504,7 @@
   {
     "url": "/course-detail/audiobook-zero-to-hero-social-media-manager-copy-1792212460894/49793",
     "status": 200,
-    "title": "Free Audiobook - Zero to Hero Social Media Manager",
+    "title": "Free Audiobook - Zero to Hero Social Media Manager — Lena — Lena",
     "description": "A step-by-step guide to becoming a well-paid social media manager.",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1507,7 +1513,7 @@
   {
     "url": "/course-detail/infopreneur-audiobook-copy-1792213073560/49794",
     "status": 200,
-    "title": "Infopreneur - Free Audiobook",
+    "title": "Infopreneur - Free Audiobook — Lena — Lena",
     "description": "null",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1516,7 +1522,7 @@
   {
     "url": "/course-detail/infoprenuer-roadmap-ebook-copy-1792213119365/49795",
     "status": 200,
-    "title": "Free Ebook - Infoprenuer Roadmap",
+    "title": "Free Ebook - Infoprenuer Roadmap — Lena — Lena",
     "description": "null",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1525,7 +1531,7 @@
   {
     "url": "/course-detail/social-media-content-creation-ebook-copy-1792214265244/49796",
     "status": 200,
-    "title": "Free Ebook - Social Media Content Creation",
+    "title": "Free Ebook - Social Media Content Creation — Lena — Lena",
     "description": "Buy with Zambian mobile money\n\nFree Ebook: https://productcheckout.kundananjicreations.com/checkout?pId=545\nAudiobook: https://productcheckout.kundananjicreations.com/checkout?pId=1218\n\n",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1534,7 +1540,7 @@
   {
     "url": "/course-detail/audiobook-social-media-content-creation-copy-1792214327806/49797",
     "status": 200,
-    "title": "Free Audiobook - Social Media Content Creation",
+    "title": "Free Audiobook - Social Media Content Creation — Lena — Lena",
     "description": "Free Audiobook - Social Media Content Creation",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1543,7 +1549,7 @@
   {
     "url": "/course-detail/free-audiobook-social-media-paid-ads/49801",
     "status": 200,
-    "title": "Free Audiobook - Social Media Paid Ads",
+    "title": "Free Audiobook - Social Media Paid Ads — Lena — Lena",
     "description": "Free Audiobook - Social Media Paid Ads",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1552,7 +1558,7 @@
   {
     "url": "/course-detail/how-to-create-and-sell-your-first-online-course/49870",
     "status": 200,
-    "title": "Free Ebook - How to Create and Sell Your First Online Course",
+    "title": "Free Ebook - How to Create and Sell Your First Online Course — Lena — Lena",
     "description": "A Step-By-Step Guide To Package Your Passion, Knowledge, And Experience Into A  Course Your Students Will Love.",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1561,7 +1567,7 @@
   {
     "url": "/course-detail/free-audiobook-how-to-create-and-sell-your-first-online-course/49906",
     "status": 200,
-    "title": "Free Audiobook - How to Create and Sell Your First Online Course",
+    "title": "Free Audiobook - How to Create and Sell Your First Online Course — Lena — Lena",
     "description": "Free Audiobook - How to Create and Sell Your First Online Course",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1570,7 +1576,7 @@
   {
     "url": "/course-detail/free-audiobook-autopilot-sales-system/49908",
     "status": 200,
-    "title": "Free Audiobook - Autopilot Sales System",
+    "title": "Free Audiobook - Autopilot Sales System — Lena — Lena",
     "description": "Free Audiobook - Autopilot Sales System",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1579,7 +1585,7 @@
   {
     "url": "/course-detail/start-where-you-are-audiobook-copy-1792925319820/50151",
     "status": 200,
-    "title": "Start Where You Are - Free Audiobook",
+    "title": "Start Where You Are - Free Audiobook — Lena — Lena",
     "description": "STWYA",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1588,7 +1594,7 @@
   {
     "url": "/community/650",
     "status": 200,
-    "title": "VIP",
+    "title": "VIP — Lena — Lena",
     "description": "\nBy invitation only.",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1597,8 +1603,8 @@
   {
     "url": "/community/834",
     "status": 200,
-    "title": "Savvypro Starter Chatgroup",
-    "description": "Group discussion, posts and member contributions.",
+    "title": "Savvypro Starter Chatgroup — Lena — Lena",
+    "description": "Savvypro Starter Chatgroup — courses, books and digital skills training from Lena.",
     "consoleErrors": [
       "Loading the image 'https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/da/d3/18/dad31873-6900-01cb-7c7a-4da0a6390190/AppIcon-0-0-1x_U007emarketing-0-10-0-85-220.png/1200x630wa.png' violates the foll",
       "Loading the image 'https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/da/d3/18/dad31873-6900-01cb-7c7a-4da0a6390190/AppIcon-0-0-1x_U007emarketing-0-10-0-85-220.png/1200x630wa.png' violates the foll",
@@ -1610,7 +1616,7 @@
   {
     "url": "/community/853",
     "status": 200,
-    "title": "Content Creation School Chatgroup",
+    "title": "Content Creation School Chatgroup — Lena — Lena",
     "description": "Let's discuss Freelancing",
     "consoleErrors": [],
     "handler": "dynamic template",
@@ -1619,8 +1625,8 @@
   {
     "url": "/community/4943",
     "status": 200,
-    "title": "Digital Skills Bundle Forum",
-    "description": "Group discussion, posts and member contributions.",
+    "title": "Digital Skills Bundle Forum — Lena — Lena",
+    "description": "Digital Skills Bundle Forum — courses, books and digital skills training from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/community/[id]"
@@ -1628,8 +1634,8 @@
   {
     "url": "/community/4944",
     "status": 200,
-    "title": "Digital Skills Bundle Forum",
-    "description": "Group discussion, posts and member contributions.",
+    "title": "Digital Skills Bundle Forum — Lena — Lena",
+    "description": "Digital Skills Bundle Forum — courses, books and digital skills training from Lena.",
     "consoleErrors": [],
     "handler": "dynamic template",
     "route": "/community/[id]"
