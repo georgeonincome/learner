@@ -1,11 +1,11 @@
-import { BlockPage, blockPageMetadata } from '@/components/layout/BlockPage'
-
+import { pageMeta } from '@/lib/page-metadata'
+import { TemplatePage } from '@/components/templates/TemplatePage'
 export const revalidate = 3600
 
 export async function generateMetadata() {
-  return blockPageMetadata('7-step-whatspp-automation-system-setup')
+  return pageMeta('7-step-whatspp-automation-system-setup')
 }
 
 export default function Page() {
-  return <BlockPage slug="7-step-whatspp-automation-system-setup" />
+  return <TemplatePage slug="7-step-whatspp-automation-system-setup" />
 }

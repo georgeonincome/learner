@@ -1,4 +1,5 @@
-import { BlockPage, blockPageMetadata } from '@/components/layout/BlockPage'
+import { pageMeta } from '@/lib/page-metadata'
+import { TemplatePage } from '@/components/templates/TemplatePage'
 import { buildMetadata } from '@/lib/seo'
 
 export const revalidate = 3600
@@ -12,9 +13,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       path: '/books?ref=stripe-payment',
     })
   }
-  return blockPageMetadata('books')
+  return pageMeta('books')
 }
 
 export default function Page() {
-  return <BlockPage slug="books" />
+  return <TemplatePage slug="books" />
 }

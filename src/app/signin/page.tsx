@@ -1,4 +1,4 @@
-import { PublicPage } from '@/components/layout/PublicPage'
+import { TemplatePage } from '@/components/templates/TemplatePage'
 import { buildMetadata } from '@/lib/seo'
 
 export const revalidate = 3600
@@ -30,5 +30,5 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
 }
 
 export default function Page() {
-  return <PublicPage specKey="login" />
+  return <TemplatePage slug="login" />
 }

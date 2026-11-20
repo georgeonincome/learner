@@ -1,4 +1,4 @@
-import { BlockPage } from '@/components/layout/BlockPage'
+import { TemplatePage } from '@/components/templates/TemplatePage'
 import { buildMetadata } from '@/lib/seo'
 
 export const revalidate = 3600
@@ -8,5 +8,5 @@ export async function generateMetadata() {
 }
 
 export default function Page() {
-  return <BlockPage slug="digital-skills-classes" />
+  return <TemplatePage slug="digital-skills-classes" />
 }

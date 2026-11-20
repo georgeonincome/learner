@@ -1,11 +1,11 @@
-import { BlockPage, blockPageMetadata } from '@/components/layout/BlockPage'
-
+import { pageMeta } from '@/lib/page-metadata'
+import { TemplatePage } from '@/components/templates/TemplatePage'
 export const revalidate = 3600
 
 export async function generateMetadata() {
-  return blockPageMetadata('savvypro-privacy-policy')
+  return pageMeta('savvypro-privacy-policy')
 }
 
 export default function Page() {
-  return <BlockPage slug="savvypro-privacy-policy" />
+  return <TemplatePage slug="savvypro-privacy-policy" />
 }

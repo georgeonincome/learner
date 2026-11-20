@@ -1,7 +1,7 @@
-import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
-
-export const metadata = specMetadata('terms-and-conditions', 'Terms & Conditions')
+import { pageMeta } from '@/lib/page-metadata'
+import { TemplatePage } from '@/components/templates/TemplatePage'
+export const metadata = pageMeta('terms-and-conditions', 'Terms & Conditions')
 
 export default function Page() {
-  return <PublicPage specKey="terms-and-conditions" />
+  return <TemplatePage slug="terms-and-conditions" />
 }

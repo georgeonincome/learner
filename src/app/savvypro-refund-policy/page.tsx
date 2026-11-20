@@ -1,7 +1,7 @@
-import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
-
-export const metadata = specMetadata('savvypro-refund-policy', 'Savvypro Refund Policy')
+import { pageMeta } from '@/lib/page-metadata'
+import { TemplatePage } from '@/components/templates/TemplatePage'
+export const metadata = pageMeta('savvypro-refund-policy', 'Savvypro Refund Policy')
 
 export default function Page() {
-  return <PublicPage specKey="savvypro-refund-policy" />
+  return <TemplatePage slug="savvypro-refund-policy" />
 }

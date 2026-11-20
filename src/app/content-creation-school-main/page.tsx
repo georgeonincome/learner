@@ -1,11 +1,11 @@
-import { BlockPage, blockPageMetadata } from '@/components/layout/BlockPage'
-
+import { pageMeta } from '@/lib/page-metadata'
+import { TemplatePage } from '@/components/templates/TemplatePage'
 export const revalidate = 3600
 
 export async function generateMetadata() {
-  return blockPageMetadata('content-creation-school-main')
+  return pageMeta('content-creation-school-main')
 }
 
 export default function Page() {
-  return <BlockPage slug="content-creation-school-main" />
+  return <TemplatePage slug="content-creation-school-main" />
 }

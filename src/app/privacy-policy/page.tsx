@@ -1,7 +1,7 @@
-import { PublicPage, specMetadata } from '@/components/layout/PublicPage'
-
-export const metadata = specMetadata('privacy-policy', 'Privacy Policy')
+import { pageMeta } from '@/lib/page-metadata'
+import { TemplatePage } from '@/components/templates/TemplatePage'
+export const metadata = pageMeta('privacy-policy', 'Privacy Policy')
 
 export default function Page() {
-  return <PublicPage specKey="privacy-policy" />
+  return <TemplatePage slug="privacy-policy" />
 }

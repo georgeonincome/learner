@@ -1,22 +1,8 @@
 @import "tailwindcss";
 
-/* Reference vendor CSS is unlayered and would otherwise beat every Tailwind
-   utility in the cascade (CSS layers: unlayered > layered). Put it in `base`
-   so Lena's token utilities actually take effect — audit J/H. */
-@layer base {
-  @import "../styles/vendor.css";
-  @import "../styles/reference.css";
-}
 @import "../styles/tokens.css";
-/* Arbitrary-value utilities that exist only inside compiled CMS blocks. */
-@import "../styles/block-safelist.css";
 
-/*
- * Base layer. The reference's compiled CSS (vendor.css) and the captured
- * styled-components rules (reference.css) are imported by app/layout.tsx after
- * this file, so they win over Tailwind's layered preflight for shared
- * properties. Only what the reference does not already set lives here.
- */
+/* Original Lena base styles. No reference CSS or captured markup is imported. */
 
 * {
   box-sizing: border-box;
@@ -137,26 +123,5 @@ h6 {
   font-size: 0.9em;
 }
 
-/* ---------------------------------------------------------------------------
-   Accessibility (audit J/H): the captured vendor navbar token resolves to an
-   off-white foreground on Lena's light navbar (1.08 contrast). Force a legible
-   ink colour inside the header. Structure and spacing are unchanged.
-   --------------------------------------------------------------------------- */
-header a.sys-navbar-text,
-header a.sys-navbar-text-active,
-header a.sys-navbar-text-no-hover,
-header a._stMenu_mdl_txt,
-header .text-ezy-gray-400 {
-  color: #0b1f1a !important;
-}
-header a.sys-navbar-text:hover,
-header a._stMenu_mdl_txt:hover {
-  color: #0a5c4c !important;
-}
-
-/* Dark-theme base: inherited body text must be light on Lena's dark surfaces.
-   Light sections set their own explicit text colour in compiled blocks. */
+/* Dark-theme base: inherited body text is light on Lena's dark surfaces. */
 body { color: var(--color-text-primary); }
-
-/* Final a11y corrections (unlayered, so they win over vendor base layer). */
-@import "../styles/a11y-overrides.css";

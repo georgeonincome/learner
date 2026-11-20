@@ -1,11 +1,11 @@
-import { BlockPage, blockPageMetadata } from '@/components/layout/BlockPage'
-
+import { pageMeta } from '@/lib/page-metadata'
+import { TemplatePage } from '@/components/templates/TemplatePage'
 export const revalidate = 3600
 
 export async function generateMetadata() {
-  return blockPageMetadata('whatsapp-marketing-for-smes')
+  return pageMeta('whatsapp-marketing-for-smes')
 }
 
 export default function Page() {
-  return <BlockPage slug="whatsapp-marketing-for-smes" />
+  return <TemplatePage slug="whatsapp-marketing-for-smes" />
 }

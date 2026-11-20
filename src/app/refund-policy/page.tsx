@@ -1,11 +1,11 @@
-import { BlockPage, blockPageMetadata } from '@/components/layout/BlockPage'
-
+import { pageMeta } from '@/lib/page-metadata'
+import { TemplatePage } from '@/components/templates/TemplatePage'
 export const revalidate = 3600
 
 export async function generateMetadata() {
-  return blockPageMetadata('refund-policy')
+  return pageMeta('refund-policy')
 }
 
 export default function Page() {
-  return <BlockPage slug="refund-policy" />
+  return <TemplatePage slug="refund-policy" />
 }

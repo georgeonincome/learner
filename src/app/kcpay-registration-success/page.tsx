@@ -1,11 +1,11 @@
-import { BlockPage, blockPageMetadata } from '@/components/layout/BlockPage'
-
+import { pageMeta } from '@/lib/page-metadata'
+import { TemplatePage } from '@/components/templates/TemplatePage'
 export const revalidate = 3600
 
 export async function generateMetadata() {
-  return blockPageMetadata('kcpay-registration-success')
+  return pageMeta('kcpay-registration-success')
 }
 
 export default function Page() {
-  return <BlockPage slug="kcpay-registration-success" />
+  return <TemplatePage slug="kcpay-registration-success" />
 }

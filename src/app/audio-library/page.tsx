@@ -1,11 +1,11 @@
-import { BlockPage, blockPageMetadata } from '@/components/layout/BlockPage'
-
+import { pageMeta } from '@/lib/page-metadata'
+import { TemplatePage } from '@/components/templates/TemplatePage'
 export const revalidate = 3600
 
 export async function generateMetadata() {
-  return blockPageMetadata('audio-library')
+  return pageMeta('audio-library')
 }
 
 export default function Page() {
-  return <BlockPage slug="audio-library" />
+  return <TemplatePage slug="audio-library" />
 }
