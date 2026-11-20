@@ -52,7 +52,7 @@ export async function hasEntityAccess(
   try {
     if (entityType === 'course' || entityType === 'program') {
       const rows = await query<Record<string, unknown>>(
-        `SELECT id, status, ends_at FROM enrollments
+        `SELECT id, status FROM enrollments
           WHERE auth_user_id = ? AND course_id = ? LIMIT 1`,
         [uid, String(id)],
       )

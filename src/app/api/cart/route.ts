@@ -14,7 +14,7 @@ async function cartKey() {
   const uid = await getCurrentUserId()
   if (uid) return `uid:${uid}`
   const jar = await cookies()
-  let token = jar.get(CART_COOKIE)?.value
+  const token = jar.get(CART_COOKIE)?.value
   return { key: `guest:${token ?? 'new'}`, token }
 }
 
