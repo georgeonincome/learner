@@ -9,6 +9,9 @@ const navItems = [
   { label: 'Lessons', href: '/admin/lessons' },
   { label: 'Blog posts', href: '/admin/posts' },
   { label: 'Books', href: '/admin/books' },
+  { label: 'Pages', href: '/admin/pages' },
+  { label: 'Testimonials', href: '/admin/testimonials' },
+  { label: 'Media', href: '/admin/media' },
   { label: 'Users', href: '/admin/users' },
   { label: 'Orders', href: '/admin/orders' },
   { label: 'Memberships', href: '/admin/memberships' },
@@ -46,7 +49,7 @@ export default async function AdminLayout({
         <div className="mx-auto max-w-[1264px] px-2 sm:px-2 py-4 flex items-center justify-between">
           <div>
             <h1 className="font-heading font-bold text-xl text-text-primary">
-              SavvyPro Admin
+              Lena Admin
             </h1>
             <p className="text-xs text-text-muted">
               Signed in as {identity.uid} ({identity.role})

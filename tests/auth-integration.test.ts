@@ -22,8 +22,11 @@ describe('session creation', () => {
     expect(res.status).toBe(401)
   })
 
-  it('rejects /me without a session cookie', async () => {
+  it('/me without a session cookie is a signed-out probe (200 + null)', async () => {
+    // /me is a public "who am I" probe: 200 + null when signed out so public
+    // pages don't emit 401 console noise. Protected routes guard via getSessionUser.
     const res = await meGET()
-    expect(res.status).toBe(401)
+    expect(res.status).toBe(200)
+    expect(await res.json()).toBeNull()
   })
 })

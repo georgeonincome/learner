@@ -68,3 +68,39 @@ export async function signOut() {
   const a = getClientAuth()
   await a.signOut()
 }
+
+// ---- Account settings (M3) ----
+import {
+  updateProfile,
+  updateEmail,
+  updatePassword,
+  reauthenticateWithCredential,
+  EmailAuthProvider,
+} from 'firebase/auth'
+
+export async function updateDisplayName(firstName: string, lastName: string) {
+  const a = getClientAuth()
+  const user = a.currentUser
+  if (!user) throw new Error('Not signed in')
+  await updateProfile(user, { displayName: `${firstName} ${lastName}`.trim() })
+}
+
+async function reauth(currentPassword: string) {
+  const a = getClientAuth()
+  const user = a.currentUser
+  if (!user || !user.email) throw new Error('Not signed in')
+  const cred = EmailAuthProvider.credential(user.email, currentPassword)
+  await reauthenticateWithCredential(user, cred)
+  return user
+}
+
+export async function changeEmail(currentPassword: string, newEmail: string) {
+  const user = await reauth(currentPassword)
+  await updateEmail(user, newEmail)
+  await sendEmailVerification(user)
+}
+
+export async function changePassword(currentPassword: string, newPassword: string) {
+  const user = await reauth(currentPassword)
+  await updatePassword(user, newPassword)
+}

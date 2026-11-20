@@ -176,13 +176,20 @@ export function RefSignupForm() {
       await signUp(email, password)
       const idToken = await getIdToken()
       if (idToken) {
+        // Persist the captured names (audit B1) + sync displayName, then session.
+        await fetch('/api/auth/profile', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ idToken, firstName: firstName.trim(), lastName: lastName.trim() }),
+        }).catch(() => {})
         await fetch('/api/auth/session', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ idToken }),
         })
       }
-      router.push('/')
+      // Reference requires a verified email before access (is_auth_require_verified_email=1).
+      router.push('/verify')
       router.refresh()
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Signup failed')

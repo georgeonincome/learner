@@ -43,3 +43,9 @@ export async function getCurrentUserId(): Promise<string | null> {
   const user = await getSessionUser()
   return user?.uid ?? null
 }
+
+/** uid only when authenticated AND email-verified (reference access rule). */
+export async function getVerifiedUserId(): Promise<string | null> {
+  const user = await getSessionUser()
+  return user && user.emailVerified ? user.uid : null
+}

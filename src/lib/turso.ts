@@ -21,6 +21,14 @@ export async function query<T = unknown>(sql: string, args: InArgs = []) {
   return rows as unknown as T[]
 }
 
+/** INSERT helper returning the new rowid (libSQL lastInsertRowid). */
+export async function insert(sql: string, args: InArgs = []): Promise<number | undefined> {
+  const c = getTursoClient()
+  const res = await c.execute({ sql, args })
+  const id = (res as any).lastInsertRowid
+  return id != null ? Number(id) : undefined
+}
+
 export async function getClient() {
   return getTursoClient()
 }
