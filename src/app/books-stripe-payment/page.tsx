@@ -1,9 +1,10 @@
-import { BlockPage, blockPageMetadata } from '@/components/layout/BlockPage'
+import { BlockPage } from '@/components/layout/BlockPage'
+import { buildMetadata } from '@/lib/seo'
 
 export const revalidate = 3600
 
 export async function generateMetadata() {
-  return blockPageMetadata('books-stripe-payment')
+  return buildMetadata({ title: 'Books payment page', description: 'Complete your book purchase securely.', path: '/books-stripe-payment' })
 }
 
 export default function Page() {

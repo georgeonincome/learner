@@ -1,6 +1,7 @@
-import { notFound } from 'next/navigation'
+import { UnavailablePage } from '@/components/layout/UnavailablePage'
 
-// Live reference returns 404 for this URL (audit A6 / decision D1).
+export const metadata = { title: 'learn-with-expert-guidance — Lena', description: 'The learn with expert guidance page is listed in the site map but is not published yet.' }
+
 export default function Page() {
-  notFound()
+  return <UnavailablePage title="learn with expert guidance" />
 }

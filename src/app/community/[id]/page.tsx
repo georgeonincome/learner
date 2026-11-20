@@ -9,7 +9,15 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Params }) {
   const n = await params
-  return specMetadataForSpec(getSpecByKey(`community__${n.id}`), 'Community')
+  const meta = specMetadataForSpec(getSpecByKey(`community__${n.id}`), 'Community')
+  // Duplicate group names exist in the reference (two "Digital Skills Bundle Forum"
+  // spaces). Disambiguate by id so every URL has a unique title/description.
+  const suffix = ` · Group ${n.id}`
+  return {
+    ...meta,
+    title: `${meta.title ?? 'Community'}${suffix}`,
+    description: `${meta.description ?? ''} Group ${n.id}.`,
+  }
 }
 
 export default async function Page({ params }: { params: Params }) {

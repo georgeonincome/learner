@@ -68,7 +68,6 @@ if (isProd) {
  * payment pages redirect to real commerce surfaces; auth aliases canonicalize.
  */
 const redirects = [
-  { source: '/signin', destination: '/login', permanent: true },
   { source: '/home', destination: '/', permanent: true },
   { source: '/forgot-password', destination: '/reset-password', permanent: true },
   { source: '/password-reset-link', destination: '/reset-password', permanent: true },
@@ -80,13 +79,13 @@ const redirects = [
   { source: '/teacher/signup', destination: '/signup', permanent: true },
   { source: '/student', destination: '/dashboard', permanent: true },
   { source: '/student/dashboard', destination: '/dashboard', permanent: true },
-  { source: '/kcpay-redirect', destination: '/checkout', permanent: true },
-  { source: '/kcpay--redirect', destination: '/checkout', permanent: true },
-  { source: '/kcpay-registration-success', destination: '/you-have-paid', permanent: true },
-  { source: '/payments', destination: '/checkout', permanent: true },
-  { source: '/testkcpayment', destination: '/checkout', permanent: true },
-  { source: '/payforcontentcreationschool', destination: '/checkout', permanent: true },
-  { source: '/books-stripe-payment', destination: '/books', permanent: true },
+  { source: '/kcpay-redirect', destination: '/signin?ref=kcpay-redirect&callbackUrl=/checkout', permanent: true },
+  { source: '/kcpay--redirect', destination: '/signin?ref=kcpay--redirect&callbackUrl=/checkout', permanent: true },
+  { source: '/kcpay-registration-success', destination: '/you-have-paid?ref=kcpay-registration-success', permanent: true },
+  { source: '/payments', destination: '/signin?ref=payments&callbackUrl=/checkout', permanent: true },
+  { source: '/testkcpayment', destination: '/signin?ref=testkcpayment&callbackUrl=/checkout', permanent: true },
+  { source: '/payforcontentcreationschool', destination: '/signin?ref=payforcontentcreationschool&callbackUrl=/checkout', permanent: true },
+  { source: '/books-stripe-payment', destination: '/books?ref=stripe-payment', permanent: true },
 ]
 
 const nextConfig = {

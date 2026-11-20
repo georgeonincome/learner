@@ -5,7 +5,17 @@ import { query } from '@/lib/turso'
 import { AppSurface } from '@/components/layout/AppSurface'
 
 export const dynamic = 'force-dynamic'
-export const metadata = { title: 'Payment complete — Lena Learning', description: 'Your order has been received.' }
+
+export async function generateMetadata({ searchParams }: { searchParams: Promise<{ ref?: string }> }) {
+  const { ref } = await searchParams
+  if (!ref) return { title: 'Payment complete — Lena Learning', description: 'Your order has been received.' }
+  const label = ref.replace(/[-_]/g, ' ')
+  return {
+    title: `Payment complete — ${label}`,
+    description: `Your ${label} payment has been received. View your Lena order summary.`,
+    robots: { index: false },
+  }
+}
 
 interface Order {
   id: string; status: string; total: number; currency: string
@@ -13,10 +23,14 @@ interface Order {
 }
 
 /** Real post-payment summary: never trusts query params for ownership. */
-export default async function ThankYouPage({ searchParams }: { searchParams: Promise<{ session_id?: string }> }) {
-  const { session_id } = await searchParams
+export default async function ThankYouPage({ searchParams }: { searchParams: Promise<{ session_id?: string; ref?: string }> }) {
+  const sp = await searchParams
+  const { session_id } = sp
   const uid = await getCurrentUserId()
-  if (!uid) redirect('/signin?callbackUrl=/you-have-paid')
+  if (!uid) {
+    const suffix = sp.ref ? `?ref=${encodeURIComponent(sp.ref)}` : ''
+    redirect(`/signin?callbackUrl=/you-have-paid${encodeURIComponent(suffix)}`)
+  }
 
   let order: Order | null = null
   if (session_id) {

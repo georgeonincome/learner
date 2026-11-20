@@ -264,14 +264,18 @@ function rewriteContent(html: string, kind: 'heading' | 'body' | 'label', ctx: C
   const text = textOf(h)
   const words = text.split(/\s+/).filter(Boolean).length
   if (/^\d[\d,]*\+?\s+(students|countries|clients|years)/i.test(text)) {
-    return /students/i.test(text) ? '<p>3,800+ students</p>' : `<p>${debrand(text)}</p>`
+    // Return inline text only: the block renderer already supplies the <p>
+    // wrapper. Nesting <p> inside <p> breaks HTML and causes hydration errors.
+    return /students/i.test(text) ? '3,800+ students' : debrand(text)
   }
   if (kind === 'heading' && words > 7) {
     if (ctx.pageSlug === 'home') return `Learn Digital Skills. <span style="color: var(--color-magenta)">Build Real Income.</span>`
     return debrand(ctx.pageTitle)
   }
   if (kind === 'body' && text.length > 90) {
-    return `<p>${originalPara(ctx.pageSlug + blockId)}</p>`
+    // Inline text only — never emit a block-level <p> here. The parent block
+    // is itself a <p>; nesting block tags corrupts the DOM during hydration.
+    return originalPara(ctx.pageSlug + blockId)
   }
   h = rewriteInlineColors(h)
   // debrand text nodes only (keep tags)

@@ -1422,7 +1422,7 @@
       "route": "/win-a-book/",
       "key": "win-a-book",
       "template": "lead-magnet",
-      "title": "Application error: a client-side exception has occurred",
+      "title": "Win a Book",
       "source": "captured-browser/win-a-book.html",
       "bytes": 330
     },

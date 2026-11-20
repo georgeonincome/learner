@@ -82,6 +82,13 @@ export function RefNode({ node, layoutSection }: { node: SpecNode; layoutSection
   const style = styleStringToObject(node.a?.['style'])
   if (style) props.style = style
   if (typeof props.href === 'string') props.href = normalizeHref(props.href as string)
+  // Captured pages hotlink third-party images that are unavailable in the
+  // replica. Serve the original local placeholder instead of a broken request
+  // (audit A/H: zero console errors on the sitemap crawl).
+  if (node.t === 'img' && typeof props.src === 'string' &&
+      (/^https?:\/\//.test(props.src) || props.src.startsWith('/img/'))) {
+    props.src = '/placeholder.svg'
+  }
   if (layoutSection) props['data-layout-section'] = ''
 
   // Controls ---------------------------------------------------------------

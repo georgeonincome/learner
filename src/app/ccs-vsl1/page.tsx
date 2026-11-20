@@ -1,9 +1,10 @@
-import { BlockPage, blockPageMetadata } from '@/components/layout/BlockPage'
+import { BlockPage } from '@/components/layout/BlockPage'
+import { buildMetadata } from '@/lib/seo'
 
 export const revalidate = 3600
 
 export async function generateMetadata() {
-  return blockPageMetadata('ccs-vsl1')
+  return buildMetadata({ title: 'Content Creation School — Introduction', description: 'See how the Content Creation School works and what you will build.', path: '/ccs-vsl1' })
 }
 
 export default function Page() {
