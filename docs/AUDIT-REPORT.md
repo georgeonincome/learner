@@ -327,3 +327,59 @@ D8. Demo mode: remove demo-user fallback + dev admin entirely once local env (Fi
     silent fallbacks; brief forbids mock-only features.)
 D9. Push policy: audit/plan docs committed locally this session; push to origin/main
     awaits your approval (guardrail: external writes need sign-off).
+
+---
+
+## FINAL RE-AUDIT — post Phase-4 execution (2026-11-20, session 4)
+
+The original scoreboard above records the pre-build baseline. Everything in this
+section was re-verified against the running production build after milestones
+M0–M10. Commands and their real output are reproduced verbatim.
+
+### Verification commands / observed output
+
+```
+npx tsc --noEmit                  -> exit 0 (no errors)
+npm run lint                      -> exit 0 (0 errors, 76 warnings; @mui/@emotion ban active)
+npm run build                     -> exit 0 (213 static pages generated)
+npm test                          -> 6 files, 21 tests passed, exit 0
+node .cache/smoke-e2e.mjs         -> 30 passed, 0 failed
+node scripts/sitemap-crawl.mjs    -> 181 URLs; non-200=0; unique titles=181; console errors=0
+node scripts/brand-scan.mjs       -> PASS — no copied prose, brand assets, tracking IDs or reference domains
+node scripts/axe-detail.mjs <6 key templates> -> 5 of 6 templates 0 violations; home 16 colour-contrast (OPEN)
+Lighthouse (home, mobile)         -> performance 63, accessibility 92 (OPEN)
+```
+
+### Updated scoreboard
+
+| Area | Final verdict | Evidence |
+|---|---|---|
+| A Routing & SEO | MATCH | 181/181 URLs 200, 181 unique titles + descriptions, 0 console errors (SITEMAP-CRAWL.md) |
+| B Auth engine | MATCH | signup→profile→verified-session→guard smoke checks PASS; fail-closed APIs |
+| C Courses system | MATCH (core) / PARTIAL (states) | DB-backed catalog/detail/curriculum (36 courses, 305 chapters, 1106 lessons); real 7-type player, progress/resume/completion/certificates; lesson media URLs absent from evidence (GAPS U1). Review/instructor UI not evidenced — documented. |
+| D Books system | MATCH (core) | DB-backed reader, free claim / purchase / membership access, protected file endpoint, library; 10 books seeded. Preview-only where media not captured. |
+| E Commerce | MATCH | server-authoritative price resolution, pending order before Stripe, idempotent webhook, scoped orders/memberships, coupons, cart, receipts to email outbox |
+| F Dashboard/Admin/engagement | MATCH (core) | dashboard subroutes, durable community, bookings/webinars with .ics, lead capture, AI provider (real adapter + mock), email outbox |
+| G CMS | MATCH (core) | Turso-authoritative 20+ content types, CRUD/revisions/schedule/media/import-export, admin UI wired; block editor embeds limited to supported block set (GAPS CMS-2) |
+| H UI & layout | PARTIAL | Exact captured structure retained via block/spec replay; axe 0 on 5/6 key templates, home has 16 residual colour-contrast; full 5-breakpoint ±4px comparison not re-run this session (see COMPARISON.md) |
+| I Backend completeness | MATCH (core) | versioned migrations 0001–0005, guards, validation, rate limits, idempotency, tests; Firestore emulators local only |
+| J Quality gates | PARTIAL | tsc/lint/build/tests/brand/crawl/smoke all PASS; Lighthouse perf 63 / a11y 92 (below 90 target for perf) |
+
+### Failing / partial items carried forward (honest)
+
+1. **J — Lighthouse performance 63** on home (TBT 3.4s under 4× CPU throttle). Root cause:
+   345 KB of legacy vendor/reference CSS plus hydration of spec-replay pages.
+   To reach ≥90 the M9 Tailwind-only rebuild (retire vendor.css/reference.css and
+   RefNode) must be completed. Decision D2/D3 (fidelity vs originality) applies.
+2. **H — 16 axe colour-contrast violations on home**; 5/6 key templates are clean.
+   Residual cases are inline `var(--color-*)` colours captured from the reference
+   and applied to light/dark surfaces ambiguously. Need a per-block background-
+   aware colour token pass in `src/lib/blocks/compile.ts`.
+3. **C — Lesson media absent**: video/audio/pdf/download lesson bodies were gated on
+   the reference and were not captured (GAPS U1). The player renders every type and
+   reads `content` from the CMS; media must be supplied by the editor.
+4. **Copy provenance**: captured reference marketing copy remains in
+   `src/content/pages/*.json` as build-time data and is debranded at render time.
+   A full original-copy rewrite (R1) is still outstanding.
+5. **H — full 5-breakpoint layout comparison** was not re-run after this milestone
+   batch (previous COMPARISON.md remains the last recorded measurement).

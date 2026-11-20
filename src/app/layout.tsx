@@ -1,8 +1,6 @@
 import './globals.css'
 // Legacy reference stylesheets — retired in M9 (Tailwind-only rebuild).
 // Kept temporarily so the remaining spec-replay pages render during the build-out.
-import '@/styles/vendor.css'
-import '@/styles/reference.css'
 import { ToastProvider } from '@/components/ui/Toast'
 import brand from '@/lib/brand'
 

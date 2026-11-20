@@ -1,5 +1,15 @@
 @import "tailwindcss";
+
+/* Reference vendor CSS is unlayered and would otherwise beat every Tailwind
+   utility in the cascade (CSS layers: unlayered > layered). Put it in `base`
+   so Lena's token utilities actually take effect — audit J/H. */
+@layer base {
+  @import "../styles/vendor.css";
+  @import "../styles/reference.css";
+}
 @import "../styles/tokens.css";
+/* Arbitrary-value utilities that exist only inside compiled CMS blocks. */
+@import "../styles/block-safelist.css";
 
 /*
  * Base layer. The reference's compiled CSS (vendor.css) and the captured
@@ -33,12 +43,8 @@ h6 {
   line-height: 1.2;
 }
 
-/* Accessible text tint: the brand primary (#6662ff) is 4.33:1 on the hero
-   background, below WCAG AA. Keep the brand token for fills/buttons but use
-   this lighter tint for text and links so axe passes AA. */
-:root {
-  --color-primary-text: #a5a2ff;
-}
+/* Link text uses the Lena token from styles/tokens.css (#3aab92), which meets
+   WCAG AA on the dark surfaces. Do not override it with a legacy tint here. */
 
 /* nProgress loading bar (present in the reference) */
 #nprogress {
@@ -130,3 +136,27 @@ h6 {
   border-radius: 4px;
   font-size: 0.9em;
 }
+
+/* ---------------------------------------------------------------------------
+   Accessibility (audit J/H): the captured vendor navbar token resolves to an
+   off-white foreground on Lena's light navbar (1.08 contrast). Force a legible
+   ink colour inside the header. Structure and spacing are unchanged.
+   --------------------------------------------------------------------------- */
+header a.sys-navbar-text,
+header a.sys-navbar-text-active,
+header a.sys-navbar-text-no-hover,
+header a._stMenu_mdl_txt,
+header .text-ezy-gray-400 {
+  color: #0b1f1a !important;
+}
+header a.sys-navbar-text:hover,
+header a._stMenu_mdl_txt:hover {
+  color: #0a5c4c !important;
+}
+
+/* Dark-theme base: inherited body text must be light on Lena's dark surfaces.
+   Light sections set their own explicit text colour in compiled blocks. */
+body { color: var(--color-text-primary); }
+
+/* Final a11y corrections (unlayered, so they win over vendor base layer). */
+@import "../styles/a11y-overrides.css";

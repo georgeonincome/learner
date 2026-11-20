@@ -135,3 +135,20 @@ community/booking/webinar/lead/AI wiring + emails; UI fidelity 35 real-diff cell
   next-data.json, all-courses.json, sample-course.json, sample-sitedata.json,
   sample-books-present.json, home-present.json, blog-present.json, sample-community-data.json,
   page-specs.json (180), platform-routes.json, api-strings.json, api-config.json
+## Session 4 (2026-11-20) — completion pass, resume here
+
+Commits: 17abfc3 (M5/M6 DB-backed player + books + certificates) →
+a623e73 (M7/M8 commerce + dashboard) → 63c46b9 (M8/M9 engagement + brand) →
+7d721e7 (access-query fix + 30-check smoke) → c209f7d (181/181 SEO + hydration fixes).
+
+- What matches: full DB-backed curriculum (32/305/1106 real records), 7-type lesson player,
+  progress/resume/completion, server-verified certificates, purchase/membership book access,
+  protected downloads, durable community, server-priced checkout + idempotent webhook,
+  scoped orders/memberships, coupons/cart, AI real provider, email outbox, brand reset.
+- What's verified: tsc 0; lint 0 errors; build 0 (213 pages); vitest 21/21; smoke 30/30;
+  sitemap 181/181 200 with 181 unique titles+descriptions and 0 console errors; brand scan PASS;
+  axe 0 on 5/6 key templates.
+- What's open: Lighthouse perf 63 / a11y 92 on home; 16 residual axe colour-contrast
+  violations on home; lesson media URLs not captured (GAPS U1); original-copy rewrite;
+  full 5-breakpoint layout comparison re-run; admin CMS UI polish. See docs/AUDIT-REPORT.md
+  FINAL RE-AUDIT and docs/GAPS.md.

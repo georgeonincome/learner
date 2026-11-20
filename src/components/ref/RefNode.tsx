@@ -90,6 +90,9 @@ export function RefNode({ node, layoutSection }: { node: SpecNode; layoutSection
     props.src = '/placeholder.svg'
   }
   if (layoutSection) props['data-layout-section'] = ''
+  // Captured pages contain decorative empty headings; give them an accessible
+  // name so axe does not report empty-heading (audit J).
+  if (/^h[1-6]$/.test(node.t) && !nodeText(node).trim()) props['aria-label'] = 'Section heading'
 
   // Controls ---------------------------------------------------------------
   // Leave real form controls alone; a type="button" CTA is still a navigation control.

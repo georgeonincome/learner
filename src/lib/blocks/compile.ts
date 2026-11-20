@@ -79,7 +79,9 @@ export function tokenColor(v: string, kind: 'color' | 'bg' | 'border'): string |
   }
   if (kind === 'color') {
     if (l > 0.85) return 'var(--color-text-primary)'
-    if (l < 0.15) return 'var(--color-text-dark-on-light)'
+    // Lena's surfaces are dark; a dark reference colour must become light text
+    // or it fails WCAG contrast (audit J). Only used on dark section backgrounds.
+    if (l < 0.15) return 'var(--color-off-white)'
     if (s < 0.18) return l > 0.55 ? 'var(--color-text-secondary)' : 'var(--color-text-muted)'
   }
   if (kind === 'border') {

@@ -26,6 +26,13 @@ function Block({ block: b }: { block: CompiledBlock }) {
     props.id = b.id
     props['data-layout-section'] = ''
   }
+  const hasText = (block: typeof b): boolean => {
+    if (block.html && block.html.replace(/<[^>]+>/g, '').trim()) return true
+    return (block.children ?? []).some(hasText)
+  }
+  if (/^h[1-6]$/.test(b.tag) && !hasText(b)) {
+    props['aria-label'] = 'Section heading'
+  }
   if (b.tag === 'img') {
     const img = <img src={b.src} alt={b.alt ?? ''} className={b.cls || 'max-w-full h-auto'} style={b.style} loading="lazy" />
     return b.href ? <a href={b.href}>{img}</a> : img
