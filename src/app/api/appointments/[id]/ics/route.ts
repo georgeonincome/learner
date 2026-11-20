@@ -25,7 +25,7 @@ export async function GET(
 
     const ics = createIcsEvent({
       uid: appt.id,
-      title: 'SavvyPro Coaching Appointment',
+      title: 'Lena Learning Coaching Appointment',
       description: '1-on-1 coaching session',
       startsAt: new Date(appt.starts_at),
       endsAt: new Date(appt.ends_at),

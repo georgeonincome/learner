@@ -20,11 +20,11 @@ export function createIcsEvent({
   return [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//SavvyPro//Learning Platform//EN',
+    'PRODID:-//Lena Learning//Learning Platform//EN',
     'CALSCALE:GREGORIAN',
     'METHOD:PUBLISH',
     'BEGIN:VEVENT',
-    `UID:${uid}@savvypro.example`,
+    `UID:${uid}@lena.local`,
     `DTSTAMP:${fmt(new Date())}`,
     `DTSTART:${fmt(startsAt)}`,
     `DTEND:${fmt(endsAt)}`,

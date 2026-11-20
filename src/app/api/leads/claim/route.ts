@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { query, getTursoClient } from '@/lib/turso'
 import { clientKey, rateLimit } from '@/lib/rate-limit'
 import { leadSchema, safeParse } from '@/lib/validation'
+import { sendEmail, templates } from '@/lib/email'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -44,6 +45,7 @@ export async function POST(req: Request) {
         args: [`lead_${Date.now()}`, email, slug],
       })
     }
+    await sendEmail({ to: email, ...templates.lead((email.split('@')[0] ?? 'Learner'), slug) })
     return NextResponse.json({ ok: true })
   } catch (err) {
     const message = err instanceof Error ? err.message : 'Unknown error'

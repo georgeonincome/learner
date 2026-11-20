@@ -25,7 +25,7 @@ export function ReferenceLanding({
           </h1>
           <p className="text-text-secondary text-lg leading-relaxed max-w-[760px]">
             {description ??
-              `Explore ${title} on SavvyPro — practical digital skills, training and support for people building what comes next.`}
+              `Explore ${title} on Lena Learning — practical digital skills, training and support for people building what comes next.`}
           </p>
           <div className="flex flex-wrap gap-3 mt-8">
             <Link href="/courses" className="no-underline">
@@ -48,7 +48,7 @@ export function ReferenceLanding({
             {sectionTitle}
           </h2>
           <p className="text-text-secondary leading-relaxed mb-4">
-            This page is part of the rebuilt SavvyPro platform. Course, book and
+            This page is part of the rebuilt Lena Learning platform. Course, book and
             program details are available through the catalog and product pages.
           </p>
           <div className="flex flex-wrap gap-3">

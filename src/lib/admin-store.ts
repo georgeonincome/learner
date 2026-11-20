@@ -66,9 +66,9 @@ export const adminStore: AdminStore =
     courses: initialCourses,
     posts: initialPosts,
     settings: {
-      siteName: 'SavvyPro',
+      siteName: 'Lena Learning',
       tagline: 'Practical tools, skills, training and hands-on support.',
-      supportEmail: 'hello@savvypro.example',
+      supportEmail: 'hello@lena.local',
       whatsapp: '+260 777 22 88 27',
       maintenanceMode: false,
     },

@@ -23,8 +23,8 @@ export async function GET(
     const end = new Date(start.getTime() + 60 * 60 * 1000)
     const ics = createIcsEvent({
       uid: id,
-      title: 'SavvyPro Webinar: Beginner Freelancer Blueprint',
-      description: "You're registered for the SavvyPro webinar.",
+      title: 'Lena Learning Webinar: Beginner Freelancer Blueprint',
+      description: "You're registered for the Lena Learning webinar.",
       startsAt: start,
       endsAt: end,
     })

@@ -48,6 +48,10 @@ export default async function DashboardPage() {
     { href: '/dashboard/orders', label: 'Orders' },
     { href: '/dashboard/memberships', label: 'Memberships' },
     { href: '/dashboard/library', label: 'My library' },
+    { href: '/dashboard/community', label: 'Community' },
+    { href: '/dashboard/ai', label: 'AI assistant' },
+    { href: '/dashboard/appointments', label: 'Book a session' },
+    { href: '/dashboard/webinars', label: 'Webinars' },
   ]
 
   return (

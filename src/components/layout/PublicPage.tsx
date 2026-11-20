@@ -4,6 +4,7 @@ import { Footer } from './Footer'
 import { RefBlocks } from '@/components/ref/RefNode'
 import { getSpecByKey, type PageSpec } from '@/lib/page-spec'
 import { buildMetadata } from '@/lib/seo'
+import { debrand } from '@/lib/brand'
 import { JsonLd } from '@/components/seo/JsonLd'
 
 /**
@@ -35,9 +36,9 @@ export function specMetadata(specKey: string, fallback: string) {
 
 /** Metadata for a spec already resolved by a dynamic route. */
 export function specMetadataForSpec(spec: PageSpec | null, fallback: string) {
-  const title = spec?.meta?.title || spec?.title || fallback
+  const title = debrand(spec?.meta?.title || spec?.title || fallback)
   const rawDesc = spec?.meta?.description
-  const cleanDesc = rawDesc && !/^(null|undefined)$/i.test(String(rawDesc).trim()) ? String(rawDesc) : ''
+  const cleanDesc = rawDesc && !/^(null|undefined)$/i.test(String(rawDesc).trim()) ? debrand(String(rawDesc)) : ''
   const description =
     cleanDesc ||
     `${title} — courses, books and digital skills training from Lena.`

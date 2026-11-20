@@ -3,6 +3,7 @@ import Stripe from 'stripe'
 import { getStripe } from '@/lib/stripe'
 import { query } from '@/lib/turso'
 import { fulfillOrder, refundOrder, claimEvent } from '@/lib/commerce'
+import { sendEmail, templates } from '@/lib/email'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -43,6 +44,12 @@ export async function POST(req: Request) {
           await query('UPDATE orders SET stripe_session_id = ?, payment_intent_id = ? WHERE id = ?', [session.id, piId, orderId])
           const subId = typeof session.subscription === 'string' ? session.subscription : session.subscription?.id ?? null
           await fulfillOrder(orderId, { subscriptionId: subId })
+          const email = session.customer_details?.email ?? session.customer_email
+          if (email) {
+            const order = await query<{ total: number; currency: string }>('SELECT total, currency FROM orders WHERE id = ? LIMIT 1', [orderId])
+            const amount = `${order[0]?.currency?.toUpperCase() ?? 'USD'} ${((order[0]?.total ?? 0) / 100).toFixed(2)}`
+            await sendEmail({ to: email, ...templates.receipt((email.split('@')[0] ?? 'Learner'), orderId, amount) })
+          }
         }
         break
       }

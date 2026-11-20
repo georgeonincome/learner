@@ -3,7 +3,7 @@ import { Card } from '@/components/ui/Card'
 import { adminStore } from '@/lib/admin-store'
 
 export const metadata = {
-  title: 'Admin — SavvyPro',
+  title: 'Admin — Lena Learning',
 }
 
 const sections = [

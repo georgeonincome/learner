@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { getCurrentUserId } from '@/lib/session'
-import { mockAiProvider, type AiMessage } from '@/lib/ai-provider'
+import { getAiProvider, type AiMessage } from '@/lib/ai-provider'
 import { rateLimit } from '@/lib/rate-limit'
 import { aiChatSchema, safeParse } from '@/lib/validation'
 
@@ -39,7 +39,7 @@ export async function POST(req: Request) {
   const stream = new ReadableStream<Uint8Array>({
     async start(controller) {
       try {
-        for await (const chunk of mockAiProvider.streamAnswer(messages)) {
+        for await (const chunk of getAiProvider().streamAnswer(messages)) {
           controller.enqueue(encoder.encode(chunk))
         }
       } catch {

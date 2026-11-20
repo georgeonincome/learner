@@ -4,6 +4,7 @@ import React, { createContext, useContext, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { attrsToProps, styleStringToObject } from '@/lib/ref-attrs'
 import { buttonTarget } from '@/lib/button-targets'
+import { debrand } from '@/lib/brand'
 import { RefLoginForm, RefSignupForm } from '@/components/auth/RefAuthForm'
 
 /** Compact DOM spec produced by scripts/extract-page-specs.mjs. */
@@ -64,7 +65,7 @@ function useRefNavigation() {
 export function RefNode({ node, layoutSection }: { node: SpecNode; layoutSection?: boolean }) {
   const navigateByLabel = useRefNavigation()
 
-  if (node.t === '#text') return <>{node.x ?? ''}</>
+  if (node.t === '#text') return <>{debrand(node.x ?? '')}</>
   if (node.t.startsWith('#')) return null
 
   if (node.t === 'form') {

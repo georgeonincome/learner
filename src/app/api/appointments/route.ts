@@ -4,6 +4,7 @@ import { getCurrentUserId } from '@/lib/session'
 import { createIcsEvent } from '@/lib/ics'
 import { rateLimit } from '@/lib/rate-limit'
 import { appointmentSchema, safeParse } from '@/lib/validation'
+import { sendEmail, templates } from '@/lib/email'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -61,7 +62,7 @@ export async function POST(req: Request) {
     const id = `appt_${Date.now()}`
     const ics = createIcsEvent({
       uid: id,
-      title: 'SavvyPro Coaching Appointment',
+      title: 'Lena Learning Coaching Appointment',
       description: reason ?? '1-on-1 coaching session',
       startsAt: start,
       endsAt: end,
@@ -74,6 +75,11 @@ export async function POST(req: Request) {
             VALUES (?, ?, ?, ?, ?, 'confirmed', ?, datetime('now'))`,
       args: [id, uid, staffId, start.toISOString(), end.toISOString(), icsUrl],
     })
+
+    const profile = await query<{ email: string }>('SELECT email FROM profiles WHERE id = ? LIMIT 1', [uid])
+    if (profile[0]?.email) {
+      await sendEmail({ to: profile[0].email, ...templates.booking((profile[0].email.split('@')[0] ?? 'Learner'), start.toLocaleString()) })
+    }
 
     // Persist the .ics content for later download via a simple data URL scheme.
     return NextResponse.json(

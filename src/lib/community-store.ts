@@ -46,7 +46,7 @@ interface CommunityStore {
 const seedGroups: CommunityGroup[] = [
   {
     id: '834',
-    name: 'SavvyPro Starter Chatgroup',
+    name: 'Lena Learning Starter Chatgroup',
     tagline: 'Discover ways to earn through online gigs',
     description: "Discover ways to earn through online gigs. Ask questions, share wins, and learn alongside other members.",
     memberCount: 1505,

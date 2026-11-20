@@ -6,6 +6,7 @@ import { BlockRenderer } from '@/components/blocks/BlockRenderer'
 import { SiteHeader } from '@/components/layout/SiteHeader'
 import { Footer } from '@/components/layout/Footer'
 import { buildMetadata } from '@/lib/seo'
+import { debrand } from '@/lib/brand'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { breadcrumbLd } from '@/lib/seo'
 
@@ -21,8 +22,8 @@ export async function blockPageMetadata(slug: string): Promise<Metadata> {
   const page = await getPage(slug)
   if (!page) return buildMetadata({ title: 'Page not found', description: 'This page does not exist.', path: `/${slug}`, noIndex: true })
   return buildMetadata({
-    title: page.seo_title || page.title,
-    description: page.seo_description || `${page.title} — courses, books and training from Lena.`,
+    title: debrand(page.seo_title || page.title),
+    description: debrand(page.seo_description || `${page.title} — courses, books and training from Lena.`),
     path: slug === 'home' ? '/' : `/${slug}`,
     ogImage: page.og_image,
     noIndex: !!page.no_index,

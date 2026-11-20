@@ -3,8 +3,8 @@ import { Card } from '@/components/ui/Card'
 import { communityStore } from '@/lib/community-store'
 
 export const metadata = {
-  title: 'Community — SavvyPro',
-  description: 'Join a SavvyPro chat group, ask questions and learn alongside other members.',
+  title: 'Community — Lena Learning',
+  description: 'Join a Lena Learning chat group, ask questions and learn alongside other members.',
 }
 
 export default function CommunityPage() {

@@ -4,6 +4,7 @@ import { getCurrentUserId } from '@/lib/session'
 import { createIcsEvent } from '@/lib/ics'
 import { rateLimit } from '@/lib/rate-limit'
 import { webinarSchema, safeParse } from '@/lib/validation'
+import { sendEmail, templates } from '@/lib/email'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -50,11 +51,19 @@ export async function POST(req: Request) {
 
     const ics = createIcsEvent({
       uid: id,
-      title: 'SavvyPro Webinar: Beginner Freelancer Blueprint',
-      description: `Hi ${name ?? 'there'}, you're registered for the SavvyPro webinar.`,
+      title: 'Lena Learning Webinar: Beginner Freelancer Blueprint',
+      description: `Hi ${name ?? 'there'}, you're registered for the Lena Learning webinar.`,
       startsAt: start,
       endsAt: end,
     })
+
+    const webinar = await getTursoClient().execute({
+      sql: 'SELECT title FROM webinars WHERE CAST(id AS TEXT) = ? OR slug = ? LIMIT 1',
+      args: [String(webinarId), String(webinarId)],
+    })
+    const title = String(webinar.rows[0]?.title ?? 'Lena Learning webinar')
+    const email = parsed.data.email
+    if (email) await sendEmail({ to: email, ...templates.webinar(name || (email.split('@')[0] ?? 'Learner'), title) })
 
     return NextResponse.json(
       {
