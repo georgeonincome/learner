@@ -208,3 +208,12 @@ Lighthouse/axe, and Firestore-backed community/admin persistence.
 - **[OPEN] COPY**: reference marketing copy remains in src/content/pages/*.json as build-time
   data and is debranded at render; full original-copy rewrite outstanding.
 - **[OPEN] H**: full 5-breakpoint layout comparison not re-run in session 4.
+
+## Session-5 additional failures (reported, not omitted)
+
+- **[FAIL] H layout**: 0/45 comparison cells pass at ±4px. Original Tailwind CSS cannot
+  reproduce reference geometry with different copy/images (Decision 1 trade-off).
+- **[FAIL] J Lighthouse performance**: 70 home / 72 course detail / 76 dashboard /
+  73 lesson player vs ≥90 target. TBT dominated by React DOM evaluation under throttling.
+- **[BLOCKED] E Stripe real test mode**: `.env.local` keys are placeholders; journey not run.
+- **[PASS] axe**: 0 violations on home, course detail, dashboard and lesson player.

@@ -124,4 +124,4 @@ h6 {
 }
 
 /* Dark-theme base: inherited body text is light on Lena's dark surfaces. */
-body { color: var(--color-text-primary); }
+body { color: var(--color-text-primary); background-color: #0b1f1a; }

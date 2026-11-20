@@ -340,7 +340,7 @@ function GenericTemplate({ title }: { title: string }) {
 function templateFor(slug: string, hint?: string): React.ReactNode {
   const h = (hint || '').toLowerCase()
   const s = slug.toLowerCase()
-  if (h === 'home' || s === '') return <HomeTemplate />
+  if (h === 'home' || s === 'home' || s === '') return <HomeTemplate />
   if (['catalog', 'courses', 'all-products', 'mini-courses', 'free'].includes(h) || ['courses', 'all-products', 'mini-courses', 'free'].includes(s)) return <CatalogTemplate />
   if (h === 'books' || s === 'books' || s === 'ebooks') return <BooksTemplate />
   if (h.startsWith('blog') || s.startsWith('blog')) return <BlogTemplate />

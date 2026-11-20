@@ -127,4 +127,54 @@ if (firstBook) {
 }
 
 console.log(`seeded original copy: ${courses.length} courses, ${books.length} books, ${posts.length} posts; ${fixtures.length} media fixtures`)
+
+// -- Database-wide pass: rewrite every seeded row, not just the JSON subset ----
+const allCourses = (await client.execute('SELECT id FROM courses ORDER BY id')).rows
+for (const [i, row] of allCourses.entries()) {
+  const id = Number(row.id)
+  const label = `Course ${pad(i + 1)}`
+  const price = PAID[i % PAID.length]
+  await client.execute({
+    sql: 'UPDATE courses SET title=?, category=?, description=?, short_description=? WHERE id=?',
+    args: [`${label} — Practical Digital Skills`, 'Digital Skills',
+      `Original sample content for ${label}. Replace with real course material in the CMS.`,
+      `${label}: a hands-on introduction with short, practical lessons.`, id],
+  })
+  await client.execute({
+    sql: 'UPDATE prices SET price=?, strike_through=? WHERE entity_type=? AND entity_id=?',
+    args: [id === 49791 ? 0 : price, id === 49791 ? null : price + 10, 'course', id],
+  })
+}
+const allBooks = (await client.execute('SELECT id FROM books ORDER BY id')).rows
+for (const [i, row] of allBooks.entries()) {
+  const id = Number(row.id)
+  const label = `Guide ${pad(i + 1)}`
+  const price = PAID[i % PAID.length]
+  await client.execute({
+    sql: 'UPDATE books SET title=?, author=?, description=?, chapters=?, file_media_id=? WHERE id=?',
+    args: [`${label} — A Practical Guide`, 'Lena Editorial Team',
+      `Original sample book content for ${label}. Replace the chapters in the CMS.`,
+      JSON.stringify([
+        { title: 'Introduction', body: `Original sample content for ${label}. Safe to edit or replace.` },
+        { title: 'Chapter 1 — The basics', body: 'Work through the basics, then apply one small action.' },
+      ]), 'sample-book', id],
+  })
+  await client.execute({
+    sql: 'UPDATE prices SET price=?, price_type=? WHERE entity_type=? AND entity_id=?', args: [id === 49792 ? 0 : price, id === 49792 ? 'FREE' : 'ONE_TIME', 'book', id],
+  })
+}
+const allPosts = (await client.execute('SELECT slug FROM blog_posts ORDER BY id')).rows
+for (const [i, row] of allPosts.entries()) {
+  await client.execute({
+    sql: 'UPDATE blog_posts SET title=?, excerpt=?, body=? WHERE slug=?',
+    args: [`Field note ${pad(i + 1)} — learning digital skills`,
+      'An original sample article. Edit the body and title in the CMS before publication.',
+      'This is original placeholder content. Replace it with your own article in the CMS.', String(row.slug)],
+  })
+}
+console.log(`database-wide original copy: ${allCourses.length} courses, ${allBooks.length} books, ${allPosts.length} posts`)
+await client.close()
+
+// Keep the documented free sample items free after the original-copy rewrite.
+await client.execute({ sql: "UPDATE prices SET price=0, price_type='FREE' WHERE price_type='FREE'" })
 await client.close()

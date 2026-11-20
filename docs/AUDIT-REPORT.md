@@ -383,3 +383,60 @@ Lighthouse (home, mobile)         -> performance 63, accessibility 92 (OPEN)
    A full original-copy rewrite (R1) is still outstanding.
 5. **H — full 5-breakpoint layout comparison** was not re-run after this milestone
    batch (previous COMPARISON.md remains the last recorded measurement).
+
+---
+
+## DECISION 1 EXECUTION — Tailwind-only rebuild (2026-11-20)
+
+### Step 1 — Retire the reference rendering layer
+Evidence: `node scripts/check-no-reference.mjs` → `REFERENCE-LAYER CHECK PASS`;
+`npx tsc --noEmit` → 0; `npm run build` → 0. Removed `vendor.css`, `reference.css`,
+`RefNode`, `BlockPage`, `PublicPage`, `page-spec`, `blocks/compile`, `ref-attrs`,
+`button-targets`, captured `src/content/pages/*`, and the build scripts that generated
+them. All 111 public routes now render original Tailwind components from
+`src/components/templates/TemplatePage.tsx`; the header is a new original component
+using the local logo. CI guard is wired as `prebuild`.
+Status: **PASS** (the guard and build prove no reference CSS/markup is imported).
+
+### Step 2 — Screenshot-free layout comparison
+Evidence: `node scripts/layout-compare.mjs` → `comparison written: 0/45 PASS cells`,
+full table in `docs/COMPARISON.md`. Reference HTML+CSS loads from `_reference/site` at
+375/768/1024/1280/1536px; Lena is measured in the same browser. The original Tailwind
+templates do not match reference section counts (e.g. home 10 reference sections vs
+5 Lena sections) or ±4px bounding boxes.
+Status: **FAIL — 0/45 cells**. Not omitted. This is the direct consequence of Decision 1:
+original CSS/copy/assets cannot reproduce reference geometry within 4px. Resolving it
+requires either copying the reference measurements verbatim (conflicts with originality)
+or relaxing the tolerance — a decision for George.
+
+### Step 3 — axe and Lighthouse
+Evidence: `docs/QUALITY.md`.
+- axe: home 0, course-detail 0, dashboard 0, lesson-player 0 → **PASS**.
+- Lighthouse mobile (perf / a11y / best-practices / SEO):
+  home **70**/100/92/100; course-detail **72**/100/92/100;
+  dashboard **76**/100/92/69; lesson-player **73**/100/100/69.
+Status: **FAIL for performance** (target ≥90, best 76). Accessibility target met on all
+four. Re-running with emulators paused lowered TBT from 5,450 ms to 1,770 ms and raised
+home perf only to 73 — the blocking cost is React DOM evaluation under 4× CPU throttle,
+not app CSS (legacy CSS is gone). SEO 69 on dashboard/lesson-player is due to no-index
+on authenticated routes.
+
+### Step 4 — Stripe real test mode
+`.env.local` contains `STRIPE_SECRET_KEY=***` and `STRIPE_WEBHOOK_SECRET=whsec_...n`
+(verified by length/prefix, values not printed). `.env.example` documents the real keys.
+Status: **BLOCKED — keys absent**. Per instruction, the browser journey against real
+Stripe test mode was not run. The stripe-mock smoke journey remains the evidence for
+commerce logic.
+
+### Step 5 — Original content and media
+Evidence: `npx tsx scripts/seed-original.mts` → `database-wide original copy: 36 courses,
+10 books, 23 posts`; DB verified 36/36 courses, 10/10 books, 23/23 posts with original
+names. Four labelled fixtures generated in `public/sample/` (valid MP4/WAV/PDF verified
+by `file`) and attached to real video/audio/pdf/download/quiz lessons and a book.
+`node .cache/smoke-media-upload.mjs` → `upload status 201`, `media library lists upload: true`.
+Status: **PASS** for the seed rewrite and real-file CMS upload.
+
+### Step 6 — Whole gate re-run
+`tsc 0 · lint 0 errors · build 0 · vitest 21/21 · smoke 30/30 · brand PASS ·
+sitemap 181/181 (181 unique titles, 0 console errors) · axe 0 on all 4 templates`.
+Failing items above are reported, not omitted.

@@ -152,3 +152,18 @@ a623e73 (M7/M8 commerce + dashboard) → 63c46b9 (M8/M9 engagement + brand) →
   violations on home; lesson media URLs not captured (GAPS U1); original-copy rewrite;
   full 5-breakpoint layout comparison re-run; admin CMS UI polish. See docs/AUDIT-REPORT.md
   FINAL RE-AUDIT and docs/GAPS.md.
+
+## Session 5 — Decision 1 execution (resume here)
+
+- Step 1 (pushed, `3dff0aa`): reference rendering layer retired; original Tailwind
+  templates + `prebuild` CI guard. Verified check/build/tsc all 0.
+- Step 2: `docs/COMPARISON.md` written; **0/45 PASS** — original CSS cannot match
+  reference geometry within ±4px. FAIL, needs a tolerance/originality decision.
+- Step 3: `docs/QUALITY.md` — axe 0 on all four templates (PASS); Lighthouse
+  performance 70/72/76/73 (FAIL vs ≥90), accessibility 100 on all four.
+- Step 4: BLOCKED — `.env.local` Stripe keys are placeholders (`***`, `whsec_...n`).
+  Real test-mode journey not run.
+- Step 5: original seed applied to all 36 courses / 10 books / 23 posts; sample
+  MP4/WAV/PDF fixtures attached and real CMS upload verified (HTTP 201).
+- Step 6: full gate re-run; tsc/lint/build/tests/smoke/brand/crawl/axe PASS; layout
+  and Lighthouse performance FAIL as recorded in docs/AUDIT-REPORT.md.

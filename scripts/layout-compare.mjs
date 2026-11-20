@@ -42,19 +42,37 @@ function localCss() {
 
 async function metrics(page, selector, isRef) {
   return page.evaluate(({ selector, isRef }) => {
-    const root = document.querySelector(selector) || document.querySelector('main') || document.body
-    const sections = [...(root?.children ?? [])].slice(0, 14).map((el) => {
+    let root = null
+    if (isRef) {
+      // The reference content root is the element whose children carry the
+      // builder-generated UUID section ids (e.g. 99936c3e-...).
+      let best = null, bestCount = 0
+      for (const el of document.querySelectorAll('div, main, section')) {
+        const count = [...el.children].filter((c) => /^[0-9a-f]{8}-[0-9a-f-]{20,}$/i.test(c.id || '')).length
+        if (count > bestCount) { best = el; bestCount = count }
+      }
+      root = best
+    } else {
+      root = document.querySelector(selector)
+    }
+    if (!root) return { sections: [], typography: [], sectionCount: 0, isRef }
+    const rootTop = root.getBoundingClientRect().top
+    const allChildren = [...(root.children ?? [])]
+    const children = isRef
+      ? allChildren.filter((el) => ['section', 'div'].includes(el.tagName.toLowerCase()) && !['header','footer'].includes(el.tagName.toLowerCase()))
+      : allChildren
+    const sections = children.slice(0, 14).map((el) => {
       const r = el.getBoundingClientRect()
       return {
         tag: el.tagName.toLowerCase(),
-        top: Math.round(r.top),
+        top: Math.round(r.top - rootTop),
         height: Math.round(r.height),
         width: Math.round(r.width),
         cls: (el.className || '').toString().slice(0, 60),
       }
     })
     const typography = ['h1', 'h2', 'p'].map((tag) => {
-      const el = document.querySelector(`${selector} ${tag}`) || document.querySelector(tag)
+      const el = (isRef ? root : document.querySelector(selector))?.querySelector(tag) || document.querySelector(tag)
       if (!el) return null
       const cs = getComputedStyle(el)
       return { tag, fontSize: Math.round(parseFloat(cs.fontSize)), fontWeight: cs.fontWeight, lineHeight: cs.lineHeight }

@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <body className="bg-[var(--color-bg-hero)] text-[var(--color-text-primary)]">
         <ToastProvider>{children}</ToastProvider>
       </body>
     </html>
