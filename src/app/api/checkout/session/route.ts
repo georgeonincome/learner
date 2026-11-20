@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { getCurrentUserId } from '@/lib/session'
+import { getVerifiedUserId } from '@/lib/session'
 import { rateLimit } from '@/lib/rate-limit'
 import { checkoutSchema, safeParse } from '@/lib/validation'
 import { createCheckout } from '@/lib/commerce'
@@ -13,8 +13,8 @@ export const dynamic = 'force-dynamic'
  * persisted and linked via Stripe metadata so the webhook can fulfil it.
  */
 export async function POST(req: Request) {
-  const uid = await getCurrentUserId()
-  if (!uid) return NextResponse.json({ error: 'Sign in to checkout.' }, { status: 401 })
+  const uid = await getVerifiedUserId()
+  if (!uid) return NextResponse.json({ error: 'Sign in and verify your email to checkout.' }, { status: 401 })
   const limit = rateLimit(`checkout:${uid}`, { limit: 20, windowMs: 60_000 })
   if (!limit.allowed) {
     return NextResponse.json({ error: 'Too many checkout attempts. Try again shortly.' }, { status: 429, headers: { 'Retry-After': String(limit.retryAfterSeconds) } })
